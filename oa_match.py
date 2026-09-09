@@ -24,6 +24,23 @@ def _team_lineup(team_id, exclude_fixture=None, want=2):
         if len(out) >= want: break
     return out
 
+def _form_string(team_id):
+    """Leidt W/D/L-vorm (laatste 5, chronologisch) af uit /api/team-form."""
+    fixtures = api.team_form(team_id)
+    done = [f for f in fixtures
+            if ((f.get("fixture", {}).get("status", {}) or {}).get("short") in ("FT", "AET", "PEN"))]
+    done.sort(key=lambda f: f.get("fixture", {}).get("date", ""))
+    out = ""
+    for f in done[-5:]:
+        t = f.get("teams", {}); g = f.get("goals", {})
+        gh, ga = g.get("home"), g.get("away")
+        if gh is None or ga is None:
+            continue
+        home = str((t.get("home") or {}).get("id")) == str(team_id)
+        my, opp = (gh, ga) if home else (ga, gh)
+        out += "W" if my > opp else ("L" if my < opp else "D")
+    return out
+
 def gather(fx, definitief=False):
     """fx = een fixture-object uit /api/fixtures (of /api/match)."""
     fixture = fx.get("fixture", {}); teams = fx.get("teams", {}); league = fx.get("league", {})
@@ -45,6 +62,9 @@ def gather(fx, definitief=False):
     hForm = ((tt.get("home", {}) or {}).get("league", {}) or {}).get("form", "") or ""
     aForm = ((tt.get("away", {}) or {}).get("league", {}) or {}).get("form", "") or ""
     hForm, aForm = hForm[-5:], aForm[-5:]
+    # val terug op de laatste-5-resultaten uit de API als predictions geen vorm geeft
+    if not hForm: hForm = _form_string(homeId)
+    if not aForm: aForm = _form_string(awayId)
     h2h = pred.get("h2h") or api.h2h(homeId, awayId)
     # betrouwbare voorspelling? (API geeft soms "No predictions available" + 33/33/33)
     adv = (pr.get("advice") or "").strip().lower()
