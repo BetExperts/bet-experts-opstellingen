@@ -1,0 +1,39 @@
+name: Opstellingen genereren (avond ervoor)
+
+on:
+  schedule:
+    # 18:00 UTC = 20:00 CEST (zomertijd) / 19:00 CET (wintertijd).
+    # Draait elke avond en maakt de artikelen voor de VOLGENDE dag.
+    - cron: "0 18 * * *"
+  workflow_dispatch:
+    inputs:
+      date:
+        description: "Datum YYYY-MM-DD (leeg = morgen)"
+        required: false
+
+jobs:
+  generate:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write   # nodig om het state-bestand terug te committen
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Genereer vermoedelijke opstellingen
+        env:
+          WEBFLOW_TOKEN: ${{ secrets.WEBFLOW_TOKEN }}
+        run: |
+          if [ -n "${{ github.event.inputs.date }}" ]; then
+            python3 generate.py --date "${{ github.event.inputs.date }}"
+          else
+            python3 generate.py
+          fi
+      - name: State terugcommitten
+        run: |
+          git config user.name "opstellingen-bot"
+          git config user.email "bot@bet-experts.nl"
+          git add state/opstellingen.json || true
+          git commit -m "state: opstellingen bijgewerkt [skip ci]" || echo "geen wijziging"
+          git push || true

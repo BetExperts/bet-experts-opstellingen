@@ -1,0 +1,28 @@
+name: Opstellingen opschonen (oude artikelen + redirects)
+
+on:
+  schedule:
+    - cron: "30 5 * * *"   # dagelijks 05:30 UTC
+  workflow_dispatch:
+
+jobs:
+  cleanup:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Oude opstellingen verwijderen
+        env:
+          WEBFLOW_TOKEN: ${{ secrets.WEBFLOW_TOKEN }}
+        run: python3 cleanup.py
+      - name: State + redirects terugcommitten
+        run: |
+          git config user.name "opstellingen-bot"
+          git config user.email "bot@bet-experts.nl"
+          git add state/opstellingen.json redirects/opstellingen-redirects.csv || true
+          git commit -m "cleanup: oude opstellingen + redirects [skip ci]" || echo "geen wijziging"
+          git push || true

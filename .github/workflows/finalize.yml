@@ -1,0 +1,30 @@
+name: Opstellingen finaliseren (definitief ~1u voor aftrap)
+
+on:
+  schedule:
+    # Elke 30 min tussen 08:00-20:00 UTC (= 10:00-22:00 CEST) — dekt alle
+    # aftrapmomenten. Flipt alleen wedstrijden waarvan de opstelling binnen is.
+    - cron: "*/30 8-20 * * *"
+  workflow_dispatch:
+
+jobs:
+  finalize:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Flip naar definitieve opstellingen
+        env:
+          WEBFLOW_TOKEN: ${{ secrets.WEBFLOW_TOKEN }}
+        run: python3 finalize.py
+      - name: State terugcommitten
+        run: |
+          git config user.name "opstellingen-bot"
+          git config user.email "bot@bet-experts.nl"
+          git add state/opstellingen.json || true
+          git commit -m "state: definitief geflipt [skip ci]" || echo "geen wijziging"
+          git push || true
