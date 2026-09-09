@@ -6,5 +6,15 @@
     "match": "Twente - ADO Den Haag",
     "date": "2026-09-12",
     "league": "eredivisie"
+  },
+  "1635628": {
+    "item_id": "6aa17022f7f8d847344a89cf",
+    "slug": "opstelling-fc-barcelona-feyenoord-09-09-2026",
+    "definitief": false,
+    "match": "Barcelona - Feyenoord",
+    "date": "2026-09-09",
+    "league": "champions-league",
+    "comp_slug": "champions-league",
+    "naam": "Champions League"
   }
 }

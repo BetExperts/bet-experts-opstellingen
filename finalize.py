@@ -31,7 +31,13 @@ def main():
         fx = api.match(fid)
         if not fx:
             print(f"  ! match niet op te halen: {fid}"); continue
-        cfg = LCFG.get(e.get("league")) or LEAGUES[0]
+        # competitie-info: eerst uit de state (werkt ook voor losse test-wedstrijden),
+        # anders uit de LEAGUES-config
+        cfg = LCFG.get(e.get("league"))
+        if not cfg:
+            cfg = {"worker_slug": e.get("league", ""),
+                   "comp_slug": e.get("comp_slug", "eredivisie"),
+                   "naam": e.get("naam", "Eredivisie")}
         ctx = M.gather(fx, definitief=True)
         fd, slug, title = M.build_fielddata(ctx, cfg, slug=e["slug"])  # slug BLIJFT gelijk
         if a.dry:

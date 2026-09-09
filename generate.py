@@ -66,7 +66,8 @@ def main():
                 item_id = WF.create_live(fd)
                 state[fid] = {"item_id": item_id, "slug": slug, "definitief": False,
                               "match": f"{ctx['homeN']} - {ctx['awayN']}", "date": ymd,
-                              "league": cfg["worker_slug"]}
+                              "league": cfg["worker_slug"],
+                              "comp_slug": cfg["comp_slug"], "naam": cfg["naam"]}
                 WF.save_state(state)
                 print(f"  ✔ live: {title}  (item {item_id})")
             made += 1
