@@ -80,18 +80,46 @@ def injuries_sentence(team, inj_list):
 
 # ---------- titel + samenvatting ----------
 def _hook(homeN, awayN, city, pH, pA, has_pred=True):
+    # Nederlands, gevarieerd, zonder (Engelse) stadsnamen
     if not has_pred:
-        # geen betrouwbare modelvoorspelling -> neutrale hook (niet op favoriet)
-        opts = ["de verwachte basiselftallen", "de opstellingen op een rij"]
-        if city: opts.append(f"beide ploegen in {city}")
-        return random.choice(opts)
+        return random.choice([
+            "wie start er in de basis?",
+            "dit zijn de verwachte namen",
+            "de vermoedelijke elftallen op een rij",
+            "wie krijgt de voorkeur?",
+            "zo verschijnen beide ploegen aan de aftrap",
+            "het verwachte teamnieuws",
+            "de basiself onder de loep",
+            "wie begint er vandaag?",
+        ])
     fav, und, favp = (homeN, awayN, pH) if pH>=pA else (awayN, homeN, pA)
     if abs(pH-pA) <= 12:
-        return random.choice([f"gelijkopgaand duel in {city}", f"{homeN} en {awayN} aan elkaar gewaagd",
-                              f"weinig tussen {homeN} en {awayN}"])
-    if favp >= 60:
-        return random.choice([f"{fav} favoriet in {city}", f"{fav} de gedoodverfde favoriet"])
-    return random.choice([f"{fav} licht favoriet tegen {und}", f"{fav} met het thuisvoordeel" if fav==homeN else f"{fav} favoriet op vreemde bodem"])
+        return random.choice([
+            "een gelijkopgaand duel",
+            f"{homeN} en {awayN} aan elkaar gewaagd",
+            "alles kan in dit duel",
+            "een spannende clash op komst",
+            "wie trekt aan het langste eind?",
+            "de krachten in evenwicht",
+            "kan iedereen hier winnen",
+        ])
+    if favp >= 65:
+        return random.choice([
+            f"{fav} torenhoog favoriet",
+            f"{fav} de gedoodverfde favoriet",
+            f"{fav} moet het karwei klaren",
+            f"{fav} jaagt op de volle buit",
+            f"kan {und} verrassen?",
+            f"{fav} is de grote favoriet",
+        ])
+    return random.choice([
+        f"{fav} licht favoriet",
+        f"{fav} favoriet, maar {und} loert",
+        f"{fav} aan zet",
+        f"{fav} met de beste papieren",
+        f"{fav} start als favoriet",
+        f"loert {und} op een stunt?",
+    ])
 
 def build_title(definitief, homeN, awayN, city, pH, pA, has_pred=True):
     kind = "Definitieve opstelling" if definitief else "Vermoedelijke opstelling"
