@@ -37,7 +37,8 @@ def main():
         if not cfg:
             cfg = {"worker_slug": e.get("league", ""),
                    "comp_slug": e.get("comp_slug", "eredivisie"),
-                   "naam": e.get("naam", "Eredivisie")}
+                   "naam": e.get("naam", "Eredivisie"),
+                   "comp_id": e.get("comp_id")}
         ctx = M.gather(fx, definitief=True)
         fd, slug, title = M.build_fielddata(ctx, cfg, slug=e["slug"])  # slug BLIJFT gelijk
         if a.dry:

@@ -28,9 +28,13 @@ RETENTION_DAYS = 30
 # worker_slug   = slug in de Cloudflare Worker (voor /api/fixtures/{slug})
 # comp_slug     = slug van de competitiepagina op de site (voor /competities/<slug>)
 # naam          = weergavenaam in de tekst
+# comp_id = item-id in de Competities-collectie (voor het referentieveld 'competitie',
+# waarop je op de hub kunt filteren/sorteren)
 LEAGUES = [
-    {"worker_slug": "eredivisie",     "comp_slug": "eredivisie",              "naam": "Eredivisie"},
-    {"worker_slug": "eerste-divisie", "comp_slug": "keuken-kampioen-divisie", "naam": "Keuken Kampioen Divisie"},
+    {"worker_slug": "eredivisie",     "comp_slug": "eredivisie",              "naam": "Eredivisie",
+     "comp_id": "65de2f987de877fdf6583d10"},
+    {"worker_slug": "eerste-divisie", "comp_slug": "keuken-kampioen-divisie", "naam": "Keuken Kampioen Divisie",
+     "comp_id": "65de4bc0a8777b9898d6374e"},
 ]
 
 # --- Data-mappings ---

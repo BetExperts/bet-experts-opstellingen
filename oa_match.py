@@ -103,4 +103,6 @@ def build_fielddata(ctx, league_cfg, slug=None):
     }
     if RUBRIEK_ID:
         fd["rubriek"] = RUBRIEK_ID
+    if league_cfg.get("comp_id"):
+        fd["competitie"] = league_cfg["comp_id"]   # referentieveld voor hub-filter/sortering
     return fd, slug, title
