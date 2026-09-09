@@ -2,9 +2,10 @@ name: Opstellingen finaliseren (definitief ~1u voor aftrap)
 
 on:
   schedule:
-    # Elke 30 min tussen 08:00-20:00 UTC (= 10:00-22:00 CEST) — dekt alle
-    # aftrapmomenten. Flipt alleen wedstrijden waarvan de opstelling binnen is.
-    - cron: "*/30 8-20 * * *"
+    # Elke 10 min tussen 07:00-21:00 UTC (= 09:00-23:00 CEST) — dekt alle
+    # aftrapmomenten ruim. Flipt alleen wedstrijden waarvan de opstelling binnen is.
+    # (Publieke repo = onbeperkte Actions-minuten.)
+    - cron: "*/10 7-21 * * *"
   workflow_dispatch:
 
 jobs:
