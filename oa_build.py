@@ -156,7 +156,7 @@ def build_content(ctx):
     c2.append(_lineup_block(awayN, aLU, aPrev, definitief, kickoff, flip, is_home=False))
     c2.append("<h3>🩺 Blessures &amp; schorsingen</h3>")
     c2.append("<p>De trainers moeten rekening houden met de volgende afwezigen:</p>")
-    c2.append("<p>• "+injuries_sentence(homeN, hInj)+"<br>• "+injuries_sentence(awayN, aInj)+"</p>")
+    c2.append("<ul><li>"+injuries_sentence(homeN, hInj)+"</li><li>"+injuries_sentence(awayN, aInj)+"</li></ul>")
     c2.append("<h3>📈 Recente vorm</h3>")
     c2.append(f"<p><strong>{esc(homeN)}:</strong> {form_dashes(hForm)}. {form_zin(hForm, True)}</p>")
     c2.append(f"<p><strong>{esc(awayN)}:</strong> {form_dashes(aForm)}. {form_zin(aForm, False)}</p>")
@@ -171,17 +171,16 @@ def build_content(ctx):
               and (m.get("goals") or {}).get("away") is not None]
     if h2h_ok:
         c3.append("<p>De recente onderlinge geschiedenis tussen beide ploegen:</p>")
-        lines = "<br>".join("• " + esc(_h2h_line(m)) for m in h2h_ok[:5])
-        c3.append("<p>" + lines + "</p>")
+        c3.append("<ul>" + "".join("<li>"+esc(_h2h_line(m))+"</li>" for m in h2h_ok[:5]) + "</ul>")
     else:
         c3.append("<p>Beide ploegen speelden de afgelopen jaren niet of nauwelijks tegen elkaar, "
                   "waardoor er geen recente onderlinge statistieken beschikbaar zijn.</p>")
     c3.append("<h3>🔮 Winkansen volgens het AI-model</h3>")
     c3.append("<p>Let op: dit is <strong>geen wedtip van Bet-Experts</strong>, maar de kansberekening van een "
               "statistisch AI-model op basis van vorm, onderlinge duels en teamsterkte:</p>")
-    c3.append(f"<p>• {esc(homeN)} wint: <strong>{pH}%</strong><br>"
-              f"• Gelijkspel: <strong>{pD}%</strong><br>"
-              f"• {esc(awayN)} wint: <strong>{pA}%</strong></p>")
+    c3.append(f"<ul><li>{esc(homeN)} wint: <strong>{pH}%</strong></li>"
+              f"<li>Gelijkspel: <strong>{pD}%</strong></li>"
+              f"<li>{esc(awayN)} wint: <strong>{pA}%</strong></li></ul>")
     c3.append(f"<p>{_model_zin(homeN, awayN, pH, pD, pA)}</p>")
     c3.append("<h3>❓ Veelgestelde vragen</h3>")
     c3.append(_faq(homeN, awayN, hLU, aLU, definitief, kickoff, flip, datum, pH, pD, pA))
