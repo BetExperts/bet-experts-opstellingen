@@ -79,7 +79,12 @@ def injuries_sentence(team, inj_list):
     return f"<strong>{esc(team)}:</strong> " + ", ".join(out[:8]) + " ontbreken."
 
 # ---------- titel + samenvatting ----------
-def _hook(homeN, awayN, city, pH, pA):
+def _hook(homeN, awayN, city, pH, pA, has_pred=True):
+    if not has_pred:
+        # geen betrouwbare modelvoorspelling -> neutrale hook (niet op favoriet)
+        opts = ["de verwachte basiselftallen", "de opstellingen op een rij"]
+        if city: opts.append(f"beide ploegen in {city}")
+        return random.choice(opts)
     fav, und, favp = (homeN, awayN, pH) if pH>=pA else (awayN, homeN, pA)
     if abs(pH-pA) <= 12:
         return random.choice([f"gelijkopgaand duel in {city}", f"{homeN} en {awayN} aan elkaar gewaagd",
@@ -88,9 +93,9 @@ def _hook(homeN, awayN, city, pH, pA):
         return random.choice([f"{fav} favoriet in {city}", f"{fav} de gedoodverfde favoriet"])
     return random.choice([f"{fav} licht favoriet tegen {und}", f"{fav} met het thuisvoordeel" if fav==homeN else f"{fav} favoriet op vreemde bodem"])
 
-def build_title(definitief, homeN, awayN, city, pH, pA):
+def build_title(definitief, homeN, awayN, city, pH, pA, has_pred=True):
     kind = "Definitieve opstelling" if definitief else "Vermoedelijke opstelling"
-    hook = _hook(homeN, awayN, city, pH, pA)
+    hook = _hook(homeN, awayN, city, pH, pA, has_pred)
     hook = hook[0].upper()+hook[1:]
     return f"{kind} {homeN} – {awayN} | {hook}"
 
@@ -116,6 +121,7 @@ def build_content(ctx):
     dt = ctx["dt"]; city = ctx["city"]; venue = ctx["venue"]; ronde = ctx["ronde"]
     definitief = ctx["definitief"]
     pH,pD,pA = ctx["pH"],ctx["pD"],ctx["pA"]
+    has_pred = ctx.get("has_pred", True)
     hForm,aForm = ctx["hForm"], ctx["aForm"]
     hLU,aLU = ctx["hLU"], ctx["aLU"]              # laatste opstelling (predicted) of bevestigd
     hPrev,aPrev = ctx["hPrev"], ctx["aPrev"]      # vorige opstelling (voor rotatie)
@@ -176,14 +182,18 @@ def build_content(ctx):
         c3.append("<p>Beide ploegen speelden de afgelopen jaren niet of nauwelijks tegen elkaar, "
                   "waardoor er geen recente onderlinge statistieken beschikbaar zijn.</p>")
     c3.append("<h3>🔮 Winkansen volgens het AI-model</h3>")
-    c3.append("<p>Let op: dit is <strong>geen wedtip van Bet-Experts</strong>, maar de kansberekening van een "
-              "statistisch AI-model op basis van vorm, onderlinge duels en teamsterkte:</p>")
-    c3.append(f"<ul><li>{esc(homeN)} wint: <strong>{pH}%</strong></li>"
-              f"<li>Gelijkspel: <strong>{pD}%</strong></li>"
-              f"<li>{esc(awayN)} wint: <strong>{pA}%</strong></li></ul>")
-    c3.append(f"<p>{_model_zin(homeN, awayN, pH, pD, pA)}</p>")
+    if has_pred:
+        c3.append("<p>Let op: dit is <strong>geen wedtip van Bet-Experts</strong>, maar de kansberekening van een "
+                  "statistisch AI-model op basis van vorm, onderlinge duels en teamsterkte:</p>")
+        c3.append(f"<ul><li>{esc(homeN)} wint: <strong>{pH}%</strong></li>"
+                  f"<li>Gelijkspel: <strong>{pD}%</strong></li>"
+                  f"<li>{esc(awayN)} wint: <strong>{pA}%</strong></li></ul>")
+        c3.append(f"<p>{_model_zin(homeN, awayN, pH, pD, pA)}</p>")
+    else:
+        c3.append("<p>Voor dit duel is er nog geen betrouwbare modelvoorspelling beschikbaar. "
+                  "Zodra de winkansen bekend zijn, werken we ze hier bij.</p>")
     c3.append("<h3>❓ Veelgestelde vragen</h3>")
-    c3.append(_faq(homeN, awayN, hLU, aLU, definitief, kickoff, flip, datum, pH, pD, pA))
+    c3.append(_faq(homeN, awayN, hLU, aLU, definitief, kickoff, flip, datum, pH, pD, pA, has_pred))
     c3.append(f'<p>👉 <a href="{HUB_PATH}"><strong>Bekijk alle vermoedelijke en definitieve opstellingen van vandaag</strong></a></p>')
     content3 = "\n".join(c3)
 
@@ -231,7 +241,7 @@ def _model_zin(homeN, awayN, pH,pD,pA):
     fav = homeN if pH>=pA else awayN
     return f"Het model wijst {esc(fav)} aan als favoriet, maar rekent op een pittige wedstrijd."
 
-def _faq(homeN, awayN, hLU, aLU, definitief, kickoff, flip, datum, pH,pD,pA):
+def _faq(homeN, awayN, hLU, aLU, definitief, kickoff, flip, datum, pH,pD,pA, has_pred=True):
     fav = homeN if pH>=pA else awayN; favp = max(pH,pA)
     hf = formation(hLU) if hLU else "4-3-3"; af = formation(aLU) if aLU else "4-3-3"
     q = []
@@ -243,8 +253,9 @@ def _faq(homeN, awayN, hLU, aLU, definitief, kickoff, flip, datum, pH,pD,pA):
               f"Doorgaans ongeveer 60 minuten voor de aftrap, dus rond {flip} uur op {datum}."))
     q.append((f"In welke formatie speelt {awayN}?",
               f"{awayN} speelde de laatste wedstrijden in een {af} en treedt naar verwachting ook nu in die formatie aan."))
-    q.append((f"Wie is de favoriet bij {homeN} – {awayN}?",
-              f"Volgens het AI-model is {fav} favoriet met {favp}% winkans. {homeN}: {pH}%, gelijkspel: {pD}%, {awayN}: {pA}%."))
+    if has_pred:
+        q.append((f"Wie is de favoriet bij {homeN} – {awayN}?",
+                  f"Volgens het AI-model is {fav} favoriet met {favp}% winkans. {homeN}: {pH}%, gelijkspel: {pD}%, {awayN}: {pA}%."))
     out = []
     for question, ans in q:
         out.append(f"<p><strong>{esc(question)}</strong><br>{esc(ans)}</p>")

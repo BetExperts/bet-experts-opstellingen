@@ -46,6 +46,9 @@ def gather(fx, definitief=False):
     aForm = ((tt.get("away", {}) or {}).get("league", {}) or {}).get("form", "") or ""
     hForm, aForm = hForm[-5:], aForm[-5:]
     h2h = pred.get("h2h") or api.h2h(homeId, awayId)
+    # betrouwbare voorspelling? (API geeft soms "No predictions available" + 33/33/33)
+    adv = (pr.get("advice") or "").strip().lower()
+    has_pred = bool((pH or pD or pA) and not adv.startswith("no prediction") and not (pH == pD == pA))
 
     if definitief:
         lus = api.lineups(fid)
@@ -66,7 +69,7 @@ def gather(fx, definitief=False):
         "hSlug": club_slug(homeId, homeN), "aSlug": club_slug(awayId, awayN),
         "compSlug": None, "compN": None,  # ingevuld door caller (league config)
         "dt": dt, "venue": venue, "city": city, "ronde": ronde, "definitief": definitief,
-        "pH": pH, "pD": pD, "pA": pA, "hForm": hForm, "aForm": aForm,
+        "pH": pH, "pD": pD, "pA": pA, "has_pred": has_pred, "hForm": hForm, "aForm": aForm,
         "hLU": hLU, "aLU": aLU, "hPrev": hPrev, "aPrev": aPrev,
         "hInj": api.injuries_team(homeId), "aInj": api.injuries_team(awayId),
         "h2h": h2h,
@@ -85,7 +88,7 @@ def build_fielddata(ctx, league_cfg, slug=None):
     ctx["compSlug"] = league_cfg["comp_slug"]; ctx["compN"] = league_cfg["naam"]
     dt = ctx["dt"]; definitief = ctx["definitief"]
     content, content2, content3 = B.build_content(ctx)
-    title = B.build_title(definitief, ctx["homeN"], ctx["awayN"], ctx["city"] or ctx["venue"] or "", ctx["pH"], ctx["pA"])
+    title = B.build_title(definitief, ctx["homeN"], ctx["awayN"], ctx["city"] or ctx["venue"] or "", ctx["pH"], ctx["pA"], ctx.get("has_pred", True))
     samenvatting = B.build_samenvatting(definitief, ctx["homeN"], ctx["awayN"], league_cfg["naam"], dt)
     if not slug:
         hs = ctx["hSlug"] or B.slugify(ctx["homeN"]); as_ = ctx["aSlug"] or B.slugify(ctx["awayN"])
