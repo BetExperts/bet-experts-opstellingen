@@ -44,7 +44,7 @@
   "1635697": {
     "item_id": "6aa1cda1935714de633398af",
     "slug": "opstelling-manchester-united-sabah-fk-10-09-2026",
-    "definitief": false,
+    "definitief": true,
     "match": "Manchester United - Sabah FA",
     "date": "2026-09-10",
     "league": "champions-league",
@@ -55,7 +55,7 @@
   "1635632": {
     "item_id": "6aa1cda6c90653abab725eb5",
     "slug": "opstelling-bayern-munchen-bodo-glimt-10-09-2026",
-    "definitief": false,
+    "definitief": true,
     "match": "Bayern München - Bodo/Glimt",
     "date": "2026-09-10",
     "league": "champions-league",
@@ -66,7 +66,7 @@
   "1635729": {
     "item_id": "6aa1cdaa26ebeef1d35be8b6",
     "slug": "opstelling-slavia-praha-lens-10-09-2026",
-    "definitief": false,
+    "definitief": true,
     "match": "Slavia Praha - Lens",
     "date": "2026-09-10",
     "league": "champions-league",
@@ -77,7 +77,7 @@
   "1635648": {
     "item_id": "6aa1cdaee118de5665202c43",
     "slug": "opstelling-como-rb-leipzig-10-09-2026",
-    "definitief": false,
+    "definitief": true,
     "match": "Como - RB Leipzig",
     "date": "2026-09-10",
     "league": "champions-league",
