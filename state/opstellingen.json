@@ -22,7 +22,7 @@
   "1635708": {
     "item_id": "6aa1cd99f73bd3d2ea13ad16",
     "slug": "opstelling-psv-shakhtar-donetsk-10-09-2026",
-    "definitief": false,
+    "definitief": true,
     "match": "PSV Eindhoven - Shakhtar Donetsk",
     "date": "2026-09-10",
     "league": "champions-league",
@@ -33,7 +33,7 @@
   "1635659": {
     "item_id": "6aa1cd9dc90653abab7259db",
     "slug": "opstelling-fenerbahce-as-roma-10-09-2026",
-    "definitief": false,
+    "definitief": true,
     "match": "Fenerbahçe - AS Roma",
     "date": "2026-09-10",
     "league": "champions-league",
