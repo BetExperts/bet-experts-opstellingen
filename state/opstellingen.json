@@ -183,5 +183,49 @@
     "comp_slug": "keuken-kampioen-divisie",
     "naam": "Keuken Kampioen Divisie",
     "comp_id": "65de4bc0a8777b9898d6374e"
+  },
+  "1552164": {
+    "item_id": "6aa442ec3b485edb71e85157",
+    "slug": "opstelling-go-ahead-eagles-fc-groningen-12-09-2026",
+    "definitief": false,
+    "match": "GO Ahead Eagles - Groningen",
+    "date": "2026-09-12",
+    "league": "eredivisie",
+    "comp_slug": "eredivisie",
+    "naam": "Eredivisie",
+    "comp_id": "65de2f987de877fdf6583d10"
+  },
+  "1552165": {
+    "item_id": "6aa442f05784370f34218432",
+    "slug": "opstelling-fortuna-sittard-ajax-12-09-2026",
+    "definitief": false,
+    "match": "Fortuna Sittard - Ajax",
+    "date": "2026-09-12",
+    "league": "eredivisie",
+    "comp_slug": "eredivisie",
+    "naam": "Eredivisie",
+    "comp_id": "65de2f987de877fdf6583d10"
+  },
+  "1552168": {
+    "item_id": "6aa442f5ac4351e79fc1f662",
+    "slug": "opstelling-sc-cambuur-nec-nijmegen-12-09-2026",
+    "definitief": false,
+    "match": "Cambuur - NEC Nijmegen",
+    "date": "2026-09-12",
+    "league": "eredivisie",
+    "comp_slug": "eredivisie",
+    "naam": "Eredivisie",
+    "comp_id": "65de2f987de877fdf6583d10"
+  },
+  "1551795": {
+    "item_id": "6aa442fb85bf7e0c14be36dc",
+    "slug": "opstelling-roda-jc-vitesse-12-09-2026",
+    "definitief": false,
+    "match": "Roda - Vitesse",
+    "date": "2026-09-12",
+    "league": "eerste-divisie",
+    "comp_slug": "keuken-kampioen-divisie",
+    "naam": "Keuken Kampioen Divisie",
+    "comp_id": "65de4bc0a8777b9898d6374e"
   }
 }
