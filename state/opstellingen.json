@@ -227,5 +227,60 @@
     "comp_slug": "keuken-kampioen-divisie",
     "naam": "Keuken Kampioen Divisie",
     "comp_id": "65de4bc0a8777b9898d6374e"
+  },
+  "1552167": {
+    "item_id": "6aa594728854efa1f1458d51",
+    "slug": "opstelling-excelsior-fc-utrecht-13-09-2026",
+    "definitief": false,
+    "match": "Excelsior - Utrecht",
+    "date": "2026-09-13",
+    "league": "eredivisie",
+    "comp_slug": "eredivisie",
+    "naam": "Eredivisie",
+    "comp_id": "65de2f987de877fdf6583d10"
+  },
+  "1552166": {
+    "item_id": "6aa59479cf23fb05d34d9004",
+    "slug": "opstelling-heerenveen-telstar-13-09-2026",
+    "definitief": false,
+    "match": "Heerenveen - Telstar",
+    "date": "2026-09-13",
+    "league": "eredivisie",
+    "comp_slug": "eredivisie",
+    "naam": "Eredivisie",
+    "comp_id": "65de2f987de877fdf6583d10"
+  },
+  "1552170": {
+    "item_id": "6aa5947f346f8d369a567b43",
+    "slug": "opstelling-pec-zwolle-feyenoord-13-09-2026",
+    "definitief": false,
+    "match": "PEC Zwolle - Feyenoord",
+    "date": "2026-09-13",
+    "league": "eredivisie",
+    "comp_slug": "eredivisie",
+    "naam": "Eredivisie",
+    "comp_id": "65de2f987de877fdf6583d10"
+  },
+  "1552169": {
+    "item_id": "6aa59483642a2ad332b06814",
+    "slug": "opstelling-psv-sparta-rotterdam-13-09-2026",
+    "definitief": false,
+    "match": "PSV Eindhoven - Sparta Rotterdam",
+    "date": "2026-09-13",
+    "league": "eredivisie",
+    "comp_slug": "eredivisie",
+    "naam": "Eredivisie",
+    "comp_id": "65de2f987de877fdf6583d10"
+  },
+  "1551796": {
+    "item_id": "6aa594885f5e745c5cdf42b1",
+    "slug": "opstelling-volendam-fc-den-bosch-13-09-2026",
+    "definitief": false,
+    "match": "FC Volendam - Den Bosch",
+    "date": "2026-09-13",
+    "league": "eerste-divisie",
+    "comp_slug": "keuken-kampioen-divisie",
+    "naam": "Keuken Kampioen Divisie",
+    "comp_id": "65de4bc0a8777b9898d6374e"
   }
 }
