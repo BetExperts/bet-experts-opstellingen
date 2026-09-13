@@ -253,7 +253,7 @@
   "1552170": {
     "item_id": "6aa5947f346f8d369a567b43",
     "slug": "opstelling-pec-zwolle-feyenoord-13-09-2026",
-    "definitief": false,
+    "definitief": true,
     "match": "PEC Zwolle - Feyenoord",
     "date": "2026-09-13",
     "league": "eredivisie",
@@ -275,7 +275,7 @@
   "1551796": {
     "item_id": "6aa594885f5e745c5cdf42b1",
     "slug": "opstelling-volendam-fc-den-bosch-13-09-2026",
-    "definitief": false,
+    "definitief": true,
     "match": "FC Volendam - Den Bosch",
     "date": "2026-09-13",
     "league": "eerste-divisie",
