@@ -304,5 +304,16 @@
     "comp_slug": "keuken-kampioen-divisie",
     "naam": "Keuken Kampioen Divisie",
     "comp_id": "65de4bc0a8777b9898d6374e"
+  },
+  "1552143": {
+    "item_id": "6aa8378a2f81ea969fab4dc5",
+    "slug": "opstelling-ajax-willem-2-15-09-2026",
+    "definitief": false,
+    "match": "Ajax - Willem II",
+    "date": "2026-09-15",
+    "league": "eredivisie",
+    "comp_slug": "eredivisie",
+    "naam": "Eredivisie",
+    "comp_id": "65de2f987de877fdf6583d10"
   }
 }
