@@ -147,6 +147,8 @@ def build_content(ctx):
     hSlug, aSlug = ctx["hSlug"], ctx["aSlug"]
     compSlug, compN = ctx["compSlug"], ctx["compN"]
     dt = ctx["dt"]; city = ctx["city"]; venue = ctx["venue"]; ronde = ctx["ronde"]
+    ronde_txt = ctx.get("ronde_txt") or f"Speelronde {ronde}"
+    ronde_intro = ctx.get("ronde_intro") or f"speelronde {ronde}"
     definitief = ctx["definitief"]
     pH,pD,pA = ctx["pH"],ctx["pD"],ctx["pA"]
     has_pred = ctx.get("has_pred", True)
@@ -173,11 +175,11 @@ def build_content(ctx):
     fav = homeN if pH>=pA else awayN
     c1.append(f'<p><a href="{HUB_PATH}">‹ Alle opstellingen</a></p>')
     c1.append(f"<p><strong>Op {datum} om {kickoff} uur ontvangt {hLink} in {esc(venue or city)} {aLink} "
-              f"in speelronde {ronde} van de {compLink}. Hieronder vind je de {kop} opstellingen van beide ploegen, "
+              f"in {ronde_intro} van de {compLink}. Hieronder vind je de {kop} opstellingen van beide ploegen, "
               f"de blessures en schorsingen, de recente vorm, de onderlinge duels en de winkansen volgens ons AI-model.</strong></p>")
     c1.append("<h3>📅 Wedstrijdinformatie</h3>")
     c1.append(f"<p><strong>Wedstrijd:</strong> {esc(homeN)} – {esc(awayN)}<br>"
-              f"<strong>Competitie:</strong> {esc(compN)} – Speelronde {ronde}<br>"
+              f"<strong>Competitie:</strong> {esc(compN)} – {esc(ronde_txt)}<br>"
               f"<strong>Datum:</strong> {datum}<br>"
               f"<strong>Aanvangstijd:</strong> {kickoff} uur<br>"
               f"<strong>Stadion:</strong> {esc(venue or city)}</p>")

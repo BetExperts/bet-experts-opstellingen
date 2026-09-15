@@ -315,5 +315,27 @@
     "comp_slug": "eredivisie",
     "naam": "Eredivisie",
     "comp_id": "65de2f987de877fdf6583d10"
+  },
+  "1635565": {
+    "item_id": "6aa9b7a66b6497d5a8911d42",
+    "slug": "opstelling-manchester-united-brighton-16-09-2026",
+    "definitief": false,
+    "match": "Manchester United - Brighton",
+    "date": "2026-09-16",
+    "league": "efl-cup",
+    "comp_slug": "efl-cup",
+    "naam": "EFL Cup",
+    "comp_id": "66cc403600c5cbae73af3c82"
+  },
+  "1635557": {
+    "item_id": "6aa9b7a972bc2c874858782e",
+    "slug": "opstelling-coventry-aston-villa-16-09-2026",
+    "definitief": false,
+    "match": "Coventry - Aston Villa",
+    "date": "2026-09-16",
+    "league": "efl-cup",
+    "comp_slug": "efl-cup",
+    "naam": "EFL Cup",
+    "comp_id": "66cc403600c5cbae73af3c82"
   }
 }

@@ -9,7 +9,7 @@ from datetime import datetime, timedelta
 import oa_api as api
 import oa_match as M
 import oa_build as B
-from oa_config import LEAGUES, BASE, WEBFLOW_TOKEN
+from oa_config import LEAGUES, BASE, WEBFLOW_TOKEN, is_topper
 import oa_webflow as WF
 
 def target_date(arg):
@@ -38,7 +38,9 @@ def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--date"); ap.add_argument("--dry", action="store_true")
     ap.add_argument("--preview", action="store_true"); ap.add_argument("--limit", type=int)
+    ap.add_argument("--league", help="alleen deze worker_slug verwerken (bv. efl-cup)")
     a = ap.parse_args()
+    leagues = [c for c in LEAGUES if (not a.league or c["worker_slug"] == a.league)]
     ymd = target_date(a.date)
     live = not (a.dry or a.preview)
     if live and not WEBFLOW_TOKEN:
@@ -47,11 +49,16 @@ def main():
     state = WF.load_state()
     print(f"== Genereren voor {ymd} | modus: {'LIVE' if live else ('PREVIEW' if a.preview else 'DRY')} ==")
     made = 0
-    for cfg in LEAGUES:
+    for cfg in leagues:
         resp = api.fixtures(cfg["worker_slug"])
         ups = (resp.get("upcoming") or [])
         day = [fx for fx in ups if match_on_date(fx, ymd)]
-        print(f"\n{cfg['naam']}: {len(day)} wedstrijd(en) op {ymd}")
+        if cfg.get("toppers_only"):
+            before = len(day)
+            day = [fx for fx in day if is_topper(fx, cfg)]
+            print(f"\n{cfg['naam']}: {len(day)} topper(s) op {ymd} (van {before} wedstrijden)")
+        else:
+            print(f"\n{cfg['naam']}: {len(day)} wedstrijd(en) op {ymd}")
         for fx in day:
             fid = str(fx.get("fixture", {}).get("id"))
             if fid in state:

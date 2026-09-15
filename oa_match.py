@@ -10,6 +10,24 @@ def _pct(s):
     try: return int(str(s).replace("%","").strip())
     except: return 0
 
+_ROUND_NL = {
+    "round of 64": "1/32 finale", "round of 32": "1/16 finale", "round of 16": "achtste finale",
+    "quarter-finals": "kwartfinale", "quarter finals": "kwartfinale",
+    "semi-finals": "halve finale", "semi finals": "halve finale",
+    "final": "finale", "3rd round": "3e ronde", "4th round": "4e ronde", "5th round": "5e ronde",
+}
+def _ronde_labels(round_raw, ronde_num):
+    """Retourneert (label, introzin) — league: 'Speelronde 6' / 'speelronde 6';
+    beker: '1/16 finale' / 'de 1/16 finale'."""
+    low = (round_raw or "").strip().lower()
+    if "regular season" in low or "matchday" in low or not low:
+        n = ronde_num if ronde_num != "?" else ""
+        return (f"Speelronde {n}".strip(), f"speelronde {n}".strip())
+    for k, v in _ROUND_NL.items():
+        if k in low:
+            return (v[0].upper() + v[1:], f"de {v}")
+    return (round_raw, f"de {round_raw}")
+
 def _team_lineup(team_id, exclude_fixture=None, want=2):
     """Haal de laatste 'want' opstellingen van een team op (recentste eerst)."""
     fixtures = api.team_form(team_id)
@@ -51,8 +69,10 @@ def gather(fx, definitief=False):
     dt = B._local(fixture.get("date"))
     ven = fixture.get("venue", {}) or {}
     venue = ven.get("name"); city = ven.get("city") or ""
-    m = re.search(r"(\d+)", league.get("round", "") or "")
+    round_raw = league.get("round", "") or ""
+    m = re.search(r"(\d+)", round_raw)
     ronde = m.group(1) if m else "?"
+    ronde_txt, ronde_intro = _ronde_labels(round_raw, ronde)
 
     pred = api.predictions(fid) or {}
     pr = pred.get("predictions", {}) or {}
@@ -88,7 +108,8 @@ def gather(fx, definitief=False):
         "fid": fid, "homeId": homeId, "awayId": awayId, "homeN": homeN, "awayN": awayN,
         "hSlug": club_slug(homeId, homeN), "aSlug": club_slug(awayId, awayN),
         "compSlug": None, "compN": None,  # ingevuld door caller (league config)
-        "dt": dt, "venue": venue, "city": city, "ronde": ronde, "definitief": definitief,
+        "dt": dt, "venue": venue, "city": city, "ronde": ronde,
+        "ronde_txt": ronde_txt, "ronde_intro": ronde_intro, "definitief": definitief,
         "pH": pH, "pD": pD, "pA": pA, "has_pred": has_pred, "hForm": hForm, "aForm": aForm,
         "hLU": hLU, "aLU": aLU, "hPrev": hPrev, "aPrev": aPrev,
         "hInj": api.injuries_team(homeId), "aInj": api.injuries_team(awayId),

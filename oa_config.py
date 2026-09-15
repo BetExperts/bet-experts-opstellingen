@@ -30,12 +30,27 @@ RETENTION_DAYS = 30
 # naam          = weergavenaam in de tekst
 # comp_id = item-id in de Competities-collectie (voor het referentieveld 'competitie',
 # waarop je op de hub kunt filteren/sorteren)
+# toppers_only : True = alleen wedstrijden met een 'groot team' (top_teams) krijgen een artikel
 LEAGUES = [
     {"worker_slug": "eredivisie",     "comp_slug": "eredivisie",              "naam": "Eredivisie",
      "comp_id": "65de2f987de877fdf6583d10"},
     {"worker_slug": "eerste-divisie", "comp_slug": "keuken-kampioen-divisie", "naam": "Keuken Kampioen Divisie",
      "comp_id": "65de4bc0a8777b9898d6374e"},
+    {"worker_slug": "efl-cup",        "comp_slug": "efl-cup",                 "naam": "EFL Cup",
+     "comp_id": "66cc403600c5cbae73af3c82", "toppers_only": True,
+     "top_teams": ["manchester city", "manchester united", "liverpool", "arsenal", "chelsea",
+                   "tottenham", "newcastle", "aston villa", "west ham"]},
 ]
+
+def is_topper(fx, cfg):
+    """True als de wedstrijd een 'topper' is (of als de competitie geen filter kent)."""
+    if not cfg.get("toppers_only"):
+        return True
+    tops = [t.lower() for t in cfg.get("top_teams", [])]
+    t = fx.get("teams", {})
+    names = ((t.get("home", {}) or {}).get("name", "") + " | " +
+             (t.get("away", {}) or {}).get("name", "")).lower()
+    return any(top in names for top in tops)
 
 # --- Data-mappings ---
 def _load(fn):
