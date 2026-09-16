@@ -337,5 +337,16 @@
     "comp_slug": "efl-cup",
     "naam": "EFL Cup",
     "comp_id": "66cc403600c5cbae73af3c82"
+  },
+  "1635564": {
+    "item_id": "6aaadab54a7cfdb222ef1478",
+    "slug": "opstelling-manchester-city-norwich-17-09-2026",
+    "definitief": false,
+    "match": "Manchester City - Norwich",
+    "date": "2026-09-17",
+    "league": "efl-cup",
+    "comp_slug": "efl-cup",
+    "naam": "EFL Cup",
+    "comp_id": "66cc403600c5cbae73af3c82"
   }
 }
