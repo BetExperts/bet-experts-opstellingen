@@ -348,5 +348,104 @@
     "comp_slug": "efl-cup",
     "naam": "EFL Cup",
     "comp_id": "66cc403600c5cbae73af3c82"
+  },
+  "1552173": {
+    "item_id": "6aac2c39cddb7434b8ce8231",
+    "slug": "opstelling-fc-groningen-pec-zwolle-18-09-2026",
+    "definitief": false,
+    "match": "Groningen - PEC Zwolle",
+    "date": "2026-09-18",
+    "league": "eredivisie",
+    "comp_slug": "eredivisie",
+    "naam": "Eredivisie",
+    "comp_id": "65de2f987de877fdf6583d10"
+  },
+  "1551804": {
+    "item_id": "6aac2c406f04699b6400f451",
+    "slug": "opstelling-rkc-waalwijk-mvv-18-09-2026",
+    "definitief": false,
+    "match": "Waalwijk - MVV",
+    "date": "2026-09-18",
+    "league": "eerste-divisie",
+    "comp_slug": "keuken-kampioen-divisie",
+    "naam": "Keuken Kampioen Divisie",
+    "comp_id": "65de4bc0a8777b9898d6374e"
+  },
+  "1551801": {
+    "item_id": "6aac2c45762f0496ca59a3d0",
+    "slug": "opstelling-jong-az-volendam-18-09-2026",
+    "definitief": false,
+    "match": "Jong AZ - FC Volendam",
+    "date": "2026-09-18",
+    "league": "eerste-divisie",
+    "comp_slug": "keuken-kampioen-divisie",
+    "naam": "Keuken Kampioen Divisie",
+    "comp_id": "65de4bc0a8777b9898d6374e"
+  },
+  "1551797": {
+    "item_id": "6aac2c4b076b5ee82e293514",
+    "slug": "opstelling-almere-city-heracles-almelo-18-09-2026",
+    "definitief": false,
+    "match": "Almere City FC - Heracles",
+    "date": "2026-09-18",
+    "league": "eerste-divisie",
+    "comp_slug": "keuken-kampioen-divisie",
+    "naam": "Keuken Kampioen Divisie",
+    "comp_id": "65de4bc0a8777b9898d6374e"
+  },
+  "1551798": {
+    "item_id": "6aac2c5038475795ada5d85d",
+    "slug": "opstelling-fc-den-bosch-helmond-sport-18-09-2026",
+    "definitief": false,
+    "match": "Den Bosch - Helmond Sport",
+    "date": "2026-09-18",
+    "league": "eerste-divisie",
+    "comp_slug": "keuken-kampioen-divisie",
+    "naam": "Keuken Kampioen Divisie",
+    "comp_id": "65de4bc0a8777b9898d6374e"
+  },
+  "1551799": {
+    "item_id": "6aac2c566f96c58306505e2a",
+    "slug": "opstelling-fc-eindhoven-fc-emmen-18-09-2026",
+    "definitief": false,
+    "match": "FC Eindhoven - Emmen",
+    "date": "2026-09-18",
+    "league": "eerste-divisie",
+    "comp_slug": "keuken-kampioen-divisie",
+    "naam": "Keuken Kampioen Divisie",
+    "comp_id": "65de4bc0a8777b9898d6374e"
+  },
+  "1551803": {
+    "item_id": "6aac2c5ae33627a9d7d5586d",
+    "slug": "opstelling-top-oss-fc-dordrecht-18-09-2026",
+    "definitief": false,
+    "match": "FC OSS - Dordrecht",
+    "date": "2026-09-18",
+    "league": "eerste-divisie",
+    "comp_slug": "keuken-kampioen-divisie",
+    "naam": "Keuken Kampioen Divisie",
+    "comp_id": "65de4bc0a8777b9898d6374e"
+  },
+  "1551800": {
+    "item_id": "6aac2c5e31b7cce7fe90b82f",
+    "slug": "opstelling-jong-ajax-roda-jc-18-09-2026",
+    "definitief": false,
+    "match": "Jong Ajax - Roda",
+    "date": "2026-09-18",
+    "league": "eerste-divisie",
+    "comp_slug": "keuken-kampioen-divisie",
+    "naam": "Keuken Kampioen Divisie",
+    "comp_id": "65de4bc0a8777b9898d6374e"
+  },
+  "1551802": {
+    "item_id": "6aac2c65ac376764c845bbc4",
+    "slug": "opstelling-jong-fc-utrecht-vvv-venlo-18-09-2026",
+    "definitief": false,
+    "match": "Jong Utrecht - VVV Venlo",
+    "date": "2026-09-18",
+    "league": "eerste-divisie",
+    "comp_slug": "keuken-kampioen-divisie",
+    "naam": "Keuken Kampioen Divisie",
+    "comp_id": "65de4bc0a8777b9898d6374e"
   }
 }
