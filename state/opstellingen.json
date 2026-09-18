@@ -447,5 +447,60 @@
     "comp_slug": "keuken-kampioen-divisie",
     "naam": "Keuken Kampioen Divisie",
     "comp_id": "65de4bc0a8777b9898d6374e"
+  },
+  "1552172": {
+    "item_id": "6aad7d7b71d66d31a3e18505",
+    "slug": "opstelling-ado-den-haag-sc-cambuur-19-09-2026",
+    "definitief": false,
+    "match": "ADO Den Haag - Cambuur",
+    "date": "2026-09-19",
+    "league": "eredivisie",
+    "comp_slug": "eredivisie",
+    "naam": "Eredivisie",
+    "comp_id": "65de2f987de877fdf6583d10"
+  },
+  "1552171": {
+    "item_id": "6aad7d807f3ea3ac79fa88f6",
+    "slug": "opstelling-sparta-rotterdam-heerenveen-19-09-2026",
+    "definitief": false,
+    "match": "Sparta Rotterdam - Heerenveen",
+    "date": "2026-09-19",
+    "league": "eredivisie",
+    "comp_slug": "eredivisie",
+    "naam": "Eredivisie",
+    "comp_id": "65de2f987de877fdf6583d10"
+  },
+  "1552174": {
+    "item_id": "6aad7d852fc9656dfd2cf5b0",
+    "slug": "opstelling-ajax-excelsior-19-09-2026",
+    "definitief": false,
+    "match": "Ajax - Excelsior",
+    "date": "2026-09-19",
+    "league": "eredivisie",
+    "comp_slug": "eredivisie",
+    "naam": "Eredivisie",
+    "comp_id": "65de2f987de877fdf6583d10"
+  },
+  "1552175": {
+    "item_id": "6aad7d8a2cbab44402827162",
+    "slug": "opstelling-willem-2-fortuna-sittard-19-09-2026",
+    "definitief": false,
+    "match": "Willem II - Fortuna Sittard",
+    "date": "2026-09-19",
+    "league": "eredivisie",
+    "comp_slug": "eredivisie",
+    "naam": "Eredivisie",
+    "comp_id": "65de2f987de877fdf6583d10"
+  },
+  "1551805": {
+    "item_id": "6aad7d907f3ea3ac79fa936d",
+    "slug": "opstelling-vitesse-jong-psv-19-09-2026",
+    "definitief": false,
+    "match": "Vitesse - Jong PSV U21",
+    "date": "2026-09-19",
+    "league": "eerste-divisie",
+    "comp_slug": "keuken-kampioen-divisie",
+    "naam": "Keuken Kampioen Divisie",
+    "comp_id": "65de4bc0a8777b9898d6374e"
   }
 }
