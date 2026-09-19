@@ -502,5 +502,60 @@
     "comp_slug": "keuken-kampioen-divisie",
     "naam": "Keuken Kampioen Divisie",
     "comp_id": "65de4bc0a8777b9898d6374e"
+  },
+  "1552176": {
+    "item_id": "6aaecf0062d80b703877be5b",
+    "slug": "opstelling-feyenoord-fc-utrecht-20-09-2026",
+    "definitief": false,
+    "match": "Feyenoord - Utrecht",
+    "date": "2026-09-20",
+    "league": "eredivisie",
+    "comp_slug": "eredivisie",
+    "naam": "Eredivisie",
+    "comp_id": "65de2f987de877fdf6583d10"
+  },
+  "1552177": {
+    "item_id": "6aaecf069b17b48fafbf82ab",
+    "slug": "opstelling-az-telstar-20-09-2026",
+    "definitief": false,
+    "match": "AZ Alkmaar - Telstar",
+    "date": "2026-09-20",
+    "league": "eredivisie",
+    "comp_slug": "eredivisie",
+    "naam": "Eredivisie",
+    "comp_id": "65de2f987de877fdf6583d10"
+  },
+  "1552179": {
+    "item_id": "6aaecf0f66c665dfa1eb7abe",
+    "slug": "opstelling-fc-twente-psv-20-09-2026",
+    "definitief": false,
+    "match": "Twente - PSV Eindhoven",
+    "date": "2026-09-20",
+    "league": "eredivisie",
+    "comp_slug": "eredivisie",
+    "naam": "Eredivisie",
+    "comp_id": "65de2f987de877fdf6583d10"
+  },
+  "1552178": {
+    "item_id": "6aaecf1862d80b703877c792",
+    "slug": "opstelling-nec-nijmegen-go-ahead-eagles-20-09-2026",
+    "definitief": false,
+    "match": "NEC Nijmegen - GO Ahead Eagles",
+    "date": "2026-09-20",
+    "league": "eredivisie",
+    "comp_slug": "eredivisie",
+    "naam": "Eredivisie",
+    "comp_id": "65de2f987de877fdf6583d10"
+  },
+  "1551806": {
+    "item_id": "6aaecf1b82690354643ee2c7",
+    "slug": "opstelling-de-graafschap-nac-breda-20-09-2026",
+    "definitief": false,
+    "match": "De Graafschap - NAC Breda",
+    "date": "2026-09-20",
+    "league": "eerste-divisie",
+    "comp_slug": "keuken-kampioen-divisie",
+    "naam": "Keuken Kampioen Divisie",
+    "comp_id": "65de4bc0a8777b9898d6374e"
   }
 }
