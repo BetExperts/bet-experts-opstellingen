@@ -451,7 +451,7 @@
   "1552172": {
     "item_id": "6aad7d7b71d66d31a3e18505",
     "slug": "opstelling-ado-den-haag-sc-cambuur-19-09-2026",
-    "definitief": false,
+    "definitief": true,
     "match": "ADO Den Haag - Cambuur",
     "date": "2026-09-19",
     "league": "eredivisie",
@@ -495,7 +495,7 @@
   "1551805": {
     "item_id": "6aad7d907f3ea3ac79fa936d",
     "slug": "opstelling-vitesse-jong-psv-19-09-2026",
-    "definitief": false,
+    "definitief": true,
     "match": "Vitesse - Jong PSV U21",
     "date": "2026-09-19",
     "league": "eerste-divisie",
