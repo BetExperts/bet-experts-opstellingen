@@ -539,7 +539,7 @@
   "1552178": {
     "item_id": "6aaecf1862d80b703877c792",
     "slug": "opstelling-nec-nijmegen-go-ahead-eagles-20-09-2026",
-    "definitief": false,
+    "definitief": true,
     "match": "NEC Nijmegen - GO Ahead Eagles",
     "date": "2026-09-20",
     "league": "eredivisie",
@@ -550,7 +550,7 @@
   "1551806": {
     "item_id": "6aaecf1b82690354643ee2c7",
     "slug": "opstelling-de-graafschap-nac-breda-20-09-2026",
-    "definitief": false,
+    "definitief": true,
     "match": "De Graafschap - NAC Breda",
     "date": "2026-09-20",
     "league": "eerste-divisie",
