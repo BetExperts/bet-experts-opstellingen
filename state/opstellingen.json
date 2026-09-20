@@ -517,7 +517,7 @@
   "1552177": {
     "item_id": "6aaecf069b17b48fafbf82ab",
     "slug": "opstelling-az-telstar-20-09-2026",
-    "definitief": false,
+    "definitief": true,
     "match": "AZ Alkmaar - Telstar",
     "date": "2026-09-20",
     "league": "eredivisie",
@@ -528,7 +528,7 @@
   "1552179": {
     "item_id": "6aaecf0f66c665dfa1eb7abe",
     "slug": "opstelling-fc-twente-psv-20-09-2026",
-    "definitief": false,
+    "definitief": true,
     "match": "Twente - PSV Eindhoven",
     "date": "2026-09-20",
     "league": "eredivisie",
