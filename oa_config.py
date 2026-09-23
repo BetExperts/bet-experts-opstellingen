@@ -40,6 +40,10 @@ LEAGUES = [
      "comp_id": "66cc403600c5cbae73af3c82", "toppers_only": True,
      "top_teams": ["manchester city", "manchester united", "liverpool", "arsenal", "chelsea",
                    "tottenham", "newcastle", "aston villa", "west ham"]},
+    # Nations League: alle wedstrijden (League A t/m D, ~8-10 per speeldag). Landnamen worden
+    # via data/landen_nl.json naar het Nederlands vertaald.
+    {"worker_slug": "nations-league", "comp_slug": "uefa-nations-league", "naam": "Nations League",
+     "comp_id": "66d5a7f7fb9f23ce90376ef4"},
 ]
 
 def is_topper(fx, cfg):
@@ -61,6 +65,11 @@ def _load(fn):
 
 TID_SLUG   = _load("tid_slug.json")            # API team-id -> website club-slug
 CLUB_NAME  = _load("club_name_slug_filled.json")  # clubnaam -> slug (gevulde clubs)
+LANDEN_NL  = _load("landen_nl.json")           # Engelse API-landnaam -> Nederlandse naam
+
+def nl_name(name):
+    """Vertaal een landenteam-naam naar het Nederlands (clubs blijven ongemoeid)."""
+    return LANDEN_NL.get(name, name)
 
 def club_slug(team_id, name=None):
     """Website-slug voor een club op basis van API team-id (val terug op naam)."""

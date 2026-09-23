@@ -3,7 +3,7 @@
 import re
 from datetime import datetime, timezone
 import oa_api as api
-from oa_config import club_slug, RUBRIEK_ID
+from oa_config import club_slug, RUBRIEK_ID, nl_name
 import oa_build as B
 
 def _pct(s):
@@ -23,6 +23,10 @@ def _ronde_labels(round_raw, ronde_num):
     if "regular season" in low or "matchday" in low or not low:
         n = ronde_num if ronde_num != "?" else ""
         return (f"Speelronde {n}".strip(), f"speelronde {n}".strip())
+    lg = re.match(r"league\s+([a-d])\s*-\s*(\d+)", low)          # Nations League: 'League A - 1'
+    if lg:
+        L, n = lg.group(1).upper(), lg.group(2)
+        return (f"League {L}, speelronde {n}", f"speelronde {n} van League {L}")
     for k, v in _ROUND_NL.items():
         if k in low:
             return (v[0].upper() + v[1:], f"de {v}")
@@ -65,12 +69,12 @@ def gather(fx, definitief=False):
     fid = fixture.get("id")
     home = teams.get("home", {}); away = teams.get("away", {})
     homeId, awayId = home.get("id"), away.get("id")
-    homeN, awayN = home.get("name"), away.get("name")
+    homeN, awayN = nl_name(home.get("name")), nl_name(away.get("name"))   # landen -> Nederlands
     dt = B._local(fixture.get("date"))
     ven = fixture.get("venue", {}) or {}
     venue = ven.get("name"); city = ven.get("city") or ""
     round_raw = league.get("round", "") or ""
-    m = re.search(r"(\d+)", round_raw)
+    m = re.search(r"(\d+)\s*$", round_raw) or re.search(r"(\d+)", round_raw)
     ronde = m.group(1) if m else "?"
     ronde_txt, ronde_intro = _ronde_labels(round_raw, ronde)
 

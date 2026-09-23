@@ -9,7 +9,7 @@ try:
     TZ = ZoneInfo("Europe/Amsterdam")
 except Exception:
     TZ = None
-from oa_config import club_slug, reason_nl, HUB_PATH
+from oa_config import club_slug, reason_nl, HUB_PATH, nl_name
 
 DAGEN = ["maandag","dinsdag","woensdag","donderdag","vrijdag","zaterdag","zondag"]
 MAAND = ["januari","februari","maart","april","mei","juni","juli","augustus",
@@ -174,7 +174,9 @@ def build_content(ctx):
     c1 = []
     fav = homeN if pH>=pA else awayN
     c1.append(f'<p><a href="{HUB_PATH}">‹ Alle opstellingen</a></p>')
-    c1.append(f"<p><strong>Op {datum} om {kickoff} uur ontvangt {hLink} in {esc(venue or city)} {aLink} "
+    plek = venue or city   # bij interlands levert de API vaak geen stadion
+    waar = f" in {esc(plek)}" if plek else ""
+    c1.append(f"<p><strong>Op {datum} om {kickoff} uur ontvangt {hLink}{waar} {aLink} "
               f"in {ronde_intro} van de {compLink}. Hieronder vind je de {kop} opstellingen van beide ploegen, "
               f"de blessures en schorsingen, de recente vorm, de onderlinge duels en de winkansen volgens ons AI-model.</strong></p>")
     c1.append("<h3>📅 Wedstrijdinformatie</h3>")
@@ -182,7 +184,7 @@ def build_content(ctx):
               f"<strong>Competitie:</strong> {esc(compN)} – {esc(ronde_txt)}<br>"
               f"<strong>Datum:</strong> {datum}<br>"
               f"<strong>Aanvangstijd:</strong> {kickoff} uur<br>"
-              f"<strong>Stadion:</strong> {esc(venue or city)}</p>")
+              f"<strong>Stadion:</strong> {esc(plek or 'n.n.b.')}</p>")
     # thuisploeg opstelling
     c1.append(_lineup_block(homeN, hLU, hPrev, definitief, kickoff, flip, is_home=True))
     content = "\n".join(c1)
@@ -238,7 +240,7 @@ def _lineup_block(team, lu, prev, definitief, kickoff, flip, is_home):
         if not definitief:
             h.append(f"<p>{rotation_note(lu, prev, team)}</p>")
             h.append(f"👉 <strong>De definitieve opstelling van {esc(team)} volgt ongeveer één uur voor de aftrap "
-                     f"(rond {flip} uur)</strong> en wordt hier automatisch bijgewerkt zodra de club die bevestigt.")
+                     f"(rond {flip} uur)</strong> en wordt hier automatisch bijgewerkt zodra die officieel bekend is.")
             h[-1] = "<p>"+h[-1]+"</p>"
     else:
         h.append(f"<p>De opstelling van <strong>{esc(team)}</strong> is nog niet bekend. Deze wordt hier bijgewerkt "
@@ -262,7 +264,8 @@ def _h2h_line(m):
         y,mo,d = dt.split("-"); dts=f"{int(d)} {MAAND[int(mo)-1]} {y}"
     except Exception:
         dts=dt
-    return f"{dts}: {t.get('home',{}).get('name')} {g.get('home')}-{g.get('away')} {t.get('away',{}).get('name')}"
+    return (f"{dts}: {nl_name(t.get('home',{}).get('name'))} {g.get('home')}-{g.get('away')} "
+            f"{nl_name(t.get('away',{}).get('name'))}")
 
 def _model_zin(homeN, awayN, pH,pD,pA):
     if abs(pH-pA)<=12:
