@@ -557,5 +557,16 @@
     "comp_slug": "keuken-kampioen-divisie",
     "naam": "Keuken Kampioen Divisie",
     "comp_id": "65de4bc0a8777b9898d6374e"
+  },
+  "1545826": {
+    "item_id": "6ab3ab8c95d9a96a28738614",
+    "slug": "opstelling-marokko-gabon-25-09-2026",
+    "definitief": false,
+    "match": "Marokko - Gabon",
+    "date": "2026-09-25",
+    "league": "afrika-cup-kwalificatie",
+    "comp_slug": "afrika-cup-of-nations",
+    "naam": "Afrika Cup-kwalificatie",
+    "comp_id": "6926ce5a5247b7619744eb7c"
   }
 }

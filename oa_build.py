@@ -76,7 +76,7 @@ def injuries_sentence(team, inj_list):
             seen.add(nm); out.append(f"{esc(nm)} ({esc(reason_nl(rs))})")
     if not out:
         return f"<strong>{esc(team)}:</strong> geen bekende afwezigen — de trainer kan uit een fitte selectie kiezen."
-    return f"<strong>{esc(team)}:</strong> " + ", ".join(out[:8]) + " ontbreken."
+    return f"<strong>{esc(team)}:</strong> " + ", ".join(out[:8]) + (" ontbreekt." if len(out[:8]) == 1 else " ontbreken.")
 
 # ---------- titel + samenvatting ----------
 def _hook(homeN, awayN, city, pH, pA, has_pred=True):
@@ -276,16 +276,21 @@ def _model_zin(homeN, awayN, pH,pD,pA):
 
 def _faq(homeN, awayN, hLU, aLU, definitief, kickoff, flip, datum, pH,pD,pA, has_pred=True):
     fav = homeN if pH>=pA else awayN; favp = max(pH,pA)
-    hf = formation(hLU) if hLU else "4-3-3"; af = formation(aLU) if aLU else "4-3-3"
+    # formatie alleen noemen als de API die kent (geen gok)
+    hf = formation(hLU) if hLU else ""; af = formation(aLU) if aLU else ""
+    vervolg = ("De opstelling is bevestigd en hierboven te zien." if definitief else
+               f"De definitieve opstelling wordt ongeveer een uur voor de aftrap van {kickoff} uur bevestigd en hier direct bijgewerkt.")
     q = []
     q.append((f"Wat is de {'definitieve' if definitief else 'vermoedelijke'} opstelling van {homeN} tegen {awayN}?",
-              f"{homeN} speelt {'in' if definitief else 'vermoedelijk in'} een {hf}. "
-              + ("De opstelling is bevestigd en hierboven te zien." if definitief else
-                 f"De definitieve opstelling wordt ongeveer een uur voor de aftrap van {kickoff} uur bevestigd en hier direct bijgewerkt.")))
+              (f"{homeN} speelt {'in' if definitief else 'vermoedelijk in'} een {hf}. " if hf else
+               f"De {'definitieve' if definitief else 'vermoedelijke'} elf van {homeN} staat hierboven. ") + vervolg))
     q.append((f"Wanneer is de definitieve opstelling van {homeN} – {awayN} bekend?",
               f"Doorgaans ongeveer 60 minuten voor de aftrap, dus rond {flip} uur op {datum}."))
     q.append((f"In welke formatie speelt {awayN}?",
-              f"{awayN} speelde de laatste wedstrijden in een {af} en treedt naar verwachting ook nu in die formatie aan."))
+              f"{awayN} speelde de laatste wedstrijden in een {af} en treedt naar verwachting ook nu in die formatie aan."
+              if af else
+              f"De formatie van {awayN} is vooraf nog niet bekend; die wordt duidelijk zodra de opstelling "
+              f"ongeveer een uur voor de aftrap bevestigd is."))
     if has_pred:
         q.append((f"Wie is de favoriet bij {homeN} – {awayN}?",
                   f"Volgens het AI-model is {fav} favoriet met {favp}% winkans. {homeN}: {pH}%, gelijkspel: {pD}%, {awayN}: {pA}%."))

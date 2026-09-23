@@ -44,6 +44,10 @@ LEAGUES = [
     # via data/landen_nl.json naar het Nederlands vertaald.
     {"worker_slug": "nations-league", "comp_slug": "uefa-nations-league", "naam": "Nations League",
      "comp_id": "66d5a7f7fb9f23ce90376ef4"},
+    # Afrika Cup-kwalificatie: alleen Marokko (grote Marokkaanse doelgroep in NL)
+    {"worker_slug": "afrika-cup-kwalificatie", "comp_slug": "afrika-cup-of-nations",
+     "naam": "Afrika Cup-kwalificatie", "comp_id": "6926ce5a5247b7619744eb7c",
+     "toppers_only": True, "top_teams": ["morocco"]},
 ]
 
 def is_topper(fx, cfg):

@@ -27,6 +27,9 @@ def _ronde_labels(round_raw, ronde_num):
     if lg:
         L, n = lg.group(1).upper(), lg.group(2)
         return (f"League {L}, speelronde {n}", f"speelronde {n} van League {L}")
+    gs = re.match(r"group stage\s*-\s*(\d+)", low)               # kwalificatie: 'Group Stage - 1'
+    if gs:
+        return (f"Groepsfase, speelronde {gs.group(1)}", f"speelronde {gs.group(1)} van de groepsfase")
     for k, v in _ROUND_NL.items():
         if k in low:
             return (v[0].upper() + v[1:], f"de {v}")
@@ -92,7 +95,9 @@ def gather(fx, definitief=False):
     h2h = pred.get("h2h") or api.h2h(homeId, awayId)
     # betrouwbare voorspelling? (API geeft soms "No predictions available" + 33/33/33)
     adv = (pr.get("advice") or "").strip().lower()
-    has_pred = bool((pH or pD or pA) and not adv.startswith("no prediction") and not (pH == pD == pA))
+    # een uitkomst op 0% (bv. 50/50/0) is een kapotte API-voorspelling -> niet tonen
+    has_pred = bool((pH or pD or pA) and not adv.startswith("no prediction") and not (pH == pD == pA)
+                    and 0 not in (pH, pD, pA))
 
     if definitief:
         lus = api.lineups(fid)
