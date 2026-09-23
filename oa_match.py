@@ -5,6 +5,9 @@ from datetime import datetime, timezone
 import oa_api as api
 from oa_config import club_slug, RUBRIEK_ID, nl_name
 import oa_build as B
+from tvgids import TvGids
+
+_GIDS = TvGids()   # waaroptv.nl — één keer laden per run (generate én finalize)
 
 def _pct(s):
     try: return int(str(s).replace("%","").strip())
@@ -123,6 +126,7 @@ def gather(fx, definitief=False):
         "hLU": hLU, "aLU": aLU, "hPrev": hPrev, "aPrev": aPrev,
         "hInj": api.injuries_team(homeId), "aInj": api.injuries_team(awayId),
         "h2h": h2h,
+        "tvgids": _GIDS.lookup(homeN, awayN, dt),   # exacte zender (of None -> geen tv-regel)
     }
 
 def has_confirmed_lineups(fid):

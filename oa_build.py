@@ -169,6 +169,7 @@ def build_content(ctx):
 
     lbl = "De bevestigde" if definitief else "De vermoedelijke"
     kop = "bevestigde" if definitief else "vermoedelijke"
+    tv_kort, tv_faq = tv_info(ctx.get("tvgids"), homeN, awayN)
 
     # ---- CONTENT (deel 1/3): intro + info + thuisploeg-opstelling ----
     c1 = []
@@ -184,7 +185,9 @@ def build_content(ctx):
               f"<strong>Competitie:</strong> {esc(compN)} – {esc(ronde_txt)}<br>"
               f"<strong>Datum:</strong> {datum}<br>"
               f"<strong>Aanvangstijd:</strong> {kickoff} uur<br>"
-              f"<strong>Stadion:</strong> {esc(plek or 'n.n.b.')}</p>")
+              f"<strong>Stadion:</strong> {esc(plek or 'n.n.b.')}"
+              + (f"<br><strong>{tv_kort[0]}:</strong> {esc(tv_kort[1])}" if tv_kort else "")
+              + "</p>")
     # thuisploeg opstelling
     c1.append(_lineup_block(homeN, hLU, hPrev, definitief, kickoff, flip, is_home=True))
     content = "\n".join(c1)
@@ -225,7 +228,7 @@ def build_content(ctx):
         c3.append("<p>Voor dit duel is er nog geen betrouwbare modelvoorspelling beschikbaar. "
                   "Zodra de winkansen bekend zijn, werken we ze hier bij.</p>")
     c3.append("<h3>❓ Veelgestelde vragen</h3>")
-    c3.append(_faq(homeN, awayN, hLU, aLU, definitief, kickoff, flip, datum, pH, pD, pA, has_pred))
+    c3.append(_faq(homeN, awayN, hLU, aLU, definitief, kickoff, flip, datum, pH, pD, pA, has_pred, tv_faq))
     c3.append(f'<p>👉 <a href="{HUB_PATH}"><strong>Bekijk alle vermoedelijke en definitieve opstellingen van vandaag</strong></a></p>')
     content3 = "\n".join(c3)
 
@@ -274,7 +277,27 @@ def _model_zin(homeN, awayN, pH,pD,pA):
     fav = homeN if pH>=pA else awayN
     return f"Het model wijst {esc(fav)} aan als favoriet, maar rekent op een pittige wedstrijd."
 
-def _faq(homeN, awayN, hLU, aLU, definitief, kickoff, flip, datum, pH,pD,pA, has_pred=True):
+def tv_info(card, homeN, awayN):
+    """Uit een waaroptv-kaart: (infoblok-regel (label, waarde), FAQ (vraag, antwoord)) of (None, None)."""
+    if not card:
+        return None, None
+    tv = card.get("tv") or []; bm = card.get("bookmakers") or []
+    vraag = f"Op welke zender is {homeN} – {awayN} te zien?"
+    if tv:
+        zender = " en ".join(tv)
+        npo = all(z.upper().startswith("NPO") for z in tv)
+        extra = (" (gratis)" if npo else " (basispakket)") if card.get("gratis") else ""
+        antw = f"{homeN} – {awayN} is in Nederland live te zien op {zender}"
+        antw += (". De wedstrijd is gratis te zien, ook online via NPO Start." if npo and card.get("gratis") else
+                 ", dat in het basispakket van de meeste tv-aanbieders zit." if card.get("gratis") else ".")
+        return ("Live op tv", zender + extra), (vraag, antw)
+    if bm:
+        stream = " en ".join(bm)
+        return (("Livestream", stream),
+                (vraag, f"{homeN} – {awayN} is niet op de Nederlandse tv te zien, maar wel live te streamen bij {stream}."))
+    return None, None
+
+def _faq(homeN, awayN, hLU, aLU, definitief, kickoff, flip, datum, pH,pD,pA, has_pred=True, tv_faq=None):
     fav = homeN if pH>=pA else awayN; favp = max(pH,pA)
     # formatie alleen noemen als de API die kent (geen gok)
     hf = formation(hLU) if hLU else ""; af = formation(aLU) if aLU else ""
@@ -294,6 +317,8 @@ def _faq(homeN, awayN, hLU, aLU, definitief, kickoff, flip, datum, pH,pD,pA, has
     if has_pred:
         q.append((f"Wie is de favoriet bij {homeN} – {awayN}?",
                   f"Volgens het AI-model is {fav} favoriet met {favp}% winkans. {homeN}: {pH}%, gelijkspel: {pD}%, {awayN}: {pA}%."))
+    if tv_faq:
+        q.append(tv_faq)
     out = []
     for question, ans in q:
         out.append(f"<p><strong>{esc(question)}</strong><br>{esc(ans)}</p>")
