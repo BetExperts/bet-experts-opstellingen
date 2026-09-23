@@ -568,5 +568,93 @@
     "comp_slug": "afrika-cup-of-nations",
     "naam": "Afrika Cup-kwalificatie",
     "comp_id": "6926ce5a5247b7619744eb7c"
+  },
+  "1545601": {
+    "item_id": "6ab41540371750d91fcf92cb",
+    "slug": "opstelling-andorra-malta-24-09-2026",
+    "definitief": false,
+    "match": "Andorra - Malta",
+    "date": "2026-09-24",
+    "league": "nations-league",
+    "comp_slug": "uefa-nations-league",
+    "naam": "Nations League",
+    "comp_id": "66d5a7f7fb9f23ce90376ef4"
+  },
+  "1528863": {
+    "item_id": "6ab4154467600adf1a56e42c",
+    "slug": "opstelling-servie-griekenland-24-09-2026",
+    "definitief": false,
+    "match": "Servië - Griekenland",
+    "date": "2026-09-24",
+    "league": "nations-league",
+    "comp_slug": "uefa-nations-league",
+    "naam": "Nations League",
+    "comp_id": "66d5a7f7fb9f23ce90376ef4"
+  },
+  "1528864": {
+    "item_id": "6ab4154968370d3c62e7df74",
+    "slug": "opstelling-portugal-wales-24-09-2026",
+    "definitief": false,
+    "match": "Portugal - Wales",
+    "date": "2026-09-24",
+    "league": "nations-league",
+    "comp_slug": "uefa-nations-league",
+    "naam": "Nations League",
+    "comp_id": "66d5a7f7fb9f23ce90376ef4"
+  },
+  "1528878": {
+    "item_id": "6ab4154d7c1f1f7edf9bd6aa",
+    "slug": "opstelling-oostenrijk-israel-24-09-2026",
+    "definitief": false,
+    "match": "Oostenrijk - Israël",
+    "date": "2026-09-24",
+    "league": "nations-league",
+    "comp_slug": "uefa-nations-league",
+    "naam": "Nations League",
+    "comp_id": "66d5a7f7fb9f23ce90376ef4"
+  },
+  "1528865": {
+    "item_id": "6ab4155351d29beded66e8c5",
+    "slug": "opstelling-noorwegen-denemarken-24-09-2026",
+    "definitief": false,
+    "match": "Noorwegen - Denemarken",
+    "date": "2026-09-24",
+    "league": "nations-league",
+    "comp_slug": "uefa-nations-league",
+    "naam": "Nations League",
+    "comp_id": "66d5a7f7fb9f23ce90376ef4"
+  },
+  "1528880": {
+    "item_id": "6ab4155826be1a3df411e2f7",
+    "slug": "opstelling-liechtenstein-litouwen-24-09-2026",
+    "definitief": false,
+    "match": "Liechtenstein - Litouwen",
+    "date": "2026-09-24",
+    "league": "nations-league",
+    "comp_slug": "uefa-nations-league",
+    "naam": "Nations League",
+    "comp_id": "66d5a7f7fb9f23ce90376ef4"
+  },
+  "1528879": {
+    "item_id": "6ab4155df3bb91b59d61c8c4",
+    "slug": "opstelling-kosovo-ierland-24-09-2026",
+    "definitief": false,
+    "match": "Kosovo - Ierland",
+    "date": "2026-09-24",
+    "league": "nations-league",
+    "comp_slug": "uefa-nations-league",
+    "naam": "Nations League",
+    "comp_id": "66d5a7f7fb9f23ce90376ef4"
+  },
+  "1528862": {
+    "item_id": "6ab415617c1f1f7edf9be0b2",
+    "slug": "opstelling-nederland-duitsland-24-09-2026",
+    "definitief": false,
+    "match": "Nederland - Duitsland",
+    "date": "2026-09-24",
+    "league": "nations-league",
+    "comp_slug": "uefa-nations-league",
+    "naam": "Nations League",
+    "comp_id": "66d5a7f7fb9f23ce90376ef4"
   }
 }
