@@ -140,6 +140,7 @@ def build_fielddata(ctx, league_cfg, slug=None):
     random.seed(str(ctx["fid"]))   # deterministische titel-hook per wedstrijd
     ctx = dict(ctx)
     ctx["compSlug"] = league_cfg["comp_slug"]; ctx["compN"] = league_cfg["naam"]
+    ctx["vriendschappelijk"] = league_cfg.get("vriendschappelijk", False)
     dt = ctx["dt"]; definitief = ctx["definitief"]
     content, content2, content3 = B.build_content(ctx)
     title = B.build_title(definitief, ctx["homeN"], ctx["awayN"], ctx["city"] or ctx["venue"] or "", ctx["pH"], ctx["pA"], ctx.get("has_pred", True))

@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 """Configuratie voor de opstellingen-agent."""
-import os, json
+import os, json, re
 
 BASE = os.path.dirname(os.path.abspath(__file__))
 DATA = os.path.join(BASE, "data")
@@ -48,6 +48,9 @@ LEAGUES = [
     {"worker_slug": "afrika-cup-kwalificatie", "comp_slug": "afrika-cup-of-nations",
      "naam": "Afrika Cup-kwalificatie", "comp_id": "6926ce5a5247b7619744eb7c",
      "toppers_only": True, "top_teams": ["morocco"]},
+    # Oefeninterlands: alleen op verzoek (manual_only), via --league friendlies --fixture <id>
+    {"worker_slug": "friendlies", "comp_slug": "int-vriendschappelijke-wedstrijden", "naam": "oefeninterland",
+     "comp_id": "65f9b20c402bb844e2ad0bf4", "manual_only": True, "vriendschappelijk": True},
 ]
 
 def is_topper(fx, cfg):
@@ -95,6 +98,17 @@ REASON_NL = {
     "Inactive": "niet inzetbaar", "Injury": "blessure", "Coach's decision": "keuze trainer",
     "National selection": "interlandverplichting", "Rest": "rust",
 }
+_REASON_KW = [("hamstring", "hamstringblessure"), ("ankle", "enkelblessure"), ("knee", "knieblessure"),
+               ("calf", "kuitblessure"), ("thigh", "dijblessure"), ("groin", "liesblessure"), ("achilles", "achillespeesblessure"),
+               ("foot", "voetblessure"), ("toe", "teenblessure"), ("back", "rugblessure"), ("shoulder", "schouderblessure"),
+               ("hip", "heupblessure"), ("concussion", "hersenschudding"), ("head", "hoofdblessure"), ("wrist", "polsblessure"),
+               ("hand", "handblessure"), ("muscle", "spierblessure"), ("ill", "ziekte"), ("sick", "ziekte"),
+               ("suspen", "schorsing"), ("red card", "schorsing (rode kaart)"), ("yellow", "schorsing (gele kaarten)")]
 def reason_nl(r):
     if not r: return "blessure"
-    return REASON_NL.get(r, r.lower())
+    if r in REASON_NL: return REASON_NL[r]
+    low = r.lower()
+    for kw, nl in _REASON_KW:
+        if kw in low:
+            return nl
+    return "blessure" if re.search(r"[a-z]", low) and not re.search(r"blessure|ziek|schors", low) else low

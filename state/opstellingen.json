@@ -755,5 +755,18 @@
     "comp_slug": "uefa-nations-league",
     "naam": "Nations League",
     "comp_id": "66d5a7f7fb9f23ce90376ef4"
+  },
+  "1583655": {
+    "item_id": "6ab58309379ade7d0da1d514",
+    "slug": "opstelling-australie-brazilie-25-09-2026",
+    "definitief": false,
+    "match": "Australië - Brazilië",
+    "date": "2026-09-25",
+    "league": "friendlies",
+    "comp_slug": "int-vriendschappelijke-wedstrijden",
+    "naam": "oefeninterland",
+    "comp_id": "65f9b20c402bb844e2ad0bf4",
+    "stream": "Bet365",
+    "vriendschappelijk": true
   }
 }

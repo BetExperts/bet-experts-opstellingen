@@ -50,12 +50,20 @@ def formation(lu): return lu.get("formation") or ""
 def _xi_names(lu):
     return set((pp.get("player") or {}).get("name","") for pp in _players(lu))
 
-def rotation_note(last, prev, team):
-    """Detecteert wisselingen tussen de laatste twee opstellingen -> positiestrijd-zin."""
+def rotation_note(last, prev, team, absent=None):
+    """Detecteert wisselingen tussen de laatste twee opstellingen -> positiestrijd-zin.
+    Spelers die nu geblesseerd/geschorst zijn tellen niet mee als 'concurrent'."""
     if not last or not prev: return ""
     a, b = _xi_names(last), _xi_names(prev)
+    import unicodedata
+    fold = lambda x: unicodedata.normalize("NFKD", x).encode("ascii", "ignore").decode().lower().strip()
+    absent = {fold(x) for x in (absent or set()) if x}
     nieuw = [n for n in a - b if n]
-    eruit = [n for n in b - a if n]
+    weg_absent = [n for n in b - a if n and fold(n) in absent]
+    eruit = [n for n in b - a if n and fold(n) not in absent]
+    if len(nieuw) == 1 and not eruit and weg_absent:
+        return (f"Bij {team} lijkt <strong>{esc(nieuw[0])}</strong> zijn plek te houden, want "
+                f"<strong>{esc(weg_absent[0])}</strong> ontbreekt door een blessure of schorsing.")
     if not nieuw:
         return (f"{team} koos in de laatste twee wedstrijden vrijwel dezelfde basiself — "
                 f"veel verrassingen zijn niet te verwachten.")
@@ -178,23 +186,25 @@ def build_content(ctx):
     plek = venue or city   # bij interlands levert de API vaak geen stadion
     waar = f" in {esc(plek)}" if plek else ""
     c1.append(f"<p><strong>Op {datum} om {kickoff} uur ontvangt {hLink}{waar} {aLink} "
-              f"in {ronde_intro} van de {compLink}. Hieronder vind je de {kop} opstellingen van beide ploegen, "
+              + (f"in een {compLink}. " if ctx.get("vriendschappelijk") else f"in {ronde_intro} van de {compLink}. ")
+              + f"Hieronder vind je de {kop} opstellingen van beide ploegen, "
               f"de blessures en schorsingen, de recente vorm, de onderlinge duels en de winkansen volgens ons AI-model.</strong></p>")
     c1.append("<h3>📅 Wedstrijdinformatie</h3>")
     c1.append(f"<p><strong>Wedstrijd:</strong> {esc(homeN)} – {esc(awayN)}<br>"
-              f"<strong>Competitie:</strong> {esc(compN)} – {esc(ronde_txt)}<br>"
-              f"<strong>Datum:</strong> {datum}<br>"
+              + (f"<strong>Competitie:</strong> {esc(compN[:1].upper() + compN[1:])}<br>" if ctx.get("vriendschappelijk")
+                 else f"<strong>Competitie:</strong> {esc(compN)} – {esc(ronde_txt)}<br>")
+              + f"<strong>Datum:</strong> {datum}<br>"
               f"<strong>Aanvangstijd:</strong> {kickoff} uur<br>"
               f"<strong>Stadion:</strong> {esc(plek or 'n.n.b.')}"
               + (f"<br><strong>{tv_kort[0]}:</strong> {esc(tv_kort[1])}" if tv_kort else "")
               + "</p>")
     # thuisploeg opstelling
-    c1.append(_lineup_block(homeN, hLU, hPrev, definitief, kickoff, flip, is_home=True))
+    c1.append(_lineup_block(homeN, hLU, hPrev, definitief, kickoff, flip, is_home=True, absent={(i.get('player') or {}).get('name','') for i in (hInj or [])}))
     content = "\n".join(c1)
 
     # ---- CONTENT-2 (deel 2/3): uitploeg-opstelling + blessures + vorm ----
     c2 = []
-    c2.append(_lineup_block(awayN, aLU, aPrev, definitief, kickoff, flip, is_home=False))
+    c2.append(_lineup_block(awayN, aLU, aPrev, definitief, kickoff, flip, is_home=False, absent={(i.get('player') or {}).get('name','') for i in (aInj or [])}))
     c2.append("<h3>🩺 Blessures &amp; schorsingen</h3>")
     c2.append("<p>De trainers moeten rekening houden met de volgende afwezigen:</p>")
     c2.append("<ul><li>"+injuries_sentence(homeN, hInj)+"</li><li>"+injuries_sentence(awayN, aInj)+"</li></ul>")
@@ -234,14 +244,14 @@ def build_content(ctx):
 
     return content, content2, content3
 
-def _lineup_block(team, lu, prev, definitief, kickoff, flip, is_home):
+def _lineup_block(team, lu, prev, definitief, kickoff, flip, is_home, absent=None):
     emoji = "🏟️" if is_home else "🚌"
     h = [f"<h3>{emoji} {'Bevestigde' if definitief else 'Vermoedelijke'} opstelling {esc(team)}"
          + (f" ({esc(formation(lu))})" if lu and formation(lu) else "") + "</h3>"]
     if lu and _players(lu):
         h.append(f"<p><strong>{'Bevestigde' if definitief else 'Vermoedelijke'} elf:</strong> {xi_line(lu)}.</p>")
         if not definitief:
-            h.append(f"<p>{rotation_note(lu, prev, team)}</p>")
+            h.append(f"<p>{rotation_note(lu, prev, team, absent)}</p>")
             h.append(f"👉 <strong>De definitieve opstelling van {esc(team)} volgt ongeveer één uur voor de aftrap "
                      f"(rond {flip} uur)</strong> en wordt hier automatisch bijgewerkt zodra die officieel bekend is.")
             h[-1] = "<p>"+h[-1]+"</p>"

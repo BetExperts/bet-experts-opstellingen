@@ -38,8 +38,10 @@ def main():
             cfg = {"worker_slug": e.get("league", ""),
                    "comp_slug": e.get("comp_slug", "eredivisie"),
                    "naam": e.get("naam", "Eredivisie"),
-                   "comp_id": e.get("comp_id")}
+                   "comp_id": e.get("comp_id"), "vriendschappelijk": e.get("vriendschappelijk", False)}
         ctx = M.gather(fx, definitief=True)
+        if e.get("stream"):
+            ctx["tvgids"] = {"tv": [], "bookmakers": [e["stream"]], "gratis": False}
         fd, slug, title = M.build_fielddata(ctx, cfg, slug=e["slug"])  # slug BLIJFT gelijk
         if a.dry:
             print(f"  ○ zou flippen -> {title}")

@@ -39,8 +39,11 @@ def main():
     ap.add_argument("--date"); ap.add_argument("--dry", action="store_true")
     ap.add_argument("--preview", action="store_true"); ap.add_argument("--limit", type=int)
     ap.add_argument("--league", help="alleen deze worker_slug verwerken (bv. efl-cup)")
+    ap.add_argument("--fixture", help="alleen deze fixture-id(s), komma-gescheiden")
+    ap.add_argument("--stream", help="niet op NL-tv, wel live te streamen bij deze aanbieder (bv. Bet365)")
     a = ap.parse_args()
-    leagues = [c for c in LEAGUES if (not a.league or c["worker_slug"] == a.league)]
+    leagues = [c for c in LEAGUES if (c["worker_slug"] == a.league if a.league else not c.get("manual_only"))]
+    only = set((a.fixture or "").replace(" ", "").split(",")) - {""}
     ymd = target_date(a.date)
     live = not (a.dry or a.preview)
     if live and not WEBFLOW_TOKEN:
@@ -53,6 +56,8 @@ def main():
         resp = api.fixtures(cfg["worker_slug"])
         ups = (resp.get("upcoming") or [])
         day = [fx for fx in ups if match_on_date(fx, ymd)]
+        if only:
+            day = [fx for fx in day if str(fx.get("fixture", {}).get("id")) in only]
         if cfg.get("toppers_only"):
             before = len(day)
             day = [fx for fx in day if is_topper(fx, cfg)]
@@ -64,6 +69,8 @@ def main():
             if fid in state:
                 print(f"  · overslaan (bestaat al): {fid}"); continue
             ctx = M.gather(fx, definitief=False)
+            if a.stream:
+                ctx["tvgids"] = {"tv": [], "bookmakers": [a.stream], "gratis": False}
             fd, slug, title = M.build_fielddata(ctx, cfg)
             if a.preview:
                 p = write_preview(fd, title); print(f"  ✎ preview: {p}")
@@ -75,7 +82,8 @@ def main():
                               "match": f"{ctx['homeN']} - {ctx['awayN']}", "date": ymd,
                               "league": cfg["worker_slug"],
                               "comp_slug": cfg["comp_slug"], "naam": cfg["naam"],
-                              "comp_id": cfg.get("comp_id")}
+                              "comp_id": cfg.get("comp_id"), "stream": a.stream,
+                              "vriendschappelijk": cfg.get("vriendschappelijk", False)}
                 WF.save_state(state)
                 print(f"  ✔ live: {title}  (item {item_id})")
             made += 1
