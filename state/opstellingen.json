@@ -572,7 +572,7 @@
   "1545601": {
     "item_id": "6ab41540371750d91fcf92cb",
     "slug": "opstelling-andorra-malta-24-09-2026",
-    "definitief": false,
+    "definitief": true,
     "match": "Andorra - Malta",
     "date": "2026-09-24",
     "league": "nations-league",
@@ -627,7 +627,7 @@
   "1528880": {
     "item_id": "6ab4155826be1a3df411e2f7",
     "slug": "opstelling-liechtenstein-litouwen-24-09-2026",
-    "definitief": false,
+    "definitief": true,
     "match": "Liechtenstein - Litouwen",
     "date": "2026-09-24",
     "league": "nations-league",
