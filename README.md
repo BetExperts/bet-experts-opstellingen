@@ -57,3 +57,12 @@ Nieuwe competitie toevoegen = één regel (worker-slug + competitiepagina-slug +
 | `oa_webflow.py` | Webflow aanmaken/updaten/publiceren + state |
 | `generate.py` / `finalize.py` | de twee cron-scripts |
 | `data/` | team-id→slug en club/competitie-slug-mappings |
+
+## Wedstrijd-links (`crosslink.py`)
+Koppelt per wedstrijd de **voorbeschouwing**, het **opstelling-artikel** en het **live-kijken-artikel**
+aan elkaar: elk artikel krijgt direct na de intro één blok
+`🔗 Meer over X – Y: Voorspelling en odds X – Y · Opstellingen X – Y · X – Y gratis live kijken`
+(alleen links naar de ándere, al live staande artikelen). Wedstrijd = team-id-paar + speeldatum.
+Idempotent (bestaand blok wordt vervangen), geplande/draft-items worden niet aangeraakt.
+- `python3 crosslink.py --dry` / `python3 crosslink.py` (venster: nu −6 u t/m +3 dagen)
+- Workflow `crosslink.yml`: 18:45 UTC + 08:00/12:00 UTC; `finalize.py` draait het ook na elke flip.

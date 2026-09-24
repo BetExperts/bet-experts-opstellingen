@@ -49,6 +49,11 @@ def main():
             print(f"  ✔ definitief: {title}")
         flipped += 1
     print(f"\nKLAAR — {flipped} artikel(en) geflipt naar definitief.")
+    if flipped and not a.dry:
+        # de flip herschrijft de content -> wedstrijd-links (voorbeschouwing/live) opnieuw plaatsen
+        import crosslink
+        print("\n-- wedstrijd-links opnieuw plaatsen --")
+        crosslink.run(days=1, back=6, max_items=400)
 
 if __name__ == "__main__":
     main()

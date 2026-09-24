@@ -1,0 +1,23 @@
+name: Wedstrijd-links (voorbeschouwing ↔ opstelling ↔ live kijken)
+
+on:
+  schedule:
+    # 18:45 UTC: na de avondruns van de opstellingen- en live-kijken-agent (18:00 UTC).
+    # 08:00 en 12:00 UTC: pikt voorbeschouwingen op die later live zijn gegaan.
+    # (Na elke flip naar 'definitief' draait finalize.py dit zelf ook.)
+    - cron: "45 18 * * *"
+    - cron: "0 8,12 * * *"
+  workflow_dispatch:
+
+jobs:
+  crosslink:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Wedstrijd-links plaatsen/bijwerken
+        env:
+          WEBFLOW_TOKEN: ${{ secrets.WEBFLOW_TOKEN }}
+        run: python3 crosslink.py
