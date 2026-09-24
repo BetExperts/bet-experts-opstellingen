@@ -583,7 +583,7 @@
   "1528863": {
     "item_id": "6ab4154467600adf1a56e42c",
     "slug": "opstelling-servie-griekenland-24-09-2026",
-    "definitief": false,
+    "definitief": true,
     "match": "Servië - Griekenland",
     "date": "2026-09-24",
     "league": "nations-league",
@@ -594,7 +594,7 @@
   "1528864": {
     "item_id": "6ab4154968370d3c62e7df74",
     "slug": "opstelling-portugal-wales-24-09-2026",
-    "definitief": false,
+    "definitief": true,
     "match": "Portugal - Wales",
     "date": "2026-09-24",
     "league": "nations-league",
@@ -605,7 +605,7 @@
   "1528878": {
     "item_id": "6ab4154d7c1f1f7edf9bd6aa",
     "slug": "opstelling-oostenrijk-israel-24-09-2026",
-    "definitief": false,
+    "definitief": true,
     "match": "Oostenrijk - Israël",
     "date": "2026-09-24",
     "league": "nations-league",
@@ -616,7 +616,7 @@
   "1528865": {
     "item_id": "6ab4155351d29beded66e8c5",
     "slug": "opstelling-noorwegen-denemarken-24-09-2026",
-    "definitief": false,
+    "definitief": true,
     "match": "Noorwegen - Denemarken",
     "date": "2026-09-24",
     "league": "nations-league",
@@ -638,7 +638,7 @@
   "1528879": {
     "item_id": "6ab4155df3bb91b59d61c8c4",
     "slug": "opstelling-kosovo-ierland-24-09-2026",
-    "definitief": false,
+    "definitief": true,
     "match": "Kosovo - Ierland",
     "date": "2026-09-24",
     "league": "nations-league",
@@ -649,7 +649,7 @@
   "1528862": {
     "item_id": "6ab415617c1f1f7edf9be0b2",
     "slug": "opstelling-nederland-duitsland-24-09-2026",
-    "definitief": false,
+    "definitief": true,
     "match": "Nederland - Duitsland",
     "date": "2026-09-24",
     "league": "nations-league",
