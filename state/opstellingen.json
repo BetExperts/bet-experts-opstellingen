@@ -671,7 +671,7 @@
   "1545602": {
     "item_id": "6ab566ae8029b3583ada84df",
     "slug": "opstelling-armenie-letland-25-09-2026",
-    "definitief": false,
+    "definitief": true,
     "match": "Armenië - Letland",
     "date": "2026-09-25",
     "league": "nations-league",
@@ -682,7 +682,7 @@
   "1528881": {
     "item_id": "6ab566b3e635552645d7790b",
     "slug": "opstelling-georgie-noord-ierland-25-09-2026",
-    "definitief": false,
+    "definitief": true,
     "match": "Georgië - Noord-Ierland",
     "date": "2026-09-25",
     "league": "nations-league",
