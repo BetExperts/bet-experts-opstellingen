@@ -561,7 +561,7 @@
   "1545826": {
     "item_id": "6ab3ab8c95d9a96a28738614",
     "slug": "opstelling-marokko-gabon-25-09-2026",
-    "definitief": false,
+    "definitief": true,
     "match": "Marokko - Gabon",
     "date": "2026-09-25",
     "league": "afrika-cup-kwalificatie",
@@ -660,7 +660,7 @@
   "1551809": {
     "item_id": "6ab566a7ee64014bdf5f7483",
     "slug": "opstelling-fc-dordrecht-almere-city-25-09-2026",
-    "definitief": false,
+    "definitief": true,
     "match": "Dordrecht - Almere City FC",
     "date": "2026-09-25",
     "league": "eerste-divisie",
