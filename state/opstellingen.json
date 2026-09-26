@@ -785,7 +785,7 @@
   "1551814": {
     "item_id": "6ab6b802b01ad718961958d3",
     "slug": "opstelling-nac-breda-fc-eindhoven-26-09-2026",
-    "definitief": false,
+    "definitief": true,
     "match": "NAC Breda - FC Eindhoven",
     "date": "2026-09-26",
     "league": "eerste-divisie",
@@ -798,7 +798,7 @@
   "1551811": {
     "item_id": "6ab6b8079ad8538553da363c",
     "slug": "opstelling-fc-emmen-top-oss-26-09-2026",
-    "definitief": false,
+    "definitief": true,
     "match": "Emmen - FC OSS",
     "date": "2026-09-26",
     "league": "eerste-divisie",
@@ -811,7 +811,7 @@
   "1551813": {
     "item_id": "6ab6b80d5794509af2019232",
     "slug": "opstelling-mvv-helmond-sport-26-09-2026",
-    "definitief": false,
+    "definitief": true,
     "match": "MVV - Helmond Sport",
     "date": "2026-09-26",
     "league": "eerste-divisie",
@@ -824,7 +824,7 @@
   "1551815": {
     "item_id": "6ab6b813df6588d3067fdda1",
     "slug": "opstelling-roda-jc-rkc-waalwijk-26-09-2026",
-    "definitief": false,
+    "definitief": true,
     "match": "Roda - Waalwijk",
     "date": "2026-09-26",
     "league": "eerste-divisie",
@@ -837,7 +837,7 @@
   "1551812": {
     "item_id": "6ab6b819f5b1cb7c733bb7e0",
     "slug": "opstelling-volendam-vvv-venlo-26-09-2026",
-    "definitief": false,
+    "definitief": true,
     "match": "FC Volendam - VVV Venlo",
     "date": "2026-09-26",
     "league": "eerste-divisie",
