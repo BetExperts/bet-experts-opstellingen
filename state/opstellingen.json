@@ -863,7 +863,7 @@
   "1528890": {
     "item_id": "6ab6b822bae479e4750e79f4",
     "slug": "opstelling-ijsland-estland-26-09-2026",
-    "definitief": false,
+    "definitief": true,
     "match": "IJsland - Estland",
     "date": "2026-09-26",
     "league": "nations-league",
@@ -876,7 +876,7 @@
   "1528889": {
     "item_id": "6ab6b8275794509af201993e",
     "slug": "opstelling-faeroer-kazachstan-26-09-2026",
-    "definitief": false,
+    "definitief": true,
     "match": "Faeröer - Kazachstan",
     "date": "2026-09-26",
     "league": "nations-league",
@@ -889,7 +889,7 @@
   "1545603": {
     "item_id": "6ab6b82f286be234b377eafd",
     "slug": "opstelling-bulgarije-luxemburg-26-09-2026",
-    "definitief": false,
+    "definitief": true,
     "match": "Bulgarije - Luxemburg",
     "date": "2026-09-26",
     "league": "nations-league",
@@ -902,7 +902,7 @@
   "1528888": {
     "item_id": "6ab6b8353f28738a38396a82",
     "slug": "opstelling-san-marino-finland-26-09-2026",
-    "definitief": false,
+    "definitief": true,
     "match": "San Marino - Finland",
     "date": "2026-09-26",
     "league": "nations-league",
