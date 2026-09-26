@@ -915,7 +915,7 @@
   "1528891": {
     "item_id": "6ab6b83bb88d4c7e80ea8b81",
     "slug": "opstelling-engeland-spanje-26-09-2026",
-    "definitief": false,
+    "definitief": true,
     "match": "Engeland - Spanje",
     "date": "2026-09-26",
     "league": "nations-league",
@@ -928,7 +928,7 @@
   "1528892": {
     "item_id": "6ab6b83fb88d4c7e80ea8e89",
     "slug": "opstelling-tsjechie-kroatie-26-09-2026",
-    "definitief": false,
+    "definitief": true,
     "match": "Tsjechië - Kroatië",
     "date": "2026-09-26",
     "league": "nations-league",
@@ -941,7 +941,7 @@
   "1528894": {
     "item_id": "6ab6b8436afe83a6e2f0a35b",
     "slug": "opstelling-slowakije-moldavie-26-09-2026",
-    "definitief": false,
+    "definitief": true,
     "match": "Slowakije - Moldavië",
     "date": "2026-09-26",
     "league": "nations-league",
@@ -954,7 +954,7 @@
   "1528893": {
     "item_id": "6ab6b848b01ad718961980cd",
     "slug": "opstelling-albanie-wit-rusland-26-09-2026",
-    "definitief": false,
+    "definitief": true,
     "match": "Albanië - Wit-Rusland",
     "date": "2026-09-26",
     "league": "nations-league",
@@ -967,7 +967,7 @@
   "1545656": {
     "item_id": "6ab6b84ca294f7fa130cbbce",
     "slug": "opstelling-noord-macedonie-zwitserland-26-09-2026",
-    "definitief": false,
+    "definitief": true,
     "match": "Noord-Macedonië - Zwitserland",
     "date": "2026-09-26",
     "league": "nations-league",
