@@ -1006,7 +1006,7 @@
   "1528896": {
     "item_id": "6ab8098ae5d9f17124fedf32",
     "slug": "opstelling-servie-nederland-27-09-2026",
-    "definitief": false,
+    "definitief": true,
     "match": "Servië - Nederland",
     "date": "2026-09-27",
     "league": "nations-league",
@@ -1019,7 +1019,7 @@
   "1528897": {
     "item_id": "6ab8098f77606d0bcf961157",
     "slug": "opstelling-denemarken-wales-27-09-2026",
-    "definitief": false,
+    "definitief": true,
     "match": "Denemarken - Wales",
     "date": "2026-09-27",
     "league": "nations-league",
@@ -1032,7 +1032,7 @@
   "1528898": {
     "item_id": "6ab809936c51a06a273e89bb",
     "slug": "opstelling-oostenrijk-kosovo-27-09-2026",
-    "definitief": false,
+    "definitief": true,
     "match": "Oostenrijk - Kosovo",
     "date": "2026-09-27",
     "league": "nations-league",
@@ -1045,7 +1045,7 @@
   "1545604": {
     "item_id": "6ab8099812a3938606b948b6",
     "slug": "opstelling-gibraltar-andorra-27-09-2026",
-    "definitief": false,
+    "definitief": true,
     "match": "Gibraltar - Andorra",
     "date": "2026-09-27",
     "league": "nations-league",
