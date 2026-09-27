@@ -1058,7 +1058,7 @@
   "1528899": {
     "item_id": "6ab8099d6c51a06a273e8d6f",
     "slug": "opstelling-duitsland-griekenland-27-09-2026",
-    "definitief": false,
+    "definitief": true,
     "match": "Duitsland - Griekenland",
     "date": "2026-09-27",
     "league": "nations-league",
@@ -1071,7 +1071,7 @@
   "1528900": {
     "item_id": "6ab809a0286be234b3b7d2ac",
     "slug": "opstelling-noorwegen-portugal-27-09-2026",
-    "definitief": false,
+    "definitief": true,
     "match": "Noorwegen - Portugal",
     "date": "2026-09-27",
     "league": "nations-league",
@@ -1084,7 +1084,7 @@
   "1528901": {
     "item_id": "6ab809a8ab89ee1433a6ba98",
     "slug": "opstelling-israel-ierland-27-09-2026",
-    "definitief": false,
+    "definitief": true,
     "match": "Israël - Ierland",
     "date": "2026-09-27",
     "league": "nations-league",
