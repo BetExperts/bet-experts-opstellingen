@@ -1136,7 +1136,7 @@
   "1528904": {
     "item_id": "6ab95b2188e2fffd7c758874",
     "slug": "opstelling-belgie-frankrijk-28-09-2026",
-    "definitief": false,
+    "definitief": true,
     "match": "België - Frankrijk",
     "date": "2026-09-28",
     "league": "nations-league",
@@ -1149,7 +1149,7 @@
   "1528907": {
     "item_id": "6ab95b285cd223a118aa8baf",
     "slug": "opstelling-zweden-polen-28-09-2026",
-    "definitief": false,
+    "definitief": true,
     "match": "Zweden - Polen",
     "date": "2026-09-28",
     "league": "nations-league",
@@ -1162,7 +1162,7 @@
   "1528906": {
     "item_id": "6ab95b2b14e615c91fc40134",
     "slug": "opstelling-noord-ierland-hongarije-28-09-2026",
-    "definitief": false,
+    "definitief": true,
     "match": "Noord-Ierland - Hongarije",
     "date": "2026-09-28",
     "league": "nations-league",
@@ -1175,7 +1175,7 @@
   "1528908": {
     "item_id": "6ab95b2fc70a7acef38b0165",
     "slug": "opstelling-roemenie-bosnie-herzegovina-28-09-2026",
-    "definitief": false,
+    "definitief": true,
     "match": "Roemenië - Bosnië en Herzegovina",
     "date": "2026-09-28",
     "league": "nations-league",
@@ -1188,7 +1188,7 @@
   "1528905": {
     "item_id": "6ab95b33ea0e1f450c90fd4a",
     "slug": "opstelling-turkije-italie-28-09-2026",
-    "definitief": false,
+    "definitief": true,
     "match": "Turkije - Italië",
     "date": "2026-09-28",
     "league": "nations-league",
