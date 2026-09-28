@@ -48,7 +48,7 @@ def fetch_items(max_items):
     return out
 
 PREFIX_RE = re.compile(r"^(?:(?:vermoedelijke|definitieve|officiële)\s+)?opstelling(?:en)?\s+|^wedtips\s+"
-                       r"|^(?:waar kijk je|kun je|is|hoe kijk je)\s+", re.I)
+                       r"|^(?:zo kijk je|waar kijk je|kun je|is|hoe kijk je)\s+", re.I)
 TEAMS_RE = re.compile(r"^(.+?) [–-] (.+?)(?=\s+(?:gratis|live|kijken|voorspelling)\b|\s*[:|(,?]|$)", re.I)
 
 def teams_from_title(it):
