@@ -142,8 +142,9 @@ def build_samenvatting(definitief, homeN, awayN, comp, dt):
     return s[:250]
 
 def slugify(s):
-    import re
-    return re.sub(r"-+","-", re.sub(r"[^a-z0-9]+","-", (s or "").lower())).strip("-")
+    import re, unicodedata
+    s = unicodedata.normalize("NFKD", s or "").encode("ascii", "ignore").decode()   # ë -> e
+    return re.sub(r"-+","-", re.sub(r"[^a-z0-9]+","-", s.lower())).strip("-")
 
 def build_slug(home_slug, away_slug, dt):
     return f"opstelling-{home_slug}-{away_slug}-{dt.day:02d}-{dt.month:02d}-{dt.year}"
@@ -186,12 +187,13 @@ def build_content(ctx):
     plek = venue or city   # bij interlands levert de API vaak geen stadion
     waar = f" in {esc(plek)}" if plek else ""
     c1.append(f"<p><strong>Op {datum} om {kickoff} uur ontvangt {hLink}{waar} {aLink} "
-              + (f"in een {compLink}. " if ctx.get("vriendschappelijk") else f"in {ronde_intro} van de {compLink}. ")
+              + (f"in een {compLink}. " if ctx.get("vriendschappelijk")
+                 else f"in de {compLink}. " if ctx.get("geen_ronde") else f"in {ronde_intro} van de {compLink}. ")
               + f"Hieronder vind je de {kop} opstellingen van beide ploegen, "
               f"de blessures en schorsingen, de recente vorm, de onderlinge duels en de winkansen volgens ons AI-model.</strong></p>")
     c1.append("<h3>📅 Wedstrijdinformatie</h3>")
     c1.append(f"<p><strong>Wedstrijd:</strong> {esc(homeN)} – {esc(awayN)}<br>"
-              + (f"<strong>Competitie:</strong> {esc(compN[:1].upper() + compN[1:])}<br>" if ctx.get("vriendschappelijk")
+              + (f"<strong>Competitie:</strong> {esc(compN[:1].upper() + compN[1:])}<br>" if ctx.get("vriendschappelijk") or ctx.get("geen_ronde")
                  else f"<strong>Competitie:</strong> {esc(compN)} – {esc(ronde_txt)}<br>")
               + f"<strong>Datum:</strong> {datum}<br>"
               f"<strong>Aanvangstijd:</strong> {kickoff} uur<br>"

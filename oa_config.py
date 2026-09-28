@@ -48,6 +48,10 @@ LEAGUES = [
     {"worker_slug": "afrika-cup-kwalificatie", "comp_slug": "afrika-cup-of-nations",
      "naam": "Afrika Cup-kwalificatie", "comp_id": "6926ce5a5247b7619744eb7c",
      "toppers_only": True, "top_teams": ["morocco"]},
+    # EK onder 21-kwalificatie: alleen Jong Oranje
+    {"worker_slug": "u21-ek-kwalificatie", "comp_slug": "ek-onder-21-kwalificatie",
+     "naam": "EK onder 21-kwalificatie", "comp_id": "6abaf551b3633bce07b3312c",
+     "toppers_only": True, "top_teams": ["netherlands u21"], "geen_ronde": True},
     # Oefeninterlands: alleen op verzoek (manual_only), via --league friendlies --fixture <id>
     {"worker_slug": "friendlies", "comp_slug": "int-vriendschappelijke-wedstrijden", "naam": "oefeninterland",
      "comp_id": "65f9b20c402bb844e2ad0bf4", "manual_only": True, "vriendschappelijk": True},
@@ -75,7 +79,13 @@ CLUB_NAME  = _load("club_name_slug_filled.json")  # clubnaam -> slug (gevulde cl
 LANDEN_NL  = _load("landen_nl.json")           # Engelse API-landnaam -> Nederlandse naam
 
 def nl_name(name):
-    """Vertaal een landenteam-naam naar het Nederlands (clubs blijven ongemoeid)."""
+    """Vertaal een landenteam-naam naar het Nederlands (clubs blijven ongemoeid).
+    Jeugdelftallen: 'Slovenia U21' -> 'Jong Slovenië', 'Netherlands U21' -> 'Jong Oranje'."""
+    if name and name.endswith(" U21"):
+        base = name[:-4]
+        if base == "Netherlands":
+            return "Jong Oranje"
+        return "Jong " + LANDEN_NL.get(base, LANDEN_NL.get(base.replace("-", " & "), base))
     return LANDEN_NL.get(name, name)
 
 def club_slug(team_id, name=None):
