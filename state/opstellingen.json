@@ -1097,7 +1097,7 @@
   "1545605": {
     "item_id": "6ab95b13d326b360e64091b6",
     "slug": "opstelling-letland-cyprus-28-09-2026",
-    "definitief": false,
+    "definitief": true,
     "match": "Letland - Cyprus",
     "date": "2026-09-28",
     "league": "nations-league",
@@ -1110,7 +1110,7 @@
   "1528903": {
     "item_id": "6ab95b17609b3daadb58ae75",
     "slug": "opstelling-armenie-montenegro-28-09-2026",
-    "definitief": false,
+    "definitief": true,
     "match": "Armenië - Montenegro",
     "date": "2026-09-28",
     "league": "nations-league",
@@ -1123,7 +1123,7 @@
   "1528902": {
     "item_id": "6ab95b1bba2f51d17fdc2a9b",
     "slug": "opstelling-georgie-oekraine-28-09-2026",
-    "definitief": false,
+    "definitief": true,
     "match": "Georgië - Oekraïne",
     "date": "2026-09-28",
     "league": "nations-league",
