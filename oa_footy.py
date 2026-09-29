@@ -1,8 +1,8 @@
 # -*- coding: utf-8 -*-
 """Vermoedelijke opstellingen van FootyMetrics (footymetrics.com) — met toestemming van de eigenaar.
 
-Er is geen feed/API-sleutel; we lezen de openbare wedstrijdpagina (robots.txt staat /fixtures/ en
-/teams/ toe, /api/ NIET — die gebruiken we dus ook niet).
+Er is geen feed/API-sleutel; we lezen de openbare wedstrijdpagina. /api/ staat dicht in robots.txt;
+alleen de daglijst /api/front/fixtures mogen we van de eigenaar gebruiken (max. 1x per dag per datum).
 
   predicted(home_api_name, away_api_name, ymd) -> dict of None
       {"url", "home": {"formation", "names"[11]}, "away": {...}, "confirmed": bool}
@@ -22,7 +22,7 @@ PAUSE = 1.0
 ALIAS = {
     "czechia": "czech-republic", "fyr-macedonia": "north-macedonia", "rep-of-ireland": "republic-of-ireland",
     "bosnia-herzegovina": "bosnia-and-herzegovina", "bosnia-and-herzegovina": "bosnia-and-herzegovina",
-    "turkey": "turkiye", "usa": "usa", "psv-eindhoven": "psv", "az-alkmaar": "az-alkmaar",
+    "turkey": "turkiye", "usa": "united-states", "united-states-of-america": "united-states", "korea-republic": "south-korea", "psv-eindhoven": "psv", "az-alkmaar": "az-alkmaar",
 }
 
 _teams = None
@@ -55,6 +55,25 @@ def _team_index():
         except Exception as e:
             print(f"     · FootyMetrics teamlijst niet op te halen: {e}")
     return _teams
+
+_days = {}
+
+def _day(ymd):
+    """Alle wedstrijden van één dag uit de daglijst (1 verzoek per datum per run; toestemming eigenaar).
+    -> [(pad, thuisslug, uitslug)]"""
+    if ymd not in _days:
+        out = []
+        try:
+            data = json.loads(_get(f"{BASE}/api/front/fixtures?date={ymd}&tz=Europe%2FAmsterdam&late=1"))
+            for lg in data or []:
+                for f in lg.get("fixtures") or []:
+                    if f.get("slug"):
+                        out.append(("/fixtures/" + f["slug"], (f.get("Home") or {}).get("slug", ""),
+                                    (f.get("Away") or {}).get("slug", "")))
+        except Exception as e:
+            print(f"     · FootyMetrics daglijst {ymd} niet op te halen: {e}")
+        _days[ymd] = out
+    return _days[ymd]
 
 def _candidates(api_name, n=3):
     idx = _team_index()
@@ -117,12 +136,13 @@ def _lookup(home_api_name, away_api_name, ymd, want_confirmed=False):
         if not homes or not aways:
             return None
         idx = _team_index()
-        # wedstrijdlinks zoeken op: teampagina thuis + uit (competitie/interlands), anders de homepage
-        # (wedstrijden van vandaag, ook oefenduels die niet op de teampagina staan)
-        sources = [BASE + idx[t] for t in homes + aways] + [BASE + "/"]
+        # 1) daglijst van die datum (compleet); 2) teampagina's thuis + uit; 3) homepage (vandaag)
+        day = [pad for pad, hs, as_ in _day(ymd) if hs in homes and as_ in aways]
+        sources = ["day"] + [BASE + idx[t] for t in homes + aways] + [BASE + "/"]
         tried = set()
         for src in sources:
-            for link in sorted(set(re.findall(r'/fixtures/\d+-[a-z0-9-]+', _get(src))), reverse=True):
+            found = day if src == "day" else sorted(set(re.findall(r'/fixtures/\d+-[a-z0-9-]+', _get(src))), reverse=True)
+            for link in found:
                 if link in tried or not any(link.endswith(f"-{h}-{a}") for h in homes for a in aways):
                     continue
                 tried.add(link)
