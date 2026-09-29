@@ -63,6 +63,9 @@ def main():
         if fm:
             ctx["hLU"] = FOOTY.as_lineup(fm["home"], fm["url"])
             ctx["aLU"] = FOOTY.as_lineup(fm["away"], fm["url"])
+        # nooit 'definitief' zonder beide elftallen (cache kan net tussen twee verzoeken wisselen)
+        if not ((ctx.get("hLU") or {}).get("startXI") and (ctx.get("aLU") or {}).get("startXI")):
+            print(f"  · opstelling nog niet compleet binnen, volgende run opnieuw: {e['match']} ({fid})"); continue
         if e.get("stream"):
             ctx["tvgids"] = {"tv": [], "bookmakers": [e["stream"]], "gratis": False}
         fd, slug, title = M.build_fielddata(ctx, cfg, slug=e["slug"])  # slug BLIJFT gelijk

@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 """Wedstrijd-links: koppelt per wedstrijd de voorbeschouwing, het opstelling-artikel
 en het live-kijken-artikel aan elkaar. Elk artikel krijgt één blok
-  🔗 Meer over X – Y: <voorspelling> · <opstellingen> · <live kijken>
+  Meer over X – Y: <voorspelling> · <opstellingen> · <live kijken>
 met links naar de ándere artikelen van dezelfde wedstrijd.
 Wedstrijd = team-id-paar + speeldatum (Amsterdam). Idempotent: een bestaand blok wordt
 vervangen, niet gedupliceerd; alleen gewijzigde artikelen worden gepatcht.
@@ -18,8 +18,8 @@ import oa_webflow as WF
 
 AMS = ZoneInfo("Europe/Amsterdam")
 SPACER = "<p>‍</p>"
-BLOCK_RE = re.compile(r"(?:<p>‍</p>)?<p>🔗 <strong>Meer over .*?</p>", re.S)
-LEES_OOK_RE = re.compile(r"<p>📋 <strong>Lees ook:</strong>.*?</p>", re.S)   # oud blok live-kijken
+BLOCK_RE = re.compile(r"(?:<p>‍</p>)?<p>(?:🔗 )?<strong>Meer over .*?</p>", re.S)   # oud (met emoji) en nieuw
+LEES_OOK_RE = re.compile(r"<p>(?:📋 )?<strong>Lees ook:</strong>.*?</p>", re.S)   # oud blok live-kijken
 LIVE_RE = re.compile(r"-live(-gratis)?-kijken-\d{2}-\d{2}-\d{4}$")
 FIELDS = ("content", "content-2", "content-3")
 
@@ -66,7 +66,7 @@ def build_block(group, self_kind, label):
     if "live" in group and self_kind != "live":
         parts.append(f'<a href="/nieuws/{group["live"]["fieldData"]["slug"]}">{label} gratis live kijken</a>')
     if not parts: return None
-    return f"<p>🔗 <strong>Meer over {label}:</strong> " + " · ".join(parts) + "</p>"
+    return f"<p><strong>Meer over {label}:</strong> " + " · ".join(parts) + "</p>"
 
 def place(html, block):
     """Vervang een bestaand blok, of zet het na de intro-alinea."""
