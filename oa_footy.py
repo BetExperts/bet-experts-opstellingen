@@ -117,11 +117,15 @@ def _lookup(home_api_name, away_api_name, ymd, want_confirmed=False):
         if not homes or not aways:
             return None
         idx = _team_index()
-        for hs in homes:
-            links = sorted(set(re.findall(r'/fixtures/\d+-[a-z0-9-]+', _get(BASE + idx[hs]))), reverse=True)
-            for link in links:
-                if not any(link.endswith(f"-{hs}-{a}") for a in aways):
+        # wedstrijdlinks zoeken op: teampagina thuis + uit (competitie/interlands), anders de homepage
+        # (wedstrijden van vandaag, ook oefenduels die niet op de teampagina staan)
+        sources = [BASE + idx[t] for t in homes + aways] + [BASE + "/"]
+        tried = set()
+        for src in sources:
+            for link in sorted(set(re.findall(r'/fixtures/\d+-[a-z0-9-]+', _get(src))), reverse=True):
+                if link in tried or not any(link.endswith(f"-{h}-{a}") for h in homes for a in aways):
                     continue
+                tried.add(link)
                 url = BASE + link
                 p = _parse_fixture(_get(url))
                 if not p or not p.get("kickoff"):
