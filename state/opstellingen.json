@@ -1351,7 +1351,7 @@
   "1545853": {
     "item_id": "6abaaceacc7742512dbaf54f",
     "slug": "opstelling-lesotho-marokko-29-09-2026",
-    "definitief": false,
+    "definitief": true,
     "match": "Lesotho - Marokko",
     "date": "2026-09-29",
     "league": "afrika-cup-kwalificatie",
@@ -1360,7 +1360,8 @@
     "comp_id": "6926ce5a5247b7619744eb7c",
     "stream": null,
     "vriendschappelijk": false,
-    "og": "og/opstelling-lesotho-marokko-29-09-2026-b062c2.webp",
-    "og_done": "og/opstelling-lesotho-marokko-29-09-2026-b062c2.webp"
+    "og": "og/opstelling-lesotho-marokko-29-09-2026-32f88f.webp",
+    "og_done": "og/opstelling-lesotho-marokko-29-09-2026-b062c2.webp",
+    "bron": "api"
   }
 }
