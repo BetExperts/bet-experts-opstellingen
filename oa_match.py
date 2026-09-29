@@ -3,6 +3,7 @@
 import re
 from datetime import datetime, timezone
 import oa_api as api
+import oa_footy as FOOTY
 from oa_config import club_slug, RUBRIEK_ID, nl_name
 import oa_build as B
 from tvgids import TvGids
@@ -115,6 +116,13 @@ def gather(fx, definitief=False):
         hl = _team_lineup(homeId, exclude_fixture=fid); al = _team_lineup(awayId, exclude_fixture=fid)
         hLU = hl[0] if hl else None; hPrev = hl[1] if len(hl) > 1 else None
         aLU = al[0] if al else None; aPrev = al[1] if len(al) > 1 else None
+        # Betere voorspelling van FootyMetrics (met toestemming)? Dan die elf + formatie gebruiken;
+        # de laatst gespeelde opstelling dient dan als vergelijking ('wijzigingen t.o.v. vorige duel').
+        fm = FOOTY.predicted(home.get("name"), away.get("name"), dt.date().isoformat())
+        if fm:
+            hPrev, aPrev = hLU, aLU
+            hLU, aLU = FOOTY.as_lineup(fm["home"], fm["url"]), FOOTY.as_lineup(fm["away"], fm["url"])
+            print(f"     ↳ vermoedelijke opstellingen via FootyMetrics ({hLU['formation']} / {aLU['formation']})")
 
     return {
         "fid": fid, "homeId": homeId, "awayId": awayId, "homeN": homeN, "awayN": awayN,

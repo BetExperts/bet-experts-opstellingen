@@ -246,6 +246,30 @@ def build_content(ctx):
 
     return content, content2, content3
 
+def _last(n):
+    import unicodedata
+    n = unicodedata.normalize("NFKD", n or "").encode("ascii", "ignore").decode().lower()
+    return n.replace(".", " ").split()[-1] if n.split() else ""
+
+def footy_note(pred, last, team, absent=None):
+    """Voorspelde elf (FootyMetrics) vs. de laatst gespeelde elf -> wijzigingen-zin (vergelijkt op achternaam)."""
+    if not pred or not last: return ""
+    pn = {_last(n): n for n in _xi_names(pred) if n}
+    ln = {_last(n): n for n in _xi_names(last) if n}
+    erin = [pn[k] for k in pn if k not in ln]
+    eruit = [ln[k] for k in ln if k not in pn]
+    ab = {_last(x) for x in (absent or set()) if x}
+    if not erin:
+        return f"{team} begint naar verwachting met dezelfde elf als in de vorige wedstrijd."
+    if len(erin) <= 3:
+        uit = [f"{esc(n)}{' (afwezig)' if _last(n) in ab else ''}" for n in eruit]
+        return (f"Ten opzichte van de vorige wedstrijd verwachten we {len(erin)} "
+                f"{'wijziging' if len(erin) == 1 else 'wijzigingen'} bij {team}: "
+                f"<strong>{esc(', '.join(erin))}</strong> erin"
+                + (f", {', '.join(uit)} eruit." if uit else "."))
+    return (f"{team} wijzigt naar verwachting flink: {len(erin)} nieuwe namen ten opzichte van de vorige wedstrijd, "
+            f"onder wie <strong>{esc(', '.join(erin[:3]))}</strong>.")
+
 def _lineup_block(team, lu, prev, definitief, kickoff, flip, is_home, absent=None):
     emoji = "🏟️" if is_home else "🚌"
     h = [f"<h3>{emoji} {'Bevestigde' if definitief else 'Vermoedelijke'} opstelling {esc(team)}"
@@ -253,13 +277,19 @@ def _lineup_block(team, lu, prev, definitief, kickoff, flip, is_home, absent=Non
     if lu and _players(lu):
         h.append(f"<p><strong>{'Bevestigde' if definitief else 'Vermoedelijke'} elf:</strong> {xi_line(lu)}.</p>")
         if not definitief:
-            h.append(f"<p>{rotation_note(lu, prev, team, absent)}</p>")
+            footy = lu.get("source") == "footymetrics"
+            note = footy_note(lu, prev, team, absent) if footy else rotation_note(lu, prev, team, absent)
+            if note:
+                h.append(f"<p>{note}</p>")
             h.append(f"👉 <strong>De definitieve opstelling van {esc(team)} volgt ongeveer één uur voor de aftrap "
                      f"(rond {flip} uur)</strong> en wordt hier automatisch bijgewerkt zodra die officieel bekend is.")
             h[-1] = "<p>"+h[-1]+"</p>"
     else:
         h.append(f"<p>De opstelling van <strong>{esc(team)}</strong> is nog niet bekend. Deze wordt hier bijgewerkt "
                  f"zodra er teamnieuws binnenkomt, en definitief rond {flip} uur.</p>")
+    if lu and not definitief and not is_home and lu.get("source") == "footymetrics":
+        h.append(f'<p><em>Vermoedelijke opstellingen op basis van de voorspelling van '
+                 f'<a href="{esc(lu.get("source_url"))}" target="_blank">FootyMetrics</a>.</em></p>')
     return "\n".join(h)
 
 def form_dashes(f):
@@ -322,7 +352,8 @@ def _faq(homeN, awayN, hLU, aLU, definitief, kickoff, flip, datum, pH,pD,pA, has
     q.append((f"Wanneer is de definitieve opstelling van {homeN} – {awayN} bekend?",
               f"Doorgaans ongeveer 60 minuten voor de aftrap, dus rond {flip} uur op {datum}."))
     q.append((f"In welke formatie speelt {awayN}?",
-              f"{awayN} speelde de laatste wedstrijden in een {af} en treedt naar verwachting ook nu in die formatie aan."
+              (f"{awayN} begint naar verwachting in een {af}." if (aLU or {}).get("source") == "footymetrics" and not definitief
+               else f"{awayN} speelde de laatste wedstrijden in een {af} en treedt naar verwachting ook nu in die formatie aan.")
               if af else
               f"De formatie van {awayN} is vooraf nog niet bekend; die wordt duidelijk zodra de opstelling "
               f"ongeveer een uur voor de aftrap bevestigd is."))
