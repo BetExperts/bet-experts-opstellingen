@@ -7,6 +7,8 @@ Verwerkt standaard alle nog-niet-definitieve items uit state (van vandaag)."""
 import sys, argparse
 import oa_api as api
 import oa_match as M
+import oa_footy as FOOTY
+from datetime import datetime, timedelta, timezone
 import oa_og as OG
 from oa_config import LEAGUES, WEBFLOW_TOKEN
 import oa_webflow as WF
@@ -21,17 +23,34 @@ def main():
         print("FOUT: WEBFLOW_TOKEN ontbreekt (of gebruik --dry)."); sys.exit(1)
 
     state = WF.load_state()
+    # nog niet definitief, of definitief via FootyMetrics en nog niet bijgewerkt met de API-opstelling
     todo = {fid: e for fid, e in state.items()
-            if not e.get("definitief") and (not a.date or e.get("date") == a.date)}
+            if (not e.get("definitief")
+                or (e.get("bron") == "footymetrics" and e.get("date", "") >= (datetime.now() - timedelta(days=1)).date().isoformat()))
+            and (not a.date or e.get("date") == a.date)}
     print(f"== Finalize | {len(todo)} kandidaat-artikel(en) | modus: {'DRY' if a.dry else 'LIVE'} ==")
     flipped = 0
     for fid, e in todo.items():
-        if not M.has_confirmed_lineups(fid):
-            print(f"  · nog geen definitieve opstelling: {e['match']} ({fid})"); continue
-        # data verzamelen mét bevestigde opstellingen
+        api_ok = M.has_confirmed_lineups(fid)
+        resync = e.get("definitief") and e.get("bron") == "footymetrics"
+        if resync and not api_ok:
+            continue                      # al definitief via FootyMetrics; wacht op de API-versie
         fx = api.match(fid)
         if not fx:
             print(f"  ! match niet op te halen: {fid}"); continue
+        fm = None
+        if not api_ok:
+            # API nog leeg: FootyMetrics heeft de bevestigde opstelling vaak eerder (vanaf ~90 min voor aftrap)
+            try:
+                ko = datetime.fromisoformat(fx["fixture"]["date"].replace("Z", "+00:00"))
+                mins = (ko - datetime.now(timezone.utc)).total_seconds() / 60
+            except Exception:
+                mins = 999
+            if -120 < mins <= 90:
+                fm = FOOTY.confirmed(fx["teams"]["home"]["name"], fx["teams"]["away"]["name"], ko.date().isoformat())
+            if not fm:
+                print(f"  · nog geen definitieve opstelling: {e['match']} ({fid})"); continue
+            print(f"     ↳ bevestigde opstelling via FootyMetrics (API nog leeg)")
         # competitie-info: eerst uit de state (werkt ook voor losse test-wedstrijden),
         # anders uit de LEAGUES-config
         cfg = LCFG.get(e.get("league"))
@@ -41,6 +60,9 @@ def main():
                    "naam": e.get("naam", "Eredivisie"),
                    "comp_id": e.get("comp_id"), "vriendschappelijk": e.get("vriendschappelijk", False)}
         ctx = M.gather(fx, definitief=True)
+        if fm:
+            ctx["hLU"] = FOOTY.as_lineup(fm["home"], fm["url"])
+            ctx["aLU"] = FOOTY.as_lineup(fm["away"], fm["url"])
         if e.get("stream"):
             ctx["tvgids"] = {"tv": [], "bookmakers": [e["stream"]], "gratis": False}
         fd, slug, title = M.build_fielddata(ctx, cfg, slug=e["slug"])  # slug BLIJFT gelijk
@@ -49,6 +71,7 @@ def main():
         else:
             WF.update_live(e["item_id"], fd)
             e["definitief"] = True
+            e["bron"] = "footymetrics" if fm else "api"
             og = OG.make(ctx, cfg, e["slug"])     # nieuwe afbeelding: 'Definitief' + echte formaties
             if og: e["og"] = og
             WF.save_state(state)

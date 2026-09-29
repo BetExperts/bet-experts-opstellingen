@@ -105,6 +105,13 @@ def _parse_fixture(page):
 
 def predicted(home_api_name, away_api_name, ymd):
     """Vermoedelijke opstelling voor deze wedstrijd, of None (dan valt de agent terug op eigen methode)."""
+    return _lookup(home_api_name, away_api_name, ymd, want_confirmed=False)
+
+def confirmed(home_api_name, away_api_name, ymd):
+    """Bevestigde opstelling zodra FootyMetrics die heeft (vaak eerder dan onze API), anders None."""
+    return _lookup(home_api_name, away_api_name, ymd, want_confirmed=True)
+
+def _lookup(home_api_name, away_api_name, ymd, want_confirmed=False):
     try:
         homes, aways = _candidates(home_api_name), _candidates(away_api_name)
         if not homes or not aways:
@@ -122,6 +129,8 @@ def predicted(home_api_name, away_api_name, ymd):
                 ko = datetime.fromisoformat(p["kickoff"].split(".")[0])
                 if abs((ko.date() - datetime.fromisoformat(ymd).date()).days) > 1:
                     continue          # andere ontmoeting tussen dezelfde ploegen
+                if want_confirmed and not p["confirmed"]:
+                    return None
                 hx, ax = p.get("home_xi") or [], p.get("away_xi") or []
                 if len(hx) != 11 or len(ax) != 11:
                     return None
@@ -135,4 +144,5 @@ def predicted(home_api_name, away_api_name, ymd):
 def as_lineup(side, url):
     """In het formaat van API-Football (startXI/player/name) zodat de rest van de agent het snapt."""
     return {"formation": side.get("formation") or "", "source": "footymetrics", "source_url": url,
+            "team": {},
             "startXI": [{"player": {"name": n}} for n in side["names"]]}
