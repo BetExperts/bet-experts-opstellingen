@@ -42,18 +42,18 @@ LEAGUES = [
                    "tottenham", "newcastle", "aston villa", "west ham"]},
     # Nations League: alle wedstrijden (League A t/m D, ~8-10 per speeldag). Landnamen worden
     # via data/landen_nl.json naar het Nederlands vertaald.
-    {"worker_slug": "nations-league", "comp_slug": "uefa-nations-league", "naam": "Nations League",
+    {"worker_slug": "nations-league", "landen": True, "comp_slug": "uefa-nations-league", "naam": "Nations League",
      "comp_id": "66d5a7f7fb9f23ce90376ef4"},
     # Afrika Cup-kwalificatie: alleen Marokko (grote Marokkaanse doelgroep in NL)
-    {"worker_slug": "afrika-cup-kwalificatie", "comp_slug": "afrika-cup-of-nations",
+    {"worker_slug": "afrika-cup-kwalificatie", "landen": True, "comp_slug": "afrika-cup-of-nations",
      "naam": "Afrika Cup-kwalificatie", "comp_id": "6926ce5a5247b7619744eb7c",
      "toppers_only": True, "top_teams": ["morocco"]},
     # EK onder 21-kwalificatie: alleen Jong Oranje
-    {"worker_slug": "u21-ek-kwalificatie", "comp_slug": "ek-onder-21-kwalificatie",
+    {"worker_slug": "u21-ek-kwalificatie", "landen": True, "comp_slug": "ek-onder-21-kwalificatie",
      "naam": "EK onder 21-kwalificatie", "comp_id": "6abaf551b3633bce07b3312c",
      "toppers_only": True, "top_teams": ["netherlands u21"], "geen_ronde": True},
     # Oefeninterlands: alleen op verzoek (manual_only), via --league friendlies --fixture <id>
-    {"worker_slug": "friendlies", "comp_slug": "int-vriendschappelijke-wedstrijden", "naam": "oefeninterland",
+    {"worker_slug": "friendlies", "landen": True, "comp_slug": "int-vriendschappelijke-wedstrijden", "naam": "oefeninterland",
      "comp_id": "65f9b20c402bb844e2ad0bf4", "manual_only": True, "vriendschappelijk": True},
 ]
 

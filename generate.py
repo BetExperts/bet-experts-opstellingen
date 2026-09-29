@@ -8,6 +8,7 @@ import sys, os, argparse
 from datetime import datetime, timedelta
 import oa_api as api
 import oa_match as M
+import oa_og as OG
 import oa_build as B
 from oa_config import LEAGUES, BASE, WEBFLOW_TOKEN, is_topper
 import oa_webflow as WF
@@ -74,6 +75,8 @@ def main():
             fd, slug, title = M.build_fielddata(ctx, cfg)
             if a.preview:
                 p = write_preview(fd, title); print(f"  ✎ preview: {p}")
+                og = OG.make(ctx, cfg, "preview-" + slug)
+                if og: print(f"  ✎ afbeelding: {og}")
             elif a.dry:
                 print(f"  ○ zou maken: {title}")
             else:
@@ -84,6 +87,8 @@ def main():
                               "comp_slug": cfg["comp_slug"], "naam": cfg["naam"],
                               "comp_id": cfg.get("comp_id"), "stream": a.stream,
                               "vriendschappelijk": cfg.get("vriendschappelijk", False)}
+                og = OG.make(ctx, cfg, slug)
+                if og: state[fid]["og"] = og
                 WF.save_state(state)
                 print(f"  ✔ live: {title}  (item {item_id})")
             made += 1

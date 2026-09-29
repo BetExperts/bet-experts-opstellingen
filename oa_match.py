@@ -118,6 +118,7 @@ def gather(fx, definitief=False):
 
     return {
         "fid": fid, "homeId": homeId, "awayId": awayId, "homeN": homeN, "awayN": awayN,
+        "homeApi": home.get("name"), "awayApi": away.get("name"),   # Engelse API-naam (voor de vlag)
         "hSlug": club_slug(homeId, homeN), "aSlug": club_slug(awayId, awayN),
         "compSlug": None, "compN": None,  # ingevuld door caller (league config)
         "dt": dt, "venue": venue, "city": city, "ronde": ronde,

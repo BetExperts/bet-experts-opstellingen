@@ -18,6 +18,8 @@ jobs:
       - uses: actions/setup-python@v5
         with:
           python-version: "3.12"
+      - name: Pillow (deelafbeeldingen)
+        run: pip install -q pillow
       - name: Flip naar definitieve opstellingen
         env:
           WEBFLOW_TOKEN: ${{ secrets.WEBFLOW_TOKEN }}
@@ -26,6 +28,14 @@ jobs:
         run: |
           git config user.name "opstellingen-bot"
           git config user.email "bot@bet-experts.nl"
-          git add state/opstellingen.json || true
+          git add state/opstellingen.json og/*.webp || true
           git commit -m "state: definitief geflipt [skip ci]" || echo "geen wijziging"
+          git push || true
+      - name: Deelafbeeldingen koppelen (na push, raw-URL moet bestaan)
+        env:
+          WEBFLOW_TOKEN: ${{ secrets.WEBFLOW_TOKEN }}
+        run: |
+          python3 attach_og.py
+          git add state/opstellingen.json || true
+          git commit -m "state: deelafbeeldingen gekoppeld [skip ci]" || echo "geen wijziging"
           git push || true

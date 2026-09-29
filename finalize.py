@@ -7,6 +7,7 @@ Verwerkt standaard alle nog-niet-definitieve items uit state (van vandaag)."""
 import sys, argparse
 import oa_api as api
 import oa_match as M
+import oa_og as OG
 from oa_config import LEAGUES, WEBFLOW_TOKEN
 import oa_webflow as WF
 
@@ -47,7 +48,10 @@ def main():
             print(f"  ○ zou flippen -> {title}")
         else:
             WF.update_live(e["item_id"], fd)
-            e["definitief"] = True; WF.save_state(state)
+            e["definitief"] = True
+            og = OG.make(ctx, cfg, e["slug"])     # nieuwe afbeelding: 'Definitief' + echte formaties
+            if og: e["og"] = og
+            WF.save_state(state)
             print(f"  ✔ definitief: {title}")
         flipped += 1
     print(f"\nKLAAR — {flipped} artikel(en) geflipt naar definitief.")
