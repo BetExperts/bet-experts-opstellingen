@@ -30,6 +30,7 @@ jobs:
           git config user.email "bot@bet-experts.nl"
           git add state/opstellingen.json og/*.webp || true
           git commit -m "state: definitief geflipt [skip ci]" || echo "geen wijziging"
+          git pull --rebase -X theirs origin main || git rebase --abort
           git push || true
       - name: Deelafbeeldingen koppelen (na push, raw-URL moet bestaan)
         env:
@@ -38,4 +39,5 @@ jobs:
           python3 attach_og.py
           git add state/opstellingen.json || true
           git commit -m "state: deelafbeeldingen gekoppeld [skip ci]" || echo "geen wijziging"
+          git pull --rebase -X theirs origin main || git rebase --abort
           git push || true
