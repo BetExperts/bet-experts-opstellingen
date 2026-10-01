@@ -1393,7 +1393,7 @@
   "1528919": {
     "item_id": "6abd4fdfde15f8fe16eb6a8f",
     "slug": "opstelling-denemarken-portugal-01-10-2026",
-    "definitief": false,
+    "definitief": true,
     "match": "Denemarken - Portugal",
     "date": "2026-10-01",
     "league": "nations-league",
@@ -1402,13 +1402,14 @@
     "comp_id": "66d5a7f7fb9f23ce90376ef4",
     "stream": null,
     "vriendschappelijk": false,
-    "og": "og/opstelling-denemarken-portugal-01-10-2026-d2dc84.webp",
-    "og_done": "og/opstelling-denemarken-portugal-01-10-2026-d2dc84.webp"
+    "og": "og/opstelling-denemarken-portugal-01-10-2026-3b0bfc.webp",
+    "og_done": "og/opstelling-denemarken-portugal-01-10-2026-d2dc84.webp",
+    "bron": "footymetrics"
   },
   "1528917": {
     "item_id": "6abd4fe51498a28f4f56eacc",
     "slug": "opstelling-duitsland-servie-01-10-2026",
-    "definitief": false,
+    "definitief": true,
     "match": "Duitsland - Servië",
     "date": "2026-10-01",
     "league": "nations-league",
@@ -1417,13 +1418,14 @@
     "comp_id": "66d5a7f7fb9f23ce90376ef4",
     "stream": null,
     "vriendschappelijk": false,
-    "og": "og/opstelling-duitsland-servie-01-10-2026-2d2340.webp",
-    "og_done": "og/opstelling-duitsland-servie-01-10-2026-2d2340.webp"
+    "og": "og/opstelling-duitsland-servie-01-10-2026-97b446.webp",
+    "og_done": "og/opstelling-duitsland-servie-01-10-2026-2d2340.webp",
+    "bron": "footymetrics"
   },
   "1528920": {
     "item_id": "6abd4feb3ee68e3199a804e6",
     "slug": "opstelling-wales-noorwegen-01-10-2026",
-    "definitief": false,
+    "definitief": true,
     "match": "Wales - Noorwegen",
     "date": "2026-10-01",
     "league": "nations-league",
@@ -1432,8 +1434,9 @@
     "comp_id": "66d5a7f7fb9f23ce90376ef4",
     "stream": null,
     "vriendschappelijk": false,
-    "og": "og/opstelling-wales-noorwegen-01-10-2026-57f388.webp",
-    "og_done": "og/opstelling-wales-noorwegen-01-10-2026-57f388.webp"
+    "og": "og/opstelling-wales-noorwegen-01-10-2026-519fd8.webp",
+    "og_done": "og/opstelling-wales-noorwegen-01-10-2026-57f388.webp",
+    "bron": "footymetrics"
   },
   "1528921": {
     "item_id": "6abd50082099271c8a8d15d6",
@@ -1453,7 +1456,7 @@
   "1545607": {
     "item_id": "6abd500e2099271c8a8d1827",
     "slug": "opstelling-malta-gibraltar-01-10-2026",
-    "definitief": false,
+    "definitief": true,
     "match": "Malta - Gibraltar",
     "date": "2026-10-01",
     "league": "nations-league",
@@ -1462,13 +1465,14 @@
     "comp_id": "66d5a7f7fb9f23ce90376ef4",
     "stream": null,
     "vriendschappelijk": false,
-    "og": "og/opstelling-malta-gibraltar-01-10-2026-f7f12d.webp",
-    "og_done": "og/opstelling-malta-gibraltar-01-10-2026-f7f12d.webp"
+    "og": "og/opstelling-malta-gibraltar-01-10-2026-1f71ee.webp",
+    "og_done": "og/opstelling-malta-gibraltar-01-10-2026-f7f12d.webp",
+    "bron": "footymetrics"
   },
   "1528922": {
     "item_id": "6abd5015fd3a0ebbbc526310",
     "slug": "opstelling-israel-kosovo-01-10-2026",
-    "definitief": false,
+    "definitief": true,
     "match": "Israël - Kosovo",
     "date": "2026-10-01",
     "league": "nations-league",
@@ -1477,13 +1481,14 @@
     "comp_id": "66d5a7f7fb9f23ce90376ef4",
     "stream": null,
     "vriendschappelijk": false,
-    "og": "og/opstelling-israel-kosovo-01-10-2026-854e25.webp",
-    "og_done": "og/opstelling-israel-kosovo-01-10-2026-854e25.webp"
+    "og": "og/opstelling-israel-kosovo-01-10-2026-001f61.webp",
+    "og_done": "og/opstelling-israel-kosovo-01-10-2026-854e25.webp",
+    "bron": "footymetrics"
   },
   "1528918": {
     "item_id": "6abd501c11b7d04e77f229bf",
     "slug": "opstelling-griekenland-nederland-01-10-2026",
-    "definitief": false,
+    "definitief": true,
     "match": "Griekenland - Nederland",
     "date": "2026-10-01",
     "league": "nations-league",
@@ -1492,7 +1497,8 @@
     "comp_id": "66d5a7f7fb9f23ce90376ef4",
     "stream": null,
     "vriendschappelijk": false,
-    "og": "og/opstelling-griekenland-nederland-01-10-2026-1ba1c2.webp",
-    "og_done": "og/opstelling-griekenland-nederland-01-10-2026-1ba1c2.webp"
+    "og": "og/opstelling-griekenland-nederland-01-10-2026-3a9a21.webp",
+    "og_done": "og/opstelling-griekenland-nederland-01-10-2026-1ba1c2.webp",
+    "bron": "footymetrics"
   }
 }
