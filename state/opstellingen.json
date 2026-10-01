@@ -1404,7 +1404,7 @@
     "vriendschappelijk": false,
     "og": "og/opstelling-denemarken-portugal-01-10-2026-3b0bfc.webp",
     "og_done": "og/opstelling-denemarken-portugal-01-10-2026-3b0bfc.webp",
-    "bron": "footymetrics"
+    "bron": "api"
   },
   "1528917": {
     "item_id": "6abd4fe51498a28f4f56eacc",
@@ -1418,9 +1418,9 @@
     "comp_id": "66d5a7f7fb9f23ce90376ef4",
     "stream": null,
     "vriendschappelijk": false,
-    "og": "og/opstelling-duitsland-servie-01-10-2026-97b446.webp",
+    "og": "og/opstelling-duitsland-servie-01-10-2026-d260b7.webp",
     "og_done": "og/opstelling-duitsland-servie-01-10-2026-97b446.webp",
-    "bron": "footymetrics"
+    "bron": "api"
   },
   "1528920": {
     "item_id": "6abd4feb3ee68e3199a804e6",
@@ -1436,7 +1436,7 @@
     "vriendschappelijk": false,
     "og": "og/opstelling-wales-noorwegen-01-10-2026-519fd8.webp",
     "og_done": "og/opstelling-wales-noorwegen-01-10-2026-519fd8.webp",
-    "bron": "footymetrics"
+    "bron": "api"
   },
   "1528921": {
     "item_id": "6abd50082099271c8a8d15d6",
@@ -1452,7 +1452,7 @@
     "vriendschappelijk": false,
     "og": "og/opstelling-ierland-oostenrijk-01-10-2026-675e8c.webp",
     "og_done": "og/opstelling-ierland-oostenrijk-01-10-2026-675e8c.webp",
-    "bron": "footymetrics"
+    "bron": "api"
   },
   "1545607": {
     "item_id": "6abd500e2099271c8a8d1827",
@@ -1466,9 +1466,9 @@
     "comp_id": "66d5a7f7fb9f23ce90376ef4",
     "stream": null,
     "vriendschappelijk": false,
-    "og": "og/opstelling-malta-gibraltar-01-10-2026-1f71ee.webp",
+    "og": "og/opstelling-malta-gibraltar-01-10-2026-190a67.webp",
     "og_done": "og/opstelling-malta-gibraltar-01-10-2026-1f71ee.webp",
-    "bron": "footymetrics"
+    "bron": "api"
   },
   "1528922": {
     "item_id": "6abd5015fd3a0ebbbc526310",
@@ -1482,9 +1482,9 @@
     "comp_id": "66d5a7f7fb9f23ce90376ef4",
     "stream": null,
     "vriendschappelijk": false,
-    "og": "og/opstelling-israel-kosovo-01-10-2026-001f61.webp",
+    "og": "og/opstelling-israel-kosovo-01-10-2026-ffa3c8.webp",
     "og_done": "og/opstelling-israel-kosovo-01-10-2026-001f61.webp",
-    "bron": "footymetrics"
+    "bron": "api"
   },
   "1528918": {
     "item_id": "6abd501c11b7d04e77f229bf",
@@ -1500,7 +1500,7 @@
     "vriendschappelijk": false,
     "og": "og/opstelling-griekenland-nederland-01-10-2026-3a9a21.webp",
     "og_done": "og/opstelling-griekenland-nederland-01-10-2026-3a9a21.webp",
-    "bron": "footymetrics"
+    "bron": "api"
   },
   "1551819": {
     "item_id": "6abea1c13e5fa578086fbe70",
