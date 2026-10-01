@@ -1441,7 +1441,7 @@
   "1528921": {
     "item_id": "6abd50082099271c8a8d15d6",
     "slug": "opstelling-ierland-oostenrijk-01-10-2026",
-    "definitief": false,
+    "definitief": true,
     "match": "Ierland - Oostenrijk",
     "date": "2026-10-01",
     "league": "nations-league",
@@ -1450,8 +1450,9 @@
     "comp_id": "66d5a7f7fb9f23ce90376ef4",
     "stream": null,
     "vriendschappelijk": false,
-    "og": "og/opstelling-ierland-oostenrijk-01-10-2026-ab8fee.webp",
-    "og_done": "og/opstelling-ierland-oostenrijk-01-10-2026-ab8fee.webp"
+    "og": "og/opstelling-ierland-oostenrijk-01-10-2026-675e8c.webp",
+    "og_done": "og/opstelling-ierland-oostenrijk-01-10-2026-ab8fee.webp",
+    "bron": "footymetrics"
   },
   "1545607": {
     "item_id": "6abd500e2099271c8a8d1827",
