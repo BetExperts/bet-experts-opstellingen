@@ -1377,7 +1377,7 @@
   "1528916": {
     "item_id": "6abd4fd92099271c8a8d0330",
     "slug": "opstelling-azerbeidzjan-liechtenstein-01-10-2026",
-    "definitief": false,
+    "definitief": true,
     "match": "Azerbeidzjan - Liechtenstein",
     "date": "2026-10-01",
     "league": "nations-league",
@@ -1386,8 +1386,9 @@
     "comp_id": "66d5a7f7fb9f23ce90376ef4",
     "stream": null,
     "vriendschappelijk": false,
-    "og": "og/opstelling-azerbeidzjan-liechtenstein-01-10-2026-9062b9.webp",
-    "og_done": "og/opstelling-azerbeidzjan-liechtenstein-01-10-2026-9062b9.webp"
+    "og": "og/opstelling-azerbeidzjan-liechtenstein-01-10-2026-14709a.webp",
+    "og_done": "og/opstelling-azerbeidzjan-liechtenstein-01-10-2026-9062b9.webp",
+    "bron": "footymetrics"
   },
   "1528919": {
     "item_id": "6abd4fdfde15f8fe16eb6a8f",
