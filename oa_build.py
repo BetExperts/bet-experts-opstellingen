@@ -286,9 +286,7 @@ def _lineup_block(team, lu, prev, definitief, kickoff, flip, is_home, absent=Non
     else:
         h.append(f"<p>De opstelling van <strong>{esc(team)}</strong> is nog niet bekend. Deze wordt hier bijgewerkt "
                  f"zodra er teamnieuws binnenkomt, en definitief rond {flip} uur.</p>")
-    if lu and not definitief and not is_home and lu.get("source") == "footymetrics":
-        h.append(f'<p><em>Vermoedelijke opstellingen op basis van de voorspelling van '
-                 f'<a href="{esc(lu.get("source_url"))}" target="_blank">FootyMetrics</a>.</em></p>')
+    # geen bronvermelding "op basis van de voorspelling van FootyMetrics" meer (gebruiker, 01-10-2026)
     return "\n".join(h)
 
 def form_dashes(f):
