@@ -1,10 +1,10 @@
 # -*- coding: utf-8 -*-
 """Verzamelt alle data voor één wedstrijd en bouwt de Webflow-velddata."""
 import re
-from datetime import datetime, timezone
+from datetime import datetime, timezone, timedelta
 import oa_api as api
 import oa_footy as FOOTY
-from oa_config import club_slug, RUBRIEK_ID, nl_name
+from oa_config import club_slug, RUBRIEK_ID, nl_name, fix_mojibake, stadion_nl, stad_nl
 import oa_build as B
 from tvgids import TvGids
 
@@ -39,6 +39,53 @@ def _ronde_labels(round_raw, ronde_num):
             return (v[0].upper() + v[1:], f"de {v}")
     return (round_raw, f"de {round_raw}")
 
+def _clean_lineup(lu):
+    """Kopie van een opstelling met gerepareerde spelersnamen (mojibake)."""
+    if not lu:
+        return lu
+    lu = dict(lu)
+    xi = []
+    for pp in lu.get("startXI") or []:
+        pp = dict(pp); pl = dict(pp.get("player") or {})
+        pl["name"] = fix_mojibake(pl.get("name"))
+        pp["player"] = pl; xi.append(pp)
+    lu["startXI"] = xi
+    return lu
+
+INJ_WINDOW_DAYS = 14   # alleen afwezigen uit de laatste twee weken vóór de aftrap
+
+def _injuries(fid, team_id, kickoff, fx_inj):
+    """Afwezigen van één ploeg voor deze wedstrijd.
+    1) wedstrijd-specifieke lijst (/injuries/{fixture}) als die voor deze ploeg gevuld is;
+    2) anders de teamlijst, maar alleen meldingen met een fixture-datum binnen
+       INJ_WINDOW_DAYS dagen vóór de aftrap (oude, allang herstelde blessures vallen weg),
+       en daarvan alleen die van de recentste wedstrijd.
+    Per speler telt de recentste melding."""
+    own = [i for i in fx_inj if str((i.get("team") or {}).get("id")) == str(team_id)]
+    if not own:
+        lo = kickoff - timedelta(days=INJ_WINDOW_DAYS)
+        for i in api.injuries_team(team_id):
+            try:
+                d = datetime.fromisoformat(((i.get("fixture") or {}).get("date") or "").replace("Z", "+00:00"))
+            except ValueError:
+                continue
+            if lo <= d <= kickoff + timedelta(hours=3):
+                own.append(i)
+        # alleen de meldingen van de recentste wedstrijd in dat venster: wie daar niet meer
+        # op de lijst staat, is kennelijk hersteld (langdurig geblesseerden staan er elke keer op)
+        if own:
+            last = max((i.get("fixture") or {}).get("date") or "" for i in own)
+            own = [i for i in own if ((i.get("fixture") or {}).get("date") or "") == last]
+    own.sort(key=lambda i: (i.get("fixture") or {}).get("date") or "")
+    latest = {}
+    for i in own:                          # recentste melding per speler wint
+        pl = dict(i.get("player") or {})
+        pl["name"] = fix_mojibake(pl.get("name"))
+        key = pl.get("id") or pl.get("name")
+        if key:
+            latest[key] = dict(i, player=pl)
+    return list(latest.values())
+
 def _team_lineup(team_id, exclude_fixture=None, want=2):
     """Haal de laatste 'want' opstellingen van een team op (recentste eerst)."""
     fixtures = api.team_form(team_id)
@@ -49,15 +96,17 @@ def _team_lineup(team_id, exclude_fixture=None, want=2):
         fid = f.get("fixture", {}).get("id")
         for lu in api.lineups(fid):
             if str((lu.get("team") or {}).get("id")) == str(team_id) and (lu.get("startXI")):
-                out.append(lu); break
+                out.append(_clean_lineup(lu)); break
         if len(out) >= want: break
     return out
 
-def _form_string(team_id):
-    """Leidt W/D/L-vorm (laatste 5, chronologisch) af uit /api/team-form."""
+def _form_string(team_id, before=None):
+    """Leidt W/D/L-vorm (laatste 5, chronologisch, alle competities) af uit /api/team-form.
+    before = ISO-aftrap: alleen wedstrijden die vóór deze wedstrijd gespeeld zijn."""
     fixtures = api.team_form(team_id)
     done = [f for f in fixtures
-            if ((f.get("fixture", {}).get("status", {}) or {}).get("short") in ("FT", "AET", "PEN"))]
+            if ((f.get("fixture", {}).get("status", {}) or {}).get("short") in ("FT", "AET", "PEN"))
+            and (not before or (f.get("fixture", {}).get("date") or "") < before)]
     done.sort(key=lambda f: f.get("fixture", {}).get("date", ""))
     out = ""
     for f in done[-5:]:
@@ -79,7 +128,7 @@ def gather(fx, definitief=False):
     homeN, awayN = nl_name(home.get("name")), nl_name(away.get("name"))   # landen -> Nederlands
     dt = B._local(fixture.get("date"))
     ven = fixture.get("venue", {}) or {}
-    venue = ven.get("name"); city = ven.get("city") or ""
+    venue = stadion_nl(ven.get("name")); city = stad_nl(ven.get("city")) or ""
     round_raw = league.get("round", "") or ""
     m = re.search(r"(\d+)\s*$", round_raw) or re.search(r"(\d+)", round_raw)
     ronde = m.group(1) if m else "?"
@@ -89,19 +138,18 @@ def gather(fx, definitief=False):
     pr = pred.get("predictions", {}) or {}
     pct = pr.get("percent", {}) or {}
     pH, pD, pA = _pct(pct.get("home")), _pct(pct.get("draw")), _pct(pct.get("away"))
-    tt = pred.get("teams", {}) or {}
-    hForm = ((tt.get("home", {}) or {}).get("league", {}) or {}).get("form", "") or ""
-    aForm = ((tt.get("away", {}) or {}).get("league", {}) or {}).get("form", "") or ""
-    hForm, aForm = hForm[-5:], aForm[-5:]
-    # val terug op de laatste-5-resultaten uit de API als predictions geen vorm geeft
-    if not hForm: hForm = _form_string(homeId)
-    if not aForm: aForm = _form_string(awayId)
+    # vorm: altijd de laatste 5 gespeelde wedstrijden over álle competities (chronologisch,
+    # recentste rechts) — league.form uit predictions telt alleen de eigen competitie mee
+    hForm, aForm = _form_string(homeId, fixture.get("date")), _form_string(awayId, fixture.get("date"))
     h2h = pred.get("h2h") or api.h2h(homeId, awayId)
     # betrouwbare voorspelling? (API geeft soms "No predictions available" + 33/33/33)
     adv = (pr.get("advice") or "").strip().lower()
-    # een uitkomst op 0% (bv. 50/50/0) is een kapotte API-voorspelling -> niet tonen
+    # geen echte voorspelling: 0% voor een uitkomst (bv. 50/50/0), 33/33/33, het standaardpatroon
+    # 10/45/45 of een 'double chance'-advies (de API weet het dan eigenlijk niet)
     has_pred = bool((pH or pD or pA) and not adv.startswith("no prediction") and not (pH == pD == pA)
-                    and 0 not in (pH, pD, pA))
+                    and 0 not in (pH, pD, pA)
+                    and sorted((pH, pD, pA)) != [10, 45, 45]
+                    and "double chance" not in adv)
 
     if definitief:
         lus = api.lineups(fid)
@@ -110,7 +158,7 @@ def gather(fx, definitief=False):
                 if str((lu.get("team") or {}).get("id")) == str(tid) and lu.get("startXI"):
                     return lu
             return None
-        hLU, aLU = pick(homeId), pick(awayId)
+        hLU, aLU = _clean_lineup(pick(homeId)), _clean_lineup(pick(awayId))
         hPrev = aPrev = None
     else:
         hl = _team_lineup(homeId, exclude_fixture=fid); al = _team_lineup(awayId, exclude_fixture=fid)
@@ -120,10 +168,14 @@ def gather(fx, definitief=False):
         # de laatst gespeelde opstelling dient dan als vergelijking ('wijzigingen t.o.v. vorige duel').
         fm = FOOTY.predicted(home.get("name"), away.get("name"), dt.date().isoformat())
         if fm:
-            hPrev, aPrev = hLU, aLU
-            hLU, aLU = FOOTY.as_lineup(fm["home"], fm["url"]), FOOTY.as_lineup(fm["away"], fm["url"])
+            # vergelijkingsmateriaal: de laatste twee gespeelde basiselftallen (footy_note kiest de best passende)
+            hPrev, aPrev = hl, al
+            hLU = _clean_lineup(FOOTY.as_lineup(fm["home"], fm["url"]))
+            aLU = _clean_lineup(FOOTY.as_lineup(fm["away"], fm["url"]))
             print(f"     ↳ vermoedelijke opstellingen via FootyMetrics ({hLU['formation']} / {aLU['formation']})")
 
+    fx_inj = api.injuries_fixture(fid) if fid else []
+    ko = datetime.fromisoformat((fixture.get("date") or "").replace("Z", "+00:00"))
     return {
         "fid": fid, "homeId": homeId, "awayId": awayId, "homeN": homeN, "awayN": awayN,
         "homeApi": home.get("name"), "awayApi": away.get("name"),   # Engelse API-naam (voor de vlag)
@@ -133,7 +185,7 @@ def gather(fx, definitief=False):
         "ronde_txt": ronde_txt, "ronde_intro": ronde_intro, "definitief": definitief,
         "pH": pH, "pD": pD, "pA": pA, "has_pred": has_pred, "hForm": hForm, "aForm": aForm,
         "hLU": hLU, "aLU": aLU, "hPrev": hPrev, "aPrev": aPrev,
-        "hInj": api.injuries_team(homeId), "aInj": api.injuries_team(awayId),
+        "hInj": _injuries(fid, homeId, ko, fx_inj), "aInj": _injuries(fid, awayId, ko, fx_inj),
         "h2h": h2h,
         "tvgids": _GIDS.lookup(homeN, awayN, dt),   # exacte zender (of None -> geen tv-regel)
     }
@@ -154,7 +206,8 @@ def build_fielddata(ctx, league_cfg, slug=None):
     dt = ctx["dt"]; definitief = ctx["definitief"]
     content, content2, content3 = B.build_content(ctx)
     title = B.build_title(definitief, ctx["homeN"], ctx["awayN"], ctx["city"] or ctx["venue"] or "", ctx["pH"], ctx["pA"], ctx.get("has_pred", True))
-    samenvatting = B.build_samenvatting(definitief, ctx["homeN"], ctx["awayN"], league_cfg["naam"], dt)
+    samenvatting = B.build_samenvatting(definitief, ctx["homeN"], ctx["awayN"], league_cfg["naam"], dt,
+                                        ctx.get("has_pred", True))
     if not slug:
         hs = ctx["hSlug"] or B.slugify(ctx["homeN"]); as_ = ctx["aSlug"] or B.slugify(ctx["awayN"])
         slug = B.build_slug(hs, as_, dt)

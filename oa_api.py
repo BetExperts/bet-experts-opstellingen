@@ -51,6 +51,11 @@ def injuries_team(team_id):
     d = _get(f"injuries/team/{team_id}") or {}
     return d.get("response") or []
 
+def injuries_fixture(fixture_id):
+    """Afwezigen voor één specifieke wedstrijd (beide ploegen; vaak pas kort voor de aftrap gevuld)."""
+    d = _get(f"injuries/{fixture_id}") or {}
+    return d.get("response") or []
+
 def coach(team_id):
     d = _get(f"coach/{team_id}") or {}
     r = d.get("response") or []

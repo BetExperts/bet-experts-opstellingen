@@ -4,13 +4,13 @@ Genereert automatisch **opstellingen-artikelen** (Eredivisie + Keuken Kampioen D
 in de Webflow Nieuws-collectie, op basis van de Bet-Experts API-proxy (Cloudflare Worker).
 
 - **Avond ervóór** (`generate.py`): maakt per wedstrijd een *"Vermoedelijke opstelling …"*-artikel
-  (verwachte XI uit de laatste wedstrijden, blessures, vorm, H2H, AI-model-kansen, FAQ) en publiceert het.
+  (verwachte XI uit de laatste wedstrijden, blessures, vorm, H2H, winkansen volgens de statistische voorspelling, FAQ) en publiceert het.
   → hele nacht indexeringstijd, 's ochtends al op Google.
 - **Wedstrijddag** (`finalize.py`): zodra de echte opstelling binnen is (~1u voor aftrap) wordt hetzelfde
   artikel bijgewerkt naar *"Definitieve opstelling …"* (zelfde slug/URL, dus geen her-indexering nodig).
 
 ## Belangrijk
-- **Geen wedtips** — de winkansen komen expliciet van een *AI-model*, niet van Bet-Experts.
+- **Geen wedtips** — de winkansen komen expliciet uit een *statistische voorspelling*, niet van Bet-Experts.
 - **Geen tabellen** (Webflow rich-text ondersteunt die niet): alles is koppen + alinea's + lijsten.
 - Content wordt gesplitst over **content / content-2 / content-3**; SEO-meta staat in **samenvatting**.
 - De **slug blijft gelijk** bij het flippen naar definitief, zodat URL's/links niet breken.

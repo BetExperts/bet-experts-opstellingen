@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 """Configuratie voor de opstellingen-agent."""
-import os, json, re
+import os, json, re, html, unicodedata
 
 BASE = os.path.dirname(os.path.abspath(__file__))
 DATA = os.path.join(BASE, "data")
@@ -77,16 +77,56 @@ def _load(fn):
 TID_SLUG   = _load("tid_slug.json")            # API team-id -> website club-slug
 CLUB_NAME  = _load("club_name_slug_filled.json")  # clubnaam -> slug (gevulde clubs)
 LANDEN_NL  = _load("landen_nl.json")           # Engelse API-landnaam -> Nederlandse naam
+STADIONS_NL = _load("stadions_nl.json")        # API-stadionnaam -> Nederlandse naam (null = onbetrouwbaar, weglaten)
+STEDEN_NL  = _load("steden_nl.json")           # API-plaatsnaam -> Nederlandse naam
+_LANDEN_LC = {k.lower(): v for k, v in LANDEN_NL.items()}
+
+def fix_mojibake(s):
+    """Repareert namen uit de API: 'LÃ¤hteenmÃ¤ki' -> 'Lähteenmäki' (UTF-8 dat als Latin-1 is gelezen)
+    en HTML-entiteiten ('D. O&apos;Shea' -> "D. O'Shea")."""
+    if not s or not isinstance(s, str):
+        return s
+    if "Ã" in s or "Â" in s:
+        try:
+            s = s.encode("latin-1").decode("utf-8")
+        except (UnicodeEncodeError, UnicodeDecodeError):
+            pass
+    if "&" in s:
+        s = html.unescape(s)
+    return s
+
+def stadion_nl(name):
+    """Nederlandse stadionnaam; None als onbekend of als de API-naam onbetrouwbaar is.
+    'AFAS Stadion（Alkmaar）' -> 'AFAS Stadion' (breedtetekens genormaliseerd, plaatsnaam tussen haakjes eraf:
+    die komt er in de tekst zelf achter)."""
+    name = unicodedata.normalize("NFKC", fix_mojibake(name) or "").strip()
+    if name in STADIONS_NL:
+        return STADIONS_NL[name] or None
+    name = re.sub(r"\s*\([^)]*\)\s*$", "", name).strip()
+    if not name:
+        return None
+    if name in STADIONS_NL:
+        return STADIONS_NL[name] or None
+    return name
+
+def stad_nl(name):
+    name = (fix_mojibake(name) or "").strip()
+    return STEDEN_NL.get(name, name) or None
 
 def nl_name(name):
     """Vertaal een landenteam-naam naar het Nederlands (clubs blijven ongemoeid).
     Jeugdelftallen: 'Slovenia U21' -> 'Jong Slovenië', 'Netherlands U21' -> 'Jong Oranje'."""
+    name = fix_mojibake(name)
     if name and name.endswith(" U21"):
         base = name[:-4]
         if base == "Netherlands":
             return "Jong Oranje"
         return "Jong " + LANDEN_NL.get(base, LANDEN_NL.get(base.replace("-", " & "), base))
-    return LANDEN_NL.get(name, name)
+    if name in LANDEN_NL:
+        return LANDEN_NL[name]
+    if name and name.lower() in _LANDEN_LC:            # API levert soms 'andorra' i.p.v. 'Andorra'
+        return _LANDEN_LC[name.lower()]
+    return name
 
 def club_slug(team_id, name=None):
     """Website-slug voor een club op basis van API team-id (val terug op naam)."""
@@ -104,7 +144,9 @@ REASON_NL = {
     "Thigh Injury": "dijblessure", "Groin Injury": "liesblessure", "Calf Injury": "kuitblessure",
     "Hamstring Injury": "hamstringblessure", "Foot Injury": "voetblessure",
     "Back Injury": "rugblessure", "Shoulder Injury": "schouderblessure", "Knock": "lichte blessure",
-    "Illness": "ziekte", "Suspended": "schorsing", "Red Card": "schorsing (rode kaart)",
+    "Illness": "ziekte", "Suspended": "geschorst", "Red Card": "geschorst na rode kaart",
+    "Yellow Cards": "geschorst na gele kaarten", "Lacking Match Fitness": "nog niet wedstrijdfit",
+    "Off the roster": "niet in de selectie", "Personal Reasons": "persoonlijke omstandigheden",
     "Inactive": "niet inzetbaar", "Injury": "blessure", "Coach's decision": "keuze trainer",
     "National selection": "interlandverplichting", "Rest": "rust",
 }
@@ -113,7 +155,7 @@ _REASON_KW = [("hamstring", "hamstringblessure"), ("ankle", "enkelblessure"), ("
                ("foot", "voetblessure"), ("toe", "teenblessure"), ("back", "rugblessure"), ("shoulder", "schouderblessure"),
                ("hip", "heupblessure"), ("concussion", "hersenschudding"), ("head", "hoofdblessure"), ("wrist", "polsblessure"),
                ("hand", "handblessure"), ("muscle", "spierblessure"), ("ill", "ziekte"), ("sick", "ziekte"),
-               ("suspen", "schorsing"), ("red card", "schorsing (rode kaart)"), ("yellow", "schorsing (gele kaarten)")]
+               ("suspen", "geschorst"), ("red card", "geschorst na rode kaart"), ("yellow", "geschorst na gele kaarten")]
 def reason_nl(r):
     if not r: return "blessure"
     if r in REASON_NL: return REASON_NL[r]

@@ -46,6 +46,24 @@ def _get(url):
     with urllib.request.urlopen(r, timeout=25) as resp:
         return resp.read().decode("utf-8", "ignore")
 
+def _split_zenders(raw):
+    """'TOTO Sport · Ziggo Sport' / 'ESPN 1/2' / 'NPO 1, NPO Start' -> losse zenders.
+    Een los nummer erft de naam van de vorige zender ('ESPN 1/2' -> 'ESPN 1', 'ESPN 2')."""
+    out = []
+    for z in raw:
+        prev = None
+        for part in re.split(r"\s*[·/,]\s*", z or ""):
+            part = part.strip()
+            if not part:
+                continue
+            if prev and re.fullmatch(r"\d+", part):
+                base = re.sub(r"\s*\d+$", "", prev)
+                part = f"{base} {part}" if base else part
+            if part not in out:
+                out.append(part)
+            prev = part
+    return out
+
 def _parse(page):
     cards = []
     for li in re.findall(r'<li class="wp-block-post[^"]*".*?</li>', page, flags=re.S):
@@ -57,7 +75,8 @@ def _parse(page):
         if len(teams) != 2:
             continue
         comp = re.search(r'wedstrijd-card__competitie">([^<]+)<', li)
-        zenders = [html.unescape(z).strip() for z in re.findall(r'wedstrijd-meta__zender">([^<]+)<', li)]
+        zenders = _split_zenders(html.unescape(z).strip()
+                                 for z in re.findall(r'wedstrijd-meta__zender">([^<]+)<', li))
         try:
             ko = datetime.fromisoformat(tijd.group(1))
         except ValueError:

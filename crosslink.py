@@ -64,7 +64,7 @@ def build_block(group, self_kind, label):
     if "opst" in group and self_kind != "opst":
         parts.append(f'<a href="/nieuws/{group["opst"]["fieldData"]["slug"]}">Opstellingen {label}</a>')
     if "live" in group and self_kind != "live":
-        parts.append(f'<a href="/nieuws/{group["live"]["fieldData"]["slug"]}">{label} gratis live kijken</a>')
+        parts.append(f'<a href="/nieuws/{group["live"]["fieldData"]["slug"]}">Waar kijk je {label}?</a>')
     if not parts: return None
     return f"<p><strong>Meer over {label}:</strong> " + " · ".join(parts) + "</p>"
 
