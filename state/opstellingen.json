@@ -1537,7 +1537,7 @@
   "1551825": {
     "item_id": "6abff2fe0f6f15aa89a29e63",
     "slug": "opstelling-rkc-waalwijk-fc-emmen-03-10-2026",
-    "definitief": false,
+    "definitief": true,
     "match": "Waalwijk - Emmen",
     "date": "2026-10-03",
     "league": "eerste-divisie",
@@ -1546,13 +1546,14 @@
     "comp_id": "65de4bc0a8777b9898d6374e",
     "stream": null,
     "vriendschappelijk": false,
-    "og": "og/opstelling-rkc-waalwijk-fc-emmen-03-10-2026-845ff2.webp",
-    "og_done": "og/opstelling-rkc-waalwijk-fc-emmen-03-10-2026-845ff2.webp"
+    "og": "og/opstelling-rkc-waalwijk-fc-emmen-03-10-2026-b171f1.webp",
+    "og_done": "og/opstelling-rkc-waalwijk-fc-emmen-03-10-2026-845ff2.webp",
+    "bron": "api"
   },
   "1551821": {
     "item_id": "6abff3055142828c2f713a53",
     "slug": "opstelling-almere-city-volendam-03-10-2026",
-    "definitief": false,
+    "definitief": true,
     "match": "Almere City FC - FC Volendam",
     "date": "2026-10-03",
     "league": "eerste-divisie",
@@ -1561,13 +1562,14 @@
     "comp_id": "65de4bc0a8777b9898d6374e",
     "stream": null,
     "vriendschappelijk": false,
-    "og": "og/opstelling-almere-city-volendam-03-10-2026-cebdea.webp",
-    "og_done": "og/opstelling-almere-city-volendam-03-10-2026-cebdea.webp"
+    "og": "og/opstelling-almere-city-volendam-03-10-2026-ee1494.webp",
+    "og_done": "og/opstelling-almere-city-volendam-03-10-2026-cebdea.webp",
+    "bron": "api"
   },
   "1551822": {
     "item_id": "6abff30bdf375f3961d54d49",
     "slug": "opstelling-fc-den-bosch-fc-dordrecht-03-10-2026",
-    "definitief": false,
+    "definitief": true,
     "match": "Den Bosch - Dordrecht",
     "date": "2026-10-03",
     "league": "eerste-divisie",
@@ -1576,13 +1578,14 @@
     "comp_id": "65de4bc0a8777b9898d6374e",
     "stream": null,
     "vriendschappelijk": false,
-    "og": "og/opstelling-fc-den-bosch-fc-dordrecht-03-10-2026-e50b83.webp",
-    "og_done": "og/opstelling-fc-den-bosch-fc-dordrecht-03-10-2026-e50b83.webp"
+    "og": "og/opstelling-fc-den-bosch-fc-dordrecht-03-10-2026-73b2df.webp",
+    "og_done": "og/opstelling-fc-den-bosch-fc-dordrecht-03-10-2026-e50b83.webp",
+    "bron": "api"
   },
   "1551823": {
     "item_id": "6abff3120fe2c9c89ef7e032",
     "slug": "opstelling-fc-eindhoven-de-graafschap-03-10-2026",
-    "definitief": false,
+    "definitief": true,
     "match": "FC Eindhoven - De Graafschap",
     "date": "2026-10-03",
     "league": "eerste-divisie",
@@ -1591,8 +1594,9 @@
     "comp_id": "65de4bc0a8777b9898d6374e",
     "stream": null,
     "vriendschappelijk": false,
-    "og": "og/opstelling-fc-eindhoven-de-graafschap-03-10-2026-fd0527.webp",
-    "og_done": "og/opstelling-fc-eindhoven-de-graafschap-03-10-2026-fd0527.webp"
+    "og": "og/opstelling-fc-eindhoven-de-graafschap-03-10-2026-9faafd.webp",
+    "og_done": "og/opstelling-fc-eindhoven-de-graafschap-03-10-2026-fd0527.webp",
+    "bron": "api"
   },
   "1528932": {
     "item_id": "6abff31a3852d60193eaf3a4",
@@ -1613,7 +1617,7 @@
   "1528933": {
     "item_id": "6abff321c01f87615d1d333c",
     "slug": "opstelling-kroatie-engeland-03-10-2026",
-    "definitief": false,
+    "definitief": true,
     "match": "Kroatië - Engeland",
     "date": "2026-10-03",
     "league": "nations-league",
@@ -1622,13 +1626,14 @@
     "comp_id": "66d5a7f7fb9f23ce90376ef4",
     "stream": null,
     "vriendschappelijk": false,
-    "og": "og/opstelling-kroatie-engeland-03-10-2026-b38572.webp",
-    "og_done": "og/opstelling-kroatie-engeland-03-10-2026-b38572.webp"
+    "og": "og/opstelling-kroatie-engeland-03-10-2026-f93bc8.webp",
+    "og_done": "og/opstelling-kroatie-engeland-03-10-2026-b38572.webp",
+    "bron": "api"
   },
   "1528935": {
     "item_id": "6abff32995663b6b21a8b312",
     "slug": "opstelling-ijsland-bulgarije-03-10-2026",
-    "definitief": false,
+    "definitief": true,
     "match": "IJsland - Bulgarije",
     "date": "2026-10-03",
     "league": "nations-league",
@@ -1637,13 +1642,14 @@
     "comp_id": "66d5a7f7fb9f23ce90376ef4",
     "stream": null,
     "vriendschappelijk": false,
-    "og": "og/opstelling-ijsland-bulgarije-03-10-2026-39bf81.webp",
-    "og_done": "og/opstelling-ijsland-bulgarije-03-10-2026-39bf81.webp"
+    "og": "og/opstelling-ijsland-bulgarije-03-10-2026-4fa2f4.webp",
+    "og_done": "og/opstelling-ijsland-bulgarije-03-10-2026-39bf81.webp",
+    "bron": "api"
   },
   "1528934": {
     "item_id": "6abff3308a55b48de61d61ea",
     "slug": "opstelling-wit-rusland-san-marino-03-10-2026",
-    "definitief": false,
+    "definitief": true,
     "match": "Belarus - San Marino",
     "date": "2026-10-03",
     "league": "nations-league",
@@ -1652,13 +1658,14 @@
     "comp_id": "66d5a7f7fb9f23ce90376ef4",
     "stream": null,
     "vriendschappelijk": false,
-    "og": "og/opstelling-wit-rusland-san-marino-03-10-2026-66d973.webp",
-    "og_done": "og/opstelling-wit-rusland-san-marino-03-10-2026-66d973.webp"
+    "og": "og/opstelling-wit-rusland-san-marino-03-10-2026-bcf6cc.webp",
+    "og_done": "og/opstelling-wit-rusland-san-marino-03-10-2026-66d973.webp",
+    "bron": "api"
   },
   "1545609": {
     "item_id": "6abff3363ca3c143838be09a",
     "slug": "opstelling-estland-luxemburg-03-10-2026",
-    "definitief": false,
+    "definitief": true,
     "match": "Estland - Luxemburg",
     "date": "2026-10-03",
     "league": "nations-league",
@@ -1667,13 +1674,14 @@
     "comp_id": "66d5a7f7fb9f23ce90376ef4",
     "stream": null,
     "vriendschappelijk": false,
-    "og": "og/opstelling-estland-luxemburg-03-10-2026-eb0acb.webp",
-    "og_done": "og/opstelling-estland-luxemburg-03-10-2026-eb0acb.webp"
+    "og": "og/opstelling-estland-luxemburg-03-10-2026-8ef1ff.webp",
+    "og_done": "og/opstelling-estland-luxemburg-03-10-2026-eb0acb.webp",
+    "bron": "api"
   },
   "1528936": {
     "item_id": "6abff33b24ef361babf83380",
     "slug": "opstelling-spanje-tsjechie-03-10-2026",
-    "definitief": false,
+    "definitief": true,
     "match": "Spanje - Tsjechië",
     "date": "2026-10-03",
     "league": "nations-league",
@@ -1682,13 +1690,14 @@
     "comp_id": "66d5a7f7fb9f23ce90376ef4",
     "stream": null,
     "vriendschappelijk": false,
-    "og": "og/opstelling-spanje-tsjechie-03-10-2026-d44602.webp",
-    "og_done": "og/opstelling-spanje-tsjechie-03-10-2026-d44602.webp"
+    "og": "og/opstelling-spanje-tsjechie-03-10-2026-a7deb3.webp",
+    "og_done": "og/opstelling-spanje-tsjechie-03-10-2026-d44602.webp",
+    "bron": "api"
   },
   "1545653": {
     "item_id": "6abff342a52bde95d873d963",
     "slug": "opstelling-zwitserland-slovenie-03-10-2026",
-    "definitief": false,
+    "definitief": true,
     "match": "Zwitserland - Slovenië",
     "date": "2026-10-03",
     "league": "nations-league",
@@ -1697,13 +1706,14 @@
     "comp_id": "66d5a7f7fb9f23ce90376ef4",
     "stream": null,
     "vriendschappelijk": false,
-    "og": "og/opstelling-zwitserland-slovenie-03-10-2026-9eb494.webp",
-    "og_done": "og/opstelling-zwitserland-slovenie-03-10-2026-9eb494.webp"
+    "og": "og/opstelling-zwitserland-slovenie-03-10-2026-f4926e.webp",
+    "og_done": "og/opstelling-zwitserland-slovenie-03-10-2026-9eb494.webp",
+    "bron": "api"
   },
   "1545660": {
     "item_id": "6abff3490f6f15aa89a2c42c",
     "slug": "opstelling-noord-macedonie-schotland-03-10-2026",
-    "definitief": false,
+    "definitief": true,
     "match": "Noord-Macedonië - Schotland",
     "date": "2026-10-03",
     "league": "nations-league",
@@ -1712,7 +1722,8 @@
     "comp_id": "66d5a7f7fb9f23ce90376ef4",
     "stream": null,
     "vriendschappelijk": false,
-    "og": "og/opstelling-noord-macedonie-schotland-03-10-2026-39ae47.webp",
-    "og_done": "og/opstelling-noord-macedonie-schotland-03-10-2026-39ae47.webp"
+    "og": "og/opstelling-noord-macedonie-schotland-03-10-2026-f0554c.webp",
+    "og_done": "og/opstelling-noord-macedonie-schotland-03-10-2026-39ae47.webp",
+    "bron": "api"
   }
 }
