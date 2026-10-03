@@ -1505,7 +1505,7 @@
   "1551820": {
     "item_id": "6abff2f0876ca6fb0ff38412",
     "slug": "opstelling-vitesse-nac-breda-03-10-2026",
-    "definitief": false,
+    "definitief": true,
     "match": "Vitesse - NAC Breda",
     "date": "2026-10-03",
     "league": "eerste-divisie",
@@ -1514,13 +1514,14 @@
     "comp_id": "65de4bc0a8777b9898d6374e",
     "stream": null,
     "vriendschappelijk": false,
-    "og": "og/opstelling-vitesse-nac-breda-03-10-2026-948615.webp",
-    "og_done": "og/opstelling-vitesse-nac-breda-03-10-2026-948615.webp"
+    "og": "og/opstelling-vitesse-nac-breda-03-10-2026-41971a.webp",
+    "og_done": "og/opstelling-vitesse-nac-breda-03-10-2026-948615.webp",
+    "bron": "api"
   },
   "1551824": {
     "item_id": "6abff2f6764843b5fa716911",
     "slug": "opstelling-top-oss-mvv-03-10-2026",
-    "definitief": false,
+    "definitief": true,
     "match": "FC OSS - MVV",
     "date": "2026-10-03",
     "league": "eerste-divisie",
@@ -1529,8 +1530,9 @@
     "comp_id": "65de4bc0a8777b9898d6374e",
     "stream": null,
     "vriendschappelijk": false,
-    "og": "og/opstelling-top-oss-mvv-03-10-2026-269ca9.webp",
-    "og_done": "og/opstelling-top-oss-mvv-03-10-2026-269ca9.webp"
+    "og": "og/opstelling-top-oss-mvv-03-10-2026-f6e878.webp",
+    "og_done": "og/opstelling-top-oss-mvv-03-10-2026-269ca9.webp",
+    "bron": "api"
   },
   "1551825": {
     "item_id": "6abff2fe0f6f15aa89a29e63",
@@ -1595,7 +1597,7 @@
   "1528932": {
     "item_id": "6abff31a3852d60193eaf3a4",
     "slug": "opstelling-finland-albanie-03-10-2026",
-    "definitief": false,
+    "definitief": true,
     "match": "Finland - Albanië",
     "date": "2026-10-03",
     "league": "nations-league",
@@ -1604,8 +1606,9 @@
     "comp_id": "66d5a7f7fb9f23ce90376ef4",
     "stream": null,
     "vriendschappelijk": false,
-    "og": "og/opstelling-finland-albanie-03-10-2026-9a5bd8.webp",
-    "og_done": "og/opstelling-finland-albanie-03-10-2026-9a5bd8.webp"
+    "og": "og/opstelling-finland-albanie-03-10-2026-2221f7.webp",
+    "og_done": "og/opstelling-finland-albanie-03-10-2026-9a5bd8.webp",
+    "bron": "api"
   },
   "1528933": {
     "item_id": "6abff321c01f87615d1d333c",
