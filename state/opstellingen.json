@@ -1873,7 +1873,7 @@
   "1545611": {
     "item_id": "6ac2bfff70688bc683872090",
     "slug": "opstelling-cyprus-letland-05-10-2026",
-    "definitief": false,
+    "definitief": true,
     "match": "Cyprus - Letland",
     "date": "2026-10-05",
     "league": "nations-league",
@@ -1882,8 +1882,9 @@
     "comp_id": "66d5a7f7fb9f23ce90376ef4",
     "stream": null,
     "vriendschappelijk": false,
-    "og": "og/opstelling-cyprus-letland-05-10-2026-de6961.webp",
-    "og_done": "og/opstelling-cyprus-letland-05-10-2026-de6961.webp"
+    "og": "og/opstelling-cyprus-letland-05-10-2026-6af5a8.webp",
+    "og_done": "og/opstelling-cyprus-letland-05-10-2026-de6961.webp",
+    "bron": "footymetrics"
   },
   "1528944": {
     "item_id": "6ac2c00ea8ccd5d3eb62298f",
