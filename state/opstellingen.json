@@ -1889,7 +1889,7 @@
   "1528944": {
     "item_id": "6ac2c00ea8ccd5d3eb62298f",
     "slug": "opstelling-frankrijk-belgie-05-10-2026",
-    "definitief": false,
+    "definitief": true,
     "match": "Frankrijk - België",
     "date": "2026-10-05",
     "league": "nations-league",
@@ -1898,13 +1898,14 @@
     "comp_id": "66d5a7f7fb9f23ce90376ef4",
     "stream": null,
     "vriendschappelijk": false,
-    "og": "og/opstelling-frankrijk-belgie-05-10-2026-f86ccf.webp",
-    "og_done": "og/opstelling-frankrijk-belgie-05-10-2026-f86ccf.webp"
+    "og": "og/opstelling-frankrijk-belgie-05-10-2026-def8a6.webp",
+    "og_done": "og/opstelling-frankrijk-belgie-05-10-2026-f86ccf.webp",
+    "bron": "footymetrics"
   },
   "1528945": {
     "item_id": "6ac2c0187089402c343693a1",
     "slug": "opstelling-italie-turkije-05-10-2026",
-    "definitief": false,
+    "definitief": true,
     "match": "Italië - Turkije",
     "date": "2026-10-05",
     "league": "nations-league",
@@ -1913,13 +1914,14 @@
     "comp_id": "66d5a7f7fb9f23ce90376ef4",
     "stream": null,
     "vriendschappelijk": false,
-    "og": "og/opstelling-italie-turkije-05-10-2026-50603c.webp",
-    "og_done": "og/opstelling-italie-turkije-05-10-2026-50603c.webp"
+    "og": "og/opstelling-italie-turkije-05-10-2026-1bb91a.webp",
+    "og_done": "og/opstelling-italie-turkije-05-10-2026-50603c.webp",
+    "bron": "footymetrics"
   },
   "1528947": {
     "item_id": "6ac2c023e475af2ba4c9d063",
     "slug": "opstelling-noord-ierland-georgie-05-10-2026",
-    "definitief": false,
+    "definitief": true,
     "match": "Noord-Ierland - Georgië",
     "date": "2026-10-05",
     "league": "nations-league",
@@ -1928,13 +1930,14 @@
     "comp_id": "66d5a7f7fb9f23ce90376ef4",
     "stream": null,
     "vriendschappelijk": false,
-    "og": "og/opstelling-noord-ierland-georgie-05-10-2026-67c194.webp",
-    "og_done": "og/opstelling-noord-ierland-georgie-05-10-2026-67c194.webp"
+    "og": "og/opstelling-noord-ierland-georgie-05-10-2026-b731a3.webp",
+    "og_done": "og/opstelling-noord-ierland-georgie-05-10-2026-67c194.webp",
+    "bron": "footymetrics"
   },
   "1528946": {
     "item_id": "6ac2c0292810c85ce4f27eb2",
     "slug": "opstelling-oekraine-hongarije-05-10-2026",
-    "definitief": false,
+    "definitief": true,
     "match": "Oekraïne - Hongarije",
     "date": "2026-10-05",
     "league": "nations-league",
@@ -1943,13 +1946,14 @@
     "comp_id": "66d5a7f7fb9f23ce90376ef4",
     "stream": null,
     "vriendschappelijk": false,
-    "og": "og/opstelling-oekraine-hongarije-05-10-2026-8e17bb.webp",
-    "og_done": "og/opstelling-oekraine-hongarije-05-10-2026-8e17bb.webp"
+    "og": "og/opstelling-oekraine-hongarije-05-10-2026-b617ba.webp",
+    "og_done": "og/opstelling-oekraine-hongarije-05-10-2026-8e17bb.webp",
+    "bron": "footymetrics"
   },
   "1528949": {
     "item_id": "6ac2c031babcd82946de25ff",
     "slug": "opstelling-roemenie-zweden-05-10-2026",
-    "definitief": false,
+    "definitief": true,
     "match": "Roemenië - Zweden",
     "date": "2026-10-05",
     "league": "nations-league",
@@ -1958,8 +1962,9 @@
     "comp_id": "66d5a7f7fb9f23ce90376ef4",
     "stream": null,
     "vriendschappelijk": false,
-    "og": "og/opstelling-roemenie-zweden-05-10-2026-398772.webp",
-    "og_done": "og/opstelling-roemenie-zweden-05-10-2026-398772.webp"
+    "og": "og/opstelling-roemenie-zweden-05-10-2026-e83501.webp",
+    "og_done": "og/opstelling-roemenie-zweden-05-10-2026-398772.webp",
+    "bron": "footymetrics"
   },
   "1528950": {
     "item_id": "6ac2c0377089402c34369bdd",
@@ -1980,7 +1985,7 @@
   "1528948": {
     "item_id": "6ac2c03f6c8da10340bc1194",
     "slug": "opstelling-bosnie-herzegovina-polen-05-10-2026",
-    "definitief": false,
+    "definitief": true,
     "match": "Bosnië en Herzegovina - Polen",
     "date": "2026-10-05",
     "league": "nations-league",
@@ -1989,7 +1994,8 @@
     "comp_id": "66d5a7f7fb9f23ce90376ef4",
     "stream": null,
     "vriendschappelijk": false,
-    "og": "og/opstelling-bosnie-herzegovina-polen-05-10-2026-623339.webp",
-    "og_done": "og/opstelling-bosnie-herzegovina-polen-05-10-2026-623339.webp"
+    "og": "og/opstelling-bosnie-herzegovina-polen-05-10-2026-883c51.webp",
+    "og_done": "og/opstelling-bosnie-herzegovina-polen-05-10-2026-623339.webp",
+    "bron": "footymetrics"
   }
 }
