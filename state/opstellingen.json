@@ -2017,7 +2017,7 @@
   "1528952": {
     "item_id": "6ac3e7cdaf49bb4daa43c185",
     "slug": "opstelling-kroatie-spanje-06-10-2026",
-    "definitief": false,
+    "definitief": true,
     "match": "Kroatië - Spanje",
     "date": "2026-10-06",
     "league": "nations-league",
@@ -2026,13 +2026,14 @@
     "comp_id": "66d5a7f7fb9f23ce90376ef4",
     "stream": null,
     "vriendschappelijk": false,
-    "og": "og/opstelling-kroatie-spanje-06-10-2026-0ccc8b.webp",
-    "og_done": "og/opstelling-kroatie-spanje-06-10-2026-0ccc8b.webp"
+    "og": "og/opstelling-kroatie-spanje-06-10-2026-0422cf.webp",
+    "og_done": "og/opstelling-kroatie-spanje-06-10-2026-0ccc8b.webp",
+    "bron": "api"
   },
   "1528953": {
     "item_id": "6ac3e7d6af49bb4daa43c520",
     "slug": "opstelling-engeland-tsjechie-06-10-2026",
-    "definitief": false,
+    "definitief": true,
     "match": "Engeland - Tsjechië",
     "date": "2026-10-06",
     "league": "nations-league",
@@ -2041,13 +2042,14 @@
     "comp_id": "66d5a7f7fb9f23ce90376ef4",
     "stream": null,
     "vriendschappelijk": false,
-    "og": "og/opstelling-engeland-tsjechie-06-10-2026-4be725.webp",
-    "og_done": "og/opstelling-engeland-tsjechie-06-10-2026-4be725.webp"
+    "og": "og/opstelling-engeland-tsjechie-06-10-2026-7a20e4.webp",
+    "og_done": "og/opstelling-engeland-tsjechie-06-10-2026-4be725.webp",
+    "bron": "api"
   },
   "1545655": {
     "item_id": "6ac3e7e1e4a50906fc5ade67",
     "slug": "opstelling-zwitserland-noord-macedonie-06-10-2026",
-    "definitief": false,
+    "definitief": true,
     "match": "Zwitserland - Noord-Macedonië",
     "date": "2026-10-06",
     "league": "nations-league",
@@ -2056,13 +2058,14 @@
     "comp_id": "66d5a7f7fb9f23ce90376ef4",
     "stream": null,
     "vriendschappelijk": false,
-    "og": "og/opstelling-zwitserland-noord-macedonie-06-10-2026-dcc39f.webp",
-    "og_done": "og/opstelling-zwitserland-noord-macedonie-06-10-2026-dcc39f.webp"
+    "og": "og/opstelling-zwitserland-noord-macedonie-06-10-2026-65e300.webp",
+    "og_done": "og/opstelling-zwitserland-noord-macedonie-06-10-2026-dcc39f.webp",
+    "bron": "api"
   },
   "1528954": {
     "item_id": "6ac3e7ed3aa032e3a22b8260",
     "slug": "opstelling-albanie-san-marino-06-10-2026",
-    "definitief": false,
+    "definitief": true,
     "match": "Albanië - San Marino",
     "date": "2026-10-06",
     "league": "nations-league",
@@ -2071,13 +2074,14 @@
     "comp_id": "66d5a7f7fb9f23ce90376ef4",
     "stream": null,
     "vriendschappelijk": false,
-    "og": "og/opstelling-albanie-san-marino-06-10-2026-9dc094.webp",
-    "og_done": "og/opstelling-albanie-san-marino-06-10-2026-9dc094.webp"
+    "og": "og/opstelling-albanie-san-marino-06-10-2026-0aece6.webp",
+    "og_done": "og/opstelling-albanie-san-marino-06-10-2026-9dc094.webp",
+    "bron": "api"
   },
   "1528955": {
     "item_id": "6ac3e7f7516c979decb16fc0",
     "slug": "opstelling-wit-rusland-finland-06-10-2026",
-    "definitief": false,
+    "definitief": true,
     "match": "Belarus - Finland",
     "date": "2026-10-06",
     "league": "nations-league",
@@ -2086,13 +2090,14 @@
     "comp_id": "66d5a7f7fb9f23ce90376ef4",
     "stream": null,
     "vriendschappelijk": false,
-    "og": "og/opstelling-wit-rusland-finland-06-10-2026-1bfd65.webp",
-    "og_done": "og/opstelling-wit-rusland-finland-06-10-2026-1bfd65.webp"
+    "og": "og/opstelling-wit-rusland-finland-06-10-2026-1aa93c.webp",
+    "og_done": "og/opstelling-wit-rusland-finland-06-10-2026-1bfd65.webp",
+    "bron": "api"
   },
   "1528957": {
     "item_id": "6ac3e801edb509b925575b9a",
     "slug": "opstelling-estland-ijsland-06-10-2026",
-    "definitief": false,
+    "definitief": true,
     "match": "Estland - IJsland",
     "date": "2026-10-06",
     "league": "nations-league",
@@ -2101,13 +2106,14 @@
     "comp_id": "66d5a7f7fb9f23ce90376ef4",
     "stream": null,
     "vriendschappelijk": false,
-    "og": "og/opstelling-estland-ijsland-06-10-2026-2a6006.webp",
-    "og_done": "og/opstelling-estland-ijsland-06-10-2026-2a6006.webp"
+    "og": "og/opstelling-estland-ijsland-06-10-2026-cb03c5.webp",
+    "og_done": "og/opstelling-estland-ijsland-06-10-2026-2a6006.webp",
+    "bron": "api"
   },
   "1545612": {
     "item_id": "6ac3e80b00468a89363bc9d4",
     "slug": "opstelling-luxemburg-bulgarije-06-10-2026",
-    "definitief": false,
+    "definitief": true,
     "match": "Luxemburg - Bulgarije",
     "date": "2026-10-06",
     "league": "nations-league",
@@ -2116,13 +2122,14 @@
     "comp_id": "66d5a7f7fb9f23ce90376ef4",
     "stream": null,
     "vriendschappelijk": false,
-    "og": "og/opstelling-luxemburg-bulgarije-06-10-2026-0e3153.webp",
-    "og_done": "og/opstelling-luxemburg-bulgarije-06-10-2026-0e3153.webp"
+    "og": "og/opstelling-luxemburg-bulgarije-06-10-2026-acacec.webp",
+    "og_done": "og/opstelling-luxemburg-bulgarije-06-10-2026-0e3153.webp",
+    "bron": "api"
   },
   "1545657": {
     "item_id": "6ac3e816af49bb4daa43e584",
     "slug": "opstelling-schotland-slovenie-06-10-2026",
-    "definitief": false,
+    "definitief": true,
     "match": "Schotland - Slovenië",
     "date": "2026-10-06",
     "league": "nations-league",
@@ -2131,13 +2138,14 @@
     "comp_id": "66d5a7f7fb9f23ce90376ef4",
     "stream": null,
     "vriendschappelijk": false,
-    "og": "og/opstelling-schotland-slovenie-06-10-2026-b931c2.webp",
-    "og_done": "og/opstelling-schotland-slovenie-06-10-2026-b931c2.webp"
+    "og": "og/opstelling-schotland-slovenie-06-10-2026-ac3530.webp",
+    "og_done": "og/opstelling-schotland-slovenie-06-10-2026-b931c2.webp",
+    "bron": "api"
   },
   "1528956": {
     "item_id": "6ac3e820516c979decb18199",
     "slug": "opstelling-moldavie-slowakije-06-10-2026",
-    "definitief": false,
+    "definitief": true,
     "match": "Moldavië - Slowakije",
     "date": "2026-10-06",
     "league": "nations-league",
@@ -2146,8 +2154,9 @@
     "comp_id": "66d5a7f7fb9f23ce90376ef4",
     "stream": null,
     "vriendschappelijk": false,
-    "og": "og/opstelling-moldavie-slowakije-06-10-2026-79665a.webp",
-    "og_done": "og/opstelling-moldavie-slowakije-06-10-2026-79665a.webp"
+    "og": "og/opstelling-moldavie-slowakije-06-10-2026-4e3b68.webp",
+    "og_done": "og/opstelling-moldavie-slowakije-06-10-2026-79665a.webp",
+    "bron": "api"
   },
   "1350203": {
     "item_id": "6ac3e829a2070997a3091879",
