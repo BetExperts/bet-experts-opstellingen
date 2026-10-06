@@ -252,9 +252,27 @@ def _hooks(homeN, awayN, pH, pA, has_pred=True, definitief=False):
             f"{F} {ww(fav, 'start', 'starten')} als favoriet",
             f"{ww(und, 'loert', 'loeren')} {U} op een stunt?"]
 
-def build_title(definitief, homeN, awayN, city, pH, pA, has_pred=True):
+def is_vandaag(dt):
+    """Wedstrijd vandaag (NL-tijd)? Dan zoeken mensen op 'opstelling <club> vandaag'."""
+    if not dt:
+        return False
+    try:
+        from zoneinfo import ZoneInfo
+        nu = datetime.now(ZoneInfo("Europe/Amsterdam"))
+        d = dt.astimezone(ZoneInfo("Europe/Amsterdam")) if dt.tzinfo else dt
+    except Exception:
+        nu, d = datetime.now(), dt
+    return d.date() == nu.date()
+
+def build_title(definitief, homeN, awayN, city, pH, pA, has_pred=True, dt=None):
     """'Vermoedelijke opstelling X – Y | Hook'. De hook valt weg als de titel daardoor te lang wordt
-    (de kerninformatie, soort + teams, blijft altijd staan)."""
+    (de kerninformatie, soort + teams, blijft altijd staan). Op de wedstrijddag: 'Opstelling X vandaag tegen Y'."""
+    if is_vandaag(dt):
+        elf = "bevestigde elf" if definitief else "vermoedelijke elf"
+        for t in (f"Opstelling {homeN} vandaag tegen {awayN}: {elf}", f"Opstelling {homeN} – {awayN} vandaag: {elf}",
+                  f"Opstelling {homeN} – {awayN} vandaag"):
+            if len(t) <= TITLE_MAX:
+                return t
     kind = "Definitieve opstelling" if definitief else "Vermoedelijke opstelling"
     base = f"{kind} {homeN} – {awayN}"
     hooks = _hooks(homeN, awayN, pH, pA, has_pred, definitief)
@@ -270,6 +288,13 @@ META_MAX = 155
 
 def build_samenvatting(definitief, homeN, awayN, comp, dt, has_pred=True):
     """Meta-omschrijving van max. META_MAX tekens: kies de langste variant die past."""
+    if is_vandaag(dt):
+        soort = "bevestigde" if definitief else "vermoedelijke"
+        for s in (f"De opstelling van {homeN} vandaag tegen {awayN} ({comp}, {nl_tijd(dt)} uur): {soort} basiselftallen, "
+                  f"blessures en vorm, bijgewerkt tot de aftrap.",
+                  f"Opstelling {homeN} vandaag tegen {awayN} ({nl_tijd(dt)} uur): {soort} basiselftallen en blessures."):
+            if len(s) <= META_MAX:
+                return s
     kind = "Definitieve" if definitief else "Vermoedelijke"
     soort = "bevestigde" if definitief else "verwachte"
     tijd = nl_tijd(dt)

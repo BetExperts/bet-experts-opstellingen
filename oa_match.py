@@ -210,7 +210,7 @@ def build_fielddata(ctx, league_cfg, slug=None):
     ctx["geen_ronde"] = league_cfg.get("geen_ronde", False)   # API-ronde onbruikbaar (bv. EK onder 21)
     dt = ctx["dt"]; definitief = ctx["definitief"]
     content, content2, content3 = B.build_content(ctx)
-    title = B.build_title(definitief, ctx["homeN"], ctx["awayN"], ctx["city"] or ctx["venue"] or "", ctx["pH"], ctx["pA"], ctx.get("has_pred", True))
+    title = B.build_title(definitief, ctx["homeN"], ctx["awayN"], ctx["city"] or ctx["venue"] or "", ctx["pH"], ctx["pA"], ctx.get("has_pred", True), dt=dt)
     samenvatting = B.build_samenvatting(definitief, ctx["homeN"], ctx["awayN"], league_cfg["naam"], dt,
                                         ctx.get("has_pred", True))
     if not slug:

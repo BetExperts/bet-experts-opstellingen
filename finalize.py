@@ -131,12 +131,15 @@ def refresh_predicted(state, dry=False):
         if e.get("xi_extern") and not extern:
             continue                               # bron (even) leeg: oude voorspelling laten staan
         sig = _xi_sig(ctx)
-        if sig == e.get("xi_sig"):
+        vandaag = ko.astimezone().date() == datetime.now().date() and not e.get("titel_vandaag")
+        if sig == e.get("xi_sig") and not vandaag:
             continue
         first = "xi_sig" not in e
         e["xi_sig"], e["xi_extern"] = sig, extern
-        if first:
+        if first and not vandaag:
             continue                               # eerste meting: alleen vastleggen, artikel is net gemaakt
+        if vandaag:
+            e["titel_vandaag"] = True              # wedstrijddag: titel/meta eenmalig naar 'Opstelling X vandaag tegen Y' 
         if e.get("stream"):
             ctx["tvgids"] = {"tv": [], "bookmakers": [e["stream"]], "gratis": False}
         fd, slug, title = M.build_fielddata(ctx, cfg, slug=e["slug"])
