@@ -4,6 +4,7 @@ import re
 from datetime import datetime, timezone, timedelta
 import oa_api as api
 import oa_footy as FOOTY
+import oa_ovandaag as OV
 from oa_config import club_slug, RUBRIEK_ID, nl_name, fix_mojibake, stadion_nl, stad_nl
 import oa_build as B
 from tvgids import TvGids
@@ -166,13 +167,17 @@ def gather(fx, definitief=False):
         aLU = al[0] if al else None; aPrev = al[1] if len(al) > 1 else None
         # Betere voorspelling van FootyMetrics (met toestemming)? Dan die elf + formatie gebruiken;
         # de laatst gespeelde opstelling dient dan als vergelijking ('wijzigingen t.o.v. vorige duel').
-        fm = FOOTY.predicted(home.get("name"), away.get("name"), dt.date().isoformat())
+        # Eerst de bron die elk uur bijwerkt (o.a. op basis van persconferenties), anders FootyMetrics.
+        # Nooit als bron noemen in de tekst.
+        fm, src = OV.predicted([homeN, home.get("name")], [awayN, away.get("name")], dt.date().isoformat()), OV
+        if not fm:
+            fm, src = FOOTY.predicted(home.get("name"), away.get("name"), dt.date().isoformat()), FOOTY
         if fm:
             # vergelijkingsmateriaal: de laatste twee gespeelde basiselftallen (footy_note kiest de best passende)
             hPrev, aPrev = hl, al
-            hLU = _clean_lineup(FOOTY.as_lineup(fm["home"], fm["url"]))
-            aLU = _clean_lineup(FOOTY.as_lineup(fm["away"], fm["url"]))
-            print(f"     ↳ vermoedelijke opstellingen via FootyMetrics ({hLU['formation']} / {aLU['formation']})")
+            hLU = _clean_lineup(src.as_lineup(fm["home"], fm["url"]))
+            aLU = _clean_lineup(src.as_lineup(fm["away"], fm["url"]))
+            print(f"     ↳ vermoedelijke opstellingen via {'opstellingvandaag' if src is OV else 'FootyMetrics'} ({hLU['formation']} / {aLU['formation']})")
 
     fx_inj = api.injuries_fixture(fid) if fid else []
     ko = datetime.fromisoformat((fixture.get("date") or "").replace("Z", "+00:00"))

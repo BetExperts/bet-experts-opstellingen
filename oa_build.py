@@ -366,7 +366,7 @@ def build_content(ctx):
     # spelers die in de getoonde elf staan zijn er kennelijk wél bij -> niet als afwezig noemen
     # (bij de definitieve opstelling en bij de FootyMetrics-voorspelling, die blessures al meeweegt)
     def _xi_filter(lu):
-        return lu if lu and (definitief or lu.get("source") == "footymetrics") else None
+        return lu if lu and (definitief or lu.get("source") in EXTERN) else None
     hTxt, hN = injuries_sentence(homeN, hInj, _xi_filter(hLU))
     aTxt, aN = injuries_sentence(awayN, aInj, _xi_filter(aLU))
     if hN or aN:
@@ -411,6 +411,8 @@ def build_content(ctx):
     content3 = "\n".join(c3)
 
     return content, content2, content3
+
+EXTERN = ("footymetrics", "extern")   # externe voorspelling (FootyMetrics of de uurlijks bijgewerkte bron)
 
 def _zelfde_naam(a, b):
     """Dezelfde speler bij een andere schrijfwijze? 'P. Cubarsí' ~ 'Pau Cubarsí Paredes',
@@ -476,7 +478,7 @@ def _lineup_block(team, lu, prev, definitief, kickoff, flip, is_home, absent=Non
     if lu and _players(lu):
         h.append(f"<p><strong>{'Bevestigde' if definitief else 'Vermoedelijke'} elf:</strong> {xi_line(lu)}.</p>")
         if not definitief:
-            footy = lu.get("source") == "footymetrics"
+            footy = lu.get("source") in EXTERN
             note = footy_note(lu, prev, team, absent) if footy else rotation_note(lu, prev, team, absent)
             if note:
                 h.append(f"<p>{note}</p>")
@@ -611,7 +613,7 @@ def _faq(homeN, awayN, hLU, aLU, definitief, kickoff, flip_dt, dt, pH,pD,pA, has
               f"De opstelling van {de(awayN)} staat hierboven; de formatie is niet officieel vermeld.")
     elif af:
         a3 = (f"{De(awayN)} {ww(awayN, 'begint', 'beginnen')} naar verwachting in een {af}."
-              if (aLU or {}).get("source") == "footymetrics" else
+              if (aLU or {}).get("source") in EXTERN else
               f"{De(awayN)} {ww(awayN, 'speelde', 'speelden')} de laatste wedstrijd in een {af} en "
               f"{ww(awayN, 'treedt', 'treden')} naar verwachting ook nu in die formatie aan.")
     else:
