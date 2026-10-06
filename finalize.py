@@ -81,11 +81,72 @@ def main():
             print(f"  ✔ definitief: {title}")
         flipped += 1
     print(f"\nKLAAR — {flipped} artikel(en) geflipt naar definitief.")
-    if flipped and not a.dry:
+    ververst = 0 if a.date else refresh_predicted(state, a.dry)
+    if (flipped or ververst) and not a.dry:
         # de flip herschrijft de content -> wedstrijd-links (voorbeschouwing/live) opnieuw plaatsen
         import crosslink
         print("\n-- wedstrijd-links opnieuw plaatsen --")
         crosslink.run(days=1, back=6, max_items=400)
+
+REFRESH_MIN = 55     # vermoedelijke opstellingen op de wedstrijddag elk uur verversen
+
+def _xi_sig(ctx):
+    sig = []
+    for k in ("hLU", "aLU"):
+        lu = ctx.get(k) or {}
+        sig.append((lu.get("formation") or "") + ":" + ",".join((p.get("player") or {}).get("name", "") for p in lu.get("startXI") or []))
+    return "|".join(sig)
+
+def refresh_predicted(state, dry=False):
+    """Nog niet definitieve artikelen met aftrap in de komende 24 uur: elk uur de vermoedelijke elf opnieuw
+    ophalen (de externe bron werkt die bij na persconferenties) en het artikel alleen bijwerken als er iets
+    veranderd is. Nooit terugvallen van een externe voorspelling naar 'laatst gespeelde elf'."""
+    now = datetime.now(timezone.utc); n = 0
+    for fid, e in state.items():
+        if e.get("definitief"):
+            continue
+        last = e.get("ververst")
+        if last and (now - datetime.fromisoformat(last)).total_seconds() < REFRESH_MIN * 60:
+            continue
+        fx = api.match(fid)
+        if not fx:
+            continue
+        try:
+            ko = datetime.fromisoformat(fx["fixture"]["date"].replace("Z", "+00:00"))
+        except Exception:
+            continue
+        if not (now < ko < now + timedelta(hours=24)):
+            continue
+        cfg = LCFG.get(e.get("league")) or {"worker_slug": e.get("league", ""), "comp_slug": e.get("comp_slug", "eredivisie"),
+                                            "naam": e.get("naam", "Eredivisie"), "comp_id": e.get("comp_id"),
+                                            "vriendschappelijk": e.get("vriendschappelijk", False)}
+        ctx = M.gather(fx, definitief=False)
+        e["ververst"] = now.isoformat(timespec="seconds")
+        extern = (ctx.get("hLU") or {}).get("source") in ("footymetrics", "extern")
+        if e.get("xi_extern") and not extern:
+            continue                               # bron (even) leeg: oude voorspelling laten staan
+        sig = _xi_sig(ctx)
+        if sig == e.get("xi_sig"):
+            continue
+        first = "xi_sig" not in e
+        e["xi_sig"], e["xi_extern"] = sig, extern
+        if first:
+            continue                               # eerste meting: alleen vastleggen, artikel is net gemaakt
+        if e.get("stream"):
+            ctx["tvgids"] = {"tv": [], "bookmakers": [e["stream"]], "gratis": False}
+        fd, slug, title = M.build_fielddata(ctx, cfg, slug=e["slug"])
+        if dry:
+            print(f"  ○ zou verversen (vermoedelijke elf gewijzigd): {title}")
+        else:
+            WF.update_live(e["item_id"], fd)
+            og = OG.make(ctx, cfg, e["slug"])
+            if og: e["og"] = og
+            print(f"  ↻ vermoedelijke opstelling bijgewerkt: {title}")
+        n += 1
+    if not dry:
+        WF.save_state(state)
+    print(f"Verversen: {n} artikel(en) met gewijzigde vermoedelijke opstelling.")
+    return n
 
 if __name__ == "__main__":
     main()
