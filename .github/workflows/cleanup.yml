@@ -1,8 +1,7 @@
 name: Opstellingen opschonen (oude artikelen + redirects)
 
 on:
-  schedule:
-    - cron: "30 5 * * *"   # dagelijks 05:30 UTC
+  # schedule uit: opruimen draait op de Mac (com.betexperts.opruimen) i.v.m. 301's via Cloudflare
   workflow_dispatch:
 
 jobs:
