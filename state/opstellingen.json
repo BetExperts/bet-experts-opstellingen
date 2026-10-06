@@ -2001,7 +2001,7 @@
   "1528951": {
     "item_id": "6ac3e7c29433906e9ff5b959",
     "slug": "opstelling-kazachstan-faeroer-06-10-2026",
-    "definitief": false,
+    "definitief": true,
     "match": "Kazachstan - Faeröer",
     "date": "2026-10-06",
     "league": "nations-league",
@@ -2010,8 +2010,9 @@
     "comp_id": "66d5a7f7fb9f23ce90376ef4",
     "stream": null,
     "vriendschappelijk": false,
-    "og": "og/opstelling-kazachstan-faeroer-06-10-2026-30ad7c.webp",
-    "og_done": "og/opstelling-kazachstan-faeroer-06-10-2026-30ad7c.webp"
+    "og": "og/opstelling-kazachstan-faeroer-06-10-2026-878f80.webp",
+    "og_done": "og/opstelling-kazachstan-faeroer-06-10-2026-30ad7c.webp",
+    "bron": "api"
   },
   "1528952": {
     "item_id": "6ac3e7cdaf49bb4daa43c185",
