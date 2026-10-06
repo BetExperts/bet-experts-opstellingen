@@ -14,6 +14,7 @@ from oa_config import LEAGUES, WEBFLOW_TOKEN
 import oa_webflow as WF
 
 LCFG = {c["worker_slug"]: c for c in LEAGUES}
+PING = []   # bijgewerkte URL's -> IndexNow
 
 def main():
     ap = argparse.ArgumentParser()
@@ -79,9 +80,13 @@ def main():
             if og: e["og"] = og
             WF.save_state(state)
             print(f"  ✔ definitief: {title}")
+            PING.append(f"https://www.bet-experts.nl/nieuws/{e['slug']}")
         flipped += 1
     print(f"\nKLAAR — {flipped} artikel(en) geflipt naar definitief.")
     ververst = 0 if a.date else refresh_predicted(state, a.dry)
+    if PING and not a.dry:
+        import indexnow
+        indexnow.ping(PING)
     if (flipped or ververst) and not a.dry:
         # de flip herschrijft de content -> wedstrijd-links (voorbeschouwing/live) opnieuw plaatsen
         import crosslink
@@ -142,6 +147,7 @@ def refresh_predicted(state, dry=False):
             og = OG.make(ctx, cfg, e["slug"])
             if og: e["og"] = og
             print(f"  ↻ vermoedelijke opstelling bijgewerkt: {title}")
+            PING.append(f"https://www.bet-experts.nl/nieuws/{e['slug']}")
         n += 1
     if not dry:
         WF.save_state(state)

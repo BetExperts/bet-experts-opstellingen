@@ -35,6 +35,8 @@ def write_preview(fd, title):
     open(p, "w", encoding="utf-8").write(html)
     return p
 
+NIEUW = []   # aanmelden bij IndexNow
+
 def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--date"); ap.add_argument("--dry", action="store_true")
@@ -91,10 +93,14 @@ def main():
                 if og: state[fid]["og"] = og
                 WF.save_state(state)
                 print(f"  ✔ live: {title}  (item {item_id})")
+                NIEUW.append(f"https://www.bet-experts.nl/nieuws/{slug}")
             made += 1
             if a.limit and made >= a.limit: break
         if a.limit and made >= a.limit: break
     print(f"\nKLAAR — {made} artikel(en) verwerkt.")
+    if NIEUW:
+        import indexnow
+        indexnow.ping(NIEUW)
 
 if __name__ == "__main__":
     main()

@@ -22,7 +22,7 @@ HUB_PATH = "/opstellingen"
 
 # Opschonen: opstellingen-artikelen ouder dan zoveel dagen NA de wedstrijd
 # worden door cleanup.py verwijderd (mét redirect-lijst naar de hub).
-RETENTION_DAYS = 30
+RETENTION_DAYS = 3   # 3 dagen na de wedstrijd opruimen (met 301 via Cloudflare)
 
 # --- Competities die de agent verwerkt ---
 # worker_slug   = slug in de Cloudflare Worker (voor /api/fixtures/{slug})

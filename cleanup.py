@@ -38,25 +38,27 @@ def main():
             oud.append((fid, e))
     print(f"== Opschonen | ouder dan {a.days} dagen (t/m {cutoff}) | {len(oud)} artikel(en) | {'DRY' if a.dry else 'LIVE'} ==")
 
-    rows = []
-    for fid, e in oud:
-        oldpath = f"/nieuws/{e['slug']}"
-        if a.dry:
-            print(f"  ○ zou verwijderen: {e.get('match')} ({oldpath})")
-        else:
-            WF.delete_item(e["item_id"])
-            rows.append([oldpath, HUB_PATH])
-            del state[fid]; WF.save_state(state)
-            print(f"  ✔ verwijderd: {e.get('match')}  → redirect {oldpath} -> {HUB_PATH}")
-
+    tgt = HUB_PATH
+    rows = [(f"www.bet-experts.nl/nieuws/{e['slug']}", f"https://www.bet-experts.nl{tgt}", 301) for _, e in oud]
+    if a.dry:
+        for fid, e in oud:
+            print(f"  ○ zou verwijderen: {e.get('match')} (/nieuws/{e['slug']} -> {tgt})")
+        print("KLAAR."); return
     if rows:
-        os.makedirs(os.path.dirname(REDIR), exist_ok=True)
-        new = not os.path.exists(REDIR)
-        with open(REDIR, "a", newline="", encoding="utf-8") as f:
-            w = csv.writer(f)
-            if new: w.writerow(["old_path", "redirect_to"])
-            w.writerows(rows)
-        print(f"\n{len(rows)} redirect(s) toegevoegd aan {REDIR} — voeg deze toe in Webflow → Publishing → 301 redirects.")
+        # eerst de 301 in Cloudflare (bulk-redirectlijst 'oude_artikelen'); lukt dat niet, dan niets verwijderen
+        sys.path.insert(0, os.path.join(os.path.dirname(BASE), "superodd-agent"))
+        try:
+            import cf_redirects
+            cf_redirects.add(rows)
+        except Exception as ex:
+            print(f"! redirects niet gezet ({ex}) -> niets verwijderd"); sys.exit(1)
+    for fid, e in oud:
+        try:
+            WF.delete_item(e["item_id"])
+        except Exception as ex:
+            print(f"  ! verwijderen mislukt: {e.get('match')} ({ex})"); continue
+        del state[fid]; WF.save_state(state)
+        print(f"  ✔ verwijderd: {e.get('match')}  → 301 /nieuws/{e['slug']} -> {tgt}")
     print("KLAAR.")
 
 if __name__ == "__main__":
