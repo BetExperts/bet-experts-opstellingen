@@ -1,8 +1,9 @@
 # -*- coding: utf-8 -*-
 """Wedstrijd-links: koppelt per wedstrijd de voorbeschouwing, het opstelling-artikel
 en het live-kijken-artikel aan elkaar. Elk artikel krijgt één blok
-  Meer over X – Y: <voorspelling> · <opstellingen> · <live kijken>
-met links naar de ándere artikelen van dezelfde wedstrijd.
+  Meer over X – Y: <voorspelling> · <opstellingen> · <live kijken> · <speelronde op tv>
+met links naar de ándere artikelen van dezelfde wedstrijd en naar de speelronde-hub van de
+live-kijken-agent (die zelf al per wedstrijd naar alle drie terug linkt).
 Wedstrijd = team-id-paar + speeldatum (Amsterdam). Idempotent: een bestaand blok wordt
 vervangen, niet gedupliceerd; alleen gewijzigde artikelen worden gepatcht.
 Veilig: artikelen die (nog) niet live zijn (gepland/draft) worden niet aangeraakt en
@@ -10,7 +11,7 @@ er wordt ook niet naar gelinkt.
   python3 crosslink.py --dry
   python3 crosslink.py                  # wedstrijden van nu-6u t/m +3 dagen
   python3 crosslink.py --days 7 --back 48"""
-import re, sys, argparse
+import re, sys, argparse, json, os, html, urllib.request
 from datetime import datetime, timedelta, timezone
 from zoneinfo import ZoneInfo
 from oa_config import WEBFLOW_TOKEN, NIEUWS_COLLECTION, WF_API
@@ -22,6 +23,27 @@ BLOCK_RE = re.compile(r"(?:<p>‍</p>)?<p>(?:🔗 )?<strong>Meer over .*?</p>", 
 LEES_OOK_RE = re.compile(r"<p>(?:📋 )?<strong>Lees ook:</strong>.*?</p>", re.S)   # oud blok live-kijken
 LIVE_RE = re.compile(r"-live(-gratis)?-kijken-\d{2}-\d{2}-\d{4}$")
 FIELDS = ("content", "content-2", "content-3")
+
+HUB_STATE_LOCAL = os.path.join(os.path.dirname(os.path.abspath(__file__)), "..", "live-kijken-agent", "state", "live-kijken.json")
+HUB_STATE_RAW = "https://raw.githubusercontent.com/BetExperts/bet-experts-live-kijken/main/state/live-kijken.json"
+
+def load_hubs():
+    """(laag-id, hoog-id, datum) -> (slug, 'Eredivisie speelronde 8') uit de state van de live-kijken-agent."""
+    st = None
+    try:
+        st = json.load(open(HUB_STATE_LOCAL, encoding="utf-8"))
+    except Exception:
+        try:
+            st = json.loads(urllib.request.urlopen(HUB_STATE_RAW, timeout=30).read().decode())
+        except Exception as ex:
+            print(f"! speelronde-hubs niet geladen: {ex}")
+            return {}
+    out = {}
+    for k, e in (st or {}).items():
+        if k.startswith("hub:") and e.get("item_id") and not e.get("draft"):
+            for lo, hi, d in e.get("pairs") or []:
+                out[(lo, hi, d)] = (e["slug"], e.get("match") or "deze speelronde")
+    return out
 
 def kind(fd):
     slug = fd.get("slug") or ""
@@ -47,17 +69,20 @@ def fetch_items(max_items):
         if offset >= ((page.get("pagination") or {}).get("total") or 0): break
     return out
 
-PREFIX_RE = re.compile(r"^(?:(?:vermoedelijke|definitieve|officiële)\s+)?opstelling(?:en)?\s+|^wedtips\s+"
-                       r"|^(?:zo kijk je|waar kijk je|kun je|is|hoe kijk je)\s+", re.I)
-TEAMS_RE = re.compile(r"^(.+?) [–-] (.+?)(?=\s+(?:gratis|live|kijken|voorspelling)\b|\s*[:|(,?]|$)", re.I)
+PREFIX_RE = re.compile(r"^(?:(?:vermoedelijke|definitieve|officiële|bevestigde)\s+)?opstelling(?:en)?\s+|^wedtips\s+"
+                       r"|^(?:op welke zender (?:is|zie je|zendt)|welke zender (?:zendt|heeft|toont)|zo kijk je|waar kijk je"
+                       r"|kun je|is|hoe kijk je|hoe laat (?:is|begint))\s+", re.I)
+TEAMS_RE = re.compile(r"^(.+?) [–-] (.+?)(?=\s+(?:uit|gratis|live|kijken|voorspelling|vandaag|vanavond|op tv)\b|\s*[:|(,?]|$)", re.I)
 
 def teams_from_title(it):
     """'X – Y' uit de artikelnaam (zonder 'Vermoedelijke opstelling'/'Wedtips'), voor de ankertekst."""
-    name = PREFIX_RE.sub("", (it["fieldData"].get("name") or "").strip())
+    name = re.sub(r"^[^\w(]+", "", html.unescape(it["fieldData"].get("name") or "")).strip()   # vlag/emoji vooraan
+    for _ in range(2):
+        name = PREFIX_RE.sub("", name).strip()
     m = TEAMS_RE.search(name)
     return (m.group(1).strip(), m.group(2).strip()) if m else None
 
-def build_block(group, self_kind, label):
+def build_block(group, self_kind, label, hub=None):
     parts = []
     if "voorb" in group and self_kind != "voorb":
         parts.append(f'<a href="/nieuws/{group["voorb"]["fieldData"]["slug"]}">Voorspelling en odds {label}</a>')
@@ -65,6 +90,8 @@ def build_block(group, self_kind, label):
         parts.append(f'<a href="/nieuws/{group["opst"]["fieldData"]["slug"]}">Opstellingen {label}</a>')
     if "live" in group and self_kind != "live":
         parts.append(f'<a href="/nieuws/{group["live"]["fieldData"]["slug"]}">Waar kijk je {label}?</a>')
+    if hub:
+        parts.append(f'<a href="/nieuws/{hub[0]}">Alle wedstrijden van {hub[1]} op tv</a>')
     if not parts: return None
     return f"<p><strong>Meer over {label}:</strong> " + " · ".join(parts) + "</p>"
 
@@ -97,10 +124,13 @@ def run(dry=False, days=3, back=6, max_items=800):
         key = (tuple(sorted([str(h), str(w)])), ko.astimezone(AMS).date().isoformat())
         groups.setdefault(key, {}).setdefault(k, it)         # nieuwste per soort wint
 
+    hubs = load_hubs()
+    print(f"== Wedstrijd-links | {len(hubs)} wedstrijd(en) in speelronde-hubs")
     print(f"== Wedstrijd-links | {len(groups)} wedstrijd(en) in venster | modus: {'DRY' if dry else 'LIVE'} ==")
     changed = 0
     for key, g in sorted(groups.items(), key=lambda x: x[0][1]):
-        if len(g) < 2: continue
+        hub = hubs.get((key[0][0], key[0][1], key[1]))
+        if len(g) < 2 and not hub: continue
         tt = next((t for t in (teams_from_title(g[k]) for k in ("opst", "live", "voorb") if k in g) if t), None)
         label = f"{tt[0]} – {tt[1]}" if tt else "deze wedstrijd"
         print(f"\n{label} ({key[1]}): {', '.join(sorted(g))}")
@@ -108,7 +138,7 @@ def run(dry=False, days=3, back=6, max_items=800):
             fd = it["fieldData"]
             if it.get("isDraft"):
                 print(f"  · {k}: overslaan (draft-status) {fd['slug']}"); continue
-            block = build_block(g, k, label)
+            block = build_block(g, k, label, hub)
             patch = {}
             # blok staat in het eerste veld dat er al een heeft, anders in 'content'
             target = next((f for f in FIELDS if BLOCK_RE.search(fd.get(f) or "")), "content")
