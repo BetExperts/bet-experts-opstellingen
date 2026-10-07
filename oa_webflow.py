@@ -1,12 +1,19 @@
 # -*- coding: utf-8 -*-
 """Webflow CMS: aanmaken (+publiceren) en updaten (+publiceren) van items,
 plus een lokaal state-bestand fixture-id -> item-id."""
-import json, os, time, urllib.request, urllib.error
+import json, os, re, time, urllib.request, urllib.error
 from oa_config import WEBFLOW_TOKEN, NIEUWS_COLLECTION, WF_API, BASE
 
 STATE = os.path.join(BASE, "state", "opstellingen.json")
 
+def tighten_lists(html):
+    """Geen witruimte tussen tags binnen <ul>/<ol>: anders gooit Webflow de lijst weg bij (her)publiceren."""
+    return re.sub(r"<(ul|ol)\b.*?</\1>", lambda m: re.sub(r">\s+<", "><", m.group(0)), html, flags=re.S)
+
 def _req(method, url, body=None):
+    if isinstance(body, dict) and isinstance(body.get("fieldData"), dict):
+        body = {**body, "fieldData": {k: tighten_lists(v) if isinstance(v, str) and "<" in v else v
+                                      for k, v in body["fieldData"].items()}}
     data = json.dumps(body).encode() if body is not None else None
     r = urllib.request.Request(url, data=data, method=method)
     r.add_header("Authorization", "Bearer " + WEBFLOW_TOKEN)
