@@ -8,7 +8,7 @@ STATE = os.path.join(BASE, "state", "opstellingen.json")
 
 def tighten_lists(html):
     """Geen witruimte tussen tags binnen <ul>/<ol>: anders gooit Webflow de lijst weg bij (her)publiceren."""
-    return re.sub(r"<(ul|ol)\b.*?</\1>", lambda m: re.sub(r">\s+<", "><", m.group(0)), html, flags=re.S)
+    return re.sub(r"<(ul|ol)\b.*?</\1>", lambda m: re.sub(r"\s*(</?(?:ul|ol|li)\b[^>]*>)\s*", r"\1", m.group(0)), html, flags=re.S)
 
 def _req(method, url, body=None):
     if isinstance(body, dict) and isinstance(body.get("fieldData"), dict):
