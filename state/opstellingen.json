@@ -384,7 +384,8 @@
     "comp_id": "65de2f987de877fdf6583d10",
     "stream": null,
     "vriendschappelijk": false,
-    "og": "og/opstelling-go-ahead-eagles-sparta-rotterdam-10-10-2026-33006b.webp"
+    "og": "og/opstelling-go-ahead-eagles-sparta-rotterdam-10-10-2026-33006b.webp",
+    "og_done": "og/opstelling-go-ahead-eagles-sparta-rotterdam-10-10-2026-33006b.webp"
   },
   "1552181": {
     "item_id": "6ac81c4ae82e6e7e59637f7e",
@@ -398,7 +399,8 @@
     "comp_id": "65de2f987de877fdf6583d10",
     "stream": null,
     "vriendschappelijk": false,
-    "og": "og/opstelling-feyenoord-az-10-10-2026-53e4bc.webp"
+    "og": "og/opstelling-feyenoord-az-10-10-2026-53e4bc.webp",
+    "og_done": "og/opstelling-feyenoord-az-10-10-2026-53e4bc.webp"
   },
   "1552184": {
     "item_id": "6ac81c5151c915cbcd1352b7",
@@ -412,7 +414,8 @@
     "comp_id": "65de2f987de877fdf6583d10",
     "stream": null,
     "vriendschappelijk": false,
-    "og": "og/opstelling-fortuna-sittard-fc-twente-10-10-2026-ead264.webp"
+    "og": "og/opstelling-fortuna-sittard-fc-twente-10-10-2026-ead264.webp",
+    "og_done": "og/opstelling-fortuna-sittard-fc-twente-10-10-2026-ead264.webp"
   },
   "1552183": {
     "item_id": "6ac81c574eb8d634f9c33d05",
@@ -426,6 +429,7 @@
     "comp_id": "65de2f987de877fdf6583d10",
     "stream": null,
     "vriendschappelijk": false,
-    "og": "og/opstelling-ajax-nec-nijmegen-10-10-2026-b01c23.webp"
+    "og": "og/opstelling-ajax-nec-nijmegen-10-10-2026-b01c23.webp",
+    "og_done": "og/opstelling-ajax-nec-nijmegen-10-10-2026-b01c23.webp"
   }
 }
