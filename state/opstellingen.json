@@ -371,5 +371,61 @@
     "ververst": "2026-10-08T21:26:31+00:00",
     "xi_sig": "4-2-3-1:Setford,, Zahouani, Muzungu, Spina, van de Pavert, Verkuijl, Monserrate, Nash,,Abdalla,, Simeon, Ünüvar,VVV-Venlo,4-3-3,13,Schoonderwaldt,5,de Blok,?|4-3-3:Schoonderwaldt, de Blok, Blancquart, Clancy, Vullers, M'Hand, Schenkhuizen, Odriss, Ait Mouhou, Schmidt, Zuliani,Jong Ajax,Jong Ajax hervat de competitie tegen VVV-Venlo na een lange onderbreking. De ploeg van Carlos García kwam sinds het 0-0 gelijkspel tegen Roda JC op 18 september niet meer in competitieverband in actie. Met acht punten uit negen wedstrijden staan de Amsterdammers voorlopig in de onderste regionen van de Keuken Kampioen Divisie.,García blijft vertrouwen op een jonge ploeg, waarin creativiteit en individuele acties voorin belangrijk zijn. Jong Ajax zal vooral meer rendement moeten halen uit het balbezit: in de laatste drie competitiewedstrijden voor de onderbreking kwam de ploeg slechts één keer tot scoren.,VVV-Venlo,VVV-Venlo reist als nummer drie van de ranglijst naar Amsterdam. De ploeg van Marinus Dijkhuizen heeft achttien punten uit negen wedstrijden en boekte afgelopen zondag een sterke 2-0 overwinning op Roda JC. Gino Schmidt opende kort na rust de score, waarna Amir Rais het duel in blessuretijd besliste.,Dijkhuizen koos tegen Roda voor een 5-2-3 om de formatie van de tegenstander te spiegelen, maar kan tegen Jong Ajax weer voor een andere veldbezetting kiezen. Schmidt blijft een belangrijke aanvallende kracht, terwijl Nassim Ait Mouhou en Edhy Zuliani eveneens voor dreiging moeten zorgen. VVV won eerder dit seizoen al met 3-1 bij Jong FC Utrecht, maar verloor zijn laatste uitwedstrijd met 3-2 bij FC Volendam.,Blessures en schorsingen,Jong Ajax,Jan Faberski,Zijdebandscheur in de knie",
     "xi_extern": true
+  },
+  "1552182": {
+    "item_id": "6ac81c4351c915cbcd134b51",
+    "slug": "opstelling-go-ahead-eagles-sparta-rotterdam-10-10-2026",
+    "definitief": false,
+    "match": "GO Ahead Eagles - Sparta Rotterdam",
+    "date": "2026-10-10",
+    "league": "eredivisie",
+    "comp_slug": "eredivisie",
+    "naam": "Eredivisie",
+    "comp_id": "65de2f987de877fdf6583d10",
+    "stream": null,
+    "vriendschappelijk": false,
+    "og": "og/opstelling-go-ahead-eagles-sparta-rotterdam-10-10-2026-33006b.webp"
+  },
+  "1552181": {
+    "item_id": "6ac81c4ae82e6e7e59637f7e",
+    "slug": "opstelling-feyenoord-az-10-10-2026",
+    "definitief": false,
+    "match": "Feyenoord - AZ Alkmaar",
+    "date": "2026-10-10",
+    "league": "eredivisie",
+    "comp_slug": "eredivisie",
+    "naam": "Eredivisie",
+    "comp_id": "65de2f987de877fdf6583d10",
+    "stream": null,
+    "vriendschappelijk": false,
+    "og": "og/opstelling-feyenoord-az-10-10-2026-53e4bc.webp"
+  },
+  "1552184": {
+    "item_id": "6ac81c5151c915cbcd1352b7",
+    "slug": "opstelling-fortuna-sittard-fc-twente-10-10-2026",
+    "definitief": false,
+    "match": "Fortuna Sittard - Twente",
+    "date": "2026-10-10",
+    "league": "eredivisie",
+    "comp_slug": "eredivisie",
+    "naam": "Eredivisie",
+    "comp_id": "65de2f987de877fdf6583d10",
+    "stream": null,
+    "vriendschappelijk": false,
+    "og": "og/opstelling-fortuna-sittard-fc-twente-10-10-2026-ead264.webp"
+  },
+  "1552183": {
+    "item_id": "6ac81c574eb8d634f9c33d05",
+    "slug": "opstelling-ajax-nec-nijmegen-10-10-2026",
+    "definitief": false,
+    "match": "Ajax - NEC Nijmegen",
+    "date": "2026-10-10",
+    "league": "eredivisie",
+    "comp_slug": "eredivisie",
+    "naam": "Eredivisie",
+    "comp_id": "65de2f987de877fdf6583d10",
+    "stream": null,
+    "vriendschappelijk": false,
+    "og": "og/opstelling-ajax-nec-nijmegen-10-10-2026-b01c23.webp"
   }
 }
