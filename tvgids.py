@@ -19,7 +19,7 @@ UA = "Mozilla/5.0 (compatible; BetExpertsBot/1.0; +https://www.bet-experts.nl)"
 MAX_PAGES = 6
 
 # 'zenders' op waaroptv die eigenlijk een bookmaker-livestream zijn -> PROVIDERS-sleutel (of None)
-BOOKMAKERS = {"bet365": "bet365", "toto sport": "toto", "toto": "toto", "711": "711",
+BOOKMAKERS = {"bet365": "bet365", "toto sport": "toto", "toto": "toto", "711": "711", "starcasino": "starcasino",
               "unibet": None, "betcity": None, "jacks": None, "betmgm": None, "circus": None,
               "holland casino": None, "leovegas": None, "vbet": None, "bingoal": None}
 

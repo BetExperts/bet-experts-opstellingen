@@ -181,7 +181,8 @@ def team_block(img, d, logo, kind, box, name, name_x, align, max_w, size=40, min
     draw_text(d, (name_x, cy), name, f, WHITE, "lm" if align == "l" else "rm")
 
 # ------------------------------------------------------------------ live kijken
-PROV_LOGO = {"toto": "prov-toto.png", "bet365": "prov-bet365.png", "711": "prov-711.png"}
+PROV_LOGO = {"toto": "prov-toto.png", "bet365": "prov-bet365.png", "711": "prov-711.png",
+             "starcasino": "prov-starcasino.png"}
 
 def render_live(info):
     """info: comp, ronde, home, away (namen), home_logo/away_logo ((img, kind) of None),
