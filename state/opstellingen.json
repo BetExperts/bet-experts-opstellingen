@@ -290,5 +290,61 @@
     "ververst": "2026-10-09T21:00:26+00:00",
     "xi_sig": "4-3-3:ter Stegen,Wijndal,Baas,Kehrer,Rosa,Brandt,Amrabat,Klaassen,Gloukh,Tolu,Tsygankov|3-4-2-1:Crettaz,Brás,Schuurs,Storm,Kers,Nejašmić,Lebreton,Thomas,Tadić,Chery,Linssen",
     "xi_extern": true
+  },
+  "1552185": {
+    "item_id": "6ac964d527c709d3ec22c507",
+    "slug": "opstelling-fc-utrecht-willem-2-11-10-2026",
+    "definitief": false,
+    "match": "Utrecht - Willem II",
+    "date": "2026-10-11",
+    "league": "eredivisie",
+    "comp_slug": "eredivisie",
+    "naam": "Eredivisie",
+    "comp_id": "65de2f987de877fdf6583d10",
+    "stream": null,
+    "vriendschappelijk": false,
+    "og": "og/opstelling-fc-utrecht-willem-2-11-10-2026-db4edf.webp"
+  },
+  "1552187": {
+    "item_id": "6ac964db5ae875a49f57f047",
+    "slug": "opstelling-pec-zwolle-sc-cambuur-11-10-2026",
+    "definitief": false,
+    "match": "PEC Zwolle - Cambuur",
+    "date": "2026-10-11",
+    "league": "eredivisie",
+    "comp_slug": "eredivisie",
+    "naam": "Eredivisie",
+    "comp_id": "65de2f987de877fdf6583d10",
+    "stream": null,
+    "vriendschappelijk": false,
+    "og": "og/opstelling-pec-zwolle-sc-cambuur-11-10-2026-e913c7.webp"
+  },
+  "1552186": {
+    "item_id": "6ac964e3ca00ff06d764d7e0",
+    "slug": "opstelling-telstar-ado-den-haag-11-10-2026",
+    "definitief": false,
+    "match": "Telstar - ADO Den Haag",
+    "date": "2026-10-11",
+    "league": "eredivisie",
+    "comp_slug": "eredivisie",
+    "naam": "Eredivisie",
+    "comp_id": "65de2f987de877fdf6583d10",
+    "stream": null,
+    "vriendschappelijk": false,
+    "og": "og/opstelling-telstar-ado-den-haag-11-10-2026-50ff76.webp"
+  },
+  "1552188": {
+    "item_id": "6ac964ea7aa478088b0390e8",
+    "slug": "opstelling-excelsior-fc-groningen-11-10-2026",
+    "definitief": false,
+    "match": "Excelsior - Groningen",
+    "date": "2026-10-11",
+    "league": "eredivisie",
+    "comp_slug": "eredivisie",
+    "naam": "Eredivisie",
+    "comp_id": "65de2f987de877fdf6583d10",
+    "stream": null,
+    "vriendschappelijk": false,
+    "og": "og/opstelling-excelsior-fc-groningen-11-10-2026-82ec4f.webp"
   }
 }
