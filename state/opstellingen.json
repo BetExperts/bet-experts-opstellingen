@@ -303,7 +303,8 @@
     "comp_id": "65de2f987de877fdf6583d10",
     "stream": null,
     "vriendschappelijk": false,
-    "og": "og/opstelling-fc-utrecht-willem-2-11-10-2026-db4edf.webp"
+    "og": "og/opstelling-fc-utrecht-willem-2-11-10-2026-db4edf.webp",
+    "og_done": "og/opstelling-fc-utrecht-willem-2-11-10-2026-db4edf.webp"
   },
   "1552187": {
     "item_id": "6ac964db5ae875a49f57f047",
@@ -317,7 +318,8 @@
     "comp_id": "65de2f987de877fdf6583d10",
     "stream": null,
     "vriendschappelijk": false,
-    "og": "og/opstelling-pec-zwolle-sc-cambuur-11-10-2026-e913c7.webp"
+    "og": "og/opstelling-pec-zwolle-sc-cambuur-11-10-2026-e913c7.webp",
+    "og_done": "og/opstelling-pec-zwolle-sc-cambuur-11-10-2026-e913c7.webp"
   },
   "1552186": {
     "item_id": "6ac964e3ca00ff06d764d7e0",
@@ -331,7 +333,8 @@
     "comp_id": "65de2f987de877fdf6583d10",
     "stream": null,
     "vriendschappelijk": false,
-    "og": "og/opstelling-telstar-ado-den-haag-11-10-2026-50ff76.webp"
+    "og": "og/opstelling-telstar-ado-den-haag-11-10-2026-50ff76.webp",
+    "og_done": "og/opstelling-telstar-ado-den-haag-11-10-2026-50ff76.webp"
   },
   "1552188": {
     "item_id": "6ac964ea7aa478088b0390e8",
@@ -345,6 +348,7 @@
     "comp_id": "65de2f987de877fdf6583d10",
     "stream": null,
     "vriendschappelijk": false,
-    "og": "og/opstelling-excelsior-fc-groningen-11-10-2026-82ec4f.webp"
+    "og": "og/opstelling-excelsior-fc-groningen-11-10-2026-82ec4f.webp",
+    "og_done": "og/opstelling-excelsior-fc-groningen-11-10-2026-82ec4f.webp"
   }
 }
