@@ -17,7 +17,7 @@
     "xi_sig": "4-3-3:Kovář,Kostić,Obispo,Flamingo,Júnior,Fernandez,Sano,Mijnans,van Bommel,Til,Perišić|4-2-3-1:Klaverboer,Zagaritis,Willemsen,Kersten,Braude,Smans,Linday,Rivera,Courtens,Trenskow,Vente",
     "xi_extern": true,
     "titel_vandaag": true,
-    "bron": "footymetrics"
+    "bron": "api"
   },
   "1551828": {
     "item_id": "6ac6c7c37facac2832c9b8bf",
@@ -37,7 +37,7 @@
     "xi_sig": "4-3-3:Wieggers, Martens, Kok, Besselink, Wieckhoff, Diemers, Symons, Warmerdam, Mero, Kwint, de Jong,Jong FC Utrecht,4-3-3,33,Gadellaa,14,Kloosterboer,5,Plantinga,3,Schuldes|4-3-3:Gadellaa,Kloosterboer,, Plantinga, Schuldes, Sbai, Laaouina, Ghaddari, Kooy, Omorowa, den Boggende,,Owen,De Graafschap,De Graafschap wil tegen hekkensluiter Jong FC Utrecht de voorzichtige stijgende lijn doortrekken. Na de 1-0 overwinning op FC Den Bosch speelde de ploeg van Thomas Duivenvoorden met 2-2 gelijk bij FC Eindhoven. Toch staat De Graafschap nog altijd negentiende en is de opdracht voor de thuiswedstrijd duidelijk: winnen.,Duivenvoorden lijkt drie wijzigingen door te voeren. Thomas Kok wordt in het centrum van de defensie verwacht, terwijl Toivo Mero na zijn interlandverplichtingen met Jong Finland terugkeert op de linkerflank. In de spits krijgt Kyano Kwint waarschijnlijk de voorkeur boven Julian Kania. Kwint viel tegen FC Eindhoven sterk in en maakte daar de tijdelijke 1-2. Mark Diemers blijft een belangrijke rol op het middenveld vervullen.,Jong FC Utrecht,Jong FC Utrecht reist als nummer twintig naar De Vijverberg, maar de jonge ploeg heeft dit seizoen al laten zien dat de klassering niet alles zegt. De Utrechters wonnen onder meer op bezoek bij NAC Breda en boekten een opvallende 6-1 overwinning op Jong Ajax.,Trainer Mark Otten beschikt opnieuw over een jonge, voetballende ploeg die zonder veel druk kan spelen. Kevin Gadellaa wordt onder de lat verwacht, terwijl spelers als Emmanuel Chigozie Owen en Richie Omorowa voor snelheid en diepgang in de aanval zorgen. Jong Utrecht zal proberen onder de druk van De Graafschap uit te voetballen en vanuit de omschakeling gevaarlijk te worden.,Blessures en schorsingen",
     "xi_extern": true,
     "titel_vandaag": true,
-    "bron": "footymetrics"
+    "bron": "api"
   },
   "1551834": {
     "item_id": "6ac6c7cc6de80295b09b1451",
@@ -57,12 +57,12 @@
     "xi_sig": "4-2-3-1:Verrips, Van den Bergh, Hillen, Greiml, Lucassen, Balard, Van Hecke, Brym, Nassoh, Sowah, Soumano,MVV Maastricht,4-2-3-1,1,Wentges,17,van der Wegen,22,Bouland,6,Dicke|4-2-3-1:Wentges, van der Wegen, Bouland, Dicke, Asante, Klaasen, Sierra, Daneels, Dumont, Hamdaoui, Vinogradac,NAC Breda,NAC wil zich tegen MVV herstellen van het puntenverlies bij Vitesse, waar in de slotfase een voorsprong uit handen werd gegeven. Die wedstrijd liet fysiek zijn sporen na, maar de schade lijkt mee te vallen. Jan Van den Bergh en Rio Hillen trainden deze week aangepast, terwijl ook Charles-Andreas Brym, Kamal Sowah en Moussa Soumano lichte klachten hadden. Trainer Rick Kruys verwacht echter dat zij allemaal beschikbaar zijn.,Kruys lijkt daardoor grotendeels vast te kunnen houden aan zijn vertrouwde basis. Soumano blijft de eerste spits en Brym verkeert in goede vorm. Paul Gladon heeft de belangrijkste training van de week volledig meegedaan en is weer beschikbaar, terwijl Pepijn Reulen en Rayan van Aarst na hun interlandverplichtingen eveneens zijn teruggekeerd. NAC wil de intensieve speelstijl van de afgelopen weken blijven doorzetten en kan bij een overwinning MVV passeren op de ranglijst.,MVV Maastricht,MVV reist naar Breda na een wisselvallige periode. De ploeg begon sterk aan het seizoen, maar kreeg de laatste weken defensief flinke klappen. Na de 6-1 nederlaag bij RKC volgde wel een 2-0 overwinning op Helmond Sport, waarna MVV afgelopen weekend opnieuw ruim verloor: TOP Oss won met 4-1.,Toni Vinogradac zorgde in Oss nog voor de openingstreffer en maakte daarmee zijn eerste doelpunt voor MVV. Na rust verloor de ploeg van Andries Jonker echter de controle en liep de score snel op. Milan Hofland, Dylan Timber en Djairo Tehubijuluw zijn door blessures niet beschikbaar. Daardoor wordt Delano Asante opnieuw in de defensie verwacht. Op het middenveld zijn Olivier Dumont en Elias Sierra belangrijke schakels, terwijl MVV met Vinogradac opnieuw voor een vast aanspeelpunt in de punt kiest.,Blessures en schorsingen,NAC Breda,Jan Van den Bergh,Twijfelgeval",
     "xi_extern": true,
     "titel_vandaag": true,
-    "bron": "footymetrics"
+    "bron": "api"
   },
   "1551831": {
     "item_id": "6ac6c7d4f11fa1f7c2ee97d2",
     "slug": "opstelling-heracles-almelo-rkc-waalwijk-09-10-2026",
-    "definitief": false,
+    "definitief": true,
     "match": "Heracles - Waalwijk",
     "date": "2026-10-09",
     "league": "eerste-divisie",
@@ -71,12 +71,13 @@
     "comp_id": "65de4bc0a8777b9898d6374e",
     "stream": null,
     "vriendschappelijk": false,
-    "og": "og/opstelling-heracles-almelo-rkc-waalwijk-09-10-2026-95979f.webp",
+    "og": "og/opstelling-heracles-almelo-rkc-waalwijk-09-10-2026-f9797c.webp",
     "og_done": "og/opstelling-heracles-almelo-rkc-waalwijk-09-10-2026-95979f.webp",
     "ververst": "2026-10-09T17:32:04+00:00",
     "xi_sig": "4-2-3-1:de Keijzer, Rodríguez, Wrusch, Mirani, Benita, Scheperman, van der Kust, Hauswirth, van Gilst, Abbas, N'djoli,RKC Waalwijk,4-3-3,1,Schiks,55,Held,30,de Wijs,3,van der Plas|4-3-3:Schiks, Held, de Wijs, van der Plas, Al Mazyani, van de Loo, Postma, Nap, Varela, van de Haar, Fage,Heracles Almelo,Heracles Almelo krijgt vrijdag tegen RKC Waalwijk een nieuwe kans om de eerste periodetitel binnen te halen. De ploeg van Vincent Heilmann speelde vorige week met 2-2 gelijk tegen Helmond Sport, nadat David Vicente Robles al in de achtste minuut een rode kaart had gekregen. Ondanks het puntenverlies is Heilmann tevreden over de ontwikkeling van zijn ploeg en benadrukt hij dat promotie naar de Eredivisie het belangrijkste doel blijft.,Heracles beschikt over een vrijwel volledig fitte selectie. Alleen Robles ontbreekt vanwege een schorsing van twee wedstrijden. Mimeirhel Benita lijkt zijn plaats in de verdediging over te nemen. Heilmann heeft aangegeven weinig wijzigingen te willen doorvoeren, waardoor ook Sem Scheperman, Tristan van Gilst en Chafik Abbas hun basisplaatsen lijken te behouden. Jean-Paul N'djoli blijft het belangrijkste aanspeelpunt in de aanval.,RKC Waalwijk,RKC Waalwijk reist vrijdag af naar koploper Heracles Almelo, dat bij een overwinning de eerste periodetitel kan veroveren. De ploeg van Sander Duits pakte slechts één punt uit de afgelopen twee wedstrijden, waarin zes internationals ontbraken. Inmiddels zijn alle zes teruggekeerd, al hebben Liam van Gelderen en Navajo Bakboord door hun interlandverplichtingen en lange reizen slechts beperkt kunnen meetrainen.,RKC kampt bovendien met meerdere afwezigen. Bjarn Zorgdrager en Thijs van Leeuwen zijn geblesseerd, terwijl Juan Familia-Castillo met een lichte blessure terugkeerde van interlandverplichtingen. Ook de zieke Roy Kuijpers ontbreekt. Niek Schiks en Faissal Al Mazyani keren naar verwachting terug in de basis, terwijl Tim van de Loo een plek op het middenveld krijgt. Voorin lijkt Keyan Varela, die tijdens de interlandperiode scoorde voor Portugal Onder 20, samen met Jesse van de Haar en Ryan Fage de aanval te vormen.,Blessures en schorsingen,Heracles Almelo,David Vicente,Rode kaart",
     "xi_extern": true,
-    "titel_vandaag": true
+    "titel_vandaag": true,
+    "bron": "api"
   },
   "1551829": {
     "item_id": "6ac6c7dd3ecba6303fc9599a",
@@ -96,7 +97,7 @@
     "xi_sig": "4-2-3-1:Coremans, Mpanzu, Henderikx, Pinas, van Aken, Riccio, Vugts, Rossi, Vetkal, Ouarghi, Sits,FC Emmen,4-2-3-1,1,Karssies,17,Van Hove,3,Dede-Lhomme,25,Kongolo|4-2-3-1:Karssies, Van Hove, Dede-Lhomme, Kongolo, Everink, Rhein, Hojabrpour, Breij, Quispel, Veldhuis, Cooper-Love,FC Dordrecht,FC Dordrecht sluit tegen FC Emmen een moeizame eerste periode af. De ploeg van Paul Nuijten werd de afgelopen maanden hard geraakt door blessures en moest daardoor voortdurend wisselen in de bezetting. Ook onder de lat blijft het puzzelen: Yanick van Osch heeft opnieuw last van zijn knie, waardoor Tim Coremans na zijn optreden tegen FC Den Bosch opnieuw wordt verwacht.,De terugkeer van Dario Sits en Joey de Bie heeft de Dordtenaren de laatste wedstrijden meer structuur gegeven. Sits blijft de meest waarschijnlijke spits, met Ayoub Ouarghi daarachter als een van de belangrijkste creatieve krachten. Dordrecht pakte uit de laatste twee duels vier punten en hoopt die stijgende lijn tegen de nummer vier van de competitie door te trekken.,FC Emmen,FC Emmen moet het de rest van het seizoen zonder Casper Staring stellen. De middenvelder heeft zijn voorste kruisband afgescheurd en wordt tegen Dordrecht vervangen door Alessandro Hojabrpour. Menno van Dam verwacht daardoor een iets andere dynamiek op het middenveld, waar meer spelers graag aan de bal komen.,Aanvallend krijgt Emmen juist belangrijke krachten terug. Freddy Quispel en Sybrand Veldhuis keren terug in de basis, terwijl Jack Cooper-Love het centrale aanspeelpunt blijft. Nieuwe doelman Kelle Roos is inmiddels aangesloten, maar Sam Karssies wordt vrijdag nog onder de lat verwacht. David Voûte is na een operatie enkele weken niet beschikbaar.,Blessures en schorsingen,FC Dordrecht,Calvin Raatsie,Handblessure",
     "xi_extern": true,
     "titel_vandaag": true,
-    "bron": "footymetrics"
+    "bron": "api"
   },
   "1551836": {
     "item_id": "6ac6c7e73ecba6303fc95b50",
@@ -116,7 +117,7 @@
     "xi_sig": "3-4-2-1:Treichel, Beerten, Van den Buijs, Tol, Jansen, Nisbet, Marsman, van den Berg, Seedorf, Dorenbosch, van den Hurk,Jong PSV,4-2-3-1,51,Smolenaars,5,Verhulst,4,Merién,3,Bresser|4-2-3-1:Smolenaars,, Verhulst, Merién, Bresser, Penso, Sidibe, Mulders, Kluit, Cornecion, Dumbili, Hansen,Roda JC,Roda JC wil zich voor eigen publiek herstellen van de 2-0 nederlaag bij VVV-Venlo. Trainer Rob Penders lijkt daarbij vast te houden aan de ploeg die in Venlo begon. De Limburgers gaven tot dusver weinig weg, maar hadden afgelopen weekend aanvallend moeite om voldoende kansen af te dwingen.,Anthony van den Hurk blijft het vaste aanspeelpunt voorin, met Dyon Dorenbosch en Cain Seedorf in zijn ondersteuning. Zakarya Khaldi is door een langdurige infectie nog altijd niet inzetbaar. Verder zijn er geen nieuwe grote personele problemen gemeld richting het duel met Jong PSV.,Jong PSV,Jong PSV hervat de competitie na een onderbreking van bijna drie weken. De laatste wedstrijd eindigde in een 3-1 nederlaag bij Vitesse, waarbij Samuel Dumbili voor de Eindhovense treffer zorgde. Rens Sleegers lijkt in Kerkrade grotendeels terug te vallen op dezelfde jonge kern.,Shuryjano Cornecion en Fabio Kluit behoren tot de belangrijkste creatieve spelers, terwijl Mikkel Bro Hansen in de punt wordt verwacht. Wessel Kuhn is door een langdurige knieblessure niet beschikbaar. Omdat ook het eerste elftal van PSV vrijdagavond in actie komt, ligt een ploeg met voornamelijk vaste Jong PSV-spelers voor de hand.,Blessures en schorsingen,Roda JC,Zakarya Khaldi",
     "xi_extern": true,
     "titel_vandaag": true,
-    "bron": "footymetrics"
+    "bron": "api"
   },
   "1551830": {
     "item_id": "6ac6c7f17951da577d243ae7",
@@ -267,7 +268,10 @@
     "stream": null,
     "vriendschappelijk": false,
     "og": "og/opstelling-fortuna-sittard-fc-twente-10-10-2026-ead264.webp",
-    "og_done": "og/opstelling-fortuna-sittard-fc-twente-10-10-2026-ead264.webp"
+    "og_done": "og/opstelling-fortuna-sittard-fc-twente-10-10-2026-ead264.webp",
+    "ververst": "2026-10-09T18:21:58+00:00",
+    "xi_sig": "4-3-3:Branderhorst,Dahlhaus,Hubner,Guth,Pinto,Zand,Michut,Brittijn,Romeny,Descotte,Ihattaren|4-2-3-1:Drommel,Nijstad,Pröpper,Bruns,van Rooij,Weidmann,Zerrouki,Ørjasæter,Taha,Thorvaldsen,Weghorst",
+    "xi_extern": true
   },
   "1552183": {
     "item_id": "6ac81c574eb8d634f9c33d05",
