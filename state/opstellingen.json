@@ -326,7 +326,10 @@
     "stream": null,
     "vriendschappelijk": false,
     "og": "og/opstelling-pec-zwolle-sc-cambuur-11-10-2026-e913c7.webp",
-    "og_done": "og/opstelling-pec-zwolle-sc-cambuur-11-10-2026-e913c7.webp"
+    "og_done": "og/opstelling-pec-zwolle-sc-cambuur-11-10-2026-e913c7.webp",
+    "ververst": "2026-10-10T12:32:25+00:00",
+    "xi_sig": "4-2-3-1:Schendelaar,Aertssen,Velthuis,Viergever,Floranus,Thomas,Sommer,Cissoko,Kostons,Mbayo,van Hooijdonk|4-2-3-1:Jansen,Costarelli,van Duijl,Baouf,Bouah,Souren,Maertens,Hamache,El Arguioui,Kvam,Bouhoudane",
+    "xi_extern": true
   },
   "1552186": {
     "item_id": "6ac964e3ca00ff06d764d7e0",
@@ -341,7 +344,10 @@
     "stream": null,
     "vriendschappelijk": false,
     "og": "og/opstelling-telstar-ado-den-haag-11-10-2026-50ff76.webp",
-    "og_done": "og/opstelling-telstar-ado-den-haag-11-10-2026-50ff76.webp"
+    "og_done": "og/opstelling-telstar-ado-den-haag-11-10-2026-50ff76.webp",
+    "ververst": "2026-10-10T12:32:25+00:00",
+    "xi_sig": "3-4-2-1:Koeman,Peersman,Soualhia,Valk,Hardeveld,Owusu,Rossen,Alders,Brouwer,Mendes,Seedorf|4-4-2:Nikiema,Hokke,Jensen-Abbew,Mulder,Raterink,Hawkins,Šín,Kilo,van Mieghem,Bárány,Rottier",
+    "xi_extern": true
   },
   "1552188": {
     "item_id": "6ac964ea7aa478088b0390e8",
