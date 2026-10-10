@@ -277,7 +277,7 @@
     "xi_sig": "4-3-3:Branderhorst,Dahlhaus,Hubner,Guth,Pinto,Zand,Michut,Brittijn,Romeny,Descotte,Ihattaren|4-2-3-1:Drommel,Nijstad,Pröpper,Bruns,van Rooij,Weidmann,Zerrouki,Ørjasæter,Taha,Thorvaldsen,Weghorst",
     "xi_extern": true,
     "titel_vandaag": true,
-    "bron": "footymetrics"
+    "bron": "api"
   },
   "1552183": {
     "item_id": "6ac81c574eb8d634f9c33d05",
