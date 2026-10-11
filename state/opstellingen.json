@@ -322,7 +322,7 @@
   "1552187": {
     "item_id": "6ac964db5ae875a49f57f047",
     "slug": "opstelling-pec-zwolle-sc-cambuur-11-10-2026",
-    "definitief": false,
+    "definitief": true,
     "match": "PEC Zwolle - Cambuur",
     "date": "2026-10-11",
     "league": "eredivisie",
@@ -331,17 +331,18 @@
     "comp_id": "65de2f987de877fdf6583d10",
     "stream": null,
     "vriendschappelijk": false,
-    "og": "og/opstelling-pec-zwolle-sc-cambuur-11-10-2026-e913c7.webp",
+    "og": "og/opstelling-pec-zwolle-sc-cambuur-11-10-2026-f3ea4a.webp",
     "og_done": "og/opstelling-pec-zwolle-sc-cambuur-11-10-2026-e913c7.webp",
     "ververst": "2026-10-11T11:32:27+00:00",
     "xi_sig": "4-2-3-1:Schendelaar,Aertssen,Velthuis,Viergever,Floranus,Thomas,Sommer,Cissoko,Kostons,Mbayo,van Hooijdonk|4-2-3-1:Jansen,Costarelli,van Duijl,Baouf,Bouah,Souren,Maertens,Hamache,El Arguioui,Kvam,Bouhoudane",
     "xi_extern": true,
-    "titel_vandaag": true
+    "titel_vandaag": true,
+    "bron": "api"
   },
   "1552186": {
     "item_id": "6ac964e3ca00ff06d764d7e0",
     "slug": "opstelling-telstar-ado-den-haag-11-10-2026",
-    "definitief": false,
+    "definitief": true,
     "match": "Telstar - ADO Den Haag",
     "date": "2026-10-11",
     "league": "eredivisie",
@@ -350,12 +351,13 @@
     "comp_id": "65de2f987de877fdf6583d10",
     "stream": null,
     "vriendschappelijk": false,
-    "og": "og/opstelling-telstar-ado-den-haag-11-10-2026-830530.webp",
+    "og": "og/opstelling-telstar-ado-den-haag-11-10-2026-495e22.webp",
     "og_done": "og/opstelling-telstar-ado-den-haag-11-10-2026-830530.webp",
     "ververst": "2026-10-11T11:32:27+00:00",
     "xi_sig": "4-3-3:J. Seedorf,T. Owusu,S. Valk,G. Alders,A. Soualhia,R. Mendes,N. Shenkman,R. Koeman Jr.,N. Rossen,P. Brouwer,M. Peersman|4-4-2:Á. Pozo,K. Nikièma,P. Mulder,M. Waem,J. Jensen-Abbew,E. Rottier,M. Hokke,J. Hawkins,J. Kilo,M. Šín,Y. Ferreira Eduardo",
     "xi_extern": true,
-    "titel_vandaag": true
+    "titel_vandaag": true,
+    "bron": "api"
   },
   "1552188": {
     "item_id": "6ac964ea7aa478088b0390e8",
