@@ -377,6 +377,6 @@
     "xi_sig": "4-3-3:van Gassel,Janssen,Plug,Widell,Moreira,Hartjes,Meissen,Yegoian,Þorsteinsson,Garden,Sliti|4-2-3-1:Vaessen,Csinger,Hateboer,Blokzijl,Schreuders,Clement,de Jonge,Ondrejka,van Bergen,van der Werff,Willumsson",
     "xi_extern": true,
     "titel_vandaag": true,
-    "bron": "footymetrics"
+    "bron": "api"
   }
 }
