@@ -163,4 +163,6 @@ def reason_nl(r):
     for kw, nl in _REASON_KW:
         if kw in low:
             return nl
-    return "blessure" if re.search(r"[a-z]", low) and not re.search(r"blessure|ziek|schors", low) else low
+    # al Nederlands (bv. van opstellingvandaag.nl): zo laten
+    nl = r"blessure|ziek|schors|kwetsuur|inzetbaar|apart|gebroken|ritme|selectie|operatie|kneuzing|persoonlijk"
+    return "blessure" if re.search(r"[a-z]", low) and not re.search(nl, low) else low

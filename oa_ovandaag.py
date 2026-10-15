@@ -96,6 +96,62 @@ def _parse(page):
     return teams, forms, confirmed
 
 
+def match_url(namen_thuis, namen_uit, ymd):
+    """URL van de wedstrijdpagina (of None)."""
+    try:
+        d = datetime.fromisoformat(ymd)
+        stamp = f"-{d.day:02d}-{d.month:02d}-{d.year}/"
+        best = (0.0, None)
+        for url in _urls():
+            if not url.endswith(stamp):
+                continue
+            slug = url.rstrip("/").rsplit("/", 1)[1][: -len(stamp) + 1]
+            parts = slug.split("-")
+            for k in range(1, len(parts)):
+                sc = min(_sim(namen_thuis, "-".join(parts[:k])), _sim(namen_uit, "-".join(parts[k:])))
+                if sc > best[0]:
+                    best = (sc, url)
+        return best[1] if best[0] >= 0.75 else None
+    except Exception as e:
+        print(f"     · opstellingen-bron niet beschikbaar: {e}")
+    return None
+
+
+def absences(namen_thuis, namen_uit, ymd, url=None):
+    """Afwezigen per ploeg uit het blok 'Blessures en schorsingen':
+    {"home": [(naam, reden, status)], "away": [...]} — een lege lijst = 'Iedereen inzetbaar';
+    een ploeg die niet in het blok staat ontbreekt in de dict. None als de pagina/het blok ontbreekt."""
+    try:
+        url = url or match_url(namen_thuis, namen_uit, ymd)
+        if not url:
+            return None
+        txt = re.sub(r"(?s)<script.*?</script>|<style.*?</style>", "", _get(url))
+        lines = [l.strip() for l in html.unescape(re.sub(r"<[^>]+>", "\n", txt)).split("\n") if l.strip()]
+        if "Blessures en schorsingen" not in lines:
+            return None
+        i = lines.index("Blessures en schorsingen") + 1
+        out, team, buf = {}, None, []
+        def flush():
+            if team:
+                out[team] = [tuple(buf[k:k + 3]) for k in range(0, len(buf) - 2, 3)]
+        while i < len(lines):
+            l = lines[i]; i += 1
+            if l.endswith("?") or l == "Spelers om op te letten":
+                break
+            kant = "home" if _sim(namen_thuis, _fold(l)) >= 0.85 else "away" if _sim(namen_uit, _fold(l)) >= 0.85 else None
+            if kant and kant not in out and kant != team:
+                flush(); team, buf = kant, []
+                continue
+            if l.rstrip(".").lower() == "iedereen inzetbaar":
+                continue
+            buf.append(l)
+        flush()
+        return out or None
+    except Exception as e:
+        print(f"     · afwezigen-bron niet beschikbaar: {e}")
+    return None
+
+
 def predicted(namen_thuis, namen_uit, ymd):
     """Vermoedelijke opstelling, of None. namen_* = lijst met mogelijke namen (NL-naam, API-naam)."""
     try:

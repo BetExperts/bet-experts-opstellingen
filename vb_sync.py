@@ -139,35 +139,88 @@ def herschrijf(content, status, lus, home_id, away_id, namen):
     return "".join(nieuw)
 
 
+A_RE = re.compile(r'<p><strong>Afwezigen (?P<team>[^<:]+):</strong>(?P<body>.*?)</p>', re.S)
+GEEN_GEMELD = "geen blessures of schorsingen gemeld"
+
+
+def afwezigen(fx):
+    """Afwezigen van opstellingvandaag.nl {team-id: [(naam, reden, status)]} — alleen ploegen die in het blok staan."""
+    th, ta = fx["teams"]["home"], fx["teams"]["away"]
+    ymd = datetime.fromisoformat(fx["fixture"]["date"].replace("Z", "+00:00")).astimezone(NL).date().isoformat()
+    a = OV.absences([nl_name(th["name"]), th["name"]], [nl_name(ta["name"]), ta["name"]], ymd) or {}
+    return {str(t["id"]): a[k] for k, t in (("home", th), ("away", ta)) if k in a}
+
+
+def _afw_tekst(lijst):
+    def een(n, r, s):
+        r = r.lower()
+        if s.lower().startswith("twijfel"):
+            return f"{html.escape(n)} ({r}, twijfelachtig)" if r != s.lower() else f"{html.escape(n)} (twijfelachtig)"
+        return f"{html.escape(n)} ({r})"
+    return ", ".join(een(*x) for x in lijst) + "."
+
+
+def herschrijf_afw(content, afw, ids, namen, eigen):
+    """'Afwezigen X: … geen blessures of schorsingen gemeld.' aanvullen met de externe lijst.
+    eigen = ploegen (team-id) waarvan wij de regel eerder zelf schreven (die mogen opnieuw)."""
+    nieuw_eigen = set(eigen)
+    def sub(m):
+        team = m.group("team").strip()
+        tid = ids[0] if X._score(team, namen[0]) >= X._score(team, namen[1]) else ids[1]
+        lijst = afw.get(str(tid))
+        if not lijst or not (GEEN_GEMELD in m.group("body") or str(tid) in eigen):
+            return m.group(0)
+        nieuw_eigen.add(str(tid))
+        return f'<p><strong>Afwezigen {team}:</strong> {_afw_tekst(lijst)}</p>'
+    return A_RE.sub(sub, content or ""), nieuw_eigen
+
+
 def sync_een(fid, item, ko, st, dry=False):
     fx = api.match(fid)
     if not fx:
         return "geen wedstrijddata"
     th, ta = fx["teams"]["home"], fx["teams"]["away"]
     status, lus = opstellingen(fx)
-    if not status:
-        return "geen externe opstelling (blijft laatste duel)"
-    sig = hashlib.sha1(json.dumps([status] + [[lus[str(t["id"])]["formation"]] +
-                                              [p["player"]["name"] for p in lus[str(t["id"])]["startXI"]]
-                                              for t in (th, ta)], ensure_ascii=False).encode()).hexdigest()[:12]
+    afw = afwezigen(fx)
+    if not status and not any(afw.values()):
+        return "geen externe opstelling of afwezigen (blijft laatste duel)"
+    sig = hashlib.sha1(json.dumps([status, afw] + ([[lus[str(t["id"])]["formation"]] +
+                                                     [p["player"]["name"] for p in lus[str(t["id"])]["startXI"]]
+                                                     for t in (th, ta)] if status else []),
+                                  ensure_ascii=False).encode()).hexdigest()[:12]
     if sig == st.get("sig"):
-        return f"{status}: ongewijzigd"
+        return f"{status or 'afwezigen'}: ongewijzigd"
     fd = item["fieldData"]
-    nieuw = herschrijf(fd.get("content-2") or "", status, lus, th["id"], ta["id"],
-                       [nl_name(th["name"]), nl_name(ta["name"])])
-    if nieuw is None:
-        return "opstellingsregels niet gevonden in de tekst"
+    namen, ids = [nl_name(th["name"]), nl_name(ta["name"])], [th["id"], ta["id"]]
+    velden = {}
+    c2 = fd.get("content-2") or ""
+    if status:
+        c2n = herschrijf(c2, status, lus, th["id"], ta["id"], namen)
+        if c2n is None:
+            return "opstellingsregels niet gevonden in de tekst"
+        c2 = c2n
+    eigen = set(st.get("afw_eigen") or [])
+    c2, e2 = herschrijf_afw(c2, afw, ids, namen, eigen)
+    c1, e1 = herschrijf_afw(fd.get("content") or "", afw, ids, namen, eigen)
+    if c2 != (fd.get("content-2") or ""):
+        velden["content-2"] = c2
+    if c1 != (fd.get("content") or ""):
+        velden["content"] = c1
     kv = {"fixture": fid, "status": status, "bijgewerkt": datetime.now(timezone.utc).isoformat(timespec="seconds"),
-          "response": [lus[str(th["id"])], lus[str(ta["id"])]]}
+          "response": [lus[str(th["id"])], lus[str(ta["id"])]] if status else [],
+          "afwezigen": {tid: [{"name": n, "reason": r, "type": s} for n, r, s in lijst] for tid, lijst in afw.items()}}
     if dry:
-        print("     tekst:", re.sub(r"<[^>]+>", "", " | ".join(m.group(0) for m in P_RE.finditer(nieuw)))[:600])
-        return f"{status}: zou bijwerken"
+        print("     velden:", sorted(velden), "| afwezigen:", {k: len(v) for k, v in afw.items()})
+        for m in A_RE.finditer(velden.get("content-2", "")):
+            print("     ", re.sub(r"<[^>]+>", "", m.group(0))[:300])
+        return f"{status or 'afwezigen'}: zou bijwerken"
     if not kv_put(fid, kv):
         return "KV mislukt"
-    if nieuw != fd.get("content-2"):
-        WF.update_live(item["id"], {"content-2": nieuw})
-    st.update({"sig": sig, "status": status, "item": item["id"], "slug": fd.get("slug")})
-    return f"{status}: bijgewerkt"
+    if velden:
+        WF.update_live(item["id"], velden)
+    st.update({"sig": sig, "status": status, "item": item["id"], "slug": fd.get("slug"),
+               "afw_eigen": sorted(e1 | e2)})
+    return f"{status or 'alleen afwezigen'}: bijgewerkt ({', '.join(sorted(velden)) or 'alleen blok'})"
 
 
 def main():

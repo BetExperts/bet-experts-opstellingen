@@ -188,6 +188,17 @@ def gather(fx, definitief=False):
 
     fx_inj = api.injuries_fixture(fid) if fid else []
     ko = datetime.fromisoformat((fixture.get("date") or "").replace("Z", "+00:00"))
+    hInj, aInj = _injuries(fid, homeId, ko, fx_inj), _injuries(fid, awayId, ko, fx_inj)
+    # API-Football meldt bij sommige competities (o.a. Conference League) geen afwezigen: dan opstellingvandaag.nl
+    if not hInj or not aInj:
+        ext = OV.absences([homeN, home.get("name")], [awayN, away.get("name")], dt.date().isoformat()) or {}
+        conv = lambda lst: [{"player": {"name": n, "reason": r,
+                                        "type": "Questionable" if s.lower().startswith("twijfel") else "Missing Fixture"}}
+                            for n, r, s in lst]
+        if not hInj and ext.get("home"):
+            hInj = conv(ext["home"])
+        if not aInj and ext.get("away"):
+            aInj = conv(ext["away"])
     return {
         "fid": fid, "homeId": homeId, "awayId": awayId, "homeN": homeN, "awayN": awayN,
         "homeApi": home.get("name"), "awayApi": away.get("name"),   # Engelse API-naam (voor de vlag)
@@ -197,7 +208,7 @@ def gather(fx, definitief=False):
         "ronde_txt": ronde_txt, "ronde_intro": ronde_intro, "definitief": definitief,
         "pH": pH, "pD": pD, "pA": pA, "has_pred": has_pred, "hForm": hForm, "aForm": aForm,
         "hLU": hLU, "aLU": aLU, "hPrev": hPrev, "aPrev": aPrev,
-        "hInj": _injuries(fid, homeId, ko, fx_inj), "aInj": _injuries(fid, awayId, ko, fx_inj),
+        "hInj": hInj, "aInj": aInj,
         "h2h": h2h,
         "tvgids": _GIDS.lookup(homeN, awayN, dt),   # exacte zender (of None -> geen tv-regel)
     }
