@@ -31,6 +31,11 @@ RETENTION_DAYS = 3   # 3 dagen na de wedstrijd opruimen (met 301 via Cloudflare)
 # comp_id = item-id in de Competities-collectie (voor het referentieveld 'competitie',
 # waarop je op de hub kunt filteren/sorteren)
 # toppers_only : True = alleen wedstrijden met een 'groot team' (top_teams) krijgen een artikel
+# Nederlandse clubs + grootste Europese clubs (substring van de API-naam, kleine letters; '=naam' = exact)
+EU_TOPS = ["ajax", "psv", "feyenoord", "az alkmaar", "twente", "nec nijmegen", "go ahead eagles", "utrecht",
+           "real madrid", "barcelona", "bayern", "liverpool", "manchester city", "arsenal", "chelsea",
+           "paris saint germain", "=inter", "juventus", "ac milan", "borussia dortmund"]
+
 LEAGUES = [
     {"worker_slug": "eredivisie",     "comp_slug": "eredivisie",              "naam": "Eredivisie",
      "comp_id": "65de2f987de877fdf6583d10"},
@@ -42,6 +47,13 @@ LEAGUES = [
                    "tottenham", "newcastle", "aston villa", "west ham"]},
     # Nations League: alle wedstrijden (League A t/m D, ~8-10 per speeldag). Landnamen worden
     # via data/landen_nl.json naar het Nederlands vertaald.
+    # Europese bekers (15-10-2026): Nederlandse clubs + Europese topclubs
+    {"worker_slug": "champions-league", "comp_slug": "champions-league", "naam": "Champions League",
+     "comp_id": "65de4adac046f4488dfdebc2", "toppers_only": True, "top_teams": EU_TOPS},
+    {"worker_slug": "europa-league", "comp_slug": "europa-league", "naam": "Europa League",
+     "comp_id": "65de4be481512ad1b77740b1", "toppers_only": True, "top_teams": EU_TOPS},
+    {"worker_slug": "conference-league", "comp_slug": "conference-league", "naam": "Conference League",
+     "comp_id": "65de4bf0f348c222f01bed83", "toppers_only": True, "top_teams": EU_TOPS},
     {"worker_slug": "nations-league", "landen": True, "comp_slug": "uefa-nations-league", "naam": "Nations League",
      "comp_id": "66d5a7f7fb9f23ce90376ef4"},
     # Afrika Cup-kwalificatie: alleen Marokko (grote Marokkaanse doelgroep in NL)
@@ -63,9 +75,9 @@ def is_topper(fx, cfg):
         return True
     tops = [t.lower() for t in cfg.get("top_teams", [])]
     t = fx.get("teams", {})
-    names = ((t.get("home", {}) or {}).get("name", "") + " | " +
-             (t.get("away", {}) or {}).get("name", "")).lower()
-    return any(top in names for top in tops)
+    ploegen = [((t.get(k, {}) or {}).get("name", "") or "").lower() for k in ("home", "away")]
+    names = " | ".join(ploegen)
+    return any((top[1:] in ploegen) if top.startswith("=") else (top in names) for top in tops)
 
 # --- Data-mappings ---
 def _load(fn):

@@ -33,6 +33,9 @@ def _ronde_labels(round_raw, ronde_num):
     if lg:
         L, n = lg.group(1).upper(), lg.group(2)
         return (f"League {L}, speelronde {n}", f"speelronde {n} van League {L}")
+    ls = re.match(r"league stage\s*-\s*(\d+)", low)              # Europese bekers: 'League Stage - 2'
+    if ls:
+        return (f"Competitiefase, speelronde {ls.group(1)}", f"speelronde {ls.group(1)} van de competitiefase")
     gs = re.match(r"group stage\s*-\s*(\d+)", low)               # kwalificatie: 'Group Stage - 1'
     if gs:
         return (f"Groepsfase, speelronde {gs.group(1)}", f"speelronde {gs.group(1)} van de groepsfase")
