@@ -26,10 +26,28 @@ BOOKMAKERS = {"bet365": "bet365", "toto sport": "toto", "toto": "toto", "711": "
 _STOP = {"fc", "sk", "sc", "cf", "ac", "as", "afc", "bk", "fk", "if", "cd", "rc", "ssc", "us",
          "sv", "vfb", "vfl", "tsg", "ss", "ud", "sd", "ca", "cs", "kv", "krc", "rsc", "club", "calcio"}
 
+# plaatsnamen die bronnen verschillend schrijven (lokaal vs. Engels) -> één vorm
+_ALIAS = {"kobenhavn": "copenhagen", "munchen": "munich", "praha": "prague", "beograd": "belgrade",
+          "lisboa": "lisbon", "bucuresti": "bucharest", "warszawa": "warsaw", "wien": "vienna",
+          "koln": "cologne", "torino": "turin", "napoli": "naples", "zurich": "zurich", "plzen": "plzen",
+          "athina": "athens", "piraeus": "piraeus", "kyiv": "kiev", "kharkiv": "kharkov"}
+
+_LETTERS = str.maketrans({"ø": "o", "æ": "ae", "ß": "ss", "ł": "l", "đ": "d", "ı": "i", "œ": "oe"})
+
 def _norm(s):
-    s = unicodedata.normalize("NFKD", (s or "").lower()).encode("ascii", "ignore").decode()
-    toks = [t for t in re.split(r"[^a-z0-9]+", s) if t and t not in _STOP]
+    s = (s or "").lower().translate(_LETTERS)
+    s = unicodedata.normalize("NFKD", s).encode("ascii", "ignore").decode()
+    toks = [_ALIAS.get(t, t) for t in re.split(r"[^a-z0-9]+", s) if t and t not in _STOP]
     return " ".join(toks)
+
+def _match(home, away, c):
+    """Lijkt deze kaart op de wedstrijd? Eén team exact gelijk (zelfde aftrap) maakt het andere soepeler."""
+    sh, sa = _sim(home, c["home"]), _sim(away, c["away"])
+    s = min(sh, sa)
+    exact = _norm(home) == _norm(c["home"]) or _norm(away) == _norm(c["away"])
+    if exact and s >= 0.4:
+        s = max(s, 0.9)
+    return s
 
 def _sim(a, b):
     a, b = _norm(a), _norm(b)
@@ -174,7 +192,7 @@ class TvGids:
                     continue
             except TypeError:
                 continue
-            s = min(_sim(home, c["home"]), _sim(away, c["away"]))
+            s = _match(home, away, c)
             if s > best_s:
                 best, best_s = c, s
         return best if best_s >= min_score else None
@@ -202,7 +220,7 @@ class TvGids:
                     continue
             except TypeError:
                 continue
-            s = min(_sim(home, c["home"]), _sim(away, c["away"]))
+            s = _match(home, away, c)
             if s > best_s:
                 best, best_s = c, s
         return best if best_s >= min_score else None
