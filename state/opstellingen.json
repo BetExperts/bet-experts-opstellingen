@@ -42,7 +42,7 @@
   "1636300": {
     "item_id": "6ad0a0a4e11cddb706af1ce4",
     "slug": "opstelling-nec-nijmegen-levski-sofia-15-10-2026",
-    "definitief": false,
+    "definitief": true,
     "match": "NEC Nijmegen - Levski Sofia",
     "date": "2026-10-15",
     "league": "europa-league",
@@ -51,17 +51,18 @@
     "comp_id": "65de4be481512ad1b77740b1",
     "stream": null,
     "vriendschappelijk": false,
-    "og": "og/opstelling-nec-nijmegen-levski-sofia-15-10-2026-0f8979.webp",
+    "og": "og/opstelling-nec-nijmegen-levski-sofia-15-10-2026-bf1697.webp",
     "og_done": "og/opstelling-nec-nijmegen-levski-sofia-15-10-2026-0f8979.webp",
     "ververst": "2026-10-15T17:58:12+00:00",
     "xi_sig": "3-4-2-1:G. Crettaz,D. Fonville,P. Schuurs,G. Bras,T. Storm,N. Lebreton,D. Nejasmic,K. Kers,D. Tadic,T. Chery,Lynssen|4-2-3-1:S. Vutsov,Aldair,K. Dimitrov,C. Makoun,Maicon,M. Moubarik,G. Trdin,Everton Bala,Serginho,A. Oko-Flex,Rijnaldo",
     "xi_extern": true,
-    "titel_vandaag": true
+    "titel_vandaag": true,
+    "bron": "api"
   },
   "1636243": {
     "item_id": "6ad0a0aa75e0acd6c8abdbb2",
     "slug": "opstelling-celta-vigo-juventus-15-10-2026",
-    "definitief": false,
+    "definitief": true,
     "match": "Celta Vigo - Juventus",
     "date": "2026-10-15",
     "league": "europa-league",
@@ -70,12 +71,13 @@
     "comp_id": "65de4be481512ad1b77740b1",
     "stream": null,
     "vriendschappelijk": false,
-    "og": "og/opstelling-celta-vigo-juventus-15-10-2026-9620d0.webp",
+    "og": "og/opstelling-celta-vigo-juventus-15-10-2026-5c38d3.webp",
     "og_done": "og/opstelling-celta-vigo-juventus-15-10-2026-9620d0.webp",
     "ververst": "2026-10-15T17:58:12+00:00",
     "xi_sig": "3-4-3:I. Radu,S. Carreira,Y. Lago,J. Rodriguez,A. Febas,I. Moriba,J. Rueda,M. Alonso,Jotglà,W. Swedberg,H. Alvarez|3-4-2-1:G. Vicario,F. Gatti,P. Kalulu,L. Kelly,T. Koopmeiners,McKennye,P. M. Sarr,A. Cambiaso,N. Woltemade,F. Conceicao,K. Alajbegovic",
     "xi_extern": true,
-    "titel_vandaag": true
+    "titel_vandaag": true,
+    "bron": "api"
   },
   "1636419": {
     "item_id": "6ad0a0b5a85323214cce954d",
@@ -109,12 +111,12 @@
     "comp_id": "65de4bf0f348c222f01bed83",
     "stream": null,
     "vriendschappelijk": false,
-    "og": "og/opstelling-fc-twente-thun-15-10-2026-3e4cf2.webp",
+    "og": "og/opstelling-fc-twente-thun-15-10-2026-274233.webp",
     "og_done": "og/opstelling-fc-twente-thun-15-10-2026-3e4cf2.webp",
     "ververst": "2026-10-15T16:57:06+00:00",
     "xi_sig": "4-2-3-1:J. Drommel,B. van Rooij,R. Propper,R. Nijstad,A. Adelgaard,D. Weidmann,R. Zerrouki,D. Rots,Y. Taha,M. Pjaca,Waghorst|4-4-2:N. Steffen,T. Strannegard,J. Bamert,N. Burgy,F. Fehr,D. Derbaci,N. Zoukit,J. Roth,N. Maier,Braschy,F. Dursun",
     "xi_extern": true,
     "titel_vandaag": true,
-    "bron": "footymetrics"
+    "bron": "api"
   }
 }
