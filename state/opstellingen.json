@@ -131,7 +131,8 @@
     "comp_id": "65de2f987de877fdf6583d10",
     "stream": null,
     "vriendschappelijk": false,
-    "og": "og/opstelling-heerenveen-excelsior-16-10-2026-f4d587.webp"
+    "og": "og/opstelling-heerenveen-excelsior-16-10-2026-f4d587.webp",
+    "og_done": "og/opstelling-heerenveen-excelsior-16-10-2026-f4d587.webp"
   },
   "1551840": {
     "item_id": "6ad13bd40c8ce308c0f17ee3",
@@ -145,7 +146,8 @@
     "comp_id": "65de4bc0a8777b9898d6374e",
     "stream": null,
     "vriendschappelijk": false,
-    "og": "og/opstelling-vvv-venlo-jong-az-16-10-2026-b72101.webp"
+    "og": "og/opstelling-vvv-venlo-jong-az-16-10-2026-b72101.webp",
+    "og_done": "og/opstelling-vvv-venlo-jong-az-16-10-2026-b72101.webp"
   },
   "1551837": {
     "item_id": "6ad13bdf8901a642540cc090",
@@ -159,7 +161,8 @@
     "comp_id": "65de4bc0a8777b9898d6374e",
     "stream": null,
     "vriendschappelijk": false,
-    "og": "og/opstelling-fc-den-bosch-top-oss-16-10-2026-9c1e6a.webp"
+    "og": "og/opstelling-fc-den-bosch-top-oss-16-10-2026-9c1e6a.webp",
+    "og_done": "og/opstelling-fc-den-bosch-top-oss-16-10-2026-9c1e6a.webp"
   },
   "1551838": {
     "item_id": "6ad13bea75b03e22151999bc",
@@ -173,7 +176,8 @@
     "comp_id": "65de4bc0a8777b9898d6374e",
     "stream": null,
     "vriendschappelijk": false,
-    "og": "og/opstelling-fc-eindhoven-vitesse-16-10-2026-1f5681.webp"
+    "og": "og/opstelling-fc-eindhoven-vitesse-16-10-2026-1f5681.webp",
+    "og_done": "og/opstelling-fc-eindhoven-vitesse-16-10-2026-1f5681.webp"
   },
   "1551839": {
     "item_id": "6ad13bf4b28751da08b26378",
@@ -187,6 +191,7 @@
     "comp_id": "65de4bc0a8777b9898d6374e",
     "stream": null,
     "vriendschappelijk": false,
-    "og": "og/opstelling-helmond-sport-nac-breda-16-10-2026-7cedb7.webp"
+    "og": "og/opstelling-helmond-sport-nac-breda-16-10-2026-7cedb7.webp",
+    "og_done": "og/opstelling-helmond-sport-nac-breda-16-10-2026-7cedb7.webp"
   }
 }
