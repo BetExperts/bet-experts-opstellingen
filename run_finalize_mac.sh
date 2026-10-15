@@ -26,6 +26,8 @@ sync_push() {   # $1 = commitbericht
 git pull -q --rebase -X theirs origin main || { git rebase --abort 2>/dev/null; echo "! pull mislukt"; exit 1; }
 $PY finalize.py
 sync_push "state: definitief geflipt (Mac)" || exit 1
+# voorbeschouwingen: opstellingsregels + opstellingen-blok gelijk met het laatste nieuws (vb_sync.py, eigen tijdsbudget)
+$PY vb_sync.py
 # nog niet gekoppelde deelafbeeldingen? (bestand staat nu op GitHub) -> koppelen
 if $PY -c "import json,sys;s=json.load(open('state/opstellingen.json'));sys.exit(0 if any(e.get('og') and e.get('og_done')!=e['og'] for e in s.values()) else 1)"; then
   sleep 5

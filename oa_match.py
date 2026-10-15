@@ -5,6 +5,7 @@ from datetime import datetime, timezone, timedelta
 import oa_api as api
 import oa_footy as FOOTY
 import oa_ovandaag as OV
+import oa_xi as X
 from oa_config import club_slug, RUBRIEK_ID, nl_name, fix_mojibake, stadion_nl, stad_nl
 import oa_build as B
 from tvgids import TvGids
@@ -177,6 +178,12 @@ def gather(fx, definitief=False):
             hPrev, aPrev = hl, al
             hLU = _clean_lineup(src.as_lineup(fm["home"], fm["url"]))
             aLU = _clean_lineup(src.as_lineup(fm["away"], fm["url"]))
+            # namen koppelen aan de eigen API-spelers (volledige naam, positie, linie), net als in de
+            # voorbeschouwingen (vb_sync.py): zo staat overal dezelfde elf in dezelfde volgorde
+            for lu, side, vorige in ((hLU, fm["home"], hl), (aLU, fm["away"], al)):
+                xi, f = X.build(side["names"], side.get("formation"), X.pool_from(vorige), src is OV)
+                if xi:
+                    lu.update({"startXI": xi, "formation": f})
             print(f"     ↳ vermoedelijke opstellingen via {'opstellingvandaag' if src is OV else 'FootyMetrics'} ({hLU['formation']} / {aLU['formation']})")
 
     fx_inj = api.injuries_fixture(fid) if fid else []

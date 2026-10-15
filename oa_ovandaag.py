@@ -87,9 +87,10 @@ def _parse(page):
             continue
         names, j = [], i + 1
         while j < len(lines) and len(names) < 11:
-            if lines[j] != ",":
-                names.append(lines[j])
+            # meestal één naam per regel, soms de hele elf als 'naam, naam, …' in één regel
+            names += [n.strip() for n in lines[j].split(",") if n.strip()]
             j += 1
+        names = names[:11]
         teams.append((m.group(1), names))
     forms = [l for l in lines if re.fullmatch(r"\d-\d(?:-\d){1,3}", l)]
     return teams, forms, confirmed
