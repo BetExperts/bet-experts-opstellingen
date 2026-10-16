@@ -141,7 +141,11 @@ def run(dry=False, days=3, max_items=800):
             if dry:
                 print(f"  ○ {CL.kind(fd)}: {fd['slug']}\n      {block}")
             else:
-                WF.update_live(it["id"], {veld: new})
+                try:
+                    WF.update_live(it["id"], {veld: new})
+                except RuntimeError as e:                      # bv. 409 'never been published' (offline gehaald)
+                    n -= 1
+                    print(f"  ! {CL.kind(fd)}: overgeslagen {fd['slug']} ({str(e)[:120]})"); continue
                 print(f"  ✔ {CL.kind(fd)}: {fd['slug']}  {re.sub(r'<[^>]+>', '', block)[:90]}")
     print(f"KLAAR — {n} artikel(en) {'zouden worden ' if dry else ''}bijgewerkt.")
     return n

@@ -153,7 +153,11 @@ def run(dry=False, days=3, back=6, max_items=800):
             if dry:
                 print(f"  ○ {k}: zou bijwerken {fd['slug']}\n      {block}")
             else:
-                WF.update_live(it["id"], patch)
+                try:
+                    WF.update_live(it["id"], patch)
+                except RuntimeError as e:                      # bv. 409 'never been published' (offline gehaald)
+                    changed -= 1
+                    print(f"  ! {k}: overgeslagen {fd['slug']} ({str(e)[:120]})"); continue
                 print(f"  ✔ {k}: bijgewerkt {fd['slug']}")
     print(f"\nKLAAR — {changed} artikel(en) {'zouden worden ' if dry else ''}bijgewerkt.")
     return changed
