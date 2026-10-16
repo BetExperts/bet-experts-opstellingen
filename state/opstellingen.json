@@ -122,7 +122,7 @@
   "1552189": {
     "item_id": "6ad13bca7dacf0b5c227356f",
     "slug": "opstelling-heerenveen-excelsior-16-10-2026",
-    "definitief": false,
+    "definitief": true,
     "match": "Heerenveen - Excelsior",
     "date": "2026-10-16",
     "league": "eredivisie",
@@ -131,12 +131,13 @@
     "comp_id": "65de2f987de877fdf6583d10",
     "stream": null,
     "vriendschappelijk": false,
-    "og": "og/opstelling-heerenveen-excelsior-16-10-2026-dd9ebd.webp",
+    "og": "og/opstelling-heerenveen-excelsior-16-10-2026-752468.webp",
     "og_done": "og/opstelling-heerenveen-excelsior-16-10-2026-dd9ebd.webp",
     "ververst": "2026-10-16T16:13:01+00:00",
     "xi_sig": "4-2-3-1:B. Klaverboer,O. Braude,S. Kersten,M. Willemsen,V. Zagaritis,M. Linday,N. Courtens,J. Trenskow,R. Meerveld,M. Rivera,D. Vente|4-3-3:S. van Gassel,E. da Silva Moreira,C. Widell,J. Plug,S. Janssen,I. Yegoian,R. Meissen,L. Hartjes,A. Sliti,D. Garden,A. Thorsteinsson",
     "xi_extern": true,
-    "titel_vandaag": true
+    "titel_vandaag": true,
+    "bron": "footymetrics"
   },
   "1551840": {
     "item_id": "6ad13bd40c8ce308c0f17ee3",
@@ -152,7 +153,7 @@
     "vriendschappelijk": false,
     "og": "og/opstelling-vvv-venlo-jong-az-16-10-2026-115951.webp",
     "og_done": "og/opstelling-vvv-venlo-jong-az-16-10-2026-115951.webp",
-    "ververst": "2026-10-16T16:13:01+00:00",
+    "ververst": "2026-10-16T17:21:41+00:00",
     "xi_sig": "4-2-3-1:Y. Schoonderwaldt,Raf Vullers,É. Clancy,G. Blancquart,de Blok,Ismail Oulad M'Hand,Tristan Schenkhuizen,E. Zuliani,M. Odriss,N. Ait Mouhou,Tsygkas|4-2-3-1:K. Zeggen,J. Zwart,A. Natali,F. Andersen,K. Inge,R. Robbemond,J. Oerip,Bergraaf,T. de Wit,H. de Wit,Kuvács",
     "xi_extern": true,
     "titel_vandaag": true
@@ -171,7 +172,7 @@
     "vriendschappelijk": false,
     "og": "og/opstelling-fc-den-bosch-top-oss-16-10-2026-a22a9b.webp",
     "og_done": "og/opstelling-fc-den-bosch-top-oss-16-10-2026-a22a9b.webp",
-    "ververst": "2026-10-16T16:13:01+00:00",
+    "ververst": "2026-10-16T17:21:41+00:00",
     "xi_sig": "4-3-3:P. van de Merbel,Jeffry Fortes,Silvan Broker,S. Maas,M. Laros,Wang,De Corte,H. Eikelboom,Monzyalo,S. Karlsson Grach,I. Boumassaoudi|4-3-3:M. Havekotte,I. Pata,L. Miguel,D. Vianello,Julian Kuijpers,J. Mathieu,R. van der Venne,M. Esajas,SIlve,F. Nsingi,M. Hinoke",
     "xi_extern": true,
     "titel_vandaag": true
@@ -179,7 +180,7 @@
   "1551838": {
     "item_id": "6ad13bea75b03e22151999bc",
     "slug": "opstelling-fc-eindhoven-vitesse-16-10-2026",
-    "definitief": false,
+    "definitief": true,
     "match": "FC Eindhoven - Vitesse",
     "date": "2026-10-16",
     "league": "eerste-divisie",
@@ -188,12 +189,13 @@
     "comp_id": "65de4bc0a8777b9898d6374e",
     "stream": null,
     "vriendschappelijk": false,
-    "og": "og/opstelling-fc-eindhoven-vitesse-16-10-2026-991cb8.webp",
+    "og": "og/opstelling-fc-eindhoven-vitesse-16-10-2026-b80369.webp",
     "og_done": "og/opstelling-fc-eindhoven-vitesse-16-10-2026-991cb8.webp",
     "ververst": "2026-10-16T16:13:01+00:00",
     "xi_sig": "4-3-3:J. Borgmans,C. Essers,Poortvliet,O. Renfrum,Raf van de Riet,Antonio Baždarić,X. Blomme,G. Beaumont,Buyfrahi,Baartmans,Besuijen|4-2-3-1:C. van den Berg,S. Bonnah,V. Zumberi,M. Steffen,Xiamaro Thenu,M. Schikora,Y. Ouallil,F. de Carvalho,P. Dahbo,A. Sellouf,Bannys",
     "xi_extern": true,
-    "titel_vandaag": true
+    "titel_vandaag": true,
+    "bron": "footymetrics"
   },
   "1551839": {
     "item_id": "6ad13bf4b28751da08b26378",
@@ -209,7 +211,7 @@
     "vriendschappelijk": false,
     "og": "og/opstelling-helmond-sport-nac-breda-16-10-2026-e52137.webp",
     "og_done": "og/opstelling-helmond-sport-nac-breda-16-10-2026-e52137.webp",
-    "ververst": "2026-10-16T16:13:01+00:00",
+    "ververst": "2026-10-16T17:21:41+00:00",
     "xi_sig": "4-4-2:M. Bergsen,S. Dekkers,B. Koglin,T. Landheer,T. Poll,L. Cicero,M. Ludwig,Xander van der Velde,H. Ingason,Bajramy,T. Essakkati|4-2-3-1:M. Verrips,B. Lucassen,L. Greiml,R. Hillen,J. Van den Bergh,J. Van Hecke,M. Balard,K. Sowah,M. Nassoh,C. Brym,Saumano",
     "xi_extern": true,
     "titel_vandaag": true
