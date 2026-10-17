@@ -257,12 +257,12 @@
     "xi_sig": "4-3-3:Koeman,G. Alders,S. Valk,A. Soualhia,M. Peersman,N. Shenkman,T. Owusu,N. Rossen,R. Mendes,J. Seedorf,P. Brouwer|4-3-3:T. Ernst,G. Read,J. St. Juste,Mika Màrmol,Javi López,G. Zechiël,C. Vanhoutte,O. Targhalline,A. Hadj-Moussa,Nacho Ferri,L. Valente",
     "xi_extern": true,
     "titel_vandaag": true,
-    "bron": "footymetrics"
+    "bron": "api"
   },
   "1552193": {
     "item_id": "6ad286fdd7ebabaef0c0a867",
     "slug": "opstelling-sparta-rotterdam-willem-2-17-10-2026",
-    "definitief": false,
+    "definitief": true,
     "match": "Sparta Rotterdam - Willem II",
     "date": "2026-10-17",
     "league": "eredivisie",
@@ -271,12 +271,13 @@
     "comp_id": "65de2f987de877fdf6583d10",
     "stream": null,
     "vriendschappelijk": false,
-    "og": "og/opstelling-sparta-rotterdam-willem-2-17-10-2026-9233f0.webp",
+    "og": "og/opstelling-sparta-rotterdam-willem-2-17-10-2026-bce7ee.webp",
     "og_done": "og/opstelling-sparta-rotterdam-willem-2-17-10-2026-9233f0.webp",
     "ververst": "2026-10-17T17:29:50+00:00",
     "xi_sig": "4-2-3-1:M. Brouwer,L. Martes,M. Young,B. Martins Indi,B. Kuipers,N. Verschuren,J. Toornstra,R. van Cruijsen,C. Hatenboer,I. Babadi,M. Zonneveld|4-2-3-1:M. Delanghe,H. ter Avest,F. Stam,M. Dekker,N. Tjoe a On,C. Twigt,T. Vilhena,J. Slory,U. van Aalst,V. van Crooij,D. Haen",
     "xi_extern": true,
-    "titel_vandaag": true
+    "titel_vandaag": true,
+    "bron": "footymetrics"
   },
   "1551841": {
     "item_id": "6ad287057fd63dd5d241fe9f",
