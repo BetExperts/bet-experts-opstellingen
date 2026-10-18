@@ -83,15 +83,28 @@ def _full(lu):
     return bool(lu and len(lu.get("startXI") or []) >= 11)
 
 
+BRON = {"laatste": None}   # bron van de laatst bepaalde opstelling: api | opstellingvandaag | footymetrics | voorspeld
+
 def opstellingen(fx):
-    """(status, {teamId: lineup}) — status 'definitief' | 'voorspeld' | None."""
+    """(status, {teamId: lineup}) — status 'definitief' | 'voorspeld' | None.
+    Definitief: API-Football; heeft die nog niets, dan de bevestigde elf van opstellingvandaag of (vanaf 100 min
+    voor aftrap) FootyMetrics. Zodra de API de opstelling heeft, gaat de voorbeschouwing over op de API-versie."""
+    BRON["laatste"] = None
     fid = fx["fixture"]["id"]; th, ta = fx["teams"]["home"], fx["teams"]["away"]
     lus = {str((lu.get("team") or {}).get("id")): lu for lu in api.lineups(fid)}
     if _full(lus.get(str(th["id"]))) and _full(lus.get(str(ta["id"]))):
+        BRON["laatste"] = "api"
         return "definitief", {str(th["id"]): lus[str(th["id"])], str(ta["id"]): lus[str(ta["id"])]}
     ymd = datetime.fromisoformat(fx["fixture"]["date"].replace("Z", "+00:00")).astimezone(NL).date().isoformat()
     hN, aN = nl_name(th["name"]), nl_name(ta["name"])
     fm, ordered = OV.predicted([hN, th["name"]], [aN, ta["name"]], ymd), True
+    bevestigd = bool(fm and fm.get("confirmed"))
+    if not bevestigd:
+        ko = datetime.fromisoformat(fx["fixture"]["date"].replace("Z", "+00:00"))
+        if -120 < (ko - datetime.now(timezone.utc)).total_seconds() / 60 <= 100:
+            fc = FOOTY.confirmed(th["name"], ta["name"], ymd)
+            if fc:
+                fm, ordered, bevestigd = fc, False, True
     if not fm:
         fm, ordered = FOOTY.predicted(th["name"], ta["name"], ymd), False
     if not fm:
@@ -105,8 +118,12 @@ def opstellingen(fx):
         coach = next((lu.get("coach") for lu in vorige if lu.get("coach")), None)
         out[str(t["id"])] = {"team": {"id": t["id"], "name": t["name"], "logo": t.get("logo")},
                              "formation": form, "startXI": xi, "substitutes": [], "coach": coach}
-    # opstellingvandaag toont de officiële opstelling vaak eerder dan API-Football (18-10-2026, Brighton - Palace)
-    return ("definitief" if ordered and fm.get("confirmed") else "voorspeld"), out
+    # opstellingvandaag/FootyMetrics tonen de officiële opstelling vaak eerder dan API-Football (18-10-2026)
+    if bevestigd:
+        BRON["laatste"] = "opstellingvandaag" if ordered else "footymetrics"
+        return "definitief", out
+    BRON["laatste"] = "voorspeld"
+    return "voorspeld", out
 
 
 def _regel(lu):
@@ -185,7 +202,7 @@ def sync_een(fid, item, ko, st, dry=False):
     afw = afwezigen(fx)
     if not status and not any(afw.values()):
         return "geen externe opstelling of afwezigen (blijft laatste duel)"
-    sig = hashlib.sha1(json.dumps([status, afw] + ([[lus[str(t["id"])]["formation"]] +
+    sig = hashlib.sha1(json.dumps([status, BRON["laatste"], afw] + ([[lus[str(t["id"])]["formation"]] +
                                                      [p["player"]["name"] for p in lus[str(t["id"])]["startXI"]]
                                                      for t in (th, ta)] if status else []),
                                   ensure_ascii=False).encode()).hexdigest()[:12]
@@ -219,7 +236,7 @@ def sync_een(fid, item, ko, st, dry=False):
         return "KV mislukt"
     if velden:
         WF.update_live(item["id"], velden)
-    st.update({"sig": sig, "status": status, "item": item["id"], "slug": fd.get("slug"),
+    st.update({"sig": sig, "status": status, "bron": BRON["laatste"], "item": item["id"], "slug": fd.get("slug"),
                "afw_eigen": sorted(e1 | e2)})
     return f"{status or 'alleen afwezigen'}: bijgewerkt ({', '.join(sorted(velden)) or 'alleen blok'})"
 
@@ -237,10 +254,12 @@ def main():
     for fid, (item, ko) in lijst.items():
         if a.fixture and fid != a.fixture:
             continue
-        if not a.fixture and not (now - timedelta(minutes=15) <= ko <= now + timedelta(hours=VENSTER_U)):
-            continue
         st = state.setdefault(fid, {})
-        if st.get("status") == "definitief" and not a.force:
+        extern_def = st.get("status") == "definitief" and st.get("bron") in ("opstellingvandaag", "footymetrics")
+        na = timedelta(hours=2) if extern_def else timedelta(minutes=15)     # externe elf: tot de API hem heeft
+        if not a.fixture and not (now - na <= ko <= now + timedelta(hours=VENSTER_U)):
+            continue
+        if st.get("status") == "definitief" and not extern_def and not a.force:
             continue
         interval = 10 if ko - now < timedelta(hours=3) else 55
         last = st.get("gecheckt")
