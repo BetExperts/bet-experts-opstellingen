@@ -105,7 +105,8 @@ def opstellingen(fx):
         coach = next((lu.get("coach") for lu in vorige if lu.get("coach")), None)
         out[str(t["id"])] = {"team": {"id": t["id"], "name": t["name"], "logo": t.get("logo")},
                              "formation": form, "startXI": xi, "substitutes": [], "coach": coach}
-    return "voorspeld", out
+    # opstellingvandaag toont de officiële opstelling vaak eerder dan API-Football (18-10-2026, Brighton - Palace)
+    return ("definitief" if ordered and fm.get("confirmed") else "voorspeld"), out
 
 
 def _regel(lu):

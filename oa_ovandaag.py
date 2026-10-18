@@ -82,7 +82,8 @@ def _parse(page):
     # 'Vermoedelijke opstelling PSV:' gevolgd door naam, ',' , naam, …
     teams = []
     for i, l in enumerate(lines):
-        m = re.match(r"(?i)vermoedelijke opstelling (.+?):$", l)
+        # vóór de bekendmaking 'Vermoedelijke opstelling PSV:', daarna 'Opstelling PSV:' (bevestigd)
+        m = re.match(r"(?i)(?:vermoedelijke )?opstelling (.+?):$", l)
         if not m:
             continue
         names, j = [], i + 1
