@@ -362,7 +362,7 @@
   "1552191": {
     "item_id": "6ad3d2938698e03b4ef7410e",
     "slug": "opstelling-nec-nijmegen-fortuna-sittard-18-10-2026",
-    "definitief": false,
+    "definitief": true,
     "match": "NEC Nijmegen - Fortuna Sittard",
     "date": "2026-10-18",
     "league": "eredivisie",
@@ -371,17 +371,18 @@
     "comp_id": "65de2f987de877fdf6583d10",
     "stream": null,
     "vriendschappelijk": false,
-    "og": "og/opstelling-nec-nijmegen-fortuna-sittard-18-10-2026-23de90.webp",
+    "og": "og/opstelling-nec-nijmegen-fortuna-sittard-18-10-2026-df5858.webp",
     "og_done": "og/opstelling-nec-nijmegen-fortuna-sittard-18-10-2026-23de90.webp",
     "ververst": "2026-10-18T16:22:40+00:00",
     "xi_sig": "3-4-3:G. Crettaz,Gabriel Brás,P. Schuurs,Deveron Fonville,Kevin Kers,D. Nejašmić,N. Lebreton,Clement Bischoff,T. Chery,B. Linssen,D. Geiger|4-3-3:M. Branderhorst,I. Pinto,S. van Ottele,R. Guth,J. Hubner,E. Michut,P. Brittijn,S. Zand,M. Ihattaren,L. Zeefuik,A. Descotte",
     "xi_extern": true,
-    "titel_vandaag": true
+    "titel_vandaag": true,
+    "bron": "opstellingvandaag"
   },
   "1552196": {
     "item_id": "6ad3d29cbf3f621ead838107",
     "slug": "opstelling-fc-twente-fc-utrecht-18-10-2026",
-    "definitief": false,
+    "definitief": true,
     "match": "Twente - Utrecht",
     "date": "2026-10-18",
     "league": "eredivisie",
@@ -390,12 +391,13 @@
     "comp_id": "65de2f987de877fdf6583d10",
     "stream": null,
     "vriendschappelijk": false,
-    "og": "og/opstelling-fc-twente-fc-utrecht-18-10-2026-049448.webp",
+    "og": "og/opstelling-fc-twente-fc-utrecht-18-10-2026-5e0431.webp",
     "og_done": "og/opstelling-fc-twente-fc-utrecht-18-10-2026-049448.webp",
     "ververst": "2026-10-18T16:22:40+00:00",
     "xi_sig": "4-2-3-1:J. Drommel,B. van Rooij,R. Propper,R. Nijstad,A. Adelgaard,R. Zerrouki,D. Weidmann,D. Rots,Y. Taha,M. Pjaca,W. Weghorst|3-4-3:V. Barkas,S. Horemans,M. Didden,N. Panagiotou,N. Vesterlund,J. van Overeem,O. Agougil,A. Zagre,M. Broholm,D. de Wit,Y. Cathline",
     "xi_extern": true,
-    "titel_vandaag": true
+    "titel_vandaag": true,
+    "bron": "opstellingvandaag"
   },
   "1551842": {
     "item_id": "6ad3d2a55b6678aac2d1610e",
