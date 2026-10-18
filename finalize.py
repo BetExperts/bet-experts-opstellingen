@@ -8,12 +8,17 @@ import sys, argparse
 import oa_api as api
 import oa_match as M
 import oa_footy as FOOTY
+import oa_ovandaag as OV
+import oa_xi as X
+from zoneinfo import ZoneInfo
+NL = ZoneInfo("Europe/Amsterdam")
 from datetime import datetime, timedelta, timezone
 import oa_og as OG
-from oa_config import LEAGUES, WEBFLOW_TOKEN
+from oa_config import LEAGUES, WEBFLOW_TOKEN, nl_name
 import oa_webflow as WF
 
 LCFG = {c["worker_slug"]: c for c in LEAGUES}
+EXTERN_BRON = ("footymetrics", "opstellingvandaag")   # definitief via externe bron -> later nog de API-versie
 PING = []   # bijgewerkte URL's -> IndexNow
 
 def main():
@@ -27,31 +32,38 @@ def main():
     # nog niet definitief, of definitief via FootyMetrics en nog niet bijgewerkt met de API-opstelling
     todo = {fid: e for fid, e in state.items()
             if (not e.get("definitief")
-                or (e.get("bron") == "footymetrics" and e.get("date", "") >= (datetime.now() - timedelta(days=1)).date().isoformat()))
+                or (e.get("bron") in EXTERN_BRON and e.get("date", "") >= (datetime.now() - timedelta(days=1)).date().isoformat()))
             and (not a.date or e.get("date") == a.date)}
     print(f"== Finalize | {len(todo)} kandidaat-artikel(en) | modus: {'DRY' if a.dry else 'LIVE'} ==")
     flipped = 0
     for fid, e in todo.items():
         api_ok = M.has_confirmed_lineups(fid)
-        resync = e.get("definitief") and e.get("bron") == "footymetrics"
+        resync = e.get("definitief") and e.get("bron") in EXTERN_BRON
         if resync and not api_ok:
             continue                      # al definitief via FootyMetrics; wacht op de API-versie
         fx = api.match(fid)
         if not fx:
             print(f"  ! match niet op te halen: {fid}"); continue
-        fm = None
+        fm, fm_src = None, None
         if not api_ok:
-            # API nog leeg: FootyMetrics heeft de bevestigde opstelling vaak eerder (vanaf ~90 min voor aftrap)
+            # API nog leeg: opstellingvandaag (meteen na de bekendmaking, ~75 min voor aftrap) of FootyMetrics
+            # (vanaf ~90 min) hebben de bevestigde opstelling vaak eerder dan API-Football
             try:
                 ko = datetime.fromisoformat(fx["fixture"]["date"].replace("Z", "+00:00"))
                 mins = (ko - datetime.now(timezone.utc)).total_seconds() / 60
             except Exception:
                 mins = 999
-            if -120 < mins <= 90:
-                fm = FOOTY.confirmed(fx["teams"]["home"]["name"], fx["teams"]["away"]["name"], ko.date().isoformat())
+            if -120 < mins <= 100:
+                hn, an = fx["teams"]["home"]["name"], fx["teams"]["away"]["name"]
+                ymd = ko.astimezone(NL).date().isoformat()
+                ov = OV.predicted([nl_name(hn), hn], [nl_name(an), an], ymd)
+                if ov and ov.get("confirmed"):
+                    fm, fm_src = ov, OV
+                else:
+                    fm, fm_src = FOOTY.confirmed(hn, an, ymd), FOOTY
             if not fm:
                 print(f"  · nog geen definitieve opstelling: {e['match']} ({fid})"); continue
-            print(f"     ↳ bevestigde opstelling via FootyMetrics (API nog leeg)")
+            print(f"     ↳ bevestigde opstelling via {'opstellingvandaag' if fm_src is OV else 'FootyMetrics'} (API nog leeg)")
         # competitie-info: eerst uit de state (werkt ook voor losse test-wedstrijden),
         # anders uit de LEAGUES-config
         cfg = LCFG.get(e.get("league"))
@@ -62,8 +74,13 @@ def main():
                    "comp_id": e.get("comp_id"), "vriendschappelijk": e.get("vriendschappelijk", False)}
         ctx = M.gather(fx, definitief=True)
         if fm:
-            ctx["hLU"] = M._clean_lineup(FOOTY.as_lineup(fm["home"], fm["url"]))
-            ctx["aLU"] = M._clean_lineup(FOOTY.as_lineup(fm["away"], fm["url"]))
+            for k, side, tid in (("hLU", fm["home"], fx["teams"]["home"]["id"]), ("aLU", fm["away"], fx["teams"]["away"]["id"])):
+                lu = M._clean_lineup(fm_src.as_lineup(side, fm["url"]))
+                # namen koppelen aan de API-spelers (volledige naam, rugnummer, linie), zoals bij de vermoedelijke elf
+                xi, f = X.build(side["names"], side.get("formation"), X.pool_from(M._team_lineup(tid, exclude_fixture=fid)), fm_src is OV)
+                if xi:
+                    lu.update({"startXI": xi, "formation": f})
+                ctx[k] = lu
         # nooit 'definitief' zonder beide elftallen (cache kan net tussen twee verzoeken wisselen)
         if not ((ctx.get("hLU") or {}).get("startXI") and (ctx.get("aLU") or {}).get("startXI")):
             print(f"  · opstelling nog niet compleet binnen, volgende run opnieuw: {e['match']} ({fid})"); continue
@@ -75,7 +92,7 @@ def main():
         else:
             WF.update_live(e["item_id"], fd)
             e["definitief"] = True
-            e["bron"] = "footymetrics" if fm else "api"
+            e["bron"] = ("opstellingvandaag" if fm_src is OV else "footymetrics") if fm else "api"
             og = OG.make(ctx, cfg, e["slug"])     # nieuwe afbeelding: 'Definitief' + echte formaties
             if og: e["og"] = og
             WF.save_state(state)
