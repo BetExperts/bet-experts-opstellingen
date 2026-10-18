@@ -85,6 +85,14 @@ def _full(lu):
 
 BRON = {"laatste": None}   # bron van de laatst bepaalde opstelling: api | opstellingvandaag | footymetrics | voorspeld
 
+KOP_RE = re.compile(r"(<h[1-6][^>]*>(?:<[^>]+>)*[^<]*?)(Vermoedelijke|Definitieve)( [Oo]pstellingen)")
+
+def kop(h, status):
+    """Zet 'Vermoedelijke/Definitieve Opstellingen' in de blokkop gelijk aan de status."""
+    woord = "Definitieve" if status == "definitief" else "Vermoedelijke"
+    return KOP_RE.sub(lambda m: m.group(1) + woord + m.group(3), h or "")
+
+
 def opstellingen(fx):
     """(status, {teamId: lineup}) — status 'definitief' | 'voorspeld' | None.
     Definitief: API-Football; heeft die nog niets, dan de bevestigde elf van opstellingvandaag of (vanaf 100 min
@@ -206,7 +214,9 @@ def sync_een(fid, item, ko, st, dry=False):
                                                      [p["player"]["name"] for p in lus[str(t["id"])]["startXI"]]
                                                      for t in (th, ta)] if status else []),
                                   ensure_ascii=False).encode()).hexdigest()[:12]
-    if sig == st.get("sig"):
+    kop_klopt = not status or all(kop(item["fieldData"].get(v) or "", status) == (item["fieldData"].get(v) or "")
+                                  for v in ("content", "content-2"))
+    if sig == st.get("sig") and kop_klopt:
         return f"{status or 'afwezigen'}: ongewijzigd"
     fd = item["fieldData"]
     namen, ids = [nl_name(th["name"]), nl_name(ta["name"])], [th["id"], ta["id"]]
@@ -220,6 +230,9 @@ def sync_een(fid, item, ko, st, dry=False):
     eigen = set(st.get("afw_eigen") or [])
     c2, e2 = herschrijf_afw(c2, afw, ids, namen, eigen)
     c1, e1 = herschrijf_afw(fd.get("content") or "", afw, ids, namen, eigen)
+    # kop van het blok meeschakelen: 'Blessures & Vermoedelijke Opstellingen' <-> 'Blessures & Definitieve Opstellingen'
+    if status:
+        c1, c2 = kop(c1, status), kop(c2, status)
     if c2 != (fd.get("content-2") or ""):
         velden["content-2"] = c2
     if c1 != (fd.get("content") or ""):
