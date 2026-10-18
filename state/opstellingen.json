@@ -302,7 +302,7 @@
   "1552194": {
     "item_id": "6ad3d282e5fa96c95030b30d",
     "slug": "opstelling-pec-zwolle-go-ahead-eagles-18-10-2026",
-    "definitief": false,
+    "definitief": true,
     "match": "PEC Zwolle - GO Ahead Eagles",
     "date": "2026-10-18",
     "league": "eredivisie",
@@ -311,12 +311,13 @@
     "comp_id": "65de2f987de877fdf6583d10",
     "stream": null,
     "vriendschappelijk": false,
-    "og": "og/opstelling-pec-zwolle-go-ahead-eagles-18-10-2026-f44e73.webp",
+    "og": "og/opstelling-pec-zwolle-go-ahead-eagles-18-10-2026-fba0db.webp",
     "og_done": "og/opstelling-pec-zwolle-go-ahead-eagles-18-10-2026-f44e73.webp",
     "ververst": "2026-10-18T08:57:12+00:00",
     "xi_sig": "4-2-3-1:J. Schendelaar,O. Aertssen,S. Graves,N. Viergever,S. Floranus,R. Thomas,T. Sommer,D. Mbayo,T. Oosting,I. Cissoko,K. Kostons|4-2-3-1:K. Haug,A. Sampsted,G. van Zwam,J. Kramer,D. James,M. Meulensteen,E. Linthorst,S. Tengstedt,V. Edvardsen,M. Suray,S. I. Sigurdarson",
     "xi_extern": true,
-    "titel_vandaag": true
+    "titel_vandaag": true,
+    "bron": "footymetrics"
   },
   "1552195": {
     "item_id": "6ad3d287aca60540642b216c",
