@@ -317,7 +317,7 @@
     "xi_sig": "4-2-3-1:J. Schendelaar,O. Aertssen,S. Graves,N. Viergever,S. Floranus,R. Thomas,T. Sommer,D. Mbayo,T. Oosting,I. Cissoko,K. Kostons|4-2-3-1:K. Haug,A. Sampsted,G. van Zwam,J. Kramer,D. James,M. Meulensteen,E. Linthorst,S. Tengstedt,V. Edvardsen,M. Suray,S. I. Sigurdarson",
     "xi_extern": true,
     "titel_vandaag": true,
-    "bron": "footymetrics"
+    "bron": "api"
   },
   "1552195": {
     "item_id": "6ad3d287aca60540642b216c",
@@ -398,7 +398,7 @@
   "1551842": {
     "item_id": "6ad3d2a55b6678aac2d1610e",
     "slug": "opstelling-rkc-waalwijk-volendam-18-10-2026",
-    "definitief": false,
+    "definitief": true,
     "match": "Waalwijk - FC Volendam",
     "date": "2026-10-18",
     "league": "eerste-divisie",
@@ -407,12 +407,13 @@
     "comp_id": "65de4bc0a8777b9898d6374e",
     "stream": null,
     "vriendschappelijk": false,
-    "og": "og/opstelling-rkc-waalwijk-volendam-18-10-2026-b8e0c0.webp",
+    "og": "og/opstelling-rkc-waalwijk-volendam-18-10-2026-5b61cd.webp",
     "og_done": "og/opstelling-rkc-waalwijk-volendam-18-10-2026-b8e0c0.webp",
     "ververst": "2026-10-18T08:57:12+00:00",
     "xi_sig": "4-2-3-1:M. Spenkelink,F. Al Mazyani,S. van der Plas,J. de Wijs,N. Held,L. Postma,J. Nap,R. Fage,T. van Leeuwen,V. Misidjan,F. Stokkers|4-2-3-1:H. Jurjus,N. Bukala,Luca Blondeau,M. Amevor,M. Kleijn,A. Plat,D. Huisman,N. Doodeman,R. Niemeijer,Y. el Maftahi,H. Veerman",
     "xi_extern": true,
-    "titel_vandaag": true
+    "titel_vandaag": true,
+    "bron": "api"
   },
   "1551843": {
     "item_id": "6ad3d2ab44584377daefa6c2",
