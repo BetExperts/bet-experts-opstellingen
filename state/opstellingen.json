@@ -322,7 +322,7 @@
   "1552195": {
     "item_id": "6ad3d287aca60540642b216c",
     "slug": "opstelling-sc-cambuur-az-18-10-2026",
-    "definitief": false,
+    "definitief": true,
     "match": "Cambuur - AZ Alkmaar",
     "date": "2026-10-18",
     "league": "eredivisie",
@@ -331,12 +331,13 @@
     "comp_id": "65de2f987de877fdf6583d10",
     "stream": null,
     "vriendschappelijk": false,
-    "og": "og/opstelling-sc-cambuur-az-18-10-2026-c2679b.webp",
+    "og": "og/opstelling-sc-cambuur-az-18-10-2026-426bd3.webp",
     "og_done": "og/opstelling-sc-cambuur-az-18-10-2026-c2679b.webp",
     "ververst": "2026-10-18T10:56:38+00:00",
     "xi_sig": "4-2-3-1:T. Jansen,D. Bouah,I. Baouf,B. van Duijl,M. Costarelli,E. Apkakou,N. Souren,F. Kvam,R. El Arguioui,I. Hamache,M. Maertens|4-2-3-1:J. De Busser,E. Dijkstra,W. Goes,L. Schouten,M. Chávez,D. Kwakman,P. Koopmeiners,A. Oufkir,V. Byskov,R. Daal,M. Meerdink",
     "xi_extern": true,
-    "titel_vandaag": true
+    "titel_vandaag": true,
+    "bron": "footymetrics"
   },
   "1552197": {
     "item_id": "6ad3d28d53671da49a8732fc",
