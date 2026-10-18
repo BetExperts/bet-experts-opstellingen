@@ -438,5 +438,47 @@
     "xi_extern": true,
     "titel_vandaag": true,
     "bron": "api"
+  },
+  "1551845": {
+    "item_id": "6ad52404476d2d70abc6a2c6",
+    "slug": "opstelling-jong-psv-fc-dordrecht-19-10-2026",
+    "definitief": false,
+    "match": "Jong Jong PSV - Dordrecht",
+    "date": "2026-10-19",
+    "league": "eerste-divisie",
+    "comp_slug": "keuken-kampioen-divisie",
+    "naam": "Keuken Kampioen Divisie",
+    "comp_id": "65de4bc0a8777b9898d6374e",
+    "stream": null,
+    "vriendschappelijk": false,
+    "og": "og/opstelling-jong-psv-fc-dordrecht-19-10-2026-3e4630.webp"
+  },
+  "1551844": {
+    "item_id": "6ad5240c77e4d72868257435",
+    "slug": "opstelling-jong-ajax-de-graafschap-19-10-2026",
+    "definitief": false,
+    "match": "Jong Ajax - De Graafschap",
+    "date": "2026-10-19",
+    "league": "eerste-divisie",
+    "comp_slug": "keuken-kampioen-divisie",
+    "naam": "Keuken Kampioen Divisie",
+    "comp_id": "65de4bc0a8777b9898d6374e",
+    "stream": null,
+    "vriendschappelijk": false,
+    "og": "og/opstelling-jong-ajax-de-graafschap-19-10-2026-79ee01.webp"
+  },
+  "1551846": {
+    "item_id": "6ad5241271a139e342bc6e69",
+    "slug": "opstelling-jong-fc-utrecht-roda-jc-19-10-2026",
+    "definitief": false,
+    "match": "Jong Utrecht - Roda",
+    "date": "2026-10-19",
+    "league": "eerste-divisie",
+    "comp_slug": "keuken-kampioen-divisie",
+    "naam": "Keuken Kampioen Divisie",
+    "comp_id": "65de4bc0a8777b9898d6374e",
+    "stream": null,
+    "vriendschappelijk": false,
+    "og": "og/opstelling-jong-fc-utrecht-roda-jc-19-10-2026-99224c.webp"
   }
 }
