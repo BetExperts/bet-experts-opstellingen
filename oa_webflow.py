@@ -32,6 +32,11 @@ def _req(method, url, body=None):
             if e.code == 404:
                 return {}   # al weg
             raise RuntimeError(f"Webflow HTTP {e.code}: {e.read().decode()[:300]}")
+        except (urllib.error.URLError, ConnectionError, TimeoutError) as e:
+            # netwerkhapering (o.a. 'Connection reset by peer'): even wachten en opnieuw
+            if attempt == 4:
+                raise RuntimeError(f"Webflow: netwerkfout ({e})")
+            time.sleep(3 * (attempt + 1)); continue
     raise RuntimeError("Webflow: te veel retries")
 
 def create_live(field_data):

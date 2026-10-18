@@ -18,12 +18,12 @@ sync_push() {   # $1 = commitbericht
   git commit -q -m "$1 [skip ci]"
   for i in 1 2 3; do
     git push -q origin HEAD:main 2>/dev/null && return 0
-    git pull -q --rebase -X theirs origin main || { git rebase --abort 2>/dev/null; }
+    git pull -q --rebase --autostash -X theirs origin main || { git rebase --abort 2>/dev/null; }
   done
   echo "! push mislukt"; return 1
 }
 
-git pull -q --rebase -X theirs origin main || { git rebase --abort 2>/dev/null; echo "! pull mislukt"; exit 1; }
+git pull -q --rebase --autostash -X theirs origin main || { git rebase --abort 2>/dev/null; echo "! pull mislukt"; exit 1; }
 $PY finalize.py
 sync_push "state: definitief geflipt (Mac)" || exit 1
 # voorbeschouwingen: opstellingsregels + opstellingen-blok gelijk met het laatste nieuws (vb_sync.py, eigen tijdsbudget)
