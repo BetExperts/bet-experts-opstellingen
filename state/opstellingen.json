@@ -512,7 +512,10 @@
     "stream": null,
     "vriendschappelijk": false,
     "og": "og/opstelling-sabah-fk-borussia-dortmund-20-10-2026-a881b8.webp",
-    "og_done": "og/opstelling-sabah-fk-borussia-dortmund-20-10-2026-a881b8.webp"
+    "og_done": "og/opstelling-sabah-fk-borussia-dortmund-20-10-2026-a881b8.webp",
+    "ververst": "2026-10-19T21:55:10+00:00",
+    "xi_sig": "4-2-3-1:S. Pokatilov,A. Zedadka,S. Solvet,A. McCarthy,T. Puchacz,U. Rakhmonaliyev,I. Lepinjica,K. Parris,Du Queiroz,V. Simic,Myckels|3-4-2-1:G. Kobel,J. Gadou,W. Anton,N. Schlotterbeck,J. Ryerson,J. Veerman,F. Nmecha,D. Svensson,E. Nwaneri,M. Sabitzer,Guirassij",
+    "xi_extern": true
   },
   "1635688": {
     "item_id": "6ad691753df9f88a52afcdae",
@@ -527,7 +530,10 @@
     "stream": null,
     "vriendschappelijk": false,
     "og": "og/opstelling-liverpool-villarreal-20-10-2026-08a2df.webp",
-    "og_done": "og/opstelling-liverpool-villarreal-20-10-2026-08a2df.webp"
+    "og_done": "og/opstelling-liverpool-villarreal-20-10-2026-08a2df.webp",
+    "ververst": "2026-10-19T21:55:10+00:00",
+    "xi_sig": "4-2-3-1:Alisson,J. Gomez,J. Jacquet,V. van Dijk,K. Tsimikas,R. Gravenberch,A. Mac Allister,B. Barcola,F. Wirtz,R. Ngumoha,L. Koumas|4-4-2:Luiz Junior,S. Mourino,P. Navarro,R. Veiga,C. Romero,N. Saliba,S. Comesana,P. Gueye,A. Moleiro,G. Moreno,G. Mikautadze",
+    "xi_extern": true
   },
   "1635693": {
     "item_id": "6ad6917e6349e47ebaac0e34",
@@ -542,7 +548,10 @@
     "stream": null,
     "vriendschappelijk": false,
     "og": "og/opstelling-manchester-city-aek-athene-20-10-2026-dc0d4d.webp",
-    "og_done": "og/opstelling-manchester-city-aek-athene-20-10-2026-dc0d4d.webp"
+    "og_done": "og/opstelling-manchester-city-aek-athene-20-10-2026-dc0d4d.webp",
+    "ververst": "2026-10-19T21:55:10+00:00",
+    "xi_sig": "4-2-3-1:G. Donnarumma,A. Khusanov,R. Dias,M. Guehi,J. Gvardiol,E. Anderson,E. Fernandez,I. Ndiaye,R. Cherki,J. Doku,Fodan|4-4-2:A. Brignoli,L. Rota,H. Moukoudi,Filipe Relvas,S. Pilios,L. Majer,M. Vitális,R. Marin,A. Koita,Verga,L. Jović",
+    "xi_extern": true
   },
   "1635702": {
     "item_id": "6ad691871c92740616d246bb",
@@ -557,7 +566,10 @@
     "stream": null,
     "vriendschappelijk": false,
     "og": "og/opstelling-paris-saint-germain-psg-fc-barcelona-20-10-2026-993fc4.webp",
-    "og_done": "og/opstelling-paris-saint-germain-psg-fc-barcelona-20-10-2026-993fc4.webp"
+    "og_done": "og/opstelling-paris-saint-germain-psg-fc-barcelona-20-10-2026-993fc4.webp",
+    "ververst": "2026-10-19T21:55:10+00:00",
+    "xi_sig": "4-3-3:M. Safonov,W. Zaire-Emery,I. Zabarnyi,L. Hernandez,L. Digne,J. Neves,D. Fernandez,L. Beraldo,M. Akliouche,F. Torres,K. Kvaratskhelia|4-2-3-1:J. Garcia,J. Kounde,P. Cubarsi,G. Martin,X. Espart,Rodri,Pedri,Lamine Yamal,Fermin,K. Adeyemi,Gabriel Jesus",
+    "xi_extern": false
   },
   "1635655": {
     "item_id": "6ad6918f9a132b2e076e7680",
@@ -572,6 +584,9 @@
     "stream": null,
     "vriendschappelijk": false,
     "og": "og/opstelling-fc-porto-psv-20-10-2026-bcf3b0.webp",
-    "og_done": "og/opstelling-fc-porto-psv-20-10-2026-bcf3b0.webp"
+    "og_done": "og/opstelling-fc-porto-psv-20-10-2026-bcf3b0.webp",
+    "ververst": "2026-10-19T21:55:10+00:00",
+    "xi_sig": "4-3-3:Diogo Costa,Martim Fernandes,J. Bednarek,J. Kiwior,Francisco Moura,Victor Mow Froholdt,P. Rosario,Gabri Veiga,Borja Sainz,André Silva,Pepê Aquino|4-2-3-1:M. Kovář,S. Dest,L. Geertruida,A. Obispo,F. Kostić,K. Sano,Mauro Júnior,A. Santos,R. van Bommel,I. Perišić,D. Man",
+    "xi_extern": true
   }
 }
