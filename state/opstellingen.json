@@ -451,11 +451,12 @@
     "comp_id": "65de4bc0a8777b9898d6374e",
     "stream": null,
     "vriendschappelijk": false,
-    "og": "og/opstelling-jong-psv-fc-dordrecht-19-10-2026-3e4630.webp",
+    "og": "og/opstelling-jong-psv-fc-dordrecht-19-10-2026-d4232c.webp",
     "og_done": "og/opstelling-jong-psv-fc-dordrecht-19-10-2026-3e4630.webp",
-    "ververst": "2026-10-18T23:01:44+00:00",
+    "ververst": "2026-10-19T06:17:23+00:00",
     "xi_sig": "4-2-3-1:T. Smolenaars,K. Penso,M. Bresser,F. Merién,G. Verhulst,B. Mulders,S. Sidibe,S. Dumbili,S. Cornecion,F. Kluit,Jonas|4-2-3-1:T. Coremans,J. van Aken,J. Pinas,S. Henderikx,C. Mpanzu,Senne Vugts,L. Riccio,Rumán,M. Vetkal,N. Rossi,D. Sits",
-    "xi_extern": true
+    "xi_extern": true,
+    "titel_vandaag": true
   },
   "1551844": {
     "item_id": "6ad5240c77e4d72868257435",
@@ -469,11 +470,12 @@
     "comp_id": "65de4bc0a8777b9898d6374e",
     "stream": null,
     "vriendschappelijk": false,
-    "og": "og/opstelling-jong-ajax-de-graafschap-19-10-2026-79ee01.webp",
+    "og": "og/opstelling-jong-ajax-de-graafschap-19-10-2026-9dd732.webp",
     "og_done": "og/opstelling-jong-ajax-de-graafschap-19-10-2026-79ee01.webp",
-    "ververst": "2026-10-18T23:01:44+00:00",
+    "ververst": "2026-10-19T06:17:23+00:00",
     "xi_sig": "4-3-3:Heerkens,R. van de Pavert,G. Spina,M. Muzungu,Sinclair de Falco,Alejandro Monserrate,M. Verkuijl,Mohamed Abdalla,Symeon,E. Ünüvar,P. Nash|4-3-1-2:T. Wieggers,J. Wieckhoff,R. Besselink,T. Kok,N. Martens,D. Warmerdam,M. Diemers,K. Symons,F. de Jong,Kwynt,Bjorn van Zijl",
-    "xi_extern": true
+    "xi_extern": true,
+    "titel_vandaag": true
   },
   "1551846": {
     "item_id": "6ad5241271a139e342bc6e69",
@@ -487,10 +489,11 @@
     "comp_id": "65de4bc0a8777b9898d6374e",
     "stream": null,
     "vriendschappelijk": false,
-    "og": "og/opstelling-jong-fc-utrecht-roda-jc-19-10-2026-99224c.webp",
+    "og": "og/opstelling-jong-fc-utrecht-roda-jc-19-10-2026-ca3349.webp",
     "og_done": "og/opstelling-jong-fc-utrecht-roda-jc-19-10-2026-99224c.webp",
-    "ververst": "2026-10-18T23:01:44+00:00",
+    "ververst": "2026-10-19T06:17:23+00:00",
     "xi_sig": "4-3-3:K. Gadellaa,Yousri Sbai,J. Schuldes,W. Kooy,P. Kloosterboer,F. Pohl,Massien Ghaddari,D. Laaouina,E. C. Owen,N. Dundas,Bjorn Menzo|3-4-2-1:J. Treichel,M. Tol,D. Van den Buijs,L. Beerten,X. van den Berg,D. Dorenbosch,J. Nisbet,K. Jansen,J. Mensah,Bram Marsman,A. van den Hurk",
-    "xi_extern": true
+    "xi_extern": true,
+    "titel_vandaag": true
   }
 }
