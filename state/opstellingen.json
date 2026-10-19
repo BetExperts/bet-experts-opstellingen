@@ -497,6 +497,6 @@
     "xi_sig": "4-3-3:K. Gadellaa,Yousri Sbai,J. Schuldes,W. Kooy,P. Kloosterboer,F. Pohl,Massien Ghaddari,D. Laaouina,E. C. Owen,Dundes,Bjorn Menzo|3-4-2-1:J. Treichel,M. Tol,D. Van den Buijs,L. Beerten,X. van den Berg,D. Dorenbosch,J. Nisbet,K. Jansen,Mansah,Bram Marsman,A. van den Hurk",
     "xi_extern": true,
     "titel_vandaag": true,
-    "bron": "opstellingvandaag"
+    "bron": "api"
   }
 }
