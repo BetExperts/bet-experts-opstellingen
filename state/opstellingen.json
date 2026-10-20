@@ -217,7 +217,7 @@
     "xi_sig": "4-2-3-1:S. Pokatilov,A. Zedadka,S. Solvet,A. McCarthy,T. Puchacz,U. Rakhmonaliyev,I. Lepinjica,K. Parris,Du Queiroz,V. Simic,Myckels|3-4-2-1:G. Kobel,J. Gadou,W. Anton,N. Schlotterbeck,J. Ryerson,J. Veerman,F. Nmecha,D. Svensson,E. Nwaneri,M. Sabitzer,Guirassij",
     "xi_extern": true,
     "titel_vandaag": true,
-    "bron": "opstellingvandaag"
+    "bron": "api"
   },
   "1635688": {
     "item_id": "6ad691753df9f88a52afcdae",
