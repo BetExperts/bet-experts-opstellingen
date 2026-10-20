@@ -62,9 +62,15 @@ def pool_from(lineups):
     return out
 
 
-def _match(names, pool):
-    """Beste unieke koppeling naam -> pool-speler (of None)."""
-    pairs = sorted(((_score(n, p["name"]), i, j) for i, n in enumerate(names) for j, p in enumerate(pool)),
+def _match(names, pool, verwacht=None):
+    """Beste unieke koppeling naam -> pool-speler (of None). verwacht = positie per naam (G/D/M/F) als die bekend
+    is: bij gelijke namen (García = Joan García de keeper of Eric García de verdediger) wint de juiste positie."""
+    def sc(i, n, p):
+        s = _score(n, p["name"])
+        if verwacht and verwacht[i] and p.get("pos") == verwacht[i]:
+            s += 0.02
+        return s
+    pairs = sorted(((sc(i, n, p), i, j) for i, n in enumerate(names) for j, p in enumerate(pool)),
                    reverse=True)
     got, used = {}, set()
     for sc, i, j in pairs:
@@ -86,7 +92,13 @@ def build(names, formation, pool, ordered):
     names = [n.strip() for n in names or [] if n and n.strip()]
     if len(names) != 11:
         return None, None
-    hits = _match(names, pool)
+    rijen0 = [1] + [int(x) for x in formation.split("-")] if _valid_formation(formation) else None
+    verwacht = None
+    if ordered and rijen0:
+        verwacht = []
+        for r, k in enumerate(rijen0, 1):
+            verwacht += ["G" if r == 1 else "D" if r == 2 else "F" if r == len(rijen0) else "M"] * k
+    hits = _match(names, pool, verwacht)
     spelers = []
     for n, h in zip(names, hits):
         spelers.append({"id": (h or {}).get("id"), "name": (h or {}).get("name") or n,

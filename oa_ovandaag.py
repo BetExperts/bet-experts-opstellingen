@@ -53,9 +53,30 @@ def _urls():
     return _index
 
 
+# Afkortingen/andere namen die de bron in de URL gebruikt (20-10-2026: PSG–Barcelona werd niet gevonden)
+ALIASSEN = {"paris-saint-germain": ["psg", "paris-sg"], "paris-saint-germain-fc": ["psg"], "paris-sg": ["psg"],
+            "manchester-united": ["man-utd", "man-united"], "manchester-city": ["man-city"],
+            "tottenham-hotspur": ["tottenham", "spurs"], "tottenham": ["spurs"], "wolverhampton-wanderers": ["wolves"], "wolves": ["wolverhampton"],
+            "borussia-monchengladbach": ["gladbach", "monchengladbach"], "borussia-dortmund": ["dortmund", "bvb"],
+            "bayern-munchen": ["bayern", "bayern-munchen"], "bayern-munich": ["bayern", "bayern-munchen"],
+            "athletic-club": ["athletic-bilbao", "bilbao"], "atletico-madrid": ["atletico"], "sporting-cp": ["sporting", "sporting-lissabon"],
+            "fc-copenhagen": ["fc-kopenhagen", "kopenhagen"], "inter": ["inter-milan", "internazionale"], "az-alkmaar": ["az"],
+            "olympiakos-piraeus": ["olympiacos", "olympiakos"], "fk-crvena-zvezda": ["rode-ster-belgrado", "crvena-zvezda"],
+            "union-st-gilloise": ["union-sint-gillis", "union-sg"], "st-truiden": ["sint-truiden", "stvv"],
+            "stade-brestois-29": ["brest"], "heart-of-midlothian": ["hearts"], "rb-leipzig": ["leipzig"], "bayer-leverkusen": ["leverkusen"]}
+
+
+def _met_aliassen(namen):
+    uit = list(namen)
+    for n in namen:
+        uit += [a for a in ALIASSEN.get(_fold(n), []) if a not in uit]
+    return uit
+
+
 def _sim(namen, part):
     """Hoe goed past een van de teamnamen op een deel van de slug (0..1)."""
     best = 0.0
+    namen = _met_aliassen(namen)
     p = set(part.split("-")) - STOP
     for n in namen:
         f = _fold(n)
