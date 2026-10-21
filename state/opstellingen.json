@@ -311,11 +311,12 @@
     "comp_id": "65de4adac046f4488dfdebc2",
     "stream": null,
     "vriendschappelijk": false,
-    "og": "og/opstelling-bayern-munchen-arsenal-21-10-2026-2a371a.webp",
+    "og": "og/opstelling-bayern-munchen-arsenal-21-10-2026-0e5246.webp",
     "og_done": "og/opstelling-bayern-munchen-arsenal-21-10-2026-2a371a.webp",
-    "ververst": "2026-10-20T23:46:15+00:00",
+    "ververst": "2026-10-21T06:37:17+00:00",
     "xi_sig": "4-2-3-1:J. Urbig,K. Laimer,D. Upamecano,J. Tah,A. Davies,J. Kimmich,A. Pavlovic,L. Karl,I. Saibari,L. Diaz,H. Kane|4-2-3-1:D. Raya,J. Timber,E. Konsa,Gabriel,R. Calafiori,M. Lewis-Skelly,D. Rice,B. Saka,M. Odegaard,N. Madueke,V. Gyokeres",
-    "xi_extern": true
+    "xi_extern": true,
+    "titel_vandaag": true
   },
   "1635672": {
     "item_id": "6ad7d740e814487d946c65de",
@@ -329,11 +330,12 @@
     "comp_id": "65de4adac046f4488dfdebc2",
     "stream": null,
     "vriendschappelijk": false,
-    "og": "og/opstelling-inter-shakhtar-donetsk-21-10-2026-685a8e.webp",
+    "og": "og/opstelling-inter-shakhtar-donetsk-21-10-2026-1f7790.webp",
     "og_done": "og/opstelling-inter-shakhtar-donetsk-21-10-2026-685a8e.webp",
-    "ververst": "2026-10-20T23:46:15+00:00",
+    "ververst": "2026-10-21T06:37:17+00:00",
     "xi_sig": "3-5-2:J. Martinez,Y. Bisseck,M. Akanji,A. Bastoni,A. Diouf,N. Barella,H. Calhanoglu,P. Zielinski,F. Dimarco,M. Thuram,F. Esposito|4-1-4-1:D. Riznyk,V. Tobias,V. Bondar,M. Matvienko,Pedro Henrique,O. Ocheretko,Santana,Pedrinho,Marlon Gomes,Newertton,Kaua Elias",
-    "xi_extern": true
+    "xi_extern": true,
+    "titel_vandaag": true
   },
   "1635716": {
     "item_id": "6ad7d7472720ec4ec781efeb",
@@ -347,11 +349,12 @@
     "comp_id": "65de4adac046f4488dfdebc2",
     "stream": null,
     "vriendschappelijk": false,
-    "og": "og/opstelling-real-madrid-rb-leipzig-21-10-2026-0d12a6.webp",
+    "og": "og/opstelling-real-madrid-rb-leipzig-21-10-2026-6da9ba.webp",
     "og_done": "og/opstelling-real-madrid-rb-leipzig-21-10-2026-0d12a6.webp",
-    "ververst": "2026-10-20T23:46:15+00:00",
+    "ververst": "2026-10-21T06:37:17+00:00",
     "xi_sig": "4-2-3-1:T. Courtois,T. Alexander-Arnold,I. Konate,D. Huijsen,A. Carreras,F. Valverde,A. Tchouameni,Y. Diomande,J. Bellingham,Vinicius,K. Mbappe|4-2-3-1:M. Vandevoordt,R. Baku,W. Orban,C. Lukeba,D. Raum,E. Banzuzi,N. El Aynaoui,B. Gruda,C. Nkunku,A. Nusa,Rômulo",
-    "xi_extern": true
+    "xi_extern": true,
+    "titel_vandaag": true
   },
   "1635636": {
     "item_id": "6ad7d74d30eccb39432bb725",
@@ -365,10 +368,11 @@
     "comp_id": "65de4adac046f4488dfdebc2",
     "stream": null,
     "vriendschappelijk": false,
-    "og": "og/opstelling-real-betis-feyenoord-21-10-2026-971c37.webp",
+    "og": "og/opstelling-real-betis-feyenoord-21-10-2026-f67e38.webp",
     "og_done": "og/opstelling-real-betis-feyenoord-21-10-2026-971c37.webp",
-    "ververst": "2026-10-20T23:46:15+00:00",
+    "ververst": "2026-10-21T06:37:17+00:00",
     "xi_sig": "4-2-3-1:A. Valles,A. Ortiz,M. Bartra,Natan,V. Gomez,P. Fornals,M. Roca,Antony,Isco,A. Ezzalzouli,T. Parrott|4-3-3:T. Ernst,G. Read,J. St. Juste,Mika Màrmol,Javi López,G. Zechiël,C. Vanhoutte,O. Targhalline,A. Hadj-Moussa,Nacho Ferri,L. Valente",
-    "xi_extern": true
+    "xi_extern": true,
+    "titel_vandaag": true
   }
 }
