@@ -242,7 +242,7 @@
   "1636235": {
     "item_id": "6ad92912c180357135340779",
     "slug": "opstelling-bournemouth-ac-milan-22-10-2026",
-    "definitief": false,
+    "definitief": true,
     "match": "Bournemouth - AC Milan",
     "date": "2026-10-22",
     "league": "europa-league",
@@ -251,17 +251,18 @@
     "comp_id": "65de4be481512ad1b77740b1",
     "stream": null,
     "vriendschappelijk": false,
-    "og": "og/opstelling-bournemouth-ac-milan-22-10-2026-9af471.webp",
+    "og": "og/opstelling-bournemouth-ac-milan-22-10-2026-613555.webp",
     "og_done": "og/opstelling-bournemouth-ac-milan-22-10-2026-9af471.webp",
     "ververst": "2026-10-22T17:52:40+00:00",
     "xi_sig": "4-2-3-1:D. Petrovic,A. Smith,A. Silva,J. Hill,A. Truffert,T. Adams,R. Christie,M. Tavernier,J. Kluivert,B. Gannon-Doak,Evanilson|3-4-2-1:M. Maignan,F. Tomori,K. De Winter,S. Pavlovic,A. Jashari,Y. Musah,A. Rabiot,D. Bartesaghi,R. Loftus-Cheek,A. Cisse,F. Camarda",
     "xi_extern": true,
-    "titel_vandaag": true
+    "titel_vandaag": true,
+    "bron": "opstellingvandaag"
   },
   "1636379": {
     "item_id": "6ad9291ca5c9b0770ed337e6",
     "slug": "opstelling-ajax-atalanta-22-10-2026",
-    "definitief": false,
+    "definitief": true,
     "match": "Ajax - Atalanta",
     "date": "2026-10-22",
     "league": "conference-league",
@@ -270,12 +271,13 @@
     "comp_id": "65de4bf0f348c222f01bed83",
     "stream": null,
     "vriendschappelijk": false,
-    "og": "og/opstelling-ajax-atalanta-22-10-2026-61a19b.webp",
+    "og": "og/opstelling-ajax-atalanta-22-10-2026-fcc533.webp",
     "og_done": "og/opstelling-ajax-atalanta-22-10-2026-61a19b.webp",
     "ververst": "2026-10-22T17:52:40+00:00",
     "xi_sig": "4-3-3:M. ter Stegen,T. Kehrer,A. Bouwman,Y. Baas,O. Wijndal,D. Klaassen,S. Amrabat,J. Brandt,O. Gloukh,Tolu,A. Ouazane|4-2-3-1:M. Carnesecchi,R. Bellanova,T. Kristensen,R. Obric,D. Zappacosta,G. Gaetano,Ederson,E. Elmas,C. De Ketelaere,J. Rowe,G. Scamacca",
     "xi_extern": true,
-    "titel_vandaag": true
+    "titel_vandaag": true,
+    "bron": "footymetrics"
   },
   "1636442": {
     "item_id": "6ad92929ee23991ac12abf87",
