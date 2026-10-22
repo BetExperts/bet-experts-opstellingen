@@ -257,7 +257,7 @@
     "xi_sig": "4-2-3-1:D. Petrovic,A. Smith,A. Silva,J. Hill,A. Truffert,T. Adams,R. Christie,M. Tavernier,J. Kluivert,B. Gannon-Doak,Evanilson|3-4-2-1:M. Maignan,F. Tomori,K. De Winter,S. Pavlovic,A. Jashari,Y. Musah,A. Rabiot,D. Bartesaghi,R. Loftus-Cheek,A. Cisse,F. Camarda",
     "xi_extern": true,
     "titel_vandaag": true,
-    "bron": "opstellingvandaag"
+    "bron": "api"
   },
   "1636379": {
     "item_id": "6ad9291ca5c9b0770ed337e6",
