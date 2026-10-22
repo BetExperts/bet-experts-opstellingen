@@ -202,7 +202,7 @@
   "1636258": {
     "item_id": "6ad928ff635f0eb0ecaf193e",
     "slug": "opstelling-dinamo-zagreb-nec-nijmegen-22-10-2026",
-    "definitief": false,
+    "definitief": true,
     "match": "Dinamo Zagreb - NEC Nijmegen",
     "date": "2026-10-22",
     "league": "europa-league",
@@ -211,17 +211,18 @@
     "comp_id": "65de4be481512ad1b77740b1",
     "stream": null,
     "vriendschappelijk": false,
-    "og": "og/opstelling-dinamo-zagreb-nec-nijmegen-22-10-2026-926cd8.webp",
+    "og": "og/opstelling-dinamo-zagreb-nec-nijmegen-22-10-2026-e2f56f.webp",
     "og_done": "og/opstelling-dinamo-zagreb-nec-nijmegen-22-10-2026-926cd8.webp",
     "ververst": "2026-10-22T15:40:47+00:00",
     "xi_sig": "4-1-4-1:D. Kotarski,N. Galešić,Sergi Domínguez,S. Radeljić,Olof Matteo Perez Vinlöf,J. Mišić,Iker Almena,L. Stojković,L. Ivanušec,A. Hoxha,D. Beljo|3-4-2-1:G. Crettaz,Deveron Fonville,P. Schuurs,Gabriel Brás,Clement Bischoff,N. Lebreton,D. Nejašmić,Kevin Kers,Jamiro Monteiro,T. Chery,B. Linssen",
     "xi_extern": true,
-    "titel_vandaag": true
+    "titel_vandaag": true,
+    "bron": "opstellingvandaag"
   },
   "1636215": {
     "item_id": "6ad92909a5c9b0770ed32fbc",
     "slug": "opstelling-ararat-armenia-az-22-10-2026",
-    "definitief": false,
+    "definitief": true,
     "match": "Ararat-Armenia - AZ Alkmaar",
     "date": "2026-10-22",
     "league": "europa-league",
@@ -230,12 +231,13 @@
     "comp_id": "65de4be481512ad1b77740b1",
     "stream": null,
     "vriendschappelijk": false,
-    "og": "og/opstelling-ararat-armenia-az-22-10-2026-1a7d9e.webp",
+    "og": "og/opstelling-ararat-armenia-az-22-10-2026-a388d0.webp",
     "og_done": "og/opstelling-ararat-armenia-az-22-10-2026-1a7d9e.webp",
     "ververst": "2026-10-22T15:40:47+00:00",
     "xi_sig": "4-3-3:Joao Bravim,H. Oliveira,Wilson,Luis Felipe,E. Grigoryan,J. A. Balanta,M. Carlier,A. Tera,A. Serobyan,Sandro Lima,Zidane Banjaqui|4-2-3-1:J. De Busser,S. Maikuma,W. Goes,W. Hoedt,M. de Wit,D. Kwakman,P. Koopmeiners,A. Oufkir,V. Byskov,R. Daal,M. Meerdink",
     "xi_extern": true,
-    "titel_vandaag": true
+    "titel_vandaag": true,
+    "bron": "opstellingvandaag"
   },
   "1636235": {
     "item_id": "6ad92912c180357135340779",
