@@ -271,13 +271,13 @@
     "comp_id": "65de4bf0f348c222f01bed83",
     "stream": null,
     "vriendschappelijk": false,
-    "og": "og/opstelling-ajax-atalanta-22-10-2026-fcc533.webp",
+    "og": "og/opstelling-ajax-atalanta-22-10-2026-f58ae1.webp",
     "og_done": "og/opstelling-ajax-atalanta-22-10-2026-fcc533.webp",
     "ververst": "2026-10-22T17:52:40+00:00",
     "xi_sig": "4-3-3:M. ter Stegen,T. Kehrer,A. Bouwman,Y. Baas,O. Wijndal,D. Klaassen,S. Amrabat,J. Brandt,O. Gloukh,Tolu,A. Ouazane|4-2-3-1:M. Carnesecchi,R. Bellanova,T. Kristensen,R. Obric,D. Zappacosta,G. Gaetano,Ederson,E. Elmas,C. De Ketelaere,J. Rowe,G. Scamacca",
     "xi_extern": true,
     "titel_vandaag": true,
-    "bron": "footymetrics"
+    "bron": "api"
   },
   "1636442": {
     "item_id": "6ad92929ee23991ac12abf87",
@@ -291,12 +291,12 @@
     "comp_id": "65de4bf0f348c222f01bed83",
     "stream": null,
     "vriendschappelijk": false,
-    "og": "og/opstelling-lincoln-red-imps-fc-fc-twente-22-10-2026-efecea.webp",
+    "og": "og/opstelling-lincoln-red-imps-fc-fc-twente-22-10-2026-5043a4.webp",
     "og_done": "og/opstelling-lincoln-red-imps-fc-fc-twente-22-10-2026-efecea.webp",
     "ververst": "2026-10-22T17:52:40+00:00",
     "xi_sig": "5-3-2:J. Hankins,J. Eersteling,B. Lopes,Joe,C. Rutjens,Nano,T. Garcia,G. Torrilla,Mandi,Gómes,Romero|4-2-3-1:J. Drommel,B. van Rooij,R. Pröpper,R. Nijstad,A. Adelgaard,R. Zerrouki,D. Weidmann,D. Rots,Y. Taha,S. Ørjasæter,W. Weghorst",
     "xi_extern": true,
     "titel_vandaag": true,
-    "bron": "opstellingvandaag"
+    "bron": "api"
   }
 }
