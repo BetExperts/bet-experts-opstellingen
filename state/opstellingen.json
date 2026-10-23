@@ -498,5 +498,61 @@
     "xi_extern": true,
     "titel_vandaag": true,
     "bron": "api"
+  },
+  "1552199": {
+    "item_id": "6adbc893ab737e65568d5ad8",
+    "slug": "opstelling-fc-utrecht-pec-zwolle-24-10-2026",
+    "definitief": false,
+    "match": "Utrecht - PEC Zwolle",
+    "date": "2026-10-24",
+    "league": "eredivisie",
+    "comp_slug": "eredivisie",
+    "naam": "Eredivisie",
+    "comp_id": "65de2f987de877fdf6583d10",
+    "stream": null,
+    "vriendschappelijk": false,
+    "og": "og/opstelling-fc-utrecht-pec-zwolle-24-10-2026-b5565c.webp"
+  },
+  "1552200": {
+    "item_id": "6adbc899c68a4f34b768b085",
+    "slug": "opstelling-willem-2-sc-cambuur-24-10-2026",
+    "definitief": false,
+    "match": "Willem II - Cambuur",
+    "date": "2026-10-24",
+    "league": "eredivisie",
+    "comp_slug": "eredivisie",
+    "naam": "Eredivisie",
+    "comp_id": "65de2f987de877fdf6583d10",
+    "stream": null,
+    "vriendschappelijk": false,
+    "og": "og/opstelling-willem-2-sc-cambuur-24-10-2026-dfd22f.webp"
+  },
+  "1552201": {
+    "item_id": "6adbc8a0f2e23e6812d36bd2",
+    "slug": "opstelling-ado-den-haag-heerenveen-24-10-2026",
+    "definitief": false,
+    "match": "ADO Den Haag - Heerenveen",
+    "date": "2026-10-24",
+    "league": "eredivisie",
+    "comp_slug": "eredivisie",
+    "naam": "Eredivisie",
+    "comp_id": "65de2f987de877fdf6583d10",
+    "stream": null,
+    "vriendschappelijk": false,
+    "og": "og/opstelling-ado-den-haag-heerenveen-24-10-2026-e1d599.webp"
+  },
+  "1551856": {
+    "item_id": "6adbc8a7214ffa2d47fec05c",
+    "slug": "opstelling-fc-dordrecht-vvv-venlo-24-10-2026",
+    "definitief": false,
+    "match": "Dordrecht - VVV Venlo",
+    "date": "2026-10-24",
+    "league": "eerste-divisie",
+    "comp_slug": "keuken-kampioen-divisie",
+    "naam": "Keuken Kampioen Divisie",
+    "comp_id": "65de4bc0a8777b9898d6374e",
+    "stream": null,
+    "vriendschappelijk": false,
+    "og": "og/opstelling-fc-dordrecht-vvv-venlo-24-10-2026-7ddcf8.webp"
   }
 }
