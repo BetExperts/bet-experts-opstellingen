@@ -511,7 +511,8 @@
     "comp_id": "65de2f987de877fdf6583d10",
     "stream": null,
     "vriendschappelijk": false,
-    "og": "og/opstelling-fc-utrecht-pec-zwolle-24-10-2026-b5565c.webp"
+    "og": "og/opstelling-fc-utrecht-pec-zwolle-24-10-2026-b5565c.webp",
+    "og_done": "og/opstelling-fc-utrecht-pec-zwolle-24-10-2026-b5565c.webp"
   },
   "1552200": {
     "item_id": "6adbc899c68a4f34b768b085",
@@ -525,7 +526,8 @@
     "comp_id": "65de2f987de877fdf6583d10",
     "stream": null,
     "vriendschappelijk": false,
-    "og": "og/opstelling-willem-2-sc-cambuur-24-10-2026-dfd22f.webp"
+    "og": "og/opstelling-willem-2-sc-cambuur-24-10-2026-dfd22f.webp",
+    "og_done": "og/opstelling-willem-2-sc-cambuur-24-10-2026-dfd22f.webp"
   },
   "1552201": {
     "item_id": "6adbc8a0f2e23e6812d36bd2",
@@ -539,7 +541,8 @@
     "comp_id": "65de2f987de877fdf6583d10",
     "stream": null,
     "vriendschappelijk": false,
-    "og": "og/opstelling-ado-den-haag-heerenveen-24-10-2026-e1d599.webp"
+    "og": "og/opstelling-ado-den-haag-heerenveen-24-10-2026-e1d599.webp",
+    "og_done": "og/opstelling-ado-den-haag-heerenveen-24-10-2026-e1d599.webp"
   },
   "1551856": {
     "item_id": "6adbc8a7214ffa2d47fec05c",
@@ -553,6 +556,7 @@
     "comp_id": "65de4bc0a8777b9898d6374e",
     "stream": null,
     "vriendschappelijk": false,
-    "og": "og/opstelling-fc-dordrecht-vvv-venlo-24-10-2026-7ddcf8.webp"
+    "og": "og/opstelling-fc-dordrecht-vvv-venlo-24-10-2026-7ddcf8.webp",
+    "og_done": "og/opstelling-fc-dordrecht-vvv-venlo-24-10-2026-7ddcf8.webp"
   }
 }
