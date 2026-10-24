@@ -413,5 +413,145 @@
     "slug": "opstelling-fc-barcelona-real-madrid-25-10-2026",
     "og": "og/opstelling-fc-barcelona-real-madrid-25-10-2026-a90559.webp",
     "og_done": "og/opstelling-fc-barcelona-real-madrid-25-10-2026-a90559.webp"
+  },
+  "1552202": {
+    "definitief": false,
+    "match": "Fortuna Sittard - Excelsior",
+    "date": "2026-10-25",
+    "league": "eredivisie",
+    "comp_slug": "eredivisie",
+    "naam": "Eredivisie",
+    "comp_id": "65de2f987de877fdf6583d10",
+    "stream": null,
+    "vriendschappelijk": false,
+    "clubs": [
+      {
+        "team_id": "205",
+        "slug": "opstelling-fortuna-sittard-vandaag",
+        "item_id": "6add0ea23338fa52136a9127"
+      },
+      {
+        "team_id": "196",
+        "slug": "opstelling-excelsior-vandaag",
+        "item_id": "6add0ea4c52f5ea2d2a76864"
+      }
+    ],
+    "evergreen": true,
+    "og_slug": "opstelling-fortuna-sittard-excelsior-25-10-2026",
+    "item_id": "6add0ea23338fa52136a9127",
+    "slug": "opstelling-fortuna-sittard-vandaag",
+    "og": "og/opstelling-fortuna-sittard-excelsior-25-10-2026-67daec.webp"
+  },
+  "1552204": {
+    "definitief": false,
+    "match": "PSV Eindhoven - Feyenoord",
+    "date": "2026-10-25",
+    "league": "eredivisie",
+    "comp_slug": "eredivisie",
+    "naam": "Eredivisie",
+    "comp_id": "65de2f987de877fdf6583d10",
+    "stream": null,
+    "vriendschappelijk": false,
+    "clubs": [
+      {
+        "team_id": "197",
+        "slug": "opstelling-psv-vandaag",
+        "item_id": "6add0eb1e272194247024d86"
+      },
+      {
+        "team_id": "209",
+        "slug": "opstelling-feyenoord-vandaag",
+        "item_id": "6add0eb50fcc713db9310976"
+      }
+    ],
+    "evergreen": true,
+    "og_slug": "opstelling-psv-feyenoord-25-10-2026",
+    "item_id": "6add0eb1e272194247024d86",
+    "slug": "opstelling-psv-vandaag",
+    "og": "og/opstelling-psv-feyenoord-25-10-2026-fbc766.webp"
+  },
+  "1552203": {
+    "definitief": false,
+    "match": "NEC Nijmegen - Groningen",
+    "date": "2026-10-25",
+    "league": "eredivisie",
+    "comp_slug": "eredivisie",
+    "naam": "Eredivisie",
+    "comp_id": "65de2f987de877fdf6583d10",
+    "stream": null,
+    "vriendschappelijk": false,
+    "clubs": [
+      {
+        "team_id": "413",
+        "slug": "opstelling-nec-vandaag",
+        "item_id": "6add0ebb241e26bc4d7be3d6"
+      },
+      {
+        "team_id": "202",
+        "slug": "opstelling-fc-groningen-vandaag",
+        "item_id": "6add0ebcbf589f9263aad5c5"
+      }
+    ],
+    "evergreen": true,
+    "og_slug": "opstelling-nec-nijmegen-fc-groningen-25-10-2026",
+    "item_id": "6add0ebb241e26bc4d7be3d6",
+    "slug": "opstelling-nec-vandaag",
+    "og": "og/opstelling-nec-nijmegen-fc-groningen-25-10-2026-f21e94.webp"
+  },
+  "1552205": {
+    "definitief": false,
+    "match": "Sparta Rotterdam - Ajax",
+    "date": "2026-10-25",
+    "league": "eredivisie",
+    "comp_slug": "eredivisie",
+    "naam": "Eredivisie",
+    "comp_id": "65de2f987de877fdf6583d10",
+    "stream": null,
+    "vriendschappelijk": false,
+    "clubs": [
+      {
+        "team_id": "426",
+        "slug": "opstelling-sparta-rotterdam-vandaag",
+        "item_id": "6add0ec3dffed64ab0c06b14"
+      },
+      {
+        "team_id": "194",
+        "slug": "opstelling-ajax-vandaag",
+        "item_id": "6add0ec55667dffba0da5059"
+      }
+    ],
+    "evergreen": true,
+    "og_slug": "opstelling-sparta-rotterdam-ajax-25-10-2026",
+    "item_id": "6add0ec3dffed64ab0c06b14",
+    "slug": "opstelling-sparta-rotterdam-vandaag",
+    "og": "og/opstelling-sparta-rotterdam-ajax-25-10-2026-80bdef.webp"
+  },
+  "1552206": {
+    "definitief": false,
+    "match": "AZ Alkmaar - Twente",
+    "date": "2026-10-25",
+    "league": "eredivisie",
+    "comp_slug": "eredivisie",
+    "naam": "Eredivisie",
+    "comp_id": "65de2f987de877fdf6583d10",
+    "stream": null,
+    "vriendschappelijk": false,
+    "clubs": [
+      {
+        "team_id": "201",
+        "slug": "opstelling-az-vandaag",
+        "item_id": "6add0ecd3ff8427064bda61a"
+      },
+      {
+        "team_id": "415",
+        "slug": "opstelling-fc-twente-vandaag",
+        "item_id": "6add0ece841fcad07c68a54e"
+      }
+    ],
+    "evergreen": true,
+    "og_slug": "opstelling-az-fc-twente-25-10-2026",
+    "item_id": "6add0ecd3ff8427064bda61a",
+    "slug": "opstelling-az-vandaag",
+    "og": "og/opstelling-az-fc-twente-25-10-2026-ef5d45.webp"
   }
 }
