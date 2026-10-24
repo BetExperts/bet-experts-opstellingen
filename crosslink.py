@@ -123,10 +123,11 @@ def run(dry=False, days=3, back=6, max_items=800):
         if not h or not w: continue
         key = (tuple(sorted([str(h), str(w)])), ko.astimezone(AMS).date().isoformat())
         g = groups.setdefault(key, {})
-        if k in g:
+        if k in g:                                           # nieuwste per soort wint
             if k == "opst":                                  # vaste clubpagina's: beide clubs krijgen het blok
                 g.setdefault("_meer", []).append(it)
-            continue                                         # nieuwste per soort wint
+            continue
+        g[k] = it
 
     hubs = load_hubs()
     print(f"== Wedstrijd-links | {len(hubs)} wedstrijd(en) in speelronde-hubs")
