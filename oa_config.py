@@ -69,6 +69,9 @@ LEAGUES = [
      "comp_id": "65f9b20c402bb844e2ad0bf4", "manual_only": True, "vriendschappelijk": True},
 ]
 
+# Vaste opstellingspagina per club (oa_club.py) i.p.v. een artikel per wedstrijd (24-10-2026)
+CLUBPAGINA_LEAGUES = {"eredivisie", "eerste-divisie"}
+
 def is_topper(fx, cfg):
     """True als de wedstrijd een 'topper' is (of als de competitie geen filter kent)."""
     if not cfg.get("toppers_only"):

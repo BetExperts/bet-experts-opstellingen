@@ -221,19 +221,25 @@ def has_confirmed_lineups(fid):
     lus = api.lineups(fid)
     return len([lu for lu in lus if lu.get("startXI")]) >= 2
 
-def build_fielddata(ctx, league_cfg, slug=None):
-    """Bouw de Webflow fieldData voor create/update."""
+def build_fielddata(ctx, league_cfg, slug=None, focus=None):
+    """Bouw de Webflow fieldData voor create/update. focus='home'/'away': vaste clubpagina van die ploeg (oa_club)."""
     import random
     random.seed(str(ctx["fid"]))   # deterministische titel-hook per wedstrijd
     ctx = dict(ctx)
     ctx["compSlug"] = league_cfg["comp_slug"]; ctx["compN"] = league_cfg["naam"]
     ctx["vriendschappelijk"] = league_cfg.get("vriendschappelijk", False)
     ctx["geen_ronde"] = league_cfg.get("geen_ronde", False)   # API-ronde onbruikbaar (bv. EK onder 21)
+    ctx["focus"] = focus
     dt = ctx["dt"]; definitief = ctx["definitief"]
     content, content2, content3 = B.build_content(ctx)
     title = B.build_title(definitief, ctx["homeN"], ctx["awayN"], ctx["city"] or ctx["venue"] or "", ctx["pH"], ctx["pA"], ctx.get("has_pred", True), dt=dt)
     samenvatting = B.build_samenvatting(definitief, ctx["homeN"], ctx["awayN"], league_cfg["naam"], dt,
                                         ctx.get("has_pred", True))
+    if focus:
+        club, opp = (ctx["awayN"], ctx["homeN"]) if focus == "away" else (ctx["homeN"], ctx["awayN"])
+        club, opp = B.zoeknaam(club), B.zoeknaam(opp)
+        title = B.club_title(definitief, club, opp, dt)
+        samenvatting = B.club_samenvatting(definitief, club, opp, league_cfg["naam"], dt)
     if not slug:
         hs = ctx["hSlug"] or B.slugify(ctx["homeN"]); as_ = ctx["aSlug"] or B.slugify(ctx["awayN"])
         slug = B.build_slug(hs, as_, dt)

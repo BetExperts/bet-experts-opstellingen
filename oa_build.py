@@ -317,6 +317,44 @@ def build_samenvatting(definitief, homeN, awayN, comp, dt, has_pred=True):
     s = f"{kind} opstellingen {homeN} – {awayN} ({comp})."
     return s if len(s) <= META_MAX else s[:META_MAX].rsplit(" ", 1)[0]
 
+# ---------- vaste clubpagina's (24-10-2026): één URL per club, bijgewerkt per wedstrijd ----------
+# Naam waarop mensen zoeken ('opstelling psv vandaag'): titel en slug van de clubpagina. Lopende tekst houdt de API-naam.
+ZOEKNAAM = {"AZ Alkmaar": "AZ", "PSV Eindhoven": "PSV", "NEC Nijmegen": "NEC", "Twente": "FC Twente",
+            "Groningen": "FC Groningen", "Utrecht": "FC Utrecht", "GO Ahead Eagles": "Go Ahead Eagles",
+            "Cambuur": "SC Cambuur", "Almere City FC": "Almere City", "Den Bosch": "FC Den Bosch",
+            "Dordrecht": "FC Dordrecht", "Emmen": "FC Emmen", "FC OSS": "TOP Oss", "Jong Jong PSV": "Jong PSV",
+            "Jong Utrecht": "Jong FC Utrecht", "Roda": "Roda JC", "Waalwijk": "RKC Waalwijk"}
+
+def zoeknaam(naam):
+    return ZOEKNAAM.get(naam, naam)
+
+MAAND_KORT = ["jan", "feb", "mrt", "apr", "mei", "jun", "jul", "aug", "sep", "okt", "nov", "dec"]
+
+def club_title(definitief, club, opp, dt):
+    """'Opstelling Ajax vandaag tegen NEC: vermoedelijke elf' (wedstrijddag) of
+    'Opstelling Ajax tegen NEC (zo 26 okt): vermoedelijke elf' (avond ervoor)."""
+    elf = "bevestigde elf" if definitief else "vermoedelijke elf"
+    if is_vandaag(dt):
+        opties = [f"Opstelling {club} vandaag tegen {opp}: {elf}", f"Opstelling {club} vandaag tegen {opp}",
+                  f"Opstelling {club} vandaag"]
+    else:
+        wanneer = f"{DAGEN[dt.weekday()][:2]} {dt.day} {MAAND_KORT[dt.month-1]}"
+        opties = [f"Opstelling {club} tegen {opp} ({wanneer}): {elf}", f"Opstelling {club} tegen {opp}: {elf}",
+                  f"Opstelling {club} tegen {opp}"]
+    return next((t for t in opties if len(t) <= TITLE_MAX), opties[-1])
+
+def club_samenvatting(definitief, club, opp, comp, dt):
+    soort = "bevestigde" if definitief else "vermoedelijke"
+    tijd = nl_tijd(dt)
+    wanneer = "vandaag" if is_vandaag(dt) else f"op {DAGEN[dt.weekday()]} {dt.day} {MAAND[dt.month-1]}"
+    for s in (f"De opstelling van {club} {wanneer} tegen {opp} ({comp}, {tijd} uur): {soort} basiself, blessures en vorm, "
+              f"bijgewerkt tot de aftrap.",
+              f"Opstelling {club} {wanneer} tegen {opp} ({tijd} uur): {soort} basiself, blessures en vorm.",
+              f"Opstelling {club} {wanneer} tegen {opp}: {soort} basiself en blessures."):
+        if len(s) <= META_MAX:
+            return s
+    return f"Opstelling {club} tegen {opp}: {soort} basiself."[:META_MAX]
+
 def slugify(s):
     s = unicodedata.normalize("NFKD", s or "").encode("ascii", "ignore").decode()   # ë -> e
     return re.sub(r"-+","-", re.sub(r"[^a-z0-9]+","-", s.lower())).strip("-")
@@ -364,8 +402,17 @@ def build_content(ctx):
     onderdelen = ("de blessures en schorsingen, de recente vorm, de onderlinge duels en de winkansen "
                   "volgens de statistische voorspelling" if has_pred else
                   "de blessures en schorsingen, de recente vorm en de onderlinge duels")
-    c1.append(f"<p><strong>{cap(moment(dt))} {ww(homeN, 'ontvangt', 'ontvangen')} {hLink} {aLink}{waar}, {comp_deel}. "
-              f"Hieronder vind je de {kop} opstellingen van beide ploegen, {onderdelen}.</strong></p>")
+    focus = ctx.get("focus")            # vaste clubpagina: 'home' of 'away' (anders per-wedstrijd-artikel)
+    if focus == "away":
+        c1.append(f"<p><strong>{cap(moment(dt))} {ww(awayN, 'speelt', 'spelen')} {aLink} uit tegen {hLink}{waar}, {comp_deel}. "
+                  f"Hieronder vind je de {kop} opstellingen van beide ploegen, {onderdelen}.</strong></p>")
+    else:
+        c1.append(f"<p><strong>{cap(moment(dt))} {ww(homeN, 'ontvangt', 'ontvangen')} {hLink} {aLink}{waar}, {comp_deel}. "
+                  f"Hieronder vind je de {kop} opstellingen van beide ploegen, {onderdelen}.</strong></p>")
+    if focus:
+        club = awayN if focus == "away" else homeN
+        c1.append(f"<p>Op deze pagina staat altijd de opstelling van {esc(de(club))} voor de eerstvolgende wedstrijd: "
+                  f"de avond ervoor de vermoedelijke elf, op de wedstrijddag ongeveer een uur voor de aftrap de officiële opstelling.</p>")
     c1.append("<h3>Wedstrijdinformatie</h3>")
     stadion_regel = ""
     if venue:
@@ -380,13 +427,17 @@ def build_content(ctx):
               + stadion_regel
               + (f"<br><strong>{tv_kort[0]}:</strong> {esc(tv_kort[1])}" if tv_kort else "")
               + "</p>")
-    # thuisploeg opstelling
-    c1.append(_lineup_block(homeN, hLU, hPrev, definitief, kickoff, flip, is_home=True, absent={(i.get('player') or {}).get('name','') for i in (hInj or [])}))
+    # opstellingen: thuisploeg eerst, op een vaste clubpagina van de uitploeg de uitploeg eerst
+    blok_h = _lineup_block(homeN, hLU, hPrev, definitief, kickoff, flip, is_home=True, absent={(i.get('player') or {}).get('name','') for i in (hInj or [])})
+    blok_a = _lineup_block(awayN, aLU, aPrev, definitief, kickoff, flip, is_home=False, absent={(i.get('player') or {}).get('name','') for i in (aInj or [])})
+    if focus == "away":
+        blok_h, blok_a = blok_a, blok_h
+    c1.append(blok_h)
     content = "\n".join(c1)
 
     # ---- CONTENT-2 (deel 2/3): uitploeg-opstelling + blessures + vorm ----
     c2 = []
-    c2.append(_lineup_block(awayN, aLU, aPrev, definitief, kickoff, flip, is_home=False, absent={(i.get('player') or {}).get('name','') for i in (aInj or [])}))
+    c2.append(blok_a)
     c2.append("<h3>Blessures &amp; schorsingen</h3>")
     # spelers die in de getoonde elf staan zijn er kennelijk wél bij -> niet als afwezig noemen
     # (bij de definitieve opstelling en bij de FootyMetrics-voorspelling, die blessures al meeweegt)
@@ -431,7 +482,16 @@ def build_content(ctx):
         c3.append("<p>Voor dit duel is er geen betrouwbare statistische voorspelling beschikbaar."
                   + ("" if definitief else " Zodra de winkansen bekend zijn, werken we ze hier bij.") + "</p>")
     c3.append("<h3>Veelgestelde vragen</h3>")
-    c3.append(_faq(homeN, awayN, hLU, aLU, definitief, kickoff, flip_dt, dt, pH, pD, pA, has_pred, tv_faq))
+    if focus == "away":
+        c3.append(_faq(awayN, homeN, aLU, hLU, definitief, kickoff, flip_dt, dt, pA, pD, pH, has_pred, tv_faq,
+                       label=f"{homeN} – {awayN}"))
+    else:
+        c3.append(_faq(homeN, awayN, hLU, aLU, definitief, kickoff, flip_dt, dt, pH, pD, pA, has_pred, tv_faq))
+    if focus:
+        club = awayN if focus == "away" else homeN
+        c3.append(f"<p><strong>Waar vind ik altijd de opstelling van {esc(de(club))}?</strong><br>Op deze pagina. Voor elke "
+                  f"{esc(compN)}-wedstrijd van {esc(de(club))} zetten we hier de avond ervoor de vermoedelijke elf neer en "
+                  f"op de wedstrijddag de officiële opstelling, zodra die bekend is.</p>")
     c3.append(f'<p><a href="{HUB_PATH}"><strong>Bekijk alle vermoedelijke en definitieve opstellingen</strong></a></p>')
     content3 = "\n".join(c3)
 
@@ -617,7 +677,9 @@ def _flip_moment(flip_dt):
         return f"rond {nl_tijd(flip_dt)} uur in de {nacht_label(flip_dt)}"
     return f"rond {nl_tijd(flip_dt)} uur op {nl_datum(flip_dt)}"
 
-def _faq(homeN, awayN, hLU, aLU, definitief, kickoff, flip_dt, dt, pH,pD,pA, has_pred=True, tv_faq=None):
+def _faq(homeN, awayN, hLU, aLU, definitief, kickoff, flip_dt, dt, pH,pD,pA, has_pred=True, tv_faq=None, label=None):
+    """label: wedstrijdnaam in de juiste volgorde (thuis – uit) als homeN/awayN omgedraaid zijn (clubpagina uitploeg)."""
+    label = label or f"{homeN} – {awayN}"
     fav = homeN if pH>=pA else awayN; favp = max(pH,pA)
     # formatie alleen noemen als de bron die kent (geen gok)
     hf = formation(hLU) if hLU else ""; af = formation(aLU) if aLU else ""
@@ -631,7 +693,7 @@ def _faq(homeN, awayN, hLU, aLU, definitief, kickoff, flip_dt, dt, pH,pD,pA, has
              f"De definitieve opstelling wordt ongeveer een uur voor de aftrap van {kickoff} uur bevestigd en hier direct bijgewerkt."
     q.append((f"Wat is de {'definitieve' if definitief else 'vermoedelijke'} opstelling van {de(homeN)} tegen {de(awayN)}?", a1))
     if not definitief:
-        q.append((f"Wanneer is de definitieve opstelling van {homeN} – {awayN} bekend?",
+        q.append((f"Wanneer is de definitieve opstelling van {label} bekend?",
                   f"Doorgaans ongeveer 60 minuten voor de aftrap, dus {_flip_moment(flip_dt)}."))
     if definitief:
         a3 = (f"{De(awayN)} {ww(awayN, 'begint', 'beginnen')} in een {af}." if af else
@@ -646,7 +708,7 @@ def _faq(homeN, awayN, hLU, aLU, definitief, kickoff, flip_dt, dt, pH,pD,pA, has
               f"ongeveer een uur voor de aftrap bevestigd is.")
     q.append((f"In welke formatie {ww(awayN, 'speelt', 'spelen')} {de(awayN)}?", a3))
     if has_pred and abs(pH - pA) > FAV_DREMPEL:
-        q.append((f"Wie is de favoriet bij {homeN} – {awayN}?",
+        q.append((f"Wie is de favoriet bij {label}?",
                   f"Volgens de statistische voorspelling {ww(fav, 'is', 'zijn')} {de(fav)} favoriet met {favp}% winkans. "
                   f"{homeN}: {pH}%, gelijkspel: {pD}%, {awayN}: {pA}%."))
     if tv_faq:

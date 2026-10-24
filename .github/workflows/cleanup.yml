@@ -22,6 +22,6 @@ jobs:
         run: |
           git config user.name "opstellingen-bot"
           git config user.email "bot@bet-experts.nl"
-          git add state/opstellingen.json redirects/opstellingen-redirects.csv || true
+          git add state/opstellingen.json state/clubpaginas.json redirects/opstellingen-redirects.csv || true
           git commit -m "cleanup: oude opstellingen + redirects [skip ci]" || echo "geen wijziging"
           git push || true

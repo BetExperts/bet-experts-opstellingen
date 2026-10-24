@@ -36,7 +36,7 @@ jobs:
         run: |
           git config user.name "opstellingen-bot"
           git config user.email "bot@bet-experts.nl"
-          git add state/opstellingen.json og/*.webp || true
+          git add state/opstellingen.json state/clubpaginas.json og/*.webp || true
           git commit -m "state: opstellingen bijgewerkt [skip ci]" || echo "geen wijziging"
           git pull --rebase -X theirs origin main || git rebase --abort
           git push || true
@@ -45,7 +45,7 @@ jobs:
           WEBFLOW_TOKEN: ${{ secrets.WEBFLOW_TOKEN }}
         run: |
           python3 attach_og.py
-          git add state/opstellingen.json || true
+          git add state/opstellingen.json state/clubpaginas.json || true
           git commit -m "state: deelafbeeldingen gekoppeld [skip ci]" || echo "geen wijziging"
           git pull --rebase -X theirs origin main || git rebase --abort
           git push || true

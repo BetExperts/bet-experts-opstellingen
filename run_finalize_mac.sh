@@ -13,7 +13,7 @@ PY=../superodd-agent/.venv/bin/python
 echo "== $(date '+%Y-%m-%d %H:%M')"
 
 sync_push() {   # $1 = commitbericht
-  git add state/opstellingen.json og/*.webp 2>/dev/null
+  git add state/opstellingen.json state/clubpaginas.json og/*.webp 2>/dev/null
   git diff --cached --quiet && return 0
   git commit -q -m "$1 [skip ci]"
   for i in 1 2 3; do

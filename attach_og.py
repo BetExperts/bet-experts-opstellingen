@@ -9,6 +9,7 @@ Draait in de workflow NA de push (de raw-GitHub-URL moet bestaan). Per state-ite
 """
 import sys, urllib.request
 import oa_webflow as WF
+import oa_club as CLUB
 from oa_og import RAW
 
 def main():
@@ -27,7 +28,8 @@ def main():
         if dry:
             print(f"  ○ {e['slug']} <- {url}"); continue
         try:
-            WF.update_live(e["item_id"], {"afbeelding": img, "seo-afbeelding": img})
+            for item_id in CLUB.item_ids(e):          # vaste clubpagina's: beide clubs
+                WF.update_live(item_id, {"afbeelding": img, "seo-afbeelding": img})
             e["og_done"] = e["og"]; WF.save_state(state)
             print(f"  ✔ {e['slug']}")
         except Exception as ex:

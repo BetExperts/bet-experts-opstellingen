@@ -16,6 +16,7 @@ from datetime import datetime, timedelta, timezone
 import oa_og as OG
 from oa_config import LEAGUES, WEBFLOW_TOKEN, nl_name
 import oa_webflow as WF
+import oa_club as CLUB
 
 LCFG = {c["worker_slug"]: c for c in LEAGUES}
 EXTERN_BRON = ("footymetrics", "opstellingvandaag")   # definitief via externe bron -> later nog de API-versie
@@ -90,14 +91,14 @@ def main():
         if a.dry:
             print(f"  ○ zou flippen -> {title}")
         else:
-            WF.update_live(e["item_id"], fd)
+            slugs = schrijf(e, fid, ctx, cfg, fd)
             e["definitief"] = True
             e["bron"] = ("opstellingvandaag" if fm_src is OV else "footymetrics") if fm else "api"
-            og = OG.make(ctx, cfg, e["slug"])     # nieuwe afbeelding: 'Definitief' + echte formaties
+            og = OG.make(ctx, cfg, e.get("og_slug") or e["slug"])     # nieuwe afbeelding: 'Definitief' + echte formaties
             if og: e["og"] = og
             WF.save_state(state)
             print(f"  ✔ definitief: {title}")
-            PING.append(f"https://www.bet-experts.nl/nieuws/{e['slug']}")
+            PING.extend(f"https://www.bet-experts.nl/nieuws/{s_}" for s_ in slugs)
         flipped += 1
     print(f"\nKLAAR — {flipped} artikel(en) geflipt naar definitief.")
     ververst = 0 if a.date else refresh_predicted(state, a.dry)
@@ -109,6 +110,13 @@ def main():
         import crosslink
         print("\n-- wedstrijd-links opnieuw plaatsen --")
         crosslink.run(days=1, back=6, max_items=400)
+
+def schrijf(e, fid, ctx, cfg, fd):
+    """Wedstrijdartikel bijwerken, of bij een vaste clubpagina (oa_club) de pagina's van beide clubs. -> slugs"""
+    if e.get("evergreen"):
+        return [s_ for s_, _ in CLUB.schrijf(e, fid, ctx, cfg)]
+    WF.update_live(e["item_id"], fd)
+    return [e["slug"]]
 
 REFRESH_MIN = 55     # vermoedelijke opstellingen op de wedstrijddag elk uur verversen
 
@@ -163,11 +171,11 @@ def refresh_predicted(state, dry=False):
         if dry:
             print(f"  ○ zou verversen (vermoedelijke elf gewijzigd): {title}")
         else:
-            WF.update_live(e["item_id"], fd)
-            og = OG.make(ctx, cfg, e["slug"])
+            slugs = schrijf(e, fid, ctx, cfg, fd)
+            og = OG.make(ctx, cfg, e.get("og_slug") or e["slug"])
             if og: e["og"] = og
             print(f"  ↻ vermoedelijke opstelling bijgewerkt: {title}")
-            PING.append(f"https://www.bet-experts.nl/nieuws/{e['slug']}")
+            PING.extend(f"https://www.bet-experts.nl/nieuws/{s_}" for s_ in slugs)
         n += 1
     if not dry:
         WF.save_state(state)

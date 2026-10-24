@@ -11,8 +11,9 @@ Redirects toevoegen: Webflow → Project Settings → Publishing → 301 redirec
 """
 import os, sys, csv, argparse
 from datetime import datetime, timedelta, timezone
-from oa_config import RETENTION_DAYS, HUB_PATH, WEBFLOW_TOKEN, BASE
+from oa_config import RETENTION_DAYS, HUB_PATH, WEBFLOW_TOKEN, BASE, CLUBPAGINA_LEAGUES
 import oa_webflow as WF
+import oa_club as CLUB
 
 REDIR = os.path.join(BASE, "redirects", "opstellingen-redirects.csv")
 
@@ -38,11 +39,26 @@ def main():
             oud.append((fid, e))
     print(f"== Opschonen | ouder dan {a.days} dagen (t/m {cutoff}) | {len(oud)} artikel(en) | {'DRY' if a.dry else 'LIVE'} ==")
 
+    # vaste clubpagina's (oa_club) blijven staan: alleen de wedstrijd uit de state halen
+    for fid, e in [x for x in oud if x[1].get("evergreen")]:
+        if not a.dry:
+            del state[fid]; WF.save_state(state)
+        print(f"  · clubpagina blijft staan, wedstrijd uit state: {e.get('match')}")
+    oud = [x for x in oud if not x[1].get("evergreen")]
+
+    def doel(e):
+        """Oud Eredivisie/KKD-wedstrijdartikel -> de vaste clubpagina van de thuisploeg (als die er al is), anders de hub."""
+        if e.get("league") in CLUBPAGINA_LEAGUES:
+            thuis = (e.get("match") or "").split(" - ")[0]
+            c = next((c for c in CLUB.load().values() if c.get("naam") == thuis and c.get("item_id")), None)
+            if c:
+                return f"/nieuws/{c['slug']}"
+        return HUB_PATH
     tgt = HUB_PATH
-    rows = [(f"www.bet-experts.nl/nieuws/{e['slug']}", f"https://www.bet-experts.nl{tgt}", 301) for _, e in oud]
+    rows = [(f"www.bet-experts.nl/nieuws/{e['slug']}", f"https://www.bet-experts.nl{doel(e)}", 301) for _, e in oud]
     if a.dry:
         for fid, e in oud:
-            print(f"  ○ zou verwijderen: {e.get('match')} (/nieuws/{e['slug']} -> {tgt})")
+            print(f"  ○ zou verwijderen: {e.get('match')} (/nieuws/{e['slug']} -> {doel(e)})")
         print("KLAAR."); return
     if rows:
         # eerst de 301 in Cloudflare (bulk-redirectlijst 'oude_artikelen'); lukt dat niet, dan niets verwijderen
@@ -58,7 +74,7 @@ def main():
         except Exception as ex:
             print(f"  ! verwijderen mislukt: {e.get('match')} ({ex})"); continue
         del state[fid]; WF.save_state(state)
-        print(f"  ✔ verwijderd: {e.get('match')}  → 301 /nieuws/{e['slug']} -> {tgt}")
+        print(f"  ✔ verwijderd: {e.get('match')}  → 301 /nieuws/{e['slug']} -> {doel(e)}")
     print("KLAAR.")
 
 if __name__ == "__main__":

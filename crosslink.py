@@ -122,7 +122,11 @@ def run(dry=False, days=3, back=6, max_items=800):
         h, w = fd.get("home-team-id"), fd.get("away-team-id")
         if not h or not w: continue
         key = (tuple(sorted([str(h), str(w)])), ko.astimezone(AMS).date().isoformat())
-        groups.setdefault(key, {}).setdefault(k, it)         # nieuwste per soort wint
+        g = groups.setdefault(key, {})
+        if k in g:
+            if k == "opst":                                  # vaste clubpagina's: beide clubs krijgen het blok
+                g.setdefault("_meer", []).append(it)
+            continue                                         # nieuwste per soort wint
 
     hubs = load_hubs()
     print(f"== Wedstrijd-links | {len(hubs)} wedstrijd(en) in speelronde-hubs")
@@ -130,11 +134,12 @@ def run(dry=False, days=3, back=6, max_items=800):
     changed = 0
     for key, g in sorted(groups.items(), key=lambda x: x[0][1]):
         hub = hubs.get((key[0][0], key[0][1], key[1]))
-        if len(g) < 2 and not hub: continue
+        soorten = [k for k in g if k != "_meer"]
+        if len(soorten) < 2 and not hub: continue
         tt = next((t for t in (teams_from_title(g[k]) for k in ("opst", "live", "voorb") if k in g) if t), None)
         label = f"{tt[0]} – {tt[1]}" if tt else "deze wedstrijd"
-        print(f"\n{label} ({key[1]}): {', '.join(sorted(g))}")
-        for k, it in g.items():
+        print(f"\n{label} ({key[1]}): {', '.join(sorted(soorten))}")
+        for k, it in [(k, g[k]) for k in soorten] + [("opst", x) for x in g.get("_meer", [])]:
             fd = it["fieldData"]
             if it.get("isDraft"):
                 print(f"  · {k}: overslaan (draft-status) {fd['slug']}"); continue

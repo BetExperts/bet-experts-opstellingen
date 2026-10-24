@@ -10,8 +10,9 @@ import oa_api as api
 import oa_match as M
 import oa_og as OG
 import oa_build as B
-from oa_config import LEAGUES, BASE, WEBFLOW_TOKEN, is_topper
+from oa_config import LEAGUES, BASE, WEBFLOW_TOKEN, is_topper, CLUBPAGINA_LEAGUES
 import oa_webflow as WF
+import oa_club as CLUB
 
 def target_date(arg):
     if arg: return arg
@@ -75,25 +76,41 @@ def main():
             if a.stream:
                 ctx["tvgids"] = {"tv": [], "bookmakers": [a.stream], "gratis": False}
             fd, slug, title = M.build_fielddata(ctx, cfg)
+            club = cfg["worker_slug"] in CLUBPAGINA_LEAGUES     # vaste clubpagina's i.p.v. een wedstrijdartikel
             if a.preview:
-                p = write_preview(fd, title); print(f"  ✎ preview: {p}")
+                if club:
+                    for focus in ("home", "away"):
+                        cfd, cslug, ctitle = M.build_fielddata(ctx, cfg, slug=CLUB.slug_voor(ctx["homeN" if focus == "home" else "awayN"]), focus=focus)
+                        p = write_preview(cfd, ctitle); print(f"  ✎ preview clubpagina: {p}")
+                else:
+                    p = write_preview(fd, title); print(f"  ✎ preview: {p}")
                 og = OG.make(ctx, cfg, "preview-" + slug)
                 if og: print(f"  ✎ afbeelding: {og}")
             elif a.dry:
-                print(f"  ○ zou maken: {title}")
+                if club:
+                    CLUB.schrijf({"date": ymd}, fid, ctx, cfg, nieuw=True, dry=True)
+                else:
+                    print(f"  ○ zou maken: {title}")
             else:
-                item_id = WF.create_live(fd)
-                state[fid] = {"item_id": item_id, "slug": slug, "definitief": False,
-                              "match": f"{ctx['homeN']} - {ctx['awayN']}", "date": ymd,
-                              "league": cfg["worker_slug"],
-                              "comp_slug": cfg["comp_slug"], "naam": cfg["naam"],
-                              "comp_id": cfg.get("comp_id"), "stream": a.stream,
-                              "vriendschappelijk": cfg.get("vriendschappelijk", False)}
+                e = {"definitief": False,
+                     "match": f"{ctx['homeN']} - {ctx['awayN']}", "date": ymd,
+                     "league": cfg["worker_slug"],
+                     "comp_slug": cfg["comp_slug"], "naam": cfg["naam"],
+                     "comp_id": cfg.get("comp_id"), "stream": a.stream,
+                     "vriendschappelijk": cfg.get("vriendschappelijk", False)}
+                if club:
+                    pag = CLUB.schrijf(e, fid, ctx, cfg, nieuw=True)
+                    e.update({"evergreen": True, "og_slug": slug, "item_id": e["clubs"][0]["item_id"], "slug": e["clubs"][0]["slug"]})
+                    urls = [s_ for s_, _ in pag]
+                else:
+                    e.update({"item_id": WF.create_live(fd), "slug": slug})
+                    urls = [slug]
+                state[fid] = e
                 og = OG.make(ctx, cfg, slug)
                 if og: state[fid]["og"] = og
                 WF.save_state(state)
-                print(f"  ✔ live: {title}  (item {item_id})")
-                NIEUW.append(f"https://www.bet-experts.nl/nieuws/{slug}")
+                print(f"  ✔ live: {title}  ({', '.join('/nieuws/' + u for u in urls)})")
+                NIEUW.extend(f"https://www.bet-experts.nl/nieuws/{u}" for u in urls)
             made += 1
             if a.limit and made >= a.limit: break
         if a.limit and made >= a.limit: break
