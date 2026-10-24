@@ -362,7 +362,7 @@
   "1552201": {
     "item_id": "6adbc8a0f2e23e6812d36bd2",
     "slug": "opstelling-ado-den-haag-heerenveen-24-10-2026",
-    "definitief": false,
+    "definitief": true,
     "match": "ADO Den Haag - Heerenveen",
     "date": "2026-10-24",
     "league": "eredivisie",
@@ -371,12 +371,13 @@
     "comp_id": "65de2f987de877fdf6583d10",
     "stream": null,
     "vriendschappelijk": false,
-    "og": "og/opstelling-ado-den-haag-heerenveen-24-10-2026-b29df7.webp",
+    "og": "og/opstelling-ado-den-haag-heerenveen-24-10-2026-bbc7bc.webp",
     "og_done": "og/opstelling-ado-den-haag-heerenveen-24-10-2026-b29df7.webp",
     "ververst": "2026-10-24T16:50:40+00:00",
     "xi_sig": "4-4-2:K. Nikiéma,J. Jensen-Abbew,P. Mulder,M. Waem,M. Hokke,A. Pozo,J. Kilo,M. Šín,J. Hawkins,Y. Eduardo,E. Rottier|4-2-3-1:B. Klaverboer,O. Braude,S. Kersten,M. Willemsen,V. Zagaritis,M. Linday,N. Courtens,J. Trenskow,L. Smans,M. Rivera,D. Vente",
     "xi_extern": true,
-    "titel_vandaag": true
+    "titel_vandaag": true,
+    "bron": "opstellingvandaag"
   },
   "1551856": {
     "item_id": "6adbc8a7214ffa2d47fec05c",
