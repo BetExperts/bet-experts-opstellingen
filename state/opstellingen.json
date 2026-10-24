@@ -397,5 +397,19 @@
     "xi_extern": true,
     "titel_vandaag": true,
     "bron": "api"
+  },
+  "1570426": {
+    "definitief": false,
+    "match": "Barcelona - Real Madrid",
+    "date": "2026-10-25",
+    "league": "la-liga",
+    "comp_slug": "la-liga",
+    "naam": "La Liga",
+    "comp_id": "65eafa89159aadee0c5d81d2",
+    "stream": null,
+    "vriendschappelijk": false,
+    "item_id": "6adcd9a631f36810382e5813",
+    "slug": "opstelling-fc-barcelona-real-madrid-25-10-2026",
+    "og": "og/opstelling-fc-barcelona-real-madrid-25-10-2026-a90559.webp"
   }
 }

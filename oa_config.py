@@ -64,6 +64,9 @@ LEAGUES = [
     {"worker_slug": "u21-ek-kwalificatie", "landen": True, "comp_slug": "ek-onder-21-kwalificatie",
      "naam": "EK onder 21-kwalificatie", "comp_id": "6abaf551b3633bce07b3312c",
      "toppers_only": True, "top_teams": ["netherlands u21"], "geen_ronde": True},
+    # La Liga: alleen op verzoek (manual_only), bv. El Clásico: --league la-liga --fixture <id> (24-10-2026)
+    {"worker_slug": "la-liga", "comp_slug": "la-liga", "naam": "La Liga",
+     "comp_id": "65eafa89159aadee0c5d81d2", "manual_only": True},
     # Oefeninterlands: alleen op verzoek (manual_only), via --league friendlies --fixture <id>
     {"worker_slug": "friendlies", "landen": True, "comp_slug": "int-vriendschappelijke-wedstrijden", "naam": "oefeninterland",
      "comp_id": "65f9b20c402bb844e2ad0bf4", "manual_only": True, "vriendschappelijk": True},
