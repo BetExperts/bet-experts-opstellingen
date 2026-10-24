@@ -377,7 +377,7 @@
     "xi_sig": "4-4-2:K. Nikiéma,J. Jensen-Abbew,P. Mulder,M. Waem,M. Hokke,A. Pozo,J. Kilo,M. Šín,J. Hawkins,Y. Eduardo,E. Rottier|4-2-3-1:B. Klaverboer,O. Braude,S. Kersten,M. Willemsen,V. Zagaritis,M. Linday,N. Courtens,J. Trenskow,L. Smans,M. Rivera,D. Vente",
     "xi_extern": true,
     "titel_vandaag": true,
-    "bron": "opstellingvandaag"
+    "bron": "api"
   },
   "1551856": {
     "item_id": "6adbc8a7214ffa2d47fec05c",
