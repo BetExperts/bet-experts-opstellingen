@@ -440,7 +440,8 @@
     "og_slug": "opstelling-fortuna-sittard-excelsior-25-10-2026",
     "item_id": "6add0ea23338fa52136a9127",
     "slug": "opstelling-fortuna-sittard-vandaag",
-    "og": "og/opstelling-fortuna-sittard-excelsior-25-10-2026-67daec.webp"
+    "og": "og/opstelling-fortuna-sittard-excelsior-25-10-2026-67daec.webp",
+    "og_done": "og/opstelling-fortuna-sittard-excelsior-25-10-2026-67daec.webp"
   },
   "1552204": {
     "definitief": false,
@@ -468,7 +469,8 @@
     "og_slug": "opstelling-psv-feyenoord-25-10-2026",
     "item_id": "6add0eb1e272194247024d86",
     "slug": "opstelling-psv-vandaag",
-    "og": "og/opstelling-psv-feyenoord-25-10-2026-fbc766.webp"
+    "og": "og/opstelling-psv-feyenoord-25-10-2026-fbc766.webp",
+    "og_done": "og/opstelling-psv-feyenoord-25-10-2026-fbc766.webp"
   },
   "1552203": {
     "definitief": false,
@@ -496,7 +498,8 @@
     "og_slug": "opstelling-nec-nijmegen-fc-groningen-25-10-2026",
     "item_id": "6add0ebb241e26bc4d7be3d6",
     "slug": "opstelling-nec-vandaag",
-    "og": "og/opstelling-nec-nijmegen-fc-groningen-25-10-2026-f21e94.webp"
+    "og": "og/opstelling-nec-nijmegen-fc-groningen-25-10-2026-f21e94.webp",
+    "og_done": "og/opstelling-nec-nijmegen-fc-groningen-25-10-2026-f21e94.webp"
   },
   "1552205": {
     "definitief": false,
@@ -524,7 +527,8 @@
     "og_slug": "opstelling-sparta-rotterdam-ajax-25-10-2026",
     "item_id": "6add0ec3dffed64ab0c06b14",
     "slug": "opstelling-sparta-rotterdam-vandaag",
-    "og": "og/opstelling-sparta-rotterdam-ajax-25-10-2026-80bdef.webp"
+    "og": "og/opstelling-sparta-rotterdam-ajax-25-10-2026-80bdef.webp",
+    "og_done": "og/opstelling-sparta-rotterdam-ajax-25-10-2026-80bdef.webp"
   },
   "1552206": {
     "definitief": false,
@@ -552,6 +556,7 @@
     "og_slug": "opstelling-az-fc-twente-25-10-2026",
     "item_id": "6add0ecd3ff8427064bda61a",
     "slug": "opstelling-az-vandaag",
-    "og": "og/opstelling-az-fc-twente-25-10-2026-ef5d45.webp"
+    "og": "og/opstelling-az-fc-twente-25-10-2026-ef5d45.webp",
+    "og_done": "og/opstelling-az-fc-twente-25-10-2026-ef5d45.webp"
   }
 }
