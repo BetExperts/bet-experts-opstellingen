@@ -330,7 +330,7 @@
     "xi_sig": "5-3-2:M. Branderhorst,Ivo Pinto,S. van Ottele,Rodrigo Guth,P. Brittijn,Justin Quincy Hubner,S. Simons,É. Michut,Shiloh Kiesar ’t Zand,A. Descotte,L. Zeefuik|4-3-3:S. van Gassel,R. Meissen,C. Widell,J. Plug,S. Janssen,I. Yegoian,N. Naujoks,L. Hartjes,A. Sliti,N. Groen,K. Bos",
     "xi_extern": true,
     "titel_vandaag": true,
-    "bron": "opstellingvandaag"
+    "bron": "api"
   },
   "1552204": {
     "definitief": false,
