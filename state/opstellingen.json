@@ -299,7 +299,7 @@
     "titel_vandaag": true
   },
   "1552202": {
-    "definitief": false,
+    "definitief": true,
     "match": "Fortuna Sittard - Excelsior",
     "date": "2026-10-25",
     "league": "eredivisie",
@@ -324,12 +324,13 @@
     "og_slug": "opstelling-fortuna-sittard-excelsior-25-10-2026",
     "item_id": "6add0ea23338fa52136a9127",
     "slug": "opstelling-fortuna-sittard-vandaag",
-    "og": "og/opstelling-fortuna-sittard-excelsior-25-10-2026-b0367c.webp",
+    "og": "og/opstelling-fortuna-sittard-excelsior-25-10-2026-d0d294.webp",
     "og_done": "og/opstelling-fortuna-sittard-excelsior-25-10-2026-b0367c.webp",
     "ververst": "2026-10-25T10:27:49+00:00",
     "xi_sig": "5-3-2:M. Branderhorst,Ivo Pinto,S. van Ottele,Rodrigo Guth,P. Brittijn,Justin Quincy Hubner,S. Simons,É. Michut,Shiloh Kiesar ’t Zand,A. Descotte,L. Zeefuik|4-3-3:S. van Gassel,R. Meissen,C. Widell,J. Plug,S. Janssen,I. Yegoian,N. Naujoks,L. Hartjes,A. Sliti,N. Groen,K. Bos",
     "xi_extern": true,
-    "titel_vandaag": true
+    "titel_vandaag": true,
+    "bron": "opstellingvandaag"
   },
   "1552204": {
     "definitief": false,
