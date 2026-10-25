@@ -297,7 +297,7 @@
     "xi_sig": "4-2-3-1:Joan García,X. Espart,Cubarsí,Gerard Martín,João Cancelo,Rodri,Pedri,Lamine Yamal,López,A. Gordon,Raphinha|4-2-3-1:T. Courtois,F. Valverde,I. Konaté,D. Huijsen,Marc Cucurella,A. Güler,A. Tchouaméni,Endrick,J. Bellingham,Y. Diomande,Kylian Mbappé",
     "xi_extern": true,
     "titel_vandaag": true,
-    "bron": "opstellingvandaag"
+    "bron": "api"
   },
   "1552202": {
     "definitief": true,
