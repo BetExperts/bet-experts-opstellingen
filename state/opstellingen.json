@@ -460,12 +460,12 @@
     "og_slug": "opstelling-az-fc-twente-25-10-2026",
     "item_id": "6add0ecd3ff8427064bda61a",
     "slug": "opstelling-az-vandaag",
-    "og": "og/opstelling-az-fc-twente-25-10-2026-1df928.webp",
+    "og": "og/opstelling-az-fc-twente-25-10-2026-8c00df.webp",
     "og_done": "og/opstelling-az-fc-twente-25-10-2026-1df928.webp",
     "ververst": "2026-10-25T16:48:37+00:00",
     "xi_sig": "4-2-3-1:J. De Busser,E. Dijkstra,W. Goes,L. Schouten,M. Chávez,J. Clasie,P. Koopmeiners,A. Oufkir,C. Stengs,R. Daal,M. Meerdink|4-2-3-1:J. Drommel,B. van Rooij,R. Propper,R. Nijstad,A. Adelgaard,R. Zerrouki,D. Weidmann,D. Rots,K. Hlynsson,M. Pjaca,W. Weghorst",
     "xi_extern": true,
     "titel_vandaag": true,
-    "bron": "footymetrics"
+    "bron": "api"
   }
 }
