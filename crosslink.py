@@ -69,7 +69,7 @@ def fetch_items(max_items):
         if offset >= ((page.get("pagination") or {}).get("total") or 0): break
     return out
 
-PREFIX_RE = re.compile(r"^(?:(?:vermoedelijke|definitieve|officiële|bevestigde)\s+)?opstelling(?:en)?\s+|^wedtips\s+"
+PREFIX_RE = re.compile(r"^(?:(?:vermoedelijke|definitieve|officiële|bevestigde)\s+)?opstelling(?:en)?\s+|^wedtips\s+|^live\s?stream\s+"
                        r"|^(?:op welke zender (?:is|zie je|zendt)|welke zender (?:zendt|heeft|toont)|zo kijk je|waar kijk je"
                        r"|kun je|is|hoe kijk je|hoe laat (?:is|begint))\s+", re.I)
 TEAMS_RE = re.compile(r"^(.+?) [–-] (.+?)(?=\s+(?:uit|gratis|live|kijken|voorspelling|vandaag|vanavond|op tv)\b|\s*[:|(,?]|$)", re.I)
