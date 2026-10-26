@@ -468,5 +468,19 @@
     "xi_extern": true,
     "titel_vandaag": true,
     "bron": "api"
+  },
+  "1640386": {
+    "definitief": false,
+    "match": "Fleetwood Town - Arsenal",
+    "date": "2026-10-27",
+    "league": "efl-cup",
+    "comp_slug": "efl-cup",
+    "naam": "EFL Cup",
+    "comp_id": "66cc403600c5cbae73af3c82",
+    "stream": null,
+    "vriendschappelijk": false,
+    "item_id": "6adfcf58fde4a2d54424c350",
+    "slug": "opstelling-fleetwood-town-arsenal-27-10-2026",
+    "og": "og/opstelling-fleetwood-town-arsenal-27-10-2026-49a4ab.webp"
   }
 }
