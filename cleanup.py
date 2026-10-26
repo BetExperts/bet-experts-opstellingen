@@ -37,12 +37,33 @@ def main():
             except Exception: continue
         if d <= cutoff:
             oud.append((fid, e))
+    # 26-10-2026: ook 'wezen' opruimen: opstellingen-items in de CMS die niet (meer) in de state staan (bv. na een
+    # git-merge) en volgens de datum in de slug ouder zijn dan de bewaartermijn. Vaste clubpagina's nooit.
+    import re as _re
+    from oa_config import NIEUWS_COLLECTION, WF_API
+    bekend = {e.get("item_id") for e in state.values()} | {c.get("item_id") for c in CLUB.load().values()}
+    off = 0
+    while True:
+        r = WF._req("GET", f"{WF_API}/collections/{NIEUWS_COLLECTION}/items?limit=100&offset={off}")
+        for it in (r or {}).get("items") or []:
+            sl = it["fieldData"].get("slug", "")
+            m = _re.search(r"^opstelling-.+-(\d\d)-(\d\d)-(\d{4})$", sl)
+            if m and it["id"] not in bekend:
+                try:
+                    d = datetime(int(m.group(3)), int(m.group(2)), int(m.group(1))).date()
+                except ValueError:
+                    continue
+                if d <= cutoff:
+                    oud.append((f"wees:{it['id']}", {"item_id": it["id"], "slug": sl, "match": sl, "date": d.isoformat()}))
+        off += 100
+        if off >= ((r or {}).get("pagination") or {}).get("total", 0):
+            break
     print(f"== Opschonen | ouder dan {a.days} dagen (t/m {cutoff}) | {len(oud)} artikel(en) | {'DRY' if a.dry else 'LIVE'} ==")
 
     # vaste clubpagina's (oa_club) blijven staan: alleen de wedstrijd uit de state halen
     for fid, e in [x for x in oud if x[1].get("evergreen")]:
         if not a.dry:
-            del state[fid]; WF.save_state(state)
+            state.pop(fid, None); WF.save_state(state)
         print(f"  · clubpagina blijft staan, wedstrijd uit state: {e.get('match')}")
     oud = [x for x in oud if not x[1].get("evergreen")]
 
