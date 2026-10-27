@@ -208,5 +208,47 @@
     "xi_extern": true,
     "titel_vandaag": true,
     "bron": "api"
+  },
+  "1640575": {
+    "definitief": false,
+    "match": "Manchester City - Brighton",
+    "date": "2026-10-28",
+    "league": "efl-cup",
+    "comp_slug": "efl-cup",
+    "naam": "EFL Cup",
+    "comp_id": "66cc403600c5cbae73af3c82",
+    "stream": null,
+    "vriendschappelijk": false,
+    "item_id": "6ae11a08822961863bce67d4",
+    "slug": "opstelling-manchester-city-brighton-28-10-2026",
+    "og": "og/opstelling-manchester-city-brighton-28-10-2026-688dba.webp"
+  },
+  "1640383": {
+    "definitief": false,
+    "match": "Bournemouth - Aston Villa",
+    "date": "2026-10-28",
+    "league": "efl-cup",
+    "comp_slug": "efl-cup",
+    "naam": "EFL Cup",
+    "comp_id": "66cc403600c5cbae73af3c82",
+    "stream": null,
+    "vriendschappelijk": false,
+    "item_id": "6ae11a10bcc1cfc42968d075",
+    "slug": "opstelling-bournemouth-aston-villa-28-10-2026",
+    "og": "og/opstelling-bournemouth-aston-villa-28-10-2026-b45f04.webp"
+  },
+  "1640388": {
+    "definitief": false,
+    "match": "Liverpool - Chelsea",
+    "date": "2026-10-28",
+    "league": "efl-cup",
+    "comp_slug": "efl-cup",
+    "naam": "EFL Cup",
+    "comp_id": "66cc403600c5cbae73af3c82",
+    "stream": null,
+    "vriendschappelijk": false,
+    "item_id": "6ae11a18c05b0838c2ba22a7",
+    "slug": "opstelling-liverpool-chelsea-28-10-2026",
+    "og": "og/opstelling-liverpool-chelsea-28-10-2026-ff68c9.webp"
   }
 }
