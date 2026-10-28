@@ -1,24 +1,4 @@
 {
-  "1570426": {
-    "definitief": true,
-    "match": "Barcelona - Real Madrid",
-    "date": "2026-10-25",
-    "league": "la-liga",
-    "comp_slug": "la-liga",
-    "naam": "La Liga",
-    "comp_id": "65eafa89159aadee0c5d81d2",
-    "stream": null,
-    "vriendschappelijk": false,
-    "item_id": "6adcd9a631f36810382e5813",
-    "slug": "opstelling-fc-barcelona-real-madrid-25-10-2026",
-    "og": "og/opstelling-fc-barcelona-real-madrid-25-10-2026-c89c47.webp",
-    "og_done": "og/opstelling-fc-barcelona-real-madrid-25-10-2026-c89c47.webp",
-    "ververst": "2026-10-25T18:21:36+00:00",
-    "xi_sig": "4-2-3-1:Joan García,X. Espart,Cubarsí,Gerard Martín,João Cancelo,Rodri,Pedri,Lamine Yamal,López,A. Gordon,Raphinha|4-2-3-1:T. Courtois,F. Valverde,I. Konaté,D. Huijsen,Marc Cucurella,A. Güler,A. Tchouaméni,Endrick,J. Bellingham,Y. Diomande,Kylian Mbappé",
-    "xi_extern": true,
-    "titel_vandaag": true,
-    "bron": "api"
-  },
   "1640386": {
     "definitief": true,
     "match": "Fleetwood Town - Arsenal",
@@ -53,7 +33,7 @@
     "slug": "opstelling-manchester-city-brighton-28-10-2026",
     "og": "og/opstelling-manchester-city-brighton-28-10-2026-e06175.webp",
     "og_done": "og/opstelling-manchester-city-brighton-28-10-2026-e06175.webp",
-    "ververst": "2026-10-28T08:34:12+00:00",
+    "ververst": "2026-10-28T07:20:38+00:00",
     "xi_sig": "4-2-3-1:Gianluigi Donnarumma,Abdukodir Khusanov,Marc Guéhi,Rúben Dias,Joško Gvardiol,Elliot Anderson,Enzo Fernández,Iliman Ndiaye,Rayan Cherki,Jérémy Doku,Erling Haaland|4-2-3-1:Bart Verbruggen,Ferdi Kadıoğlu,Luka Vušković,Lewis Dunk,Olivier Boscagli,Pascal Groß,Chema Andrés,Diego Gómez,Yasin Ayari,Maxim De Cuyper,Charalampos Kostoulas",
     "xi_extern": false,
     "titel_vandaag": true
@@ -72,7 +52,7 @@
     "slug": "opstelling-bournemouth-aston-villa-28-10-2026",
     "og": "og/opstelling-bournemouth-aston-villa-28-10-2026-7c0ae5.webp",
     "og_done": "og/opstelling-bournemouth-aston-villa-28-10-2026-7c0ae5.webp",
-    "ververst": "2026-10-28T08:34:12+00:00",
+    "ververst": "2026-10-28T07:20:38+00:00",
     "xi_sig": "4-2-3-1:Đorđe Petrović,Adam Smith,James Hill,António Silva,Adrien Truffert,Tyler Adams,Lewis Cook,Rayan,Justin Kluivert,Marcus Tavernier,Evanilson|4-2-3-1:Zion Suzuki,Matty Cash,Victor Lindelöf,Pau Torres,Ian Maatsen,Boubacar Kamara,João Gomes,Alysson,John McGinn,Johan Manzambi,Nicolas Jackson",
     "xi_extern": false,
     "titel_vandaag": true
@@ -91,7 +71,7 @@
     "slug": "opstelling-liverpool-chelsea-28-10-2026",
     "og": "og/opstelling-liverpool-chelsea-28-10-2026-a80ca7.webp",
     "og_done": "og/opstelling-liverpool-chelsea-28-10-2026-a80ca7.webp",
-    "ververst": "2026-10-28T08:34:12+00:00",
+    "ververst": "2026-10-28T07:20:38+00:00",
     "xi_sig": "4-4-2:Giorgi Mamardashvili,Joe Gomez,Jérémy Jacquet,Miloš Kerkez,Ronald Araújo,Alexis Mac Allister,Cody Gakpo,Trey Nyoni,James McConnell,Rio Ngumoha,Lewis Koumas|4-4-2:Mike Penders,Wesley Fofana,Levi Colwill,Marco Palestra,Malo Gusto,Roméo Lavia,Pedro Neto,Jordan Henderson,Valentín Barco,Danny Welbeck,Estêvão",
     "xi_extern": true,
     "titel_vandaag": true
