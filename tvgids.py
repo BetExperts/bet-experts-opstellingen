@@ -13,8 +13,8 @@ opstellingen-agent.
 import re, urllib.request, html, difflib, unicodedata
 from datetime import datetime
 
-BASE = "https://waaroptv.nl"
-START = BASE + "/sport/voetbal/"
+BASE = ""      # 28-10-2026: waaroptv.nl verwijderd (zelfde eigenaar als opstellingvandaag.nl); geen externe tv-gids meer
+START = ""
 UA = "Mozilla/5.0 (compatible; BetExpertsBot/1.0; +https://www.bet-experts.nl)"
 MAX_PAGES = 6
 
@@ -59,7 +59,15 @@ def _sim(a, b):
     jac = len(ta & tb) / len(ta | tb)
     return max(jac, difflib.SequenceMatcher(None, a, b).ratio())
 
+# 28-10-2026 (Jasper): waaroptv.nl NIET MEER GEBRUIKEN (zelfde eigenaar als opstellingvandaag.nl, waar spam in de
+# data stond en de voorwaarden scrapen verbieden). Elke aanvraag naar waaroptv wordt geweigerd; de agents vallen terug
+# op hun eigen zenderconfig (en de reservebron). Niet weer aanzetten.
+UIT_WAAROPTV = True
+
+
 def _get(url):
+    if UIT_WAAROPTV and "waaroptv" in url:
+        raise RuntimeError("waaroptv.nl staat uit (28-10-2026)")
     r = urllib.request.Request(url, headers={"User-Agent": UA, "Accept": "text/html"})
     with urllib.request.urlopen(r, timeout=25) as resp:
         return resp.read().decode("utf-8", "ignore")
@@ -156,19 +164,9 @@ class TvGids:
         self.extra = None
 
     def load(self):
-        if self.cards is not None:
-            return self.cards
-        self.cards, url = [], START
-        try:
-            for _ in range(MAX_PAGES):
-                page = _get(url)
-                self.cards += _parse(page)
-                nxt = re.search(r'<a href="([^"]+)" class="wp-block-query-pagination-next"', page)
-                if not nxt:
-                    break
-                url = nxt.group(1) if nxt.group(1).startswith("http") else BASE + html.unescape(nxt.group(1))
-        except Exception as e:           # netwerk/Cloudflare: agent valt terug op eigen config
-            self.error = f"{type(e).__name__}: {e}"
+        """Hoofdgids: verwijderd (28-10-2026). Altijd leeg, de agents gebruiken hun eigen zenderconfig."""
+        if self.cards is None:
+            self.cards = []
         return self.cards
 
     def load_extra(self):
