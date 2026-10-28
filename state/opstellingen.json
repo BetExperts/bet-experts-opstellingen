@@ -1,6 +1,6 @@
 {
   "1640575": {
-    "definitief": false,
+    "definitief": true,
     "match": "Manchester City - Brighton",
     "date": "2026-10-28",
     "league": "efl-cup",
@@ -11,12 +11,13 @@
     "vriendschappelijk": false,
     "item_id": "6ae11a08822961863bce67d4",
     "slug": "opstelling-manchester-city-brighton-28-10-2026",
-    "og": "og/opstelling-manchester-city-brighton-28-10-2026-e06175.webp",
+    "og": "og/opstelling-manchester-city-brighton-28-10-2026-59ef83.webp",
     "og_done": "og/opstelling-manchester-city-brighton-28-10-2026-e06175.webp",
     "xi_sig": "4-2-3-1:Gianluigi Donnarumma,Abdukodir Khusanov,Marc Guéhi,Rúben Dias,Joško Gvardiol,Elliot Anderson,Enzo Fernández,Iliman Ndiaye,Rayan Cherki,Jérémy Doku,Erling Haaland|4-2-3-1:Bart Verbruggen,Ferdi Kadıoğlu,Luka Vušković,Lewis Dunk,Olivier Boscagli,Pascal Groß,Chema Andrés,Diego Gómez,Yasin Ayari,Maxim De Cuyper,Charalampos Kostoulas",
     "xi_extern": false,
     "titel_vandaag": true,
-    "ververst": "2026-10-28T18:24:46+00:00"
+    "ververst": "2026-10-28T18:24:46+00:00",
+    "bron": "api"
   },
   "1640383": {
     "definitief": false,
