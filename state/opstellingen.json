@@ -19,176 +19,6 @@
     "titel_vandaag": true,
     "bron": "api"
   },
-  "1552202": {
-    "definitief": true,
-    "match": "Fortuna Sittard - Excelsior",
-    "date": "2026-10-25",
-    "league": "eredivisie",
-    "comp_slug": "eredivisie",
-    "naam": "Eredivisie",
-    "comp_id": "65de2f987de877fdf6583d10",
-    "stream": null,
-    "vriendschappelijk": false,
-    "clubs": [
-      {
-        "team_id": "205",
-        "slug": "opstelling-fortuna-sittard-vandaag",
-        "item_id": "6add0ea23338fa52136a9127"
-      },
-      {
-        "team_id": "196",
-        "slug": "opstelling-excelsior-vandaag",
-        "item_id": "6add0ea4c52f5ea2d2a76864"
-      }
-    ],
-    "evergreen": true,
-    "og_slug": "opstelling-fortuna-sittard-excelsior-25-10-2026",
-    "item_id": "6add0ea23338fa52136a9127",
-    "slug": "opstelling-fortuna-sittard-vandaag",
-    "og": "og/opstelling-fortuna-sittard-excelsior-25-10-2026-d0d294.webp",
-    "og_done": "og/opstelling-fortuna-sittard-excelsior-25-10-2026-d0d294.webp",
-    "ververst": "2026-10-25T10:27:49+00:00",
-    "xi_sig": "5-3-2:M. Branderhorst,Ivo Pinto,S. van Ottele,Rodrigo Guth,P. Brittijn,Justin Quincy Hubner,S. Simons,É. Michut,Shiloh Kiesar ’t Zand,A. Descotte,L. Zeefuik|4-3-3:S. van Gassel,R. Meissen,C. Widell,J. Plug,S. Janssen,I. Yegoian,N. Naujoks,L. Hartjes,A. Sliti,N. Groen,K. Bos",
-    "xi_extern": true,
-    "titel_vandaag": true,
-    "bron": "api"
-  },
-  "1552204": {
-    "definitief": true,
-    "match": "PSV Eindhoven - Feyenoord",
-    "date": "2026-10-25",
-    "league": "eredivisie",
-    "comp_slug": "eredivisie",
-    "naam": "Eredivisie",
-    "comp_id": "65de2f987de877fdf6583d10",
-    "stream": null,
-    "vriendschappelijk": false,
-    "clubs": [
-      {
-        "team_id": "197",
-        "slug": "opstelling-psv-vandaag",
-        "item_id": "6add0eb1e272194247024d86"
-      },
-      {
-        "team_id": "209",
-        "slug": "opstelling-feyenoord-vandaag",
-        "item_id": "6add0eb50fcc713db9310976"
-      }
-    ],
-    "evergreen": true,
-    "og_slug": "opstelling-psv-feyenoord-25-10-2026",
-    "item_id": "6add0eb1e272194247024d86",
-    "slug": "opstelling-psv-vandaag",
-    "og": "og/opstelling-psv-feyenoord-25-10-2026-24de33.webp",
-    "og_done": "og/opstelling-psv-feyenoord-25-10-2026-24de33.webp",
-    "ververst": "2026-10-25T12:29:43+00:00",
-    "xi_sig": "4-3-3:M. Kovář,S. Dest,L. Geertruida,A. Obispo,F. Kostić,N. Fernandez,K. Sano,Mauro Júnior,I. Perišić,G. Til,van Bommel|4-3-3:T. Ernst,G. Read,T. Watanabe,J. St. Juste,Mika Màrmol,G. Zechiël,O. Targhalline,C. Vanhoutte,A. Hadj-Moussa,Nacho Ferri,L. Valente",
-    "xi_extern": true,
-    "titel_vandaag": true,
-    "bron": "api"
-  },
-  "1552203": {
-    "definitief": true,
-    "match": "NEC Nijmegen - Groningen",
-    "date": "2026-10-25",
-    "league": "eredivisie",
-    "comp_slug": "eredivisie",
-    "naam": "Eredivisie",
-    "comp_id": "65de2f987de877fdf6583d10",
-    "stream": null,
-    "vriendschappelijk": false,
-    "clubs": [
-      {
-        "team_id": "413",
-        "slug": "opstelling-nec-vandaag",
-        "item_id": "6add0ebb241e26bc4d7be3d6"
-      },
-      {
-        "team_id": "202",
-        "slug": "opstelling-fc-groningen-vandaag",
-        "item_id": "6add0ebcbf589f9263aad5c5"
-      }
-    ],
-    "evergreen": true,
-    "og_slug": "opstelling-nec-nijmegen-fc-groningen-25-10-2026",
-    "item_id": "6add0ebb241e26bc4d7be3d6",
-    "slug": "opstelling-nec-vandaag",
-    "og": "og/opstelling-nec-nijmegen-fc-groningen-25-10-2026-68a7e8.webp",
-    "og_done": "og/opstelling-nec-nijmegen-fc-groningen-25-10-2026-68a7e8.webp",
-    "ververst": "2026-10-25T11:31:32+00:00",
-    "xi_sig": "3-4-2-1:G. Crettaz,A. Kaplan,P. Schuurs,Deveron Fonville,T. Storm,D. Nejašmić,D. Geiger,Clement Bischoff,N. Lebreton,Jamiro Monteiro,B. Linssen|4-2-3-1:E. Vaessen,J. Schreuders,T. Blokzijl,M. Rente,H. Hateboer,T. de Jonge,P. Clement,D. van der Werff,T. van Bergen,J. Ondrejka,B. Willumsson",
-    "xi_extern": true,
-    "titel_vandaag": true,
-    "bron": "api"
-  },
-  "1552205": {
-    "definitief": true,
-    "match": "Sparta Rotterdam - Ajax",
-    "date": "2026-10-25",
-    "league": "eredivisie",
-    "comp_slug": "eredivisie",
-    "naam": "Eredivisie",
-    "comp_id": "65de2f987de877fdf6583d10",
-    "stream": null,
-    "vriendschappelijk": false,
-    "clubs": [
-      {
-        "team_id": "426",
-        "slug": "opstelling-sparta-rotterdam-vandaag",
-        "item_id": "6add0ec3dffed64ab0c06b14"
-      },
-      {
-        "team_id": "194",
-        "slug": "opstelling-ajax-vandaag",
-        "item_id": "6add0ec55667dffba0da5059"
-      }
-    ],
-    "evergreen": true,
-    "og_slug": "opstelling-sparta-rotterdam-ajax-25-10-2026",
-    "item_id": "6add0ec3dffed64ab0c06b14",
-    "slug": "opstelling-sparta-rotterdam-vandaag",
-    "og": "og/opstelling-sparta-rotterdam-ajax-25-10-2026-7b6e59.webp",
-    "og_done": "og/opstelling-sparta-rotterdam-ajax-25-10-2026-7b6e59.webp",
-    "ververst": "2026-10-25T14:27:54+00:00",
-    "xi_sig": "5-4-1:M. Brouwer,L. Martes,M. Young,N. Verschuren,B. Martins Indi,B. Kuipers,Robin van Cruijsen,J. Toornstra,Cedric Hatenboer,I. Babadi,M. Zonneveld|4-3-3:M. ter Stegen,L. Rosa,A. Bouwman,D. Janse,O. Wijndal,D. Klaassen,S. Amrabat,J. Brandt,V. Tsygankov,Tolu,O. Gloukh",
-    "xi_extern": true,
-    "titel_vandaag": true,
-    "bron": "api"
-  },
-  "1552206": {
-    "definitief": true,
-    "match": "AZ Alkmaar - Twente",
-    "date": "2026-10-25",
-    "league": "eredivisie",
-    "comp_slug": "eredivisie",
-    "naam": "Eredivisie",
-    "comp_id": "65de2f987de877fdf6583d10",
-    "stream": null,
-    "vriendschappelijk": false,
-    "clubs": [
-      {
-        "team_id": "201",
-        "slug": "opstelling-az-vandaag",
-        "item_id": "6add0ecd3ff8427064bda61a"
-      },
-      {
-        "team_id": "415",
-        "slug": "opstelling-fc-twente-vandaag",
-        "item_id": "6add0ece841fcad07c68a54e"
-      }
-    ],
-    "evergreen": true,
-    "og_slug": "opstelling-az-fc-twente-25-10-2026",
-    "item_id": "6add0ecd3ff8427064bda61a",
-    "slug": "opstelling-az-vandaag",
-    "og": "og/opstelling-az-fc-twente-25-10-2026-8c00df.webp",
-    "og_done": "og/opstelling-az-fc-twente-25-10-2026-8c00df.webp",
-    "ververst": "2026-10-25T16:48:37+00:00",
-    "xi_sig": "4-2-3-1:J. De Busser,E. Dijkstra,W. Goes,L. Schouten,M. Chávez,J. Clasie,P. Koopmeiners,A. Oufkir,C. Stengs,R. Daal,M. Meerdink|4-2-3-1:J. Drommel,B. van Rooij,R. Propper,R. Nijstad,A. Adelgaard,R. Zerrouki,D. Weidmann,D. Rots,K. Hlynsson,M. Pjaca,W. Weghorst",
-    "xi_extern": true,
-    "titel_vandaag": true,
-    "bron": "api"
-  },
   "1640386": {
     "definitief": true,
     "match": "Fleetwood Town - Arsenal",
@@ -223,7 +53,7 @@
     "slug": "opstelling-manchester-city-brighton-28-10-2026",
     "og": "og/opstelling-manchester-city-brighton-28-10-2026-e06175.webp",
     "og_done": "og/opstelling-manchester-city-brighton-28-10-2026-e06175.webp",
-    "ververst": "2026-10-28T07:20:38+00:00",
+    "ververst": "2026-10-28T08:34:12+00:00",
     "xi_sig": "4-2-3-1:Gianluigi Donnarumma,Abdukodir Khusanov,Marc Guéhi,Rúben Dias,Joško Gvardiol,Elliot Anderson,Enzo Fernández,Iliman Ndiaye,Rayan Cherki,Jérémy Doku,Erling Haaland|4-2-3-1:Bart Verbruggen,Ferdi Kadıoğlu,Luka Vušković,Lewis Dunk,Olivier Boscagli,Pascal Groß,Chema Andrés,Diego Gómez,Yasin Ayari,Maxim De Cuyper,Charalampos Kostoulas",
     "xi_extern": false,
     "titel_vandaag": true
@@ -242,7 +72,7 @@
     "slug": "opstelling-bournemouth-aston-villa-28-10-2026",
     "og": "og/opstelling-bournemouth-aston-villa-28-10-2026-7c0ae5.webp",
     "og_done": "og/opstelling-bournemouth-aston-villa-28-10-2026-7c0ae5.webp",
-    "ververst": "2026-10-28T07:20:38+00:00",
+    "ververst": "2026-10-28T08:34:12+00:00",
     "xi_sig": "4-2-3-1:Đorđe Petrović,Adam Smith,James Hill,António Silva,Adrien Truffert,Tyler Adams,Lewis Cook,Rayan,Justin Kluivert,Marcus Tavernier,Evanilson|4-2-3-1:Zion Suzuki,Matty Cash,Victor Lindelöf,Pau Torres,Ian Maatsen,Boubacar Kamara,João Gomes,Alysson,John McGinn,Johan Manzambi,Nicolas Jackson",
     "xi_extern": false,
     "titel_vandaag": true
@@ -261,7 +91,7 @@
     "slug": "opstelling-liverpool-chelsea-28-10-2026",
     "og": "og/opstelling-liverpool-chelsea-28-10-2026-a80ca7.webp",
     "og_done": "og/opstelling-liverpool-chelsea-28-10-2026-a80ca7.webp",
-    "ververst": "2026-10-28T07:20:38+00:00",
+    "ververst": "2026-10-28T08:34:12+00:00",
     "xi_sig": "4-4-2:Giorgi Mamardashvili,Joe Gomez,Jérémy Jacquet,Miloš Kerkez,Ronald Araújo,Alexis Mac Allister,Cody Gakpo,Trey Nyoni,James McConnell,Rio Ngumoha,Lewis Koumas|4-4-2:Mike Penders,Wesley Fofana,Levi Colwill,Marco Palestra,Malo Gusto,Roméo Lavia,Pedro Neto,Jordan Henderson,Valentín Barco,Danny Welbeck,Estêvão",
     "xi_extern": true,
     "titel_vandaag": true
