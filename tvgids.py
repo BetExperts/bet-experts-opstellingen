@@ -118,7 +118,7 @@ def _parse(page):
 
 # ---------- reservebron: tweede tv-gids (open JSON) — alleen gebruikt als de hoofdgids geen zender heeft ----------
 # Nooit als bron noemen in teksten.
-EXTRA_URL = "https://voetbaloptv.com/wp-json/vtv/v1/wedstrijden"
+EXTRA_URL = ""   # 28-10-2026: voetbaloptv.com uit
 _EXTRA_DROP = re.compile(r"^(?:espn watch|ziggo kanaal \d+|viaplaytv)$", re.I)
 
 def _extra_zenders(raw):
@@ -170,8 +170,10 @@ class TvGids:
         return self.cards
 
     def load_extra(self):
-        if self.extra is not None:
-            return self.extra
+        """Reservebron (voetbaloptv.com): uit sinds 28-10-2026 (Jasper: voorlopig geen externe tv-gidsen). Altijd leeg."""
+        if self.extra is None:
+            self.extra = []
+        return self.extra
         self.extra = []
         try:
             import json as _json
