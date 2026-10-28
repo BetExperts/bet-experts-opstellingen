@@ -20,7 +20,7 @@
     "bron": "api"
   },
   "1640383": {
-    "definitief": false,
+    "definitief": true,
     "match": "Bournemouth - Aston Villa",
     "date": "2026-10-28",
     "league": "efl-cup",
@@ -31,12 +31,13 @@
     "vriendschappelijk": false,
     "item_id": "6ae11a10bcc1cfc42968d075",
     "slug": "opstelling-bournemouth-aston-villa-28-10-2026",
-    "og": "og/opstelling-bournemouth-aston-villa-28-10-2026-7c0ae5.webp",
+    "og": "og/opstelling-bournemouth-aston-villa-28-10-2026-732131.webp",
     "og_done": "og/opstelling-bournemouth-aston-villa-28-10-2026-7c0ae5.webp",
     "xi_sig": "4-2-3-1:Đorđe Petrović,Adam Smith,James Hill,António Silva,Adrien Truffert,Tyler Adams,Lewis Cook,Rayan,Justin Kluivert,Marcus Tavernier,Evanilson|4-2-3-1:Zion Suzuki,Matty Cash,Victor Lindelöf,Pau Torres,Ian Maatsen,Boubacar Kamara,João Gomes,Alysson,John McGinn,Johan Manzambi,Nicolas Jackson",
     "xi_extern": false,
     "titel_vandaag": true,
-    "ververst": "2026-10-28T18:24:46+00:00"
+    "ververst": "2026-10-28T18:24:46+00:00",
+    "bron": "api"
   },
   "1640388": {
     "definitief": true,
