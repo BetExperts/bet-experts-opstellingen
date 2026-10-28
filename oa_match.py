@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 """Verzamelt alle data voor één wedstrijd en bouwt de Webflow-velddata."""
-import re
+import json, os, re
 from datetime import datetime, timezone, timedelta
 import oa_api as api
 import oa_footy as FOOTY
@@ -10,7 +10,29 @@ from oa_config import club_slug, RUBRIEK_ID, nl_name, fix_mojibake, stadion_nl, 
 import oa_build as B
 from tvgids import TvGids
 
-_GIDS = TvGids()   # waaroptv.nl — één keer laden per run (generate én finalize)
+_GIDS = TvGids()   # externe tv-gidsen staan uit (28-10-2026); één keer laden per run (generate én finalize)
+
+_HAND = None
+def _hand_tv(fid):
+    """Handmatige zender per wedstrijd (Jasper zoekt die op): data/tv_wedstrijden.json van de live-kijken-agent,
+    lokaal of via GitHub. Geeft een kaart in het tvgids-formaat of None."""
+    global _HAND
+    if _HAND is None:
+        _HAND = {}
+        try:
+            _HAND = json.load(open(os.path.join(os.path.dirname(__file__), "..", "live-kijken-agent", "data", "tv_wedstrijden.json")))
+        except Exception:
+            try:
+                import urllib.request
+                _HAND = json.load(urllib.request.urlopen(
+                    "https://raw.githubusercontent.com/BetExperts/bet-experts-live-kijken/main/data/tv_wedstrijden.json", timeout=20))
+            except Exception:
+                _HAND = {}
+    h = _HAND.get(str(fid)) if fid else None
+    if not h or not h.get("tv"):
+        return None
+    tv = [z.strip() for z in re.split(r",| en ", h["tv"]) if z.strip()]
+    return {"tv": tv, "bookmakers": [], "gratis": bool(h.get("gratis"))}
 
 def _pct(s):
     try: return int(str(s).replace("%","").strip())
@@ -213,7 +235,7 @@ def gather(fx, definitief=False):
         "hLU": hLU, "aLU": aLU, "hPrev": hPrev, "aPrev": aPrev,
         "hInj": hInj, "aInj": aInj,
         "h2h": h2h,
-        "tvgids": _GIDS.lookup(homeN, awayN, dt),   # exacte zender (of None -> geen tv-regel)
+        "tvgids": _hand_tv(fid) or _GIDS.lookup(homeN, awayN, dt),   # exacte zender (of None -> geen tv-regel)
     }
 
 def has_confirmed_lineups(fid):
