@@ -51,12 +51,12 @@
     "vriendschappelijk": false,
     "item_id": "6ae11a18c05b0838c2ba22a7",
     "slug": "opstelling-liverpool-chelsea-28-10-2026",
-    "og": "og/opstelling-liverpool-chelsea-28-10-2026-889b7d.webp",
+    "og": "og/opstelling-liverpool-chelsea-28-10-2026-dc208b.webp",
     "og_done": "og/opstelling-liverpool-chelsea-28-10-2026-889b7d.webp",
     "xi_sig": "4-4-2:Giorgi Mamardashvili,Joe Gomez,Jérémy Jacquet,Miloš Kerkez,Ronald Araújo,Alexis Mac Allister,Cody Gakpo,Trey Nyoni,James McConnell,Rio Ngumoha,Lewis Koumas|4-4-2:Mike Penders,Wesley Fofana,Levi Colwill,Marco Palestra,Malo Gusto,Roméo Lavia,Pedro Neto,Jordan Henderson,Valentín Barco,Danny Welbeck,Estêvão",
     "xi_extern": true,
     "titel_vandaag": true,
     "ververst": "2026-10-28T18:24:46+00:00",
-    "bron": "footymetrics"
+    "bron": "api"
   }
 }
