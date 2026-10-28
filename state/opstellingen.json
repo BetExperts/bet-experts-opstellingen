@@ -58,5 +58,19 @@
     "titel_vandaag": true,
     "ververst": "2026-10-28T18:24:46+00:00",
     "bron": "api"
+  },
+  "1640385": {
+    "definitief": false,
+    "match": "Everton - Newcastle",
+    "date": "2026-10-29",
+    "league": "efl-cup",
+    "comp_slug": "efl-cup",
+    "naam": "EFL Cup",
+    "comp_id": "66cc403600c5cbae73af3c82",
+    "stream": null,
+    "vriendschappelijk": false,
+    "item_id": "6ae2712e140b0826b8562dc8",
+    "slug": "opstelling-everton-newcastle-united-29-10-2026",
+    "og": "og/opstelling-everton-newcastle-united-29-10-2026-9fdbf3.webp"
   }
 }
