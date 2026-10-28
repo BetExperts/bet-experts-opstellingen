@@ -15,6 +15,10 @@ import difflib, html, re, time, unicodedata, urllib.request
 from datetime import datetime
 
 BASE = "https://opstellingvandaag.nl"
+# 28-10-2026 (Jasper): NIET MEER GEBRUIKEN. Hun voorwaarden (art. 4.3) verbieden het periodiek verzamelen van opstellingen
+# en afwezigen en het herpubliceren daarvan, en in hun afwezigenblok stond spam die in onze voorbeschouwingen kwam.
+# Alle functies geven None; de agents vallen terug op FootyMetrics en API-Football. Niet weer aanzetten.
+UIT = True
 UA = "BetExpertsBot/1.0 (+https://www.bet-experts.nl)"
 PAUSE = 1.0
 STOP = {"fc", "sc", "afc", "cf", "sv", "vv", "jc", "de", "1", "04", "05"}
@@ -29,6 +33,8 @@ def _fold(s):
 
 
 def _get(url):
+    if UIT:
+        raise RuntimeError("opstellingvandaag.nl staat uit (voorwaarden art. 4.3)")
     if url in _pages:
         return _pages[url]
     time.sleep(PAUSE)
@@ -120,6 +126,8 @@ def _parse(page):
 
 def match_url(namen_thuis, namen_uit, ymd):
     """URL van de wedstrijdpagina (of None)."""
+    if UIT:
+        return None
     try:
         d = datetime.fromisoformat(ymd)
         stamp = f"-{d.day:02d}-{d.month:02d}-{d.year}/"
@@ -143,6 +151,8 @@ def absences(namen_thuis, namen_uit, ymd, url=None):
     """Afwezigen per ploeg uit het blok 'Blessures en schorsingen':
     {"home": [(naam, reden, status)], "away": [...]} — een lege lijst = 'Iedereen inzetbaar';
     een ploeg die niet in het blok staat ontbreekt in de dict. None als de pagina/het blok ontbreekt."""
+    if UIT:
+        return None
     try:
         url = url or match_url(namen_thuis, namen_uit, ymd)
         if not url:
@@ -168,14 +178,42 @@ def absences(namen_thuis, namen_uit, ymd, url=None):
                 continue
             buf.append(l)
         flush()
+        if not schoon(out):
+            print(f"     ⚠ afwezigen-bron afgewezen (verdachte tekst): {url}")
+            return None
         return out or None
     except Exception as e:
         print(f"     · afwezigen-bron niet beschikbaar: {e}")
     return None
 
 
+# 28-10-2026: in het afwezigenblok van de externe bron stond spam (reclame voor medicijnen met onze naam erin), die
+# zo in de voorbeschouwingen terechtkwam. Daarom alleen nog korte, 'gewone' regels: een naam (letters, max 5 woorden),
+# een korte reden en status. Eén afwijkende regel = het hele blok weg (de bron is dan niet te vertrouwen).
+SPAM = re.compile(r"oxy|contin|norm\b|kopen|koop|bestel|discreet|klik|hier\b|veilig|bet.?experts|mg\b|pil|recept|apothe|"
+                  r"viagra|cialis|xanax|tramadol|codein|casino|bonus|gratis|http|www|\.nl|\.com|@", re.I)
+NAAM = re.compile(r"^[^\W\d_][\w'’. \-]{1,38}$")
+
+
+def schoon(out):
+    for lijst in (out or {}).values():
+        for t in lijst:
+            if len(t) != 3:
+                return False
+            naam, reden, status = t
+            if not NAAM.match(naam) or len(naam.split()) > 5 or any(ch.isdigit() for ch in naam):
+                return False
+            if len(reden) > 40 or len(status) > 30:
+                return False
+            if SPAM.search(" ".join(t)):
+                return False
+    return True
+
+
 def predicted(namen_thuis, namen_uit, ymd):
     """Vermoedelijke opstelling, of None. namen_* = lijst met mogelijke namen (NL-naam, API-naam)."""
+    if UIT:
+        return None
     try:
         d = datetime.fromisoformat(ymd)
         stamp = f"-{d.day:02d}-{d.month:02d}-{d.year}/"

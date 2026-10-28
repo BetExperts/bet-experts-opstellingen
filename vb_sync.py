@@ -245,6 +245,13 @@ def sync_een(fid, item, ko, st, dry=False):
         for m in A_RE.finditer(velden.get("content-2", "")):
             print("     ", re.sub(r"<[^>]+>", "", m.group(0))[:300])
         return f"{status or 'afwezigen'}: zou bijwerken"
+    # 28-10-2026: laatste vangnet tegen spam uit externe bronnen. Komt er verdachte tekst bij die er eerst niet stond,
+    # dan schrijven we niets (ook niet naar KV) en melden we het.
+    for veld, nieuw in list(velden.items()) + [("kv", json.dumps(kv["afwezigen"], ensure_ascii=False))]:
+        oud = fd.get(veld) or "" if veld != "kv" else ""
+        if len(OV.SPAM.findall(nieuw)) > len(OV.SPAM.findall(oud)):
+            print(f"     ⚠ GEBLOKKEERD: verdachte tekst in {veld} voor {fd.get('slug')}")
+            return "geblokkeerd: verdachte tekst"
     if not kv_put(fid, kv):
         return "KV mislukt"
     if velden:
