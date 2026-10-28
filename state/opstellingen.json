@@ -1,24 +1,4 @@
 {
-  "1640386": {
-    "definitief": true,
-    "match": "Fleetwood Town - Arsenal",
-    "date": "2026-10-27",
-    "league": "efl-cup",
-    "comp_slug": "efl-cup",
-    "naam": "EFL Cup",
-    "comp_id": "66cc403600c5cbae73af3c82",
-    "stream": null,
-    "vriendschappelijk": false,
-    "item_id": "6adfcf58fde4a2d54424c350",
-    "slug": "opstelling-fleetwood-town-arsenal-27-10-2026",
-    "og": "og/opstelling-fleetwood-town-arsenal-27-10-2026-ed353d.webp",
-    "og_done": "og/opstelling-fleetwood-town-arsenal-27-10-2026-ed353d.webp",
-    "ververst": "2026-10-27T18:23:54+00:00",
-    "xi_sig": "5-3-2:J. Lynch,D. Andrew,F. Potter,R. Bennett,S. Rooney,R. Cirino,H. Neal,M. Helm,C. McLean,C. Evans,R. Coughlan|4-4-2:Kepa Arrizabalaga,Cristhian Mosquera,Piero Hincapié,Jurriën Timber,Myles Lewis-Skelly,Eberechi Eze,Mikel Merino,Martín Zubimendi,M. Salmon,Kai Havertz,Max Dowman",
-    "xi_extern": true,
-    "titel_vandaag": true,
-    "bron": "api"
-  },
   "1640575": {
     "definitief": false,
     "match": "Manchester City - Brighton",
