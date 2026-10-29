@@ -78,5 +78,117 @@
     "xi_extern": false,
     "titel_vandaag": true,
     "bron": "api"
+  },
+  "1551861": {
+    "definitief": false,
+    "match": "Roda - Jong AZ",
+    "date": "2026-10-30",
+    "league": "eerste-divisie",
+    "comp_slug": "keuken-kampioen-divisie",
+    "naam": "Keuken Kampioen Divisie",
+    "comp_id": "65de4bc0a8777b9898d6374e",
+    "stream": null,
+    "vriendschappelijk": false,
+    "clubs": [
+      {
+        "team_id": "414",
+        "slug": "opstelling-roda-jc-vandaag",
+        "item_id": "6ae3c5405f631fd72de9d150"
+      },
+      {
+        "team_id": "418",
+        "slug": "opstelling-jong-az-vandaag",
+        "item_id": "6ae3c5410e3f7f15337960f1"
+      }
+    ],
+    "evergreen": true,
+    "og_slug": "opstelling-roda-jc-jong-az-30-10-2026",
+    "item_id": "6ae3c5405f631fd72de9d150",
+    "slug": "opstelling-roda-jc-vandaag",
+    "og": "og/opstelling-roda-jc-jong-az-30-10-2026-172003.webp"
+  },
+  "1551858": {
+    "definitief": false,
+    "match": "FC Volendam - De Graafschap",
+    "date": "2026-10-30",
+    "league": "eerste-divisie",
+    "comp_slug": "keuken-kampioen-divisie",
+    "naam": "Keuken Kampioen Divisie",
+    "comp_id": "65de4bc0a8777b9898d6374e",
+    "stream": null,
+    "vriendschappelijk": false,
+    "clubs": [
+      {
+        "team_id": "416",
+        "slug": "opstelling-fc-volendam-vandaag",
+        "item_id": "6ae3c5490a8851e6dd89be21"
+      },
+      {
+        "team_id": "199",
+        "slug": "opstelling-de-graafschap-vandaag",
+        "item_id": "6ae3c54a89477054fa318b41"
+      }
+    ],
+    "evergreen": true,
+    "og_slug": "opstelling-volendam-de-graafschap-30-10-2026",
+    "item_id": "6ae3c5490a8851e6dd89be21",
+    "slug": "opstelling-fc-volendam-vandaag",
+    "og": "og/opstelling-volendam-de-graafschap-30-10-2026-2fa92b.webp"
+  },
+  "1551862": {
+    "definitief": false,
+    "match": "Waalwijk - Almere City FC",
+    "date": "2026-10-30",
+    "league": "eerste-divisie",
+    "comp_slug": "keuken-kampioen-divisie",
+    "naam": "Keuken Kampioen Divisie",
+    "comp_id": "65de4bc0a8777b9898d6374e",
+    "stream": null,
+    "vriendschappelijk": false,
+    "clubs": [
+      {
+        "team_id": "417",
+        "slug": "opstelling-rkc-waalwijk-vandaag",
+        "item_id": "6ae3c55478ea2448aad49984"
+      },
+      {
+        "team_id": "419",
+        "slug": "opstelling-almere-city-vandaag",
+        "item_id": "6ae3c555b21b349f6908b436"
+      }
+    ],
+    "evergreen": true,
+    "og_slug": "opstelling-rkc-waalwijk-almere-city-30-10-2026",
+    "item_id": "6ae3c55478ea2448aad49984",
+    "slug": "opstelling-rkc-waalwijk-vandaag",
+    "og": "og/opstelling-rkc-waalwijk-almere-city-30-10-2026-c6b97a.webp"
+  },
+  "1551859": {
+    "definitief": false,
+    "match": "Helmond Sport - FC Eindhoven",
+    "date": "2026-10-30",
+    "league": "eerste-divisie",
+    "comp_slug": "keuken-kampioen-divisie",
+    "naam": "Keuken Kampioen Divisie",
+    "comp_id": "65de4bc0a8777b9898d6374e",
+    "stream": null,
+    "vriendschappelijk": false,
+    "clubs": [
+      {
+        "team_id": "424",
+        "slug": "opstelling-helmond-sport-vandaag",
+        "item_id": "6ae3c55dfc89e700a56af19e"
+      },
+      {
+        "team_id": "422",
+        "slug": "opstelling-fc-eindhoven-vandaag",
+        "item_id": "6ae3c55e50b0cc2842139227"
+      }
+    ],
+    "evergreen": true,
+    "og_slug": "opstelling-helmond-sport-fc-eindhoven-30-10-2026",
+    "item_id": "6ae3c55dfc89e700a56af19e",
+    "slug": "opstelling-helmond-sport-vandaag",
+    "og": "og/opstelling-helmond-sport-fc-eindhoven-30-10-2026-dcfb45.webp"
   }
 }

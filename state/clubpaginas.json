@@ -68,5 +68,61 @@
     "naam": "Twente",
     "fid": "1552206",
     "datum": "2026-10-25"
+  },
+  "414": {
+    "item_id": "6ae3c5405f631fd72de9d150",
+    "slug": "opstelling-roda-jc-vandaag",
+    "naam": "Roda",
+    "fid": "1551861",
+    "datum": "2026-10-30"
+  },
+  "418": {
+    "item_id": "6ae3c5410e3f7f15337960f1",
+    "slug": "opstelling-jong-az-vandaag",
+    "naam": "Jong AZ",
+    "fid": "1551861",
+    "datum": "2026-10-30"
+  },
+  "416": {
+    "item_id": "6ae3c5490a8851e6dd89be21",
+    "slug": "opstelling-fc-volendam-vandaag",
+    "naam": "FC Volendam",
+    "fid": "1551858",
+    "datum": "2026-10-30"
+  },
+  "199": {
+    "item_id": "6ae3c54a89477054fa318b41",
+    "slug": "opstelling-de-graafschap-vandaag",
+    "naam": "De Graafschap",
+    "fid": "1551858",
+    "datum": "2026-10-30"
+  },
+  "417": {
+    "item_id": "6ae3c55478ea2448aad49984",
+    "slug": "opstelling-rkc-waalwijk-vandaag",
+    "naam": "Waalwijk",
+    "fid": "1551862",
+    "datum": "2026-10-30"
+  },
+  "419": {
+    "item_id": "6ae3c555b21b349f6908b436",
+    "slug": "opstelling-almere-city-vandaag",
+    "naam": "Almere City FC",
+    "fid": "1551862",
+    "datum": "2026-10-30"
+  },
+  "424": {
+    "item_id": "6ae3c55dfc89e700a56af19e",
+    "slug": "opstelling-helmond-sport-vandaag",
+    "naam": "Helmond Sport",
+    "fid": "1551859",
+    "datum": "2026-10-30"
+  },
+  "422": {
+    "item_id": "6ae3c55e50b0cc2842139227",
+    "slug": "opstelling-fc-eindhoven-vandaag",
+    "naam": "FC Eindhoven",
+    "fid": "1551859",
+    "datum": "2026-10-30"
   }
 }
