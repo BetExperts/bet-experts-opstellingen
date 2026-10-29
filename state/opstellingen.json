@@ -60,7 +60,7 @@
     "bron": "api"
   },
   "1640385": {
-    "definitief": false,
+    "definitief": true,
     "match": "Everton - Newcastle",
     "date": "2026-10-29",
     "league": "efl-cup",
@@ -71,11 +71,12 @@
     "vriendschappelijk": false,
     "item_id": "6ae2712e140b0826b8562dc8",
     "slug": "opstelling-everton-newcastle-united-29-10-2026",
-    "og": "og/opstelling-everton-newcastle-united-29-10-2026-8b5f5a.webp",
+    "og": "og/opstelling-everton-newcastle-united-29-10-2026-43d134.webp",
     "og_done": "og/opstelling-everton-newcastle-united-29-10-2026-8b5f5a.webp",
     "ververst": "2026-10-29T18:23:30+00:00",
     "xi_sig": "4-2-3-1:Jordan Pickford,Merlin Röhl,James Tarkowski,Jake O'Brien,Vitaliy Mykolenko,Harrison Armstrong,James Garner,Brennan Johnson,Kiernan Dewsbury-Hall,Tyrique George,Thierno Barry|4-2-3-1:Lukáš Horníček,Amar Dedić,Fabian Schär,Dan Burn,Lewis Hall,Nico González,Joelinton,Jacob Murphy,Joe Willock,Harvey Barnes,William Osula",
     "xi_extern": false,
-    "titel_vandaag": true
+    "titel_vandaag": true,
+    "bron": "api"
   }
 }
