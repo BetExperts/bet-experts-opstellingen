@@ -105,7 +105,8 @@
     "og_slug": "opstelling-roda-jc-jong-az-30-10-2026",
     "item_id": "6ae3c5405f631fd72de9d150",
     "slug": "opstelling-roda-jc-vandaag",
-    "og": "og/opstelling-roda-jc-jong-az-30-10-2026-172003.webp"
+    "og": "og/opstelling-roda-jc-jong-az-30-10-2026-172003.webp",
+    "og_done": "og/opstelling-roda-jc-jong-az-30-10-2026-172003.webp"
   },
   "1551858": {
     "definitief": false,
@@ -133,7 +134,8 @@
     "og_slug": "opstelling-volendam-de-graafschap-30-10-2026",
     "item_id": "6ae3c5490a8851e6dd89be21",
     "slug": "opstelling-fc-volendam-vandaag",
-    "og": "og/opstelling-volendam-de-graafschap-30-10-2026-2fa92b.webp"
+    "og": "og/opstelling-volendam-de-graafschap-30-10-2026-2fa92b.webp",
+    "og_done": "og/opstelling-volendam-de-graafschap-30-10-2026-2fa92b.webp"
   },
   "1551862": {
     "definitief": false,
@@ -161,7 +163,8 @@
     "og_slug": "opstelling-rkc-waalwijk-almere-city-30-10-2026",
     "item_id": "6ae3c55478ea2448aad49984",
     "slug": "opstelling-rkc-waalwijk-vandaag",
-    "og": "og/opstelling-rkc-waalwijk-almere-city-30-10-2026-c6b97a.webp"
+    "og": "og/opstelling-rkc-waalwijk-almere-city-30-10-2026-c6b97a.webp",
+    "og_done": "og/opstelling-rkc-waalwijk-almere-city-30-10-2026-c6b97a.webp"
   },
   "1551859": {
     "definitief": false,
@@ -189,6 +192,7 @@
     "og_slug": "opstelling-helmond-sport-fc-eindhoven-30-10-2026",
     "item_id": "6ae3c55dfc89e700a56af19e",
     "slug": "opstelling-helmond-sport-vandaag",
-    "og": "og/opstelling-helmond-sport-fc-eindhoven-30-10-2026-dcfb45.webp"
+    "og": "og/opstelling-helmond-sport-fc-eindhoven-30-10-2026-dcfb45.webp",
+    "og_done": "og/opstelling-helmond-sport-fc-eindhoven-30-10-2026-dcfb45.webp"
   }
 }
