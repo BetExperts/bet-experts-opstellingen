@@ -106,7 +106,10 @@
     "item_id": "6ae3c5405f631fd72de9d150",
     "slug": "opstelling-roda-jc-vandaag",
     "og": "og/opstelling-roda-jc-jong-az-30-10-2026-172003.webp",
-    "og_done": "og/opstelling-roda-jc-jong-az-30-10-2026-172003.webp"
+    "og_done": "og/opstelling-roda-jc-jong-az-30-10-2026-172003.webp",
+    "ververst": "2026-10-29T22:50:06+00:00",
+    "xi_sig": ":J. Treichel,M. Tol,D. Van den Buijs,L. Beerten,G. Peixoto,J. Deom,J. Nisbet,B. Marsman,J. Mensah,A. van den Hurk,C. Seedorf|4-3-3:I. Ka,J. Zwart,A. Natali,Mathijs Menu,Saviola Mourinho Simons Saffoe,Julian Sijbrands,Bohdan Budko,F. Andersen,J. Hartog,R. Robbemond,K. Toppenberg",
+    "xi_extern": false
   },
   "1551858": {
     "definitief": false,
@@ -135,7 +138,10 @@
     "item_id": "6ae3c5490a8851e6dd89be21",
     "slug": "opstelling-fc-volendam-vandaag",
     "og": "og/opstelling-volendam-de-graafschap-30-10-2026-2fa92b.webp",
-    "og_done": "og/opstelling-volendam-de-graafschap-30-10-2026-2fa92b.webp"
+    "og_done": "og/opstelling-volendam-de-graafschap-30-10-2026-2fa92b.webp",
+    "ververst": "2026-10-29T22:50:06+00:00",
+    "xi_sig": ":R. Steur,D. Payne,L. Blondeau,M. Amevor,D. Bisschops,A. Plat,N. Bukala,K. Wolff,R. Niemeijer,M. Belfqih,F. Ihler|:P. Reverson,J. Wieckhoff,R. Besselink,J. Hardeman,G. Bolk,N. Ahmeti,K. Symons,N. Kaninda,D. Warmerdam,T. Mero,J. Kania",
+    "xi_extern": false
   },
   "1551862": {
     "definitief": false,
@@ -164,7 +170,10 @@
     "item_id": "6ae3c55478ea2448aad49984",
     "slug": "opstelling-rkc-waalwijk-vandaag",
     "og": "og/opstelling-rkc-waalwijk-almere-city-30-10-2026-c6b97a.webp",
-    "og_done": "og/opstelling-rkc-waalwijk-almere-city-30-10-2026-c6b97a.webp"
+    "og_done": "og/opstelling-rkc-waalwijk-almere-city-30-10-2026-c6b97a.webp",
+    "ververst": "2026-10-29T22:50:06+00:00",
+    "xi_sig": ":M. Spenkelink,N. Bakboord,S. van der Plas,L. van Gelderen,N. Held,A. Dkidak,J. Nap,R. van Hedel,Y. van der Veen,J. van de Haar,F. Stokkers|:W. Speel,J. Jacobs,D. van Bruggen,J. Lawrence,T. Bijleveld,M. de Haan,E. Cornelisse,E. Poku,J. Jacobs,B. Burgering,F. Druijf",
+    "xi_extern": false
   },
   "1551859": {
     "definitief": false,
@@ -193,6 +202,9 @@
     "item_id": "6ae3c55dfc89e700a56af19e",
     "slug": "opstelling-helmond-sport-vandaag",
     "og": "og/opstelling-helmond-sport-fc-eindhoven-30-10-2026-dcfb45.webp",
-    "og_done": "og/opstelling-helmond-sport-fc-eindhoven-30-10-2026-dcfb45.webp"
+    "og_done": "og/opstelling-helmond-sport-fc-eindhoven-30-10-2026-dcfb45.webp",
+    "ververst": "2026-10-29T22:50:06+00:00",
+    "xi_sig": ":M. Bergsen,B. Koglin,L. Golic,T. Landheer,S. Dekkers,M. Ludwig,X. van der Velde,T. Poll,D. Huiberts,M. Lenaerts,T. Essakkati|:J. Borgmans,L. Netten,O. Renfrum,J. Poortvliet,R. van de Riet,G. Beaumont,N. Munsters,R. Buifrahi,H. Deenen,V. Besuijen,S. Baartmans",
+    "xi_extern": false
   }
 }
