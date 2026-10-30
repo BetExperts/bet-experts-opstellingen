@@ -114,7 +114,7 @@
     "bron": "footymetrics"
   },
   "1551858": {
-    "definitief": false,
+    "definitief": true,
     "match": "FC Volendam - De Graafschap",
     "date": "2026-10-30",
     "league": "eerste-divisie",
@@ -139,12 +139,13 @@
     "og_slug": "opstelling-volendam-de-graafschap-30-10-2026",
     "item_id": "6ae3c5490a8851e6dd89be21",
     "slug": "opstelling-fc-volendam-vandaag",
-    "og": "og/opstelling-volendam-de-graafschap-30-10-2026-89c24b.webp",
+    "og": "og/opstelling-volendam-de-graafschap-30-10-2026-22c0ce.webp",
     "og_done": "og/opstelling-volendam-de-graafschap-30-10-2026-89c24b.webp",
     "ververst": "2026-10-30T18:04:38+00:00",
     "xi_sig": ":R. Steur,D. Payne,L. Blondeau,M. Amevor,D. Bisschops,A. Plat,N. Bukala,K. Wolff,R. Niemeijer,M. Belfqih,F. Ihler|:P. Reverson,J. Wieckhoff,R. Besselink,J. Hardeman,G. Bolk,N. Ahmeti,K. Symons,N. Kaninda,D. Warmerdam,T. Mero,J. Kania",
     "xi_extern": false,
-    "titel_vandaag": true
+    "titel_vandaag": true,
+    "bron": "footymetrics"
   },
   "1551862": {
     "definitief": true,
