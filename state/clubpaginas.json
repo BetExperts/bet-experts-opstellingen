@@ -3,8 +3,8 @@
     "item_id": "6add0ea23338fa52136a9127",
     "slug": "opstelling-fortuna-sittard-vandaag",
     "naam": "Fortuna Sittard",
-    "fid": "1552202",
-    "datum": "2026-10-25"
+    "fid": "1552207",
+    "datum": "2026-10-31"
   },
   "196": {
     "item_id": "6add0ea4c52f5ea2d2a76864",
@@ -17,22 +17,22 @@
     "item_id": "6add0eb1e272194247024d86",
     "slug": "opstelling-psv-vandaag",
     "naam": "PSV Eindhoven",
-    "fid": "1552204",
-    "datum": "2026-10-25"
+    "fid": "1552209",
+    "datum": "2026-10-31"
   },
   "209": {
     "item_id": "6add0eb50fcc713db9310976",
     "slug": "opstelling-feyenoord-vandaag",
     "naam": "Feyenoord",
-    "fid": "1552204",
-    "datum": "2026-10-25"
+    "fid": "1552207",
+    "datum": "2026-10-31"
   },
   "413": {
     "item_id": "6add0ebb241e26bc4d7be3d6",
     "slug": "opstelling-nec-vandaag",
     "naam": "NEC Nijmegen",
-    "fid": "1552203",
-    "datum": "2026-10-25"
+    "fid": "1552208",
+    "datum": "2026-10-31"
   },
   "202": {
     "item_id": "6add0ebcbf589f9263aad5c5",
@@ -52,15 +52,15 @@
     "item_id": "6add0ec55667dffba0da5059",
     "slug": "opstelling-ajax-vandaag",
     "naam": "Ajax",
-    "fid": "1552205",
-    "datum": "2026-10-25"
+    "fid": "1552210",
+    "datum": "2026-10-31"
   },
   "201": {
     "item_id": "6add0ecd3ff8427064bda61a",
     "slug": "opstelling-az-vandaag",
     "naam": "AZ Alkmaar",
-    "fid": "1552206",
-    "datum": "2026-10-25"
+    "fid": "1552210",
+    "datum": "2026-10-31"
   },
   "415": {
     "item_id": "6add0ece841fcad07c68a54e",
@@ -124,5 +124,47 @@
     "naam": "FC Eindhoven",
     "fid": "1551859",
     "datum": "2026-10-30"
+  },
+  "195": {
+    "item_id": "6ae5111d52fb1e06e814a2b7",
+    "slug": "opstelling-willem-ii-vandaag",
+    "naam": "Willem II",
+    "fid": "1552209",
+    "datum": "2026-10-31"
+  },
+  "210": {
+    "item_id": "6ae51124b35403b13dd10f04",
+    "slug": "opstelling-heerenveen-vandaag",
+    "naam": "Heerenveen",
+    "fid": "1552208",
+    "datum": "2026-10-31"
+  },
+  "420": {
+    "item_id": "6ae51134d77a8efba55516c2",
+    "slug": "opstelling-sc-cambuur-vandaag",
+    "naam": "Cambuur",
+    "fid": "1552211",
+    "datum": "2026-10-31"
+  },
+  "410": {
+    "item_id": "6ae511361cd0ddb1d6794623",
+    "slug": "opstelling-go-ahead-eagles-vandaag",
+    "naam": "GO Ahead Eagles",
+    "fid": "1552211",
+    "datum": "2026-10-31"
+  },
+  "412": {
+    "item_id": "6ae5113e93171a7a8ad59a02",
+    "slug": "opstelling-mvv-vandaag",
+    "naam": "MVV",
+    "fid": "1551863",
+    "datum": "2026-10-31"
+  },
+  "204": {
+    "item_id": "6ae51140433faf782fba0b88",
+    "slug": "opstelling-vvv-venlo-vandaag",
+    "naam": "VVV Venlo",
+    "fid": "1551863",
+    "datum": "2026-10-31"
   }
 }

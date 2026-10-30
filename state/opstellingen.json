@@ -214,5 +214,173 @@
     "xi_extern": false,
     "titel_vandaag": true,
     "bron": "api"
+  },
+  "1552207": {
+    "definitief": false,
+    "match": "Feyenoord - Fortuna Sittard",
+    "date": "2026-10-31",
+    "league": "eredivisie",
+    "comp_slug": "eredivisie",
+    "naam": "Eredivisie",
+    "comp_id": "65de2f987de877fdf6583d10",
+    "stream": null,
+    "vriendschappelijk": false,
+    "clubs": [
+      {
+        "team_id": "209",
+        "slug": "opstelling-feyenoord-vandaag",
+        "item_id": "6add0eb50fcc713db9310976"
+      },
+      {
+        "team_id": "205",
+        "slug": "opstelling-fortuna-sittard-vandaag",
+        "item_id": "6add0ea23338fa52136a9127"
+      }
+    ],
+    "evergreen": true,
+    "og_slug": "opstelling-feyenoord-fortuna-sittard-31-10-2026",
+    "item_id": "6add0eb50fcc713db9310976",
+    "slug": "opstelling-feyenoord-vandaag",
+    "og": "og/opstelling-feyenoord-fortuna-sittard-31-10-2026-e2bfc0.webp"
+  },
+  "1552209": {
+    "definitief": false,
+    "match": "PSV Eindhoven - Willem II",
+    "date": "2026-10-31",
+    "league": "eredivisie",
+    "comp_slug": "eredivisie",
+    "naam": "Eredivisie",
+    "comp_id": "65de2f987de877fdf6583d10",
+    "stream": null,
+    "vriendschappelijk": false,
+    "clubs": [
+      {
+        "team_id": "197",
+        "slug": "opstelling-psv-vandaag",
+        "item_id": "6add0eb1e272194247024d86"
+      },
+      {
+        "team_id": "195",
+        "slug": "opstelling-willem-ii-vandaag",
+        "item_id": "6ae5111d52fb1e06e814a2b7"
+      }
+    ],
+    "evergreen": true,
+    "og_slug": "opstelling-psv-willem-2-31-10-2026",
+    "item_id": "6add0eb1e272194247024d86",
+    "slug": "opstelling-psv-vandaag",
+    "og": "og/opstelling-psv-willem-2-31-10-2026-aa1c9e.webp"
+  },
+  "1552208": {
+    "definitief": false,
+    "match": "Heerenveen - NEC Nijmegen",
+    "date": "2026-10-31",
+    "league": "eredivisie",
+    "comp_slug": "eredivisie",
+    "naam": "Eredivisie",
+    "comp_id": "65de2f987de877fdf6583d10",
+    "stream": null,
+    "vriendschappelijk": false,
+    "clubs": [
+      {
+        "team_id": "210",
+        "slug": "opstelling-heerenveen-vandaag",
+        "item_id": "6ae51124b35403b13dd10f04"
+      },
+      {
+        "team_id": "413",
+        "slug": "opstelling-nec-vandaag",
+        "item_id": "6add0ebb241e26bc4d7be3d6"
+      }
+    ],
+    "evergreen": true,
+    "og_slug": "opstelling-heerenveen-nec-nijmegen-31-10-2026",
+    "item_id": "6ae51124b35403b13dd10f04",
+    "slug": "opstelling-heerenveen-vandaag",
+    "og": "og/opstelling-heerenveen-nec-nijmegen-31-10-2026-f5f585.webp"
+  },
+  "1552210": {
+    "definitief": false,
+    "match": "Ajax - AZ Alkmaar",
+    "date": "2026-10-31",
+    "league": "eredivisie",
+    "comp_slug": "eredivisie",
+    "naam": "Eredivisie",
+    "comp_id": "65de2f987de877fdf6583d10",
+    "stream": null,
+    "vriendschappelijk": false,
+    "clubs": [
+      {
+        "team_id": "194",
+        "slug": "opstelling-ajax-vandaag",
+        "item_id": "6add0ec55667dffba0da5059"
+      },
+      {
+        "team_id": "201",
+        "slug": "opstelling-az-vandaag",
+        "item_id": "6add0ecd3ff8427064bda61a"
+      }
+    ],
+    "evergreen": true,
+    "og_slug": "opstelling-ajax-az-31-10-2026",
+    "item_id": "6add0ec55667dffba0da5059",
+    "slug": "opstelling-ajax-vandaag",
+    "og": "og/opstelling-ajax-az-31-10-2026-5eba5c.webp"
+  },
+  "1552211": {
+    "definitief": false,
+    "match": "Cambuur - GO Ahead Eagles",
+    "date": "2026-10-31",
+    "league": "eredivisie",
+    "comp_slug": "eredivisie",
+    "naam": "Eredivisie",
+    "comp_id": "65de2f987de877fdf6583d10",
+    "stream": null,
+    "vriendschappelijk": false,
+    "clubs": [
+      {
+        "team_id": "420",
+        "slug": "opstelling-sc-cambuur-vandaag",
+        "item_id": "6ae51134d77a8efba55516c2"
+      },
+      {
+        "team_id": "410",
+        "slug": "opstelling-go-ahead-eagles-vandaag",
+        "item_id": "6ae511361cd0ddb1d6794623"
+      }
+    ],
+    "evergreen": true,
+    "og_slug": "opstelling-sc-cambuur-go-ahead-eagles-31-10-2026",
+    "item_id": "6ae51134d77a8efba55516c2",
+    "slug": "opstelling-sc-cambuur-vandaag",
+    "og": "og/opstelling-sc-cambuur-go-ahead-eagles-31-10-2026-3324ad.webp"
+  },
+  "1551863": {
+    "definitief": false,
+    "match": "MVV - VVV Venlo",
+    "date": "2026-10-31",
+    "league": "eerste-divisie",
+    "comp_slug": "keuken-kampioen-divisie",
+    "naam": "Keuken Kampioen Divisie",
+    "comp_id": "65de4bc0a8777b9898d6374e",
+    "stream": null,
+    "vriendschappelijk": false,
+    "clubs": [
+      {
+        "team_id": "412",
+        "slug": "opstelling-mvv-vandaag",
+        "item_id": "6ae5113e93171a7a8ad59a02"
+      },
+      {
+        "team_id": "204",
+        "slug": "opstelling-vvv-venlo-vandaag",
+        "item_id": "6ae51140433faf782fba0b88"
+      }
+    ],
+    "evergreen": true,
+    "og_slug": "opstelling-mvv-vvv-venlo-31-10-2026",
+    "item_id": "6ae5113e93171a7a8ad59a02",
+    "slug": "opstelling-mvv-vandaag",
+    "og": "og/opstelling-mvv-vvv-venlo-31-10-2026-e8eaea.webp"
   }
 }
