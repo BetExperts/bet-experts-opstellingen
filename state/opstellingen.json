@@ -241,7 +241,8 @@
     "og_slug": "opstelling-feyenoord-fortuna-sittard-31-10-2026",
     "item_id": "6add0eb50fcc713db9310976",
     "slug": "opstelling-feyenoord-vandaag",
-    "og": "og/opstelling-feyenoord-fortuna-sittard-31-10-2026-e2bfc0.webp"
+    "og": "og/opstelling-feyenoord-fortuna-sittard-31-10-2026-e2bfc0.webp",
+    "og_done": "og/opstelling-feyenoord-fortuna-sittard-31-10-2026-e2bfc0.webp"
   },
   "1552209": {
     "definitief": false,
@@ -269,7 +270,8 @@
     "og_slug": "opstelling-psv-willem-2-31-10-2026",
     "item_id": "6add0eb1e272194247024d86",
     "slug": "opstelling-psv-vandaag",
-    "og": "og/opstelling-psv-willem-2-31-10-2026-aa1c9e.webp"
+    "og": "og/opstelling-psv-willem-2-31-10-2026-aa1c9e.webp",
+    "og_done": "og/opstelling-psv-willem-2-31-10-2026-aa1c9e.webp"
   },
   "1552208": {
     "definitief": false,
@@ -297,7 +299,8 @@
     "og_slug": "opstelling-heerenveen-nec-nijmegen-31-10-2026",
     "item_id": "6ae51124b35403b13dd10f04",
     "slug": "opstelling-heerenveen-vandaag",
-    "og": "og/opstelling-heerenveen-nec-nijmegen-31-10-2026-f5f585.webp"
+    "og": "og/opstelling-heerenveen-nec-nijmegen-31-10-2026-f5f585.webp",
+    "og_done": "og/opstelling-heerenveen-nec-nijmegen-31-10-2026-f5f585.webp"
   },
   "1552210": {
     "definitief": false,
@@ -325,7 +328,8 @@
     "og_slug": "opstelling-ajax-az-31-10-2026",
     "item_id": "6add0ec55667dffba0da5059",
     "slug": "opstelling-ajax-vandaag",
-    "og": "og/opstelling-ajax-az-31-10-2026-5eba5c.webp"
+    "og": "og/opstelling-ajax-az-31-10-2026-5eba5c.webp",
+    "og_done": "og/opstelling-ajax-az-31-10-2026-5eba5c.webp"
   },
   "1552211": {
     "definitief": false,
@@ -353,7 +357,8 @@
     "og_slug": "opstelling-sc-cambuur-go-ahead-eagles-31-10-2026",
     "item_id": "6ae51134d77a8efba55516c2",
     "slug": "opstelling-sc-cambuur-vandaag",
-    "og": "og/opstelling-sc-cambuur-go-ahead-eagles-31-10-2026-3324ad.webp"
+    "og": "og/opstelling-sc-cambuur-go-ahead-eagles-31-10-2026-3324ad.webp",
+    "og_done": "og/opstelling-sc-cambuur-go-ahead-eagles-31-10-2026-3324ad.webp"
   },
   "1551863": {
     "definitief": false,
@@ -381,6 +386,7 @@
     "og_slug": "opstelling-mvv-vvv-venlo-31-10-2026",
     "item_id": "6ae5113e93171a7a8ad59a02",
     "slug": "opstelling-mvv-vandaag",
-    "og": "og/opstelling-mvv-vvv-venlo-31-10-2026-e8eaea.webp"
+    "og": "og/opstelling-mvv-vvv-venlo-31-10-2026-e8eaea.webp",
+    "og_done": "og/opstelling-mvv-vvv-venlo-31-10-2026-e8eaea.webp"
   }
 }
