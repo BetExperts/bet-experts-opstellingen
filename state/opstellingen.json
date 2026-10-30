@@ -242,7 +242,10 @@
     "item_id": "6add0eb50fcc713db9310976",
     "slug": "opstelling-feyenoord-vandaag",
     "og": "og/opstelling-feyenoord-fortuna-sittard-31-10-2026-e2bfc0.webp",
-    "og_done": "og/opstelling-feyenoord-fortuna-sittard-31-10-2026-e2bfc0.webp"
+    "og_done": "og/opstelling-feyenoord-fortuna-sittard-31-10-2026-e2bfc0.webp",
+    "ververst": "2026-10-30T21:58:26+00:00",
+    "xi_sig": "4-3-3:T. Ernst,J. St. Juste,G. Read,T. Watanabe,M. Marmol,G. Zechiel,O. Targhalline,C. Vanhoutte,L. Valente,N. Ferri,A. Hadj Moussa|5-3-2:M. Branderhorst,R. Guth,S. van Ottele,I. Pinto,N. de Groot,J. Hubner,E. Michut,S. Zand,P. Brittijn,K. Peterson,S. Simons",
+    "xi_extern": true
   },
   "1552209": {
     "definitief": false,
@@ -271,7 +274,10 @@
     "item_id": "6add0eb1e272194247024d86",
     "slug": "opstelling-psv-vandaag",
     "og": "og/opstelling-psv-willem-2-31-10-2026-aa1c9e.webp",
-    "og_done": "og/opstelling-psv-willem-2-31-10-2026-aa1c9e.webp"
+    "og_done": "og/opstelling-psv-willem-2-31-10-2026-aa1c9e.webp",
+    "ververst": "2026-10-30T21:58:26+00:00",
+    "xi_sig": "4-2-3-1:M. Kovar,L. Geertruida,A. Obispo,S. Dest,F. Kostic,Mauro Junior,K. Sano,I. Perisic,E. Bajraktarevic,G. Til,R. van Bommel|4-4-2:T. Didillon Hodl,F. Stam,H. ter Avest,M. Dekker,N. Tjoe a On,T. Vilhena,C. Twigt,U. van Aalst,V. van Crooij,J. Slory,D. Haen",
+    "xi_extern": true
   },
   "1552208": {
     "definitief": false,
@@ -300,7 +306,10 @@
     "item_id": "6ae51124b35403b13dd10f04",
     "slug": "opstelling-heerenveen-vandaag",
     "og": "og/opstelling-heerenveen-nec-nijmegen-31-10-2026-f5f585.webp",
-    "og_done": "og/opstelling-heerenveen-nec-nijmegen-31-10-2026-f5f585.webp"
+    "og_done": "og/opstelling-heerenveen-nec-nijmegen-31-10-2026-f5f585.webp",
+    "ververst": "2026-10-30T21:58:26+00:00",
+    "xi_sig": "4-2-3-1:B. Klaverboer,S. Kersten,M. Willemsen,V. Zagaritis,O. Braude,N. Courtens,M. Linday,M. Rivera,R. Meerveld,J. Trenskow,D. Vente|3-4-3:G. Crettaz,A. Kaplan,D. Fonville,P. Schuurs,K. Kers,J. Monteiro,C. Bischoff,D. Nejasmic,B. Linssen,T. Chery,N. Lebreton",
+    "xi_extern": true
   },
   "1552210": {
     "definitief": false,
@@ -329,7 +338,10 @@
     "item_id": "6add0ec55667dffba0da5059",
     "slug": "opstelling-ajax-vandaag",
     "og": "og/opstelling-ajax-az-31-10-2026-5eba5c.webp",
-    "og_done": "og/opstelling-ajax-az-31-10-2026-5eba5c.webp"
+    "og_done": "og/opstelling-ajax-az-31-10-2026-5eba5c.webp",
+    "ververst": "2026-10-30T21:58:26+00:00",
+    "xi_sig": "4-3-3:M. ter Stegen,L. Rosa,T. Kehrer,Y. Baas,D. Janse,S. Amrabat,J. Brandt,J. Mokio,V. Tsygankov,A. Ouazane,T. Arokodare|4-2-3-1:J. De Busser,E. Dijkstra,W. Hoedt,L. Schouten,M. Chávez,P. Koopmeiners,D. Kwakman,Weslley Patati,R. Daal,V. Byskov Andreasen,M. Meerdink",
+    "xi_extern": true
   },
   "1552211": {
     "definitief": false,
@@ -358,7 +370,10 @@
     "item_id": "6ae51134d77a8efba55516c2",
     "slug": "opstelling-sc-cambuur-vandaag",
     "og": "og/opstelling-sc-cambuur-go-ahead-eagles-31-10-2026-3324ad.webp",
-    "og_done": "og/opstelling-sc-cambuur-go-ahead-eagles-31-10-2026-3324ad.webp"
+    "og_done": "og/opstelling-sc-cambuur-go-ahead-eagles-31-10-2026-3324ad.webp",
+    "ververst": "2026-10-30T21:58:26+00:00",
+    "xi_sig": "4-1-4-1:T. Jansen,N. Binder,B. van Duijl,R. Mulders,M. Costarelli,M. Maertens,N. Souren,I. Hamache,J. Ceka,R. El Arguioui,I. Baouf|4-2-3-1:O. Sivertsen,V. Edvardsen,M. Suray,M. Meulensteen,J. Dirksen,K. Haug,A. Sampsted,J. Kramer,D. James,E. Linthorst,S. Tengstedt",
+    "xi_extern": true
   },
   "1551863": {
     "definitief": false,
@@ -387,6 +402,9 @@
     "item_id": "6ae5113e93171a7a8ad59a02",
     "slug": "opstelling-mvv-vandaag",
     "og": "og/opstelling-mvv-vvv-venlo-31-10-2026-e8eaea.webp",
-    "og_done": "og/opstelling-mvv-vvv-venlo-31-10-2026-e8eaea.webp"
+    "og_done": "og/opstelling-mvv-vvv-venlo-31-10-2026-e8eaea.webp",
+    "ververst": "2026-10-30T21:58:26+00:00",
+    "xi_sig": "4-2-3-1:H. Wentges,S. van der Wegen,F. Dicke,S. Bouland,Y. Liesdek,D. Asante,E. Sierra,O. Dumont,N. Matoug,L. Daneels,T. Verheijen|4-2-3-1:T. Doornbusch,L. Gorlich,G. Blancquart,T. Joosten,L. de Blok,A. Verstraeten,I. M'hand,A. Rais,M. Odriss,N. Ait Mouhou,L. G. Schmidt",
+    "xi_extern": false
   }
 }
