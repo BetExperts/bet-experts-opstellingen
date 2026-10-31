@@ -318,7 +318,7 @@
     "bron": "api"
   },
   "1552210": {
-    "definitief": false,
+    "definitief": true,
     "match": "Ajax - AZ Alkmaar",
     "date": "2026-10-31",
     "league": "eredivisie",
@@ -343,15 +343,16 @@
     "og_slug": "opstelling-ajax-az-31-10-2026",
     "item_id": "6add0ec55667dffba0da5059",
     "slug": "opstelling-ajax-vandaag",
-    "og": "og/opstelling-ajax-az-31-10-2026-f1f0fc.webp",
+    "og": "og/opstelling-ajax-az-31-10-2026-c11695.webp",
     "og_done": "og/opstelling-ajax-az-31-10-2026-f1f0fc.webp",
     "ververst": "2026-10-31T17:47:18+00:00",
     "xi_sig": "4-4-2:M. ter Stegen,L. Rosa,Y. Baas,O. Wijndal,A. Bouwman,S. Amrabat,J. Brandt,J. Mokio,D. Klaassen,A. Ouazane,T. Arokodare|4-2-3-1:J. De Busser,E. Dijkstra,W. Hoedt,L. Schouten,M. Chávez,P. Koopmeiners,Weslley Patati,R. Daal,V. Byskov Andreasen,J. Clasie,M. Meerdink",
     "xi_extern": true,
-    "titel_vandaag": true
+    "titel_vandaag": true,
+    "bron": "api"
   },
   "1552211": {
-    "definitief": false,
+    "definitief": true,
     "match": "Cambuur - GO Ahead Eagles",
     "date": "2026-10-31",
     "league": "eredivisie",
@@ -376,12 +377,13 @@
     "og_slug": "opstelling-sc-cambuur-go-ahead-eagles-31-10-2026",
     "item_id": "6ae51134d77a8efba55516c2",
     "slug": "opstelling-sc-cambuur-vandaag",
-    "og": "og/opstelling-sc-cambuur-go-ahead-eagles-31-10-2026-223a14.webp",
+    "og": "og/opstelling-sc-cambuur-go-ahead-eagles-31-10-2026-65b692.webp",
     "og_done": "og/opstelling-sc-cambuur-go-ahead-eagles-31-10-2026-223a14.webp",
     "ververst": "2026-10-31T17:47:18+00:00",
     "xi_sig": "4-1-4-1:T. Jansen,N. Binder,B. van Duijl,R. Mulders,M. Costarelli,M. Maertens,N. Souren,I. Hamache,J. Ceka,R. El Arguioui,I. Baouf|4-2-3-1:O. Sivertsen,V. Edvardsen,M. Suray,M. Meulensteen,J. Dirksen,K. Haug,A. Sampsted,J. Kramer,D. James,E. Linthorst,S. Tengstedt",
     "xi_extern": true,
-    "titel_vandaag": true
+    "titel_vandaag": true,
+    "bron": "api"
   },
   "1551863": {
     "definitief": true,
