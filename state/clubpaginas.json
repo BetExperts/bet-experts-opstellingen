@@ -10,8 +10,8 @@
     "item_id": "6add0ea4c52f5ea2d2a76864",
     "slug": "opstelling-excelsior-vandaag",
     "naam": "Excelsior",
-    "fid": "1552202",
-    "datum": "2026-10-25"
+    "fid": "1552213",
+    "datum": "2026-11-01"
   },
   "197": {
     "item_id": "6add0eb1e272194247024d86",
@@ -38,15 +38,15 @@
     "item_id": "6add0ebcbf589f9263aad5c5",
     "slug": "opstelling-fc-groningen-vandaag",
     "naam": "Groningen",
-    "fid": "1552203",
-    "datum": "2026-10-25"
+    "fid": "1552215",
+    "datum": "2026-11-01"
   },
   "426": {
     "item_id": "6add0ec3dffed64ab0c06b14",
     "slug": "opstelling-sparta-rotterdam-vandaag",
     "naam": "Sparta Rotterdam",
-    "fid": "1552205",
-    "datum": "2026-10-25"
+    "fid": "1552215",
+    "datum": "2026-11-01"
   },
   "194": {
     "item_id": "6add0ec55667dffba0da5059",
@@ -66,8 +66,8 @@
     "item_id": "6add0ece841fcad07c68a54e",
     "slug": "opstelling-fc-twente-vandaag",
     "naam": "Twente",
-    "fid": "1552206",
-    "datum": "2026-10-25"
+    "fid": "1552213",
+    "datum": "2026-11-01"
   },
   "414": {
     "item_id": "6ae3c5405f631fd72de9d150",
@@ -166,5 +166,47 @@
     "naam": "VVV Venlo",
     "fid": "1551863",
     "datum": "2026-10-31"
+  },
+  "193": {
+    "item_id": "6ae654a6d24ad0c001341986",
+    "slug": "opstelling-pec-zwolle-vandaag",
+    "naam": "PEC Zwolle",
+    "fid": "1552212",
+    "datum": "2026-11-01"
+  },
+  "198": {
+    "item_id": "6ae654a7e13644c1aaf1773a",
+    "slug": "opstelling-ado-den-haag-vandaag",
+    "naam": "ADO Den Haag",
+    "fid": "1552212",
+    "datum": "2026-11-01"
+  },
+  "427": {
+    "item_id": "6ae654b7a7c7319279df560c",
+    "slug": "opstelling-telstar-vandaag",
+    "naam": "Telstar",
+    "fid": "1552214",
+    "datum": "2026-11-01"
+  },
+  "207": {
+    "item_id": "6ae654b97e6c6546015f1be1",
+    "slug": "opstelling-fc-utrecht-vandaag",
+    "naam": "Utrecht",
+    "fid": "1552214",
+    "datum": "2026-11-01"
+  },
+  "208": {
+    "item_id": "6ae654d38981eb605eecf47f",
+    "slug": "opstelling-fc-emmen-vandaag",
+    "naam": "Emmen",
+    "fid": "1551857",
+    "datum": "2026-11-01"
+  },
+  "421": {
+    "item_id": "6ae654d4bc0ed2f9667a6e49",
+    "slug": "opstelling-fc-den-bosch-vandaag",
+    "naam": "Den Bosch",
+    "fid": "1551857",
+    "datum": "2026-11-01"
   }
 }

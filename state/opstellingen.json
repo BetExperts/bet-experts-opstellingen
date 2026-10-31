@@ -418,5 +418,145 @@
     "xi_extern": false,
     "titel_vandaag": true,
     "bron": "api"
+  },
+  "1552212": {
+    "definitief": false,
+    "match": "PEC Zwolle - ADO Den Haag",
+    "date": "2026-11-01",
+    "league": "eredivisie",
+    "comp_slug": "eredivisie",
+    "naam": "Eredivisie",
+    "comp_id": "65de2f987de877fdf6583d10",
+    "stream": null,
+    "vriendschappelijk": false,
+    "clubs": [
+      {
+        "team_id": "193",
+        "slug": "opstelling-pec-zwolle-vandaag",
+        "item_id": "6ae654a6d24ad0c001341986"
+      },
+      {
+        "team_id": "198",
+        "slug": "opstelling-ado-den-haag-vandaag",
+        "item_id": "6ae654a7e13644c1aaf1773a"
+      }
+    ],
+    "evergreen": true,
+    "og_slug": "opstelling-pec-zwolle-ado-den-haag-01-11-2026",
+    "item_id": "6ae654a6d24ad0c001341986",
+    "slug": "opstelling-pec-zwolle-vandaag",
+    "og": "og/opstelling-pec-zwolle-ado-den-haag-01-11-2026-3b2027.webp"
+  },
+  "1552213": {
+    "definitief": false,
+    "match": "Excelsior - Twente",
+    "date": "2026-11-01",
+    "league": "eredivisie",
+    "comp_slug": "eredivisie",
+    "naam": "Eredivisie",
+    "comp_id": "65de2f987de877fdf6583d10",
+    "stream": null,
+    "vriendschappelijk": false,
+    "clubs": [
+      {
+        "team_id": "196",
+        "slug": "opstelling-excelsior-vandaag",
+        "item_id": "6add0ea4c52f5ea2d2a76864"
+      },
+      {
+        "team_id": "415",
+        "slug": "opstelling-fc-twente-vandaag",
+        "item_id": "6add0ece841fcad07c68a54e"
+      }
+    ],
+    "evergreen": true,
+    "og_slug": "opstelling-excelsior-fc-twente-01-11-2026",
+    "item_id": "6add0ea4c52f5ea2d2a76864",
+    "slug": "opstelling-excelsior-vandaag",
+    "og": "og/opstelling-excelsior-fc-twente-01-11-2026-70f2fd.webp"
+  },
+  "1552214": {
+    "definitief": false,
+    "match": "Telstar - Utrecht",
+    "date": "2026-11-01",
+    "league": "eredivisie",
+    "comp_slug": "eredivisie",
+    "naam": "Eredivisie",
+    "comp_id": "65de2f987de877fdf6583d10",
+    "stream": null,
+    "vriendschappelijk": false,
+    "clubs": [
+      {
+        "team_id": "427",
+        "slug": "opstelling-telstar-vandaag",
+        "item_id": "6ae654b7a7c7319279df560c"
+      },
+      {
+        "team_id": "207",
+        "slug": "opstelling-fc-utrecht-vandaag",
+        "item_id": "6ae654b97e6c6546015f1be1"
+      }
+    ],
+    "evergreen": true,
+    "og_slug": "opstelling-telstar-fc-utrecht-01-11-2026",
+    "item_id": "6ae654b7a7c7319279df560c",
+    "slug": "opstelling-telstar-vandaag",
+    "og": "og/opstelling-telstar-fc-utrecht-01-11-2026-6a6cd4.webp"
+  },
+  "1552215": {
+    "definitief": false,
+    "match": "Groningen - Sparta Rotterdam",
+    "date": "2026-11-01",
+    "league": "eredivisie",
+    "comp_slug": "eredivisie",
+    "naam": "Eredivisie",
+    "comp_id": "65de2f987de877fdf6583d10",
+    "stream": null,
+    "vriendschappelijk": false,
+    "clubs": [
+      {
+        "team_id": "202",
+        "slug": "opstelling-fc-groningen-vandaag",
+        "item_id": "6add0ebcbf589f9263aad5c5"
+      },
+      {
+        "team_id": "426",
+        "slug": "opstelling-sparta-rotterdam-vandaag",
+        "item_id": "6add0ec3dffed64ab0c06b14"
+      }
+    ],
+    "evergreen": true,
+    "og_slug": "opstelling-fc-groningen-sparta-rotterdam-01-11-2026",
+    "item_id": "6add0ebcbf589f9263aad5c5",
+    "slug": "opstelling-fc-groningen-vandaag",
+    "og": "og/opstelling-fc-groningen-sparta-rotterdam-01-11-2026-73f91e.webp"
+  },
+  "1551857": {
+    "definitief": false,
+    "match": "Emmen - Den Bosch",
+    "date": "2026-11-01",
+    "league": "eerste-divisie",
+    "comp_slug": "keuken-kampioen-divisie",
+    "naam": "Keuken Kampioen Divisie",
+    "comp_id": "65de4bc0a8777b9898d6374e",
+    "stream": null,
+    "vriendschappelijk": false,
+    "clubs": [
+      {
+        "team_id": "208",
+        "slug": "opstelling-fc-emmen-vandaag",
+        "item_id": "6ae654d38981eb605eecf47f"
+      },
+      {
+        "team_id": "421",
+        "slug": "opstelling-fc-den-bosch-vandaag",
+        "item_id": "6ae654d4bc0ed2f9667a6e49"
+      }
+    ],
+    "evergreen": true,
+    "og_slug": "opstelling-fc-emmen-fc-den-bosch-01-11-2026",
+    "item_id": "6ae654d38981eb605eecf47f",
+    "slug": "opstelling-fc-emmen-vandaag",
+    "og": "og/opstelling-fc-emmen-fc-den-bosch-01-11-2026-acbebf.webp"
   }
 }
