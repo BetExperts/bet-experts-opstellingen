@@ -420,7 +420,7 @@
     "bron": "api"
   },
   "1552212": {
-    "definitief": false,
+    "definitief": true,
     "match": "PEC Zwolle - ADO Den Haag",
     "date": "2026-11-01",
     "league": "eredivisie",
@@ -445,12 +445,13 @@
     "og_slug": "opstelling-pec-zwolle-ado-den-haag-01-11-2026",
     "item_id": "6ae654a6d24ad0c001341986",
     "slug": "opstelling-pec-zwolle-vandaag",
-    "og": "og/opstelling-pec-zwolle-ado-den-haag-01-11-2026-3b2027.webp",
+    "og": "og/opstelling-pec-zwolle-ado-den-haag-01-11-2026-190da4.webp",
     "og_done": "og/opstelling-pec-zwolle-ado-den-haag-01-11-2026-3b2027.webp",
     "ververst": "2026-11-01T08:38:41+00:00",
     "xi_sig": "4-2-3-1:J. Schendelaar,O. Aertssen,N. Viergever,S. Graves,D. van der Haar,T. Sommer,R. Thomas,D. Mbayo,T. Oosting,G. van der Wal,S. van Hooijdonk|4-4-2:M. Sin,Y. Eduardo,M. Waem,J. Jensen-Abbew,J. Bal,S. Sylla,E. Rottier,J. Hawkins,J. Kilo,K. Nikiema,P. Mulder",
     "xi_extern": true,
-    "titel_vandaag": true
+    "titel_vandaag": true,
+    "bron": "api"
   },
   "1552213": {
     "definitief": false,
@@ -480,7 +481,7 @@
     "slug": "opstelling-excelsior-vandaag",
     "og": "og/opstelling-excelsior-fc-twente-01-11-2026-70f2fd.webp",
     "og_done": "og/opstelling-excelsior-fc-twente-01-11-2026-70f2fd.webp",
-    "ververst": "2026-11-01T08:38:41+00:00",
+    "ververst": "2026-11-01T11:09:21+00:00",
     "xi_sig": "2-5-3:S. van Gassel,C. Widell,J. Plug,R. Meissen,D. van Vianen,I. Yegoian,N. Naujoks,L. Hartjes,A. Sliti,K. Bos,N. Groen|4-4-2:J. Drommel,R. Propper,R. Nijstad,B. van Rooij,A. Adelgaard,Y. Taha,D. Rots,R. Zerrouki,S. Ørjasæter,M. Pjaca,W. Weghorst",
     "xi_extern": true,
     "titel_vandaag": true
@@ -513,7 +514,7 @@
     "slug": "opstelling-telstar-vandaag",
     "og": "og/opstelling-telstar-fc-utrecht-01-11-2026-6a6cd4.webp",
     "og_done": "og/opstelling-telstar-fc-utrecht-01-11-2026-6a6cd4.webp",
-    "ververst": "2026-11-01T08:38:41+00:00",
+    "ververst": "2026-11-01T11:09:21+00:00",
     "xi_sig": "4-2-3-1:R. Koeman Jr,A. Soualhia,S. Valk,G. Caschili,M. Peersman,N. Rossen,N. Shenkman,T. Owusu,P. Brouwer,A. Martha,N. Thorisson|5-5:S. Padt,S. Horemans,M. Didden,N. Panagiotou,N. Vesterlund,A. Zagre,J. van Overeem,Y. Cathline,A. Alarcon,D. de Wit,O. Agougil",
     "xi_extern": true,
     "titel_vandaag": true
@@ -546,7 +547,7 @@
     "slug": "opstelling-fc-groningen-vandaag",
     "og": "og/opstelling-fc-groningen-sparta-rotterdam-01-11-2026-73f91e.webp",
     "og_done": "og/opstelling-fc-groningen-sparta-rotterdam-01-11-2026-73f91e.webp",
-    "ververst": "2026-11-01T08:38:41+00:00",
+    "ververst": "2026-11-01T11:09:21+00:00",
     "xi_sig": "5-4-1:E. Vaessen,H. Hateboer,T. Blokzijl,M. Csinger,M. Rente,J. Schreuders,P. Clement,T. van Bergen,T. de Jonge,D. van der Werff,B. Willumsson|5-4-1:M. Brouwer,L. Martes,M. Young,B. Martins Indi,B. Kuipers,N. Verschuren,J. Toornstra,C. Hatenboer,I. Babadi,R. van Cruijsen,M. Zonneveld",
     "xi_extern": true,
     "titel_vandaag": true
@@ -579,7 +580,7 @@
     "slug": "opstelling-fc-emmen-vandaag",
     "og": "og/opstelling-fc-emmen-fc-den-bosch-01-11-2026-45d3ee.webp",
     "og_done": "og/opstelling-fc-emmen-fc-den-bosch-01-11-2026-45d3ee.webp",
-    "ververst": "2026-11-01T08:38:41+00:00",
+    "ververst": "2026-11-01T11:09:21+00:00",
     "xi_sig": "4-2-3-1:K. Roos,L. Everink,R. Kongolo,Y. Dede-Lhomme,B. Van Hove,A. Hojabrpour,T. Rhein,S. Veldhuis,D. Lambers,M. Breij,J. Cooper-Love|:P. van de Merbel,J. Fortes,M. Laros,S. Maas,S. Barglan,B. Wang,H. Eikelboom,E. Semedo,D. De Corte,L. Hoffman,J. de Vries",
     "xi_extern": false,
     "titel_vandaag": true
