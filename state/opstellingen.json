@@ -615,7 +615,8 @@
     "og_slug": "opstelling-heracles-almelo-top-oss-02-11-2026",
     "item_id": "6ae7afd2d1399902e056a2bb",
     "slug": "opstelling-heracles-vandaag",
-    "og": "og/opstelling-heracles-almelo-top-oss-02-11-2026-12d518.webp"
+    "og": "og/opstelling-heracles-almelo-top-oss-02-11-2026-12d518.webp",
+    "og_done": "og/opstelling-heracles-almelo-top-oss-02-11-2026-12d518.webp"
   },
   "1551865": {
     "definitief": false,
@@ -643,7 +644,8 @@
     "og_slug": "opstelling-jong-psv-nac-breda-02-11-2026",
     "item_id": "6ae7afdf2f44f67ca20cd6bf",
     "slug": "opstelling-jong-psv-vandaag",
-    "og": "og/opstelling-jong-psv-nac-breda-02-11-2026-c8b391.webp"
+    "og": "og/opstelling-jong-psv-nac-breda-02-11-2026-c8b391.webp",
+    "og_done": "og/opstelling-jong-psv-nac-breda-02-11-2026-c8b391.webp"
   },
   "1551864": {
     "definitief": false,
@@ -671,7 +673,8 @@
     "og_slug": "opstelling-jong-ajax-vitesse-02-11-2026",
     "item_id": "6ae7aff10180e0ebb92bab3d",
     "slug": "opstelling-jong-ajax-vandaag",
-    "og": "og/opstelling-jong-ajax-vitesse-02-11-2026-64de52.webp"
+    "og": "og/opstelling-jong-ajax-vitesse-02-11-2026-64de52.webp",
+    "og_done": "og/opstelling-jong-ajax-vitesse-02-11-2026-64de52.webp"
   },
   "1551866": {
     "definitief": false,
@@ -699,6 +702,7 @@
     "og_slug": "opstelling-jong-fc-utrecht-fc-dordrecht-02-11-2026",
     "item_id": "6ae7afff43efd89fed6e3771",
     "slug": "opstelling-jong-fc-utrecht-vandaag",
-    "og": "og/opstelling-jong-fc-utrecht-fc-dordrecht-02-11-2026-59ba94.webp"
+    "og": "og/opstelling-jong-fc-utrecht-fc-dordrecht-02-11-2026-59ba94.webp",
+    "og_done": "og/opstelling-jong-fc-utrecht-fc-dordrecht-02-11-2026-59ba94.webp"
   }
 }
