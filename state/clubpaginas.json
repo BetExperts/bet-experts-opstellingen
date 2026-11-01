@@ -208,5 +208,61 @@
     "naam": "Den Bosch",
     "fid": "1551857",
     "datum": "2026-11-01"
+  },
+  "206": {
+    "item_id": "6ae7afd2d1399902e056a2bb",
+    "slug": "opstelling-heracles-vandaag",
+    "naam": "Heracles",
+    "fid": "1551860",
+    "datum": "2026-11-02"
+  },
+  "423": {
+    "item_id": "6ae7afd488c1622a06ad8ef1",
+    "slug": "opstelling-top-oss-vandaag",
+    "naam": "FC OSS",
+    "fid": "1551860",
+    "datum": "2026-11-02"
+  },
+  "411": {
+    "item_id": "6ae7afdf2f44f67ca20cd6bf",
+    "slug": "opstelling-jong-psv-vandaag",
+    "naam": "Jong Jong PSV",
+    "fid": "1551865",
+    "datum": "2026-11-02"
+  },
+  "203": {
+    "item_id": "6ae7afe1adc1619af0249d16",
+    "slug": "opstelling-nac-breda-vandaag",
+    "naam": "NAC Breda",
+    "fid": "1551865",
+    "datum": "2026-11-02"
+  },
+  "425": {
+    "item_id": "6ae7aff10180e0ebb92bab3d",
+    "slug": "opstelling-jong-ajax-vandaag",
+    "naam": "Jong Ajax",
+    "fid": "1551864",
+    "datum": "2026-11-02"
+  },
+  "200": {
+    "item_id": "6ae7aff7feb4aaf6384e9a32",
+    "slug": "opstelling-vitesse-vandaag",
+    "naam": "Vitesse",
+    "fid": "1551864",
+    "datum": "2026-11-02"
+  },
+  "428": {
+    "item_id": "6ae7afff43efd89fed6e3771",
+    "slug": "opstelling-jong-fc-utrecht-vandaag",
+    "naam": "Jong Utrecht",
+    "fid": "1551866",
+    "datum": "2026-11-02"
+  },
+  "409": {
+    "item_id": "6ae7b00043efd89fed6e37cd",
+    "slug": "opstelling-fc-dordrecht-vandaag",
+    "naam": "Dordrecht",
+    "fid": "1551866",
+    "datum": "2026-11-02"
   }
 }
