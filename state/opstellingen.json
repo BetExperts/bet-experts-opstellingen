@@ -522,7 +522,7 @@
     "bron": "api"
   },
   "1552215": {
-    "definitief": false,
+    "definitief": true,
     "match": "Groningen - Sparta Rotterdam",
     "date": "2026-11-01",
     "league": "eredivisie",
@@ -547,12 +547,13 @@
     "og_slug": "opstelling-fc-groningen-sparta-rotterdam-01-11-2026",
     "item_id": "6add0ebcbf589f9263aad5c5",
     "slug": "opstelling-fc-groningen-vandaag",
-    "og": "og/opstelling-fc-groningen-sparta-rotterdam-01-11-2026-73f91e.webp",
+    "og": "og/opstelling-fc-groningen-sparta-rotterdam-01-11-2026-7f4ab8.webp",
     "og_done": "og/opstelling-fc-groningen-sparta-rotterdam-01-11-2026-73f91e.webp",
     "ververst": "2026-11-01T13:53:08+00:00",
     "xi_sig": "5-4-1:E. Vaessen,H. Hateboer,T. Blokzijl,M. Csinger,M. Rente,J. Schreuders,P. Clement,T. van Bergen,T. de Jonge,D. van der Werff,B. Willumsson|5-4-1:M. Brouwer,L. Martes,M. Young,B. Martins Indi,B. Kuipers,N. Verschuren,J. Toornstra,C. Hatenboer,I. Babadi,R. van Cruijsen,M. Zonneveld",
     "xi_extern": true,
-    "titel_vandaag": true
+    "titel_vandaag": true,
+    "bron": "api"
   },
   "1551857": {
     "definitief": true,
