@@ -176,7 +176,7 @@
     "bron": "api"
   },
   "1635651": {
-    "definitief": false,
+    "definitief": true,
     "match": "Borussia Dortmund - Real Betis",
     "date": "2026-11-04",
     "league": "champions-league",
@@ -187,15 +187,16 @@
     "vriendschappelijk": false,
     "item_id": "6ae9277c8715d6d60e0e8c81",
     "slug": "opstelling-borussia-dortmund-real-betis-04-11-2026",
-    "og": "og/opstelling-borussia-dortmund-real-betis-04-11-2026-ec48d3.webp",
+    "og": "og/opstelling-borussia-dortmund-real-betis-04-11-2026-f2d1b9.webp",
     "og_done": "og/opstelling-borussia-dortmund-real-betis-04-11-2026-ec48d3.webp",
     "ververst": "2026-11-04T19:16:04+00:00",
     "xi_sig": "3-4-2-1:G. Kobel,Kouakou Joane Gadou,W. Anton,N. Schlotterbeck,M. Beier,J. Veerman,F. Nmecha,D. Svensson,J. Bellingham,C. Chukwuemeka,S. Guirassy|4-2-3-1:Álvaro Vallés,Héctor Bellerín,Marc Bartra,Natan,Fran García,Pablo Fornals,Marc Roca,Rodrigo Riquelme,Isco,A. Ezzalzouli,T. Parrott",
     "xi_extern": false,
-    "titel_vandaag": true
+    "titel_vandaag": true,
+    "bron": "api"
   },
   "1635710": {
-    "definitief": false,
+    "definitief": true,
     "match": "RB Leipzig - Manchester City",
     "date": "2026-11-04",
     "league": "champions-league",
@@ -206,12 +207,13 @@
     "vriendschappelijk": false,
     "item_id": "6ae92781bc7902beadc627fc",
     "slug": "opstelling-rb-leipzig-manchester-city-04-11-2026",
-    "og": "og/opstelling-rb-leipzig-manchester-city-04-11-2026-e22d69.webp",
+    "og": "og/opstelling-rb-leipzig-manchester-city-04-11-2026-bbdbf8.webp",
     "og_done": "og/opstelling-rb-leipzig-manchester-city-04-11-2026-e22d69.webp",
     "ververst": "2026-11-04T19:16:04+00:00",
     "xi_sig": "4-5-1:M. Vandevoordt,B. Henrichs,W. Orbán,C. Lukeba,D. Raum,B. Gruda,R. Reitz,N. El Aynaoui,E. Banzuzi,A. Nusa,Rômulo|4-3-3:G. Donnarumma,Matheus Nunes,A. Khusanov,Rúben Dias,J. Gvardiol,A. Bouaddi,E. Anderson,E. Fernández,I. Ndiaye,E. Haaland,J. Doku",
     "xi_extern": false,
-    "titel_vandaag": true
+    "titel_vandaag": true,
+    "bron": "api"
   },
   "1635707": {
     "definitief": true,
@@ -231,10 +233,10 @@
     "xi_sig": "4-3-3:M. Kovář,L. Geertruida,A. Obispo,F. Kostić,S. Dest,K. Sano,Mauro Júnior,G. Til,I. Perišić,R. van Bommel,S. Mijnans|4-2-3-1:Y. Sommer,B. Mechele,J. Spileers,K. Sabbe,J. Seys,H. Vanaken,F. Potts,C. Forbs,H. Vetlesen,J. Virgili Tenas,N. Tresoldi",
     "xi_extern": true,
     "titel_vandaag": true,
-    "bron": "footymetrics"
+    "bron": "api"
   },
   "1635726": {
-    "definitief": false,
+    "definitief": true,
     "match": "Slavia Praha - Arsenal",
     "date": "2026-11-04",
     "league": "champions-league",
@@ -245,11 +247,12 @@
     "vriendschappelijk": false,
     "item_id": "6ae9278a471b597667645f75",
     "slug": "opstelling-slavia-praha-arsenal-04-11-2026",
-    "og": "og/opstelling-slavia-praha-arsenal-04-11-2026-f21cdb.webp",
+    "og": "og/opstelling-slavia-praha-arsenal-04-11-2026-a52cd4.webp",
     "og_done": "og/opstelling-slavia-praha-arsenal-04-11-2026-f21cdb.webp",
     "ververst": "2026-11-04T19:16:04+00:00",
     "xi_sig": "3-4-2-1:N. Domchak,T. Holeš,D. Zima,A. N'Guessan,T. Vlček,D. Moses,M. Sadílek,O. Kubiak,E. Ayaosi,M. E. Suleiman,W. Nowak|4-2-3-1:David Raya,J. Timber,E. Konsa,Gabriel Magalhães,R. Calafiori,D. Rice,Bruno Guimarães,N. Madueke,M. Ødegaard,C. Tzolis,K. Havertz",
     "xi_extern": false,
-    "titel_vandaag": true
+    "titel_vandaag": true,
+    "bron": "api"
   }
 }
