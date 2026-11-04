@@ -281,7 +281,8 @@
     "og_slug": "opstelling-willem-2-pec-zwolle-06-11-2026",
     "item_id": "6ae5111d52fb1e06e814a2b7",
     "slug": "opstelling-willem-ii-vandaag",
-    "og": "og/opstelling-willem-2-pec-zwolle-06-11-2026-b926fb.webp"
+    "og": "og/opstelling-willem-2-pec-zwolle-06-11-2026-b926fb.webp",
+    "og_done": "og/opstelling-willem-2-pec-zwolle-06-11-2026-b926fb.webp"
   },
   "1551873": {
     "definitief": false,
@@ -309,7 +310,8 @@
     "og_slug": "opstelling-vvv-venlo-jong-psv-06-11-2026",
     "item_id": "6ae51140433faf782fba0b88",
     "slug": "opstelling-vvv-venlo-vandaag",
-    "og": "og/opstelling-vvv-venlo-jong-psv-06-11-2026-b5cf6c.webp"
+    "og": "og/opstelling-vvv-venlo-jong-psv-06-11-2026-b5cf6c.webp",
+    "og_done": "og/opstelling-vvv-venlo-jong-psv-06-11-2026-b5cf6c.webp"
   },
   "1551870": {
     "definitief": false,
@@ -337,7 +339,8 @@
     "og_slug": "opstelling-heracles-almelo-roda-jc-06-11-2026",
     "item_id": "6ae7afd2d1399902e056a2bb",
     "slug": "opstelling-heracles-vandaag",
-    "og": "og/opstelling-heracles-almelo-roda-jc-06-11-2026-5d35bb.webp"
+    "og": "og/opstelling-heracles-almelo-roda-jc-06-11-2026-5d35bb.webp",
+    "og_done": "og/opstelling-heracles-almelo-roda-jc-06-11-2026-5d35bb.webp"
   },
   "1551867": {
     "definitief": false,
@@ -365,7 +368,8 @@
     "og_slug": "opstelling-fc-dordrecht-nac-breda-06-11-2026",
     "item_id": "6ae7b00043efd89fed6e37cd",
     "slug": "opstelling-fc-dordrecht-vandaag",
-    "og": "og/opstelling-fc-dordrecht-nac-breda-06-11-2026-e8b1cd.webp"
+    "og": "og/opstelling-fc-dordrecht-nac-breda-06-11-2026-e8b1cd.webp",
+    "og_done": "og/opstelling-fc-dordrecht-nac-breda-06-11-2026-e8b1cd.webp"
   },
   "1551871": {
     "definitief": false,
@@ -393,7 +397,8 @@
     "og_slug": "opstelling-jong-az-almere-city-06-11-2026",
     "item_id": "6ae3c5410e3f7f15337960f1",
     "slug": "opstelling-jong-az-vandaag",
-    "og": "og/opstelling-jong-az-almere-city-06-11-2026-27ea54.webp"
+    "og": "og/opstelling-jong-az-almere-city-06-11-2026-27ea54.webp",
+    "og_done": "og/opstelling-jong-az-almere-city-06-11-2026-27ea54.webp"
   },
   "1551868": {
     "definitief": false,
@@ -421,7 +426,8 @@
     "og_slug": "opstelling-fc-eindhoven-jong-ajax-06-11-2026",
     "item_id": "6ae3c55e50b0cc2842139227",
     "slug": "opstelling-fc-eindhoven-vandaag",
-    "og": "og/opstelling-fc-eindhoven-jong-ajax-06-11-2026-5c3e40.webp"
+    "og": "og/opstelling-fc-eindhoven-jong-ajax-06-11-2026-5c3e40.webp",
+    "og_done": "og/opstelling-fc-eindhoven-jong-ajax-06-11-2026-5c3e40.webp"
   },
   "1551872": {
     "definitief": false,
@@ -449,7 +455,8 @@
     "og_slug": "opstelling-top-oss-rkc-waalwijk-06-11-2026",
     "item_id": "6ae7afd488c1622a06ad8ef1",
     "slug": "opstelling-top-oss-vandaag",
-    "og": "og/opstelling-top-oss-rkc-waalwijk-06-11-2026-cc094d.webp"
+    "og": "og/opstelling-top-oss-rkc-waalwijk-06-11-2026-cc094d.webp",
+    "og_done": "og/opstelling-top-oss-rkc-waalwijk-06-11-2026-cc094d.webp"
   },
   "1551869": {
     "definitief": false,
@@ -477,6 +484,7 @@
     "og_slug": "opstelling-helmond-sport-volendam-06-11-2026",
     "item_id": "6ae3c55dfc89e700a56af19e",
     "slug": "opstelling-helmond-sport-vandaag",
-    "og": "og/opstelling-helmond-sport-volendam-06-11-2026-4c26a4.webp"
+    "og": "og/opstelling-helmond-sport-volendam-06-11-2026-4c26a4.webp",
+    "og_done": "og/opstelling-helmond-sport-volendam-06-11-2026-4c26a4.webp"
   }
 }
