@@ -73,22 +73,22 @@
     "item_id": "6ae3c5405f631fd72de9d150",
     "slug": "opstelling-roda-jc-vandaag",
     "naam": "Roda",
-    "fid": "1551861",
-    "datum": "2026-10-30"
+    "fid": "1551870",
+    "datum": "2026-11-06"
   },
   "418": {
     "item_id": "6ae3c5410e3f7f15337960f1",
     "slug": "opstelling-jong-az-vandaag",
     "naam": "Jong AZ",
-    "fid": "1551861",
-    "datum": "2026-10-30"
+    "fid": "1551871",
+    "datum": "2026-11-06"
   },
   "416": {
     "item_id": "6ae3c5490a8851e6dd89be21",
     "slug": "opstelling-fc-volendam-vandaag",
     "naam": "FC Volendam",
-    "fid": "1551858",
-    "datum": "2026-10-30"
+    "fid": "1551869",
+    "datum": "2026-11-06"
   },
   "199": {
     "item_id": "6ae3c54a89477054fa318b41",
@@ -101,36 +101,36 @@
     "item_id": "6ae3c55478ea2448aad49984",
     "slug": "opstelling-rkc-waalwijk-vandaag",
     "naam": "Waalwijk",
-    "fid": "1551862",
-    "datum": "2026-10-30"
+    "fid": "1551872",
+    "datum": "2026-11-06"
   },
   "419": {
     "item_id": "6ae3c555b21b349f6908b436",
     "slug": "opstelling-almere-city-vandaag",
     "naam": "Almere City FC",
-    "fid": "1551862",
-    "datum": "2026-10-30"
+    "fid": "1551871",
+    "datum": "2026-11-06"
   },
   "424": {
     "item_id": "6ae3c55dfc89e700a56af19e",
     "slug": "opstelling-helmond-sport-vandaag",
     "naam": "Helmond Sport",
-    "fid": "1551859",
-    "datum": "2026-10-30"
+    "fid": "1551869",
+    "datum": "2026-11-06"
   },
   "422": {
     "item_id": "6ae3c55e50b0cc2842139227",
     "slug": "opstelling-fc-eindhoven-vandaag",
     "naam": "FC Eindhoven",
-    "fid": "1551859",
-    "datum": "2026-10-30"
+    "fid": "1551868",
+    "datum": "2026-11-06"
   },
   "195": {
     "item_id": "6ae5111d52fb1e06e814a2b7",
     "slug": "opstelling-willem-ii-vandaag",
     "naam": "Willem II",
-    "fid": "1552209",
-    "datum": "2026-10-31"
+    "fid": "1552216",
+    "datum": "2026-11-06"
   },
   "210": {
     "item_id": "6ae51124b35403b13dd10f04",
@@ -164,15 +164,15 @@
     "item_id": "6ae51140433faf782fba0b88",
     "slug": "opstelling-vvv-venlo-vandaag",
     "naam": "VVV Venlo",
-    "fid": "1551863",
-    "datum": "2026-10-31"
+    "fid": "1551873",
+    "datum": "2026-11-06"
   },
   "193": {
     "item_id": "6ae654a6d24ad0c001341986",
     "slug": "opstelling-pec-zwolle-vandaag",
     "naam": "PEC Zwolle",
-    "fid": "1552212",
-    "datum": "2026-11-01"
+    "fid": "1552216",
+    "datum": "2026-11-06"
   },
   "198": {
     "item_id": "6ae654a7e13644c1aaf1773a",
@@ -213,36 +213,36 @@
     "item_id": "6ae7afd2d1399902e056a2bb",
     "slug": "opstelling-heracles-vandaag",
     "naam": "Heracles",
-    "fid": "1551860",
-    "datum": "2026-11-02"
+    "fid": "1551870",
+    "datum": "2026-11-06"
   },
   "423": {
     "item_id": "6ae7afd488c1622a06ad8ef1",
     "slug": "opstelling-top-oss-vandaag",
     "naam": "FC OSS",
-    "fid": "1551860",
-    "datum": "2026-11-02"
+    "fid": "1551872",
+    "datum": "2026-11-06"
   },
   "411": {
     "item_id": "6ae7afdf2f44f67ca20cd6bf",
     "slug": "opstelling-jong-psv-vandaag",
     "naam": "Jong Jong PSV",
-    "fid": "1551865",
-    "datum": "2026-11-02"
+    "fid": "1551873",
+    "datum": "2026-11-06"
   },
   "203": {
     "item_id": "6ae7afe1adc1619af0249d16",
     "slug": "opstelling-nac-breda-vandaag",
     "naam": "NAC Breda",
-    "fid": "1551865",
-    "datum": "2026-11-02"
+    "fid": "1551867",
+    "datum": "2026-11-06"
   },
   "425": {
     "item_id": "6ae7aff10180e0ebb92bab3d",
     "slug": "opstelling-jong-ajax-vandaag",
     "naam": "Jong Ajax",
-    "fid": "1551864",
-    "datum": "2026-11-02"
+    "fid": "1551868",
+    "datum": "2026-11-06"
   },
   "200": {
     "item_id": "6ae7aff7feb4aaf6384e9a32",
@@ -262,7 +262,7 @@
     "item_id": "6ae7b00043efd89fed6e37cd",
     "slug": "opstelling-fc-dordrecht-vandaag",
     "naam": "Dordrecht",
-    "fid": "1551866",
-    "datum": "2026-11-02"
+    "fid": "1551867",
+    "datum": "2026-11-06"
   }
 }
