@@ -374,5 +374,117 @@
     "ververst": "2026-11-05T21:57:42+00:00",
     "xi_sig": "4-4-2:M. Bergsen,R. van Bree,B. Koglin,Lovro Golič,T. Poll,D. Huiberts,Xander van der Velde,M. Ludwig,T. Essakkati,Mauro Lenaerts,L. Bajrami|4-2-3-1:R. Steur,D. Payne,Luca Blondeau,A. Plat,P. Ugwu,N. Bukala,D. Huisman,N. Doodeman,R. Niemeijer,Y. el Maftahi,H. Veerman",
     "xi_extern": false
+  },
+  "1552217": {
+    "definitief": false,
+    "match": "Fortuna Sittard - Telstar",
+    "date": "2026-11-07",
+    "league": "eredivisie",
+    "comp_slug": "eredivisie",
+    "naam": "Eredivisie",
+    "comp_id": "65de2f987de877fdf6583d10",
+    "stream": null,
+    "vriendschappelijk": false,
+    "clubs": [
+      {
+        "team_id": "205",
+        "slug": "opstelling-fortuna-sittard-vandaag",
+        "item_id": "6add0ea23338fa52136a9127"
+      },
+      {
+        "team_id": "427",
+        "slug": "opstelling-telstar-vandaag",
+        "item_id": "6ae654b7a7c7319279df560c"
+      }
+    ],
+    "evergreen": true,
+    "og_slug": "opstelling-fortuna-sittard-telstar-07-11-2026",
+    "item_id": "6add0ea23338fa52136a9127",
+    "slug": "opstelling-fortuna-sittard-vandaag",
+    "og": "og/opstelling-fortuna-sittard-telstar-07-11-2026-c0467f.webp"
+  },
+  "1552220": {
+    "definitief": false,
+    "match": "ADO Den Haag - Sparta Rotterdam",
+    "date": "2026-11-07",
+    "league": "eredivisie",
+    "comp_slug": "eredivisie",
+    "naam": "Eredivisie",
+    "comp_id": "65de2f987de877fdf6583d10",
+    "stream": null,
+    "vriendschappelijk": false,
+    "clubs": [
+      {
+        "team_id": "198",
+        "slug": "opstelling-ado-den-haag-vandaag",
+        "item_id": "6ae654a7e13644c1aaf1773a"
+      },
+      {
+        "team_id": "426",
+        "slug": "opstelling-sparta-rotterdam-vandaag",
+        "item_id": "6add0ec3dffed64ab0c06b14"
+      }
+    ],
+    "evergreen": true,
+    "og_slug": "opstelling-ado-den-haag-sparta-rotterdam-07-11-2026",
+    "item_id": "6ae654a7e13644c1aaf1773a",
+    "slug": "opstelling-ado-den-haag-vandaag",
+    "og": "og/opstelling-ado-den-haag-sparta-rotterdam-07-11-2026-72be45.webp"
+  },
+  "1552218": {
+    "definitief": false,
+    "match": "Excelsior - GO Ahead Eagles",
+    "date": "2026-11-07",
+    "league": "eredivisie",
+    "comp_slug": "eredivisie",
+    "naam": "Eredivisie",
+    "comp_id": "65de2f987de877fdf6583d10",
+    "stream": null,
+    "vriendschappelijk": false,
+    "clubs": [
+      {
+        "team_id": "196",
+        "slug": "opstelling-excelsior-vandaag",
+        "item_id": "6add0ea4c52f5ea2d2a76864"
+      },
+      {
+        "team_id": "410",
+        "slug": "opstelling-go-ahead-eagles-vandaag",
+        "item_id": "6ae511361cd0ddb1d6794623"
+      }
+    ],
+    "evergreen": true,
+    "og_slug": "opstelling-excelsior-go-ahead-eagles-07-11-2026",
+    "item_id": "6add0ea4c52f5ea2d2a76864",
+    "slug": "opstelling-excelsior-vandaag",
+    "og": "og/opstelling-excelsior-go-ahead-eagles-07-11-2026-68b3b1.webp"
+  },
+  "1551874": {
+    "definitief": false,
+    "match": "Den Bosch - Jong Utrecht",
+    "date": "2026-11-07",
+    "league": "eerste-divisie",
+    "comp_slug": "keuken-kampioen-divisie",
+    "naam": "Keuken Kampioen Divisie",
+    "comp_id": "65de4bc0a8777b9898d6374e",
+    "stream": null,
+    "vriendschappelijk": false,
+    "clubs": [
+      {
+        "team_id": "421",
+        "slug": "opstelling-fc-den-bosch-vandaag",
+        "item_id": "6ae654d4bc0ed2f9667a6e49"
+      },
+      {
+        "team_id": "428",
+        "slug": "opstelling-jong-fc-utrecht-vandaag",
+        "item_id": "6ae7afff43efd89fed6e3771"
+      }
+    ],
+    "evergreen": true,
+    "og_slug": "opstelling-fc-den-bosch-jong-fc-utrecht-07-11-2026",
+    "item_id": "6ae654d4bc0ed2f9667a6e49",
+    "slug": "opstelling-fc-den-bosch-vandaag",
+    "og": "og/opstelling-fc-den-bosch-jong-fc-utrecht-07-11-2026-d4d685.webp"
   }
 }
