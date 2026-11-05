@@ -401,7 +401,8 @@
     "og_slug": "opstelling-fortuna-sittard-telstar-07-11-2026",
     "item_id": "6add0ea23338fa52136a9127",
     "slug": "opstelling-fortuna-sittard-vandaag",
-    "og": "og/opstelling-fortuna-sittard-telstar-07-11-2026-c0467f.webp"
+    "og": "og/opstelling-fortuna-sittard-telstar-07-11-2026-c0467f.webp",
+    "og_done": "og/opstelling-fortuna-sittard-telstar-07-11-2026-c0467f.webp"
   },
   "1552220": {
     "definitief": false,
@@ -429,7 +430,8 @@
     "og_slug": "opstelling-ado-den-haag-sparta-rotterdam-07-11-2026",
     "item_id": "6ae654a7e13644c1aaf1773a",
     "slug": "opstelling-ado-den-haag-vandaag",
-    "og": "og/opstelling-ado-den-haag-sparta-rotterdam-07-11-2026-72be45.webp"
+    "og": "og/opstelling-ado-den-haag-sparta-rotterdam-07-11-2026-72be45.webp",
+    "og_done": "og/opstelling-ado-den-haag-sparta-rotterdam-07-11-2026-72be45.webp"
   },
   "1552218": {
     "definitief": false,
@@ -457,7 +459,8 @@
     "og_slug": "opstelling-excelsior-go-ahead-eagles-07-11-2026",
     "item_id": "6add0ea4c52f5ea2d2a76864",
     "slug": "opstelling-excelsior-vandaag",
-    "og": "og/opstelling-excelsior-go-ahead-eagles-07-11-2026-68b3b1.webp"
+    "og": "og/opstelling-excelsior-go-ahead-eagles-07-11-2026-68b3b1.webp",
+    "og_done": "og/opstelling-excelsior-go-ahead-eagles-07-11-2026-68b3b1.webp"
   },
   "1551874": {
     "definitief": false,
@@ -485,6 +488,7 @@
     "og_slug": "opstelling-fc-den-bosch-jong-fc-utrecht-07-11-2026",
     "item_id": "6ae654d4bc0ed2f9667a6e49",
     "slug": "opstelling-fc-den-bosch-vandaag",
-    "og": "og/opstelling-fc-den-bosch-jong-fc-utrecht-07-11-2026-d4d685.webp"
+    "og": "og/opstelling-fc-den-bosch-jong-fc-utrecht-07-11-2026-d4d685.webp",
+    "og_done": "og/opstelling-fc-den-bosch-jong-fc-utrecht-07-11-2026-d4d685.webp"
   }
 }
