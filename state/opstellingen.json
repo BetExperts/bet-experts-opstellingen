@@ -253,10 +253,10 @@
     "xi_sig": "4-2-3-1:T. Coremans,J. van Aken,J. Pinas,S. Henderikx,L. Woudenberg,Lucas Gardenier,L. Riccio,Robin van Asten,M. Vetkal,A. Ouarghi,J. de Bie|4-2-3-1:M. Verrips,B. Lucassen,L. Greiml,R. Hillen,J. Van den Bergh,M. Balard,K. Sowah,J. Van Hecke,M. Nassoh,C. Brym,M. Soumano",
     "xi_extern": false,
     "titel_vandaag": true,
-    "bron": "footymetrics"
+    "bron": "api"
   },
   "1551871": {
-    "definitief": false,
+    "definitief": true,
     "match": "Jong AZ - Almere City FC",
     "date": "2026-11-06",
     "league": "eerste-divisie",
@@ -281,12 +281,13 @@
     "og_slug": "opstelling-jong-az-almere-city-06-11-2026",
     "item_id": "6ae3c5410e3f7f15337960f1",
     "slug": "opstelling-jong-az-vandaag",
-    "og": "og/opstelling-jong-az-almere-city-06-11-2026-275ba1.webp",
+    "og": "og/opstelling-jong-az-almere-city-06-11-2026-0ed02c.webp",
     "og_done": "og/opstelling-jong-az-almere-city-06-11-2026-275ba1.webp",
     "ververst": "2026-11-06T18:42:45+00:00",
     "xi_sig": "4-2-3-1:R. Owusu-Oduro,J. Zwart,R. Ichihara,F. Elkjær,J. Esajas,Julian Sijbrands,R. Robbemond,J. Hartog,H. de Wit,W. Bouziane,Jerolldino Bergraaf|4-2-3-1:Wessel Speel,M. Wasinski,T. Bijleveld,D. van Bruggen,E. Cornelisse,M. Hoedemakers,J. Jacobs,E. Poku,H. El Dahri,J. Ritmeester van de Kamp,F. Druijf",
     "xi_extern": true,
-    "titel_vandaag": true
+    "titel_vandaag": true,
+    "bron": "api"
   },
   "1551868": {
     "definitief": true,
@@ -323,7 +324,7 @@
     "bron": "api"
   },
   "1551872": {
-    "definitief": false,
+    "definitief": true,
     "match": "FC OSS - Waalwijk",
     "date": "2026-11-06",
     "league": "eerste-divisie",
@@ -348,12 +349,13 @@
     "og_slug": "opstelling-top-oss-rkc-waalwijk-06-11-2026",
     "item_id": "6ae7afd488c1622a06ad8ef1",
     "slug": "opstelling-top-oss-vandaag",
-    "og": "og/opstelling-top-oss-rkc-waalwijk-06-11-2026-6c159d.webp",
+    "og": "og/opstelling-top-oss-rkc-waalwijk-06-11-2026-faf4e6.webp",
     "og_done": "og/opstelling-top-oss-rkc-waalwijk-06-11-2026-6c159d.webp",
     "ververst": "2026-11-06T18:42:45+00:00",
     "xi_sig": "4-3-3:M. Havekotte,I. Pata,L. Miguel,D. Vianello,Julian Kuijpers,R. van der Venne,M. Esajas,L. Mol,K. Lubrano,F. Nsingi,M. Hinoke|4-2-3-1:N. Schiks,F. Al Mazyani,L. van Gelderen,J. de Wijs,Juan Carlos Familia-Castillo,T. van de Loo,J. Nap,V. Misidjan,A. Dkidak,Yorem van der Veen,F. Stokkers",
     "xi_extern": false,
-    "titel_vandaag": true
+    "titel_vandaag": true,
+    "bron": "api"
   },
   "1551869": {
     "definitief": true,
@@ -387,7 +389,7 @@
     "xi_sig": "4-4-2:M. Bergsen,R. van Bree,B. Koglin,Lovro Golič,T. Poll,D. Huiberts,Xander van der Velde,M. Ludwig,T. Essakkati,Mauro Lenaerts,L. Bajrami|4-2-3-1:R. Steur,D. Payne,Luca Blondeau,A. Plat,P. Ugwu,N. Bukala,D. Huisman,N. Doodeman,R. Niemeijer,Y. el Maftahi,H. Veerman",
     "xi_extern": false,
     "titel_vandaag": true,
-    "bron": "footymetrics"
+    "bron": "api"
   },
   "1552217": {
     "definitief": false,
