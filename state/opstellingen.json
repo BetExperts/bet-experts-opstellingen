@@ -120,7 +120,7 @@
     "bron": "api"
   },
   "1552216": {
-    "definitief": false,
+    "definitief": true,
     "match": "Willem II - PEC Zwolle",
     "date": "2026-11-06",
     "league": "eredivisie",
@@ -145,15 +145,16 @@
     "og_slug": "opstelling-willem-2-pec-zwolle-06-11-2026",
     "item_id": "6ae5111d52fb1e06e814a2b7",
     "slug": "opstelling-willem-ii-vandaag",
-    "og": "og/opstelling-willem-2-pec-zwolle-06-11-2026-debca1.webp",
+    "og": "og/opstelling-willem-2-pec-zwolle-06-11-2026-83ed98.webp",
     "og_done": "og/opstelling-willem-2-pec-zwolle-06-11-2026-debca1.webp",
     "ververst": "2026-11-06T17:03:29+00:00",
     "xi_sig": "4-4-1-1:M. Delanghe,M. Lemmens,M. Dekker,N. Tjoe-A-On,F. Stam,V. van Crooij,H. ter Avest,C. Twigt,Anass Zarrouk,Uriel van Aalst,D. Haen|4-3-3:J. Schendelaar,O. Aertssen,N. Viergever,S. Graves,D. van der Haar,T. Sommer,R. Thomas,Gilles van der Wal,Y. Namli,D. Mbayo,S. van Hooijdonk",
     "xi_extern": true,
-    "titel_vandaag": true
+    "titel_vandaag": true,
+    "bron": "api"
   },
   "1551873": {
-    "definitief": false,
+    "definitief": true,
     "match": "VVV Venlo - Jong Jong PSV",
     "date": "2026-11-06",
     "league": "eerste-divisie",
@@ -178,15 +179,16 @@
     "og_slug": "opstelling-vvv-venlo-jong-psv-06-11-2026",
     "item_id": "6ae51140433faf782fba0b88",
     "slug": "opstelling-vvv-venlo-vandaag",
-    "og": "og/opstelling-vvv-venlo-jong-psv-06-11-2026-aa0fb9.webp",
+    "og": "og/opstelling-vvv-venlo-jong-psv-06-11-2026-297e56.webp",
     "og_done": "og/opstelling-vvv-venlo-jong-psv-06-11-2026-aa0fb9.webp",
     "ververst": "2026-11-06T17:03:29+00:00",
     "xi_sig": "4-2-3-1:Y. Schoonderwaldt,Raf Vullers,É. Clancy,G. Blancquart,Lars de Blok,A. Verstraeten,Tristan Schenkhuizen,Thomas Janssen,Ismail Oulad M'Hand,N. Ait Mouhou,L. Schmidt|4-2-3-1:T. Smolenaars,M. Bresser,F. Merién,M. Monamay,R. Manuhutu,S. Cornecion,N. Fernandez,F. Kluit,A. Bouhamdi,A. Santos,M. Hansen",
     "xi_extern": false,
-    "titel_vandaag": true
+    "titel_vandaag": true,
+    "bron": "api"
   },
   "1551870": {
-    "definitief": false,
+    "definitief": true,
     "match": "Heracles - Roda",
     "date": "2026-11-06",
     "league": "eerste-divisie",
@@ -211,15 +213,16 @@
     "og_slug": "opstelling-heracles-almelo-roda-jc-06-11-2026",
     "item_id": "6ae7afd2d1399902e056a2bb",
     "slug": "opstelling-heracles-vandaag",
-    "og": "og/opstelling-heracles-almelo-roda-jc-06-11-2026-1b66ab.webp",
+    "og": "og/opstelling-heracles-almelo-roda-jc-06-11-2026-7c1d71.webp",
     "og_done": "og/opstelling-heracles-almelo-roda-jc-06-11-2026-1b66ab.webp",
     "ververst": "2026-11-06T17:03:29+00:00",
     "xi_sig": "4-2-3-1:F. de Keijzer,David Vicente,D. Mirani,M. Wrusch,Manny,D. van der Kust,S. Scheperman,C. Abbas,T. van Gilst,M. Hauswirth,J. N'djoli|3-4-2-1:J. Treichel,M. Tol,D. Van den Buijs,L. Beerten,Guilherme Martinho Peixoto,J. Déom,J. Nisbet,K. Jansen,M. Paulissen,C. Seedorf,A. van den Hurk",
     "xi_extern": false,
-    "titel_vandaag": true
+    "titel_vandaag": true,
+    "bron": "api"
   },
   "1551867": {
-    "definitief": false,
+    "definitief": true,
     "match": "Dordrecht - NAC Breda",
     "date": "2026-11-06",
     "league": "eerste-divisie",
@@ -244,12 +247,13 @@
     "og_slug": "opstelling-fc-dordrecht-nac-breda-06-11-2026",
     "item_id": "6ae7b00043efd89fed6e37cd",
     "slug": "opstelling-fc-dordrecht-vandaag",
-    "og": "og/opstelling-fc-dordrecht-nac-breda-06-11-2026-a7f0ba.webp",
+    "og": "og/opstelling-fc-dordrecht-nac-breda-06-11-2026-32564e.webp",
     "og_done": "og/opstelling-fc-dordrecht-nac-breda-06-11-2026-a7f0ba.webp",
     "ververst": "2026-11-06T17:03:29+00:00",
     "xi_sig": "4-2-3-1:T. Coremans,J. van Aken,J. Pinas,S. Henderikx,L. Woudenberg,Lucas Gardenier,L. Riccio,Robin van Asten,M. Vetkal,A. Ouarghi,J. de Bie|4-2-3-1:M. Verrips,B. Lucassen,L. Greiml,R. Hillen,J. Van den Bergh,M. Balard,K. Sowah,J. Van Hecke,M. Nassoh,C. Brym,M. Soumano",
     "xi_extern": false,
-    "titel_vandaag": true
+    "titel_vandaag": true,
+    "bron": "footymetrics"
   },
   "1551871": {
     "definitief": false,
@@ -279,13 +283,13 @@
     "slug": "opstelling-jong-az-vandaag",
     "og": "og/opstelling-jong-az-almere-city-06-11-2026-275ba1.webp",
     "og_done": "og/opstelling-jong-az-almere-city-06-11-2026-275ba1.webp",
-    "ververst": "2026-11-06T17:03:29+00:00",
-    "xi_sig": "4-2-3-1:R. Owusu-Oduro,J. Zwart,Mathijs Menu,F. Andersen,K. Inge,R. Robbemond,Julian Sijbrands,J. Hartog,H. de Wit,K. Toppenberg,Jerolldino Bergraaf|4-2-3-1:Wessel Speel,M. Wasinski,J. Jacobs,J. Lawrence,T. Bijleveld,M. Hoedemakers,E. Cornelisse,E. Poku,H. El Dahri,J. Ritmeester van de Kamp,F. Druijf",
-    "xi_extern": false,
+    "ververst": "2026-11-06T18:42:45+00:00",
+    "xi_sig": "4-2-3-1:R. Owusu-Oduro,J. Zwart,R. Ichihara,F. Elkjær,J. Esajas,Julian Sijbrands,R. Robbemond,J. Hartog,H. de Wit,W. Bouziane,Jerolldino Bergraaf|4-2-3-1:Wessel Speel,M. Wasinski,T. Bijleveld,D. van Bruggen,E. Cornelisse,M. Hoedemakers,J. Jacobs,E. Poku,H. El Dahri,J. Ritmeester van de Kamp,F. Druijf",
+    "xi_extern": true,
     "titel_vandaag": true
   },
   "1551868": {
-    "definitief": false,
+    "definitief": true,
     "match": "FC Eindhoven - Jong Ajax",
     "date": "2026-11-06",
     "league": "eerste-divisie",
@@ -310,12 +314,13 @@
     "og_slug": "opstelling-fc-eindhoven-jong-ajax-06-11-2026",
     "item_id": "6ae3c55e50b0cc2842139227",
     "slug": "opstelling-fc-eindhoven-vandaag",
-    "og": "og/opstelling-fc-eindhoven-jong-ajax-06-11-2026-7556d3.webp",
+    "og": "og/opstelling-fc-eindhoven-jong-ajax-06-11-2026-9f54b6.webp",
     "og_done": "og/opstelling-fc-eindhoven-jong-ajax-06-11-2026-7556d3.webp",
     "ververst": "2026-11-06T17:03:29+00:00",
     "xi_sig": "4-4-2:J. Borgmans,C. Essers,O. Renfrum,Predrag Jevtić,Raf van de Riet,R. Buifrahi,X. Blomme,G. Beaumont,V. Besuijen,Kevin Ferreira,H. Deenen|4-3-3:J. Heerkens,R. van de Pavert,G. Spina,M. Muzungu,J. Amour,Alejandro Monserrate,T. Peters,Mohamed Abdalla,E. Ünüvar,D. Pugno,P. Nash",
     "xi_extern": false,
-    "titel_vandaag": true
+    "titel_vandaag": true,
+    "bron": "api"
   },
   "1551872": {
     "definitief": false,
@@ -345,13 +350,13 @@
     "slug": "opstelling-top-oss-vandaag",
     "og": "og/opstelling-top-oss-rkc-waalwijk-06-11-2026-6c159d.webp",
     "og_done": "og/opstelling-top-oss-rkc-waalwijk-06-11-2026-6c159d.webp",
-    "ververst": "2026-11-06T17:03:29+00:00",
+    "ververst": "2026-11-06T18:42:45+00:00",
     "xi_sig": "4-3-3:M. Havekotte,I. Pata,L. Miguel,D. Vianello,Julian Kuijpers,R. van der Venne,M. Esajas,L. Mol,K. Lubrano,F. Nsingi,M. Hinoke|4-2-3-1:N. Schiks,F. Al Mazyani,L. van Gelderen,J. de Wijs,Juan Carlos Familia-Castillo,T. van de Loo,J. Nap,V. Misidjan,A. Dkidak,Yorem van der Veen,F. Stokkers",
     "xi_extern": false,
     "titel_vandaag": true
   },
   "1551869": {
-    "definitief": false,
+    "definitief": true,
     "match": "Helmond Sport - FC Volendam",
     "date": "2026-11-06",
     "league": "eerste-divisie",
@@ -376,12 +381,13 @@
     "og_slug": "opstelling-helmond-sport-volendam-06-11-2026",
     "item_id": "6ae3c55dfc89e700a56af19e",
     "slug": "opstelling-helmond-sport-vandaag",
-    "og": "og/opstelling-helmond-sport-volendam-06-11-2026-29d3cb.webp",
+    "og": "og/opstelling-helmond-sport-volendam-06-11-2026-164743.webp",
     "og_done": "og/opstelling-helmond-sport-volendam-06-11-2026-29d3cb.webp",
     "ververst": "2026-11-06T17:03:29+00:00",
     "xi_sig": "4-4-2:M. Bergsen,R. van Bree,B. Koglin,Lovro Golič,T. Poll,D. Huiberts,Xander van der Velde,M. Ludwig,T. Essakkati,Mauro Lenaerts,L. Bajrami|4-2-3-1:R. Steur,D. Payne,Luca Blondeau,A. Plat,P. Ugwu,N. Bukala,D. Huisman,N. Doodeman,R. Niemeijer,Y. el Maftahi,H. Veerman",
     "xi_extern": false,
-    "titel_vandaag": true
+    "titel_vandaag": true,
+    "bron": "footymetrics"
   },
   "1552217": {
     "definitief": false,
@@ -411,7 +417,7 @@
     "slug": "opstelling-fortuna-sittard-vandaag",
     "og": "og/opstelling-fortuna-sittard-telstar-07-11-2026-c0467f.webp",
     "og_done": "og/opstelling-fortuna-sittard-telstar-07-11-2026-c0467f.webp",
-    "ververst": "2026-11-06T17:03:29+00:00",
+    "ververst": "2026-11-06T18:42:45+00:00",
     "xi_sig": "5-4-1:M. Branderhorst,Rodrigo Guth,S. van Ottele,J. Dahlhaus,Ivo Pinto,Justin Quincy Hubner,A. Descotte,Shiloh Kiesar ’t Zand,P. Brittijn,M. Ihattaren,L. Zeefuik|4-2-3-1:R. Koeman Jr.,A. Soualhia,S. Valk,G. Caschili,M. Peersman,Isaiah Ahmed,N. Rossen,E. Demircan,T. Owusu,A. Martha,N. Thórisson",
     "xi_extern": true
   },
@@ -442,7 +448,10 @@
     "item_id": "6ae654a7e13644c1aaf1773a",
     "slug": "opstelling-ado-den-haag-vandaag",
     "og": "og/opstelling-ado-den-haag-sparta-rotterdam-07-11-2026-72be45.webp",
-    "og_done": "og/opstelling-ado-den-haag-sparta-rotterdam-07-11-2026-72be45.webp"
+    "og_done": "og/opstelling-ado-den-haag-sparta-rotterdam-07-11-2026-72be45.webp",
+    "ververst": "2026-11-06T18:42:45+00:00",
+    "xi_sig": "4-3-3:K. Nikiéma,P. Mulder,M. Waem,J. Jensen-Abbew,M. Hokke,E. Rottier,J. Kilo,M. Šín,J. Hawkins,N. Thomas,Y. Eduardo|5-4-1:M. Brouwer,L. Martes,M. Young,B. Martins Indi,B. Kuipers,N. Verschuren,J. Toornstra,I. Babadi,Robin van Cruijsen,C. Hatenboer,M. Zonneveld",
+    "xi_extern": true
   },
   "1552218": {
     "definitief": false,
@@ -501,7 +510,7 @@
     "slug": "opstelling-fc-den-bosch-vandaag",
     "og": "og/opstelling-fc-den-bosch-jong-fc-utrecht-07-11-2026-d4d685.webp",
     "og_done": "og/opstelling-fc-den-bosch-jong-fc-utrecht-07-11-2026-d4d685.webp",
-    "ververst": "2026-11-06T17:03:29+00:00",
+    "ververst": "2026-11-06T18:42:45+00:00",
     "xi_sig": "3-1-4-2:P. van de Merbel,Jeffry Fortes,M. Laros,S. Maas,H. Eikelboom,S. Barglan,B. van Schuppen,Devon Decorte,I. Boumassaoudi,S. Karlsson Grach,K. Monzialo|4-3-3:K. Gadellaa,Yousri Sbai,W. Kooy,F. Pohl,Viggo Plantinga,Noël Beulens,J. van Ommeren,D. Laaouina,E. C. Owen,Massien Ghaddari,Bjorn Menzo",
     "xi_extern": false
   }
