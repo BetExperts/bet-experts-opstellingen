@@ -553,7 +553,8 @@
     "og_slug": "opstelling-heerenveen-feyenoord-08-11-2026",
     "item_id": "6ae51124b35403b13dd10f04",
     "slug": "opstelling-heerenveen-vandaag",
-    "og": "og/opstelling-heerenveen-feyenoord-08-11-2026-2f8c1b.webp"
+    "og": "og/opstelling-heerenveen-feyenoord-08-11-2026-2f8c1b.webp",
+    "og_done": "og/opstelling-heerenveen-feyenoord-08-11-2026-2f8c1b.webp"
   },
   "1552222": {
     "definitief": false,
@@ -581,7 +582,8 @@
     "og_slug": "opstelling-fc-twente-ajax-08-11-2026",
     "item_id": "6add0ece841fcad07c68a54e",
     "slug": "opstelling-fc-twente-vandaag",
-    "og": "og/opstelling-fc-twente-ajax-08-11-2026-fc0027.webp"
+    "og": "og/opstelling-fc-twente-ajax-08-11-2026-fc0027.webp",
+    "og_done": "og/opstelling-fc-twente-ajax-08-11-2026-fc0027.webp"
   },
   "1552224": {
     "definitief": false,
@@ -609,7 +611,8 @@
     "og_slug": "opstelling-az-fc-groningen-08-11-2026",
     "item_id": "6add0ecd3ff8427064bda61a",
     "slug": "opstelling-az-vandaag",
-    "og": "og/opstelling-az-fc-groningen-08-11-2026-2fa804.webp"
+    "og": "og/opstelling-az-fc-groningen-08-11-2026-2fa804.webp",
+    "og_done": "og/opstelling-az-fc-groningen-08-11-2026-2fa804.webp"
   },
   "1552219": {
     "definitief": false,
@@ -637,7 +640,8 @@
     "og_slug": "opstelling-sc-cambuur-psv-08-11-2026",
     "item_id": "6ae51134d77a8efba55516c2",
     "slug": "opstelling-sc-cambuur-vandaag",
-    "og": "og/opstelling-sc-cambuur-psv-08-11-2026-7dd788.webp"
+    "og": "og/opstelling-sc-cambuur-psv-08-11-2026-7dd788.webp",
+    "og_done": "og/opstelling-sc-cambuur-psv-08-11-2026-7dd788.webp"
   },
   "1552223": {
     "definitief": false,
@@ -665,7 +669,8 @@
     "og_slug": "opstelling-fc-utrecht-nec-nijmegen-08-11-2026",
     "item_id": "6ae654b97e6c6546015f1be1",
     "slug": "opstelling-fc-utrecht-vandaag",
-    "og": "og/opstelling-fc-utrecht-nec-nijmegen-08-11-2026-a0c334.webp"
+    "og": "og/opstelling-fc-utrecht-nec-nijmegen-08-11-2026-a0c334.webp",
+    "og_done": "og/opstelling-fc-utrecht-nec-nijmegen-08-11-2026-a0c334.webp"
   },
   "1551875": {
     "definitief": false,
@@ -693,7 +698,8 @@
     "og_slug": "opstelling-vitesse-de-graafschap-08-11-2026",
     "item_id": "6ae7aff7feb4aaf6384e9a32",
     "slug": "opstelling-vitesse-vandaag",
-    "og": "og/opstelling-vitesse-de-graafschap-08-11-2026-d262e3.webp"
+    "og": "og/opstelling-vitesse-de-graafschap-08-11-2026-d262e3.webp",
+    "og_done": "og/opstelling-vitesse-de-graafschap-08-11-2026-d262e3.webp"
   },
   "1551876": {
     "definitief": false,
@@ -721,6 +727,7 @@
     "og_slug": "opstelling-fc-emmen-mvv-08-11-2026",
     "item_id": "6ae654d38981eb605eecf47f",
     "slug": "opstelling-fc-emmen-vandaag",
-    "og": "og/opstelling-fc-emmen-mvv-08-11-2026-abe347.webp"
+    "og": "og/opstelling-fc-emmen-mvv-08-11-2026-abe347.webp",
+    "og_done": "og/opstelling-fc-emmen-mvv-08-11-2026-abe347.webp"
   }
 }
