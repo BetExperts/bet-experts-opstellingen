@@ -423,7 +423,7 @@
     "xi_sig": "5-4-1:M. Branderhorst,Rodrigo Guth,S. van Ottele,J. Dahlhaus,Ivo Pinto,Justin Quincy Hubner,A. Descotte,Shiloh Kiesar ’t Zand,P. Brittijn,M. Ihattaren,L. Zeefuik|4-2-3-1:R. Koeman Jr.,A. Soualhia,S. Valk,G. Caschili,M. Peersman,Isaiah Ahmed,N. Rossen,E. Demircan,T. Owusu,A. Martha,N. Thórisson",
     "xi_extern": true,
     "titel_vandaag": true,
-    "bron": "footymetrics"
+    "bron": "api"
   },
   "1552220": {
     "definitief": false,
@@ -523,6 +523,6 @@
     "xi_sig": "3-1-4-2:P. van de Merbel,Jeffry Fortes,M. Laros,S. Maas,H. Eikelboom,S. Barglan,B. van Schuppen,Devon Decorte,I. Boumassaoudi,S. Karlsson Grach,K. Monzialo|4-3-3:K. Gadellaa,Yousri Sbai,W. Kooy,F. Pohl,Viggo Plantinga,Noël Beulens,J. van Ommeren,D. Laaouina,E. C. Owen,Massien Ghaddari,Bjorn Menzo",
     "xi_extern": false,
     "titel_vandaag": true,
-    "bron": "footymetrics"
+    "bron": "api"
   }
 }
