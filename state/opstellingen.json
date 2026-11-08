@@ -621,13 +621,13 @@
     "og_slug": "opstelling-az-fc-groningen-08-11-2026",
     "item_id": "6add0ecd3ff8427064bda61a",
     "slug": "opstelling-az-vandaag",
-    "og": "og/opstelling-az-fc-groningen-08-11-2026-67639f.webp",
+    "og": "og/opstelling-az-fc-groningen-08-11-2026-a01f16.webp",
     "og_done": "og/opstelling-az-fc-groningen-08-11-2026-2fa804.webp",
     "ververst": "2026-11-08T14:13:16+00:00",
     "xi_sig": "4-4-2:J. De Busser,E. Dijkstra,W. Goes,L. Schouten,M. de Wit,Weslley Patati,V. Byskov Andreasen,D. Kwakman,P. Koopmeiners,M. Meerdink,R. Daal|4-3-3:E. Vaessen,H. Hateboer,T. Blokzijl,M. Csinger,M. Rente,P. Clement,T. van Bergen,T. de Jonge,J. Ondrejka,J. Schreuders,B. Willumsson",
     "xi_extern": true,
     "titel_vandaag": true,
-    "bron": "footymetrics"
+    "bron": "api"
   },
   "1552219": {
     "definitief": true,
@@ -655,16 +655,16 @@
     "og_slug": "opstelling-sc-cambuur-psv-08-11-2026",
     "item_id": "6ae51134d77a8efba55516c2",
     "slug": "opstelling-sc-cambuur-vandaag",
-    "og": "og/opstelling-sc-cambuur-psv-08-11-2026-12ad26.webp",
+    "og": "og/opstelling-sc-cambuur-psv-08-11-2026-fffdf8.webp",
     "og_done": "og/opstelling-sc-cambuur-psv-08-11-2026-12ad26.webp",
     "ververst": "2026-11-08T14:13:16+00:00",
     "xi_sig": "4-3-3:T. Jansen,B. van Duijl,M. Costarelli,D. Bouah,I. Baouf,N. Souren,R. El Arguioui,M. Maertens,I. Hamache,N. Binder,J. Çeka|3-4-1-2:M. Kovar,L. Geertruida,A. Obispo,S. Dest,Mauro Junior,K. Sano,I. Perisic,R. van Bommel,S. Mijnans,Y. Gąsiorowski Hernandis,G. Til",
     "xi_extern": true,
     "titel_vandaag": true,
-    "bron": "footymetrics"
+    "bron": "api"
   },
   "1552223": {
-    "definitief": false,
+    "definitief": true,
     "match": "Utrecht - NEC Nijmegen",
     "date": "2026-11-08",
     "league": "eredivisie",
@@ -689,12 +689,13 @@
     "og_slug": "opstelling-fc-utrecht-nec-nijmegen-08-11-2026",
     "item_id": "6ae654b97e6c6546015f1be1",
     "slug": "opstelling-fc-utrecht-vandaag",
-    "og": "og/opstelling-fc-utrecht-nec-nijmegen-08-11-2026-b807b2.webp",
+    "og": "og/opstelling-fc-utrecht-nec-nijmegen-08-11-2026-c00779.webp",
     "og_done": "og/opstelling-fc-utrecht-nec-nijmegen-08-11-2026-c0e725.webp",
     "ververst": "2026-11-08T15:09:06+00:00",
     "xi_sig": "4-2-3-1:S. Padt,S. Horemans,M. Didden,N. Panagiotou,A. Zagré,J. van Overeem,O. Agougil,Y. Cathline,N. Vesterlund,M. Broholm,D. de Wit|3-4-2-1:G. Crettaz,A. Kaplan,Deveron Fonville,Gabriel Brás,D. Nejašmić,C. Mutahi Bischoff,N. Lebreton,Kevin Kers,D. Tadić,B. Linssen,T. Chery",
     "xi_extern": true,
-    "titel_vandaag": true
+    "titel_vandaag": true,
+    "bron": "api"
   },
   "1551875": {
     "definitief": false,
@@ -755,12 +756,12 @@
     "og_slug": "opstelling-fc-emmen-mvv-08-11-2026",
     "item_id": "6ae654d38981eb605eecf47f",
     "slug": "opstelling-fc-emmen-vandaag",
-    "og": "og/opstelling-fc-emmen-mvv-08-11-2026-1e77cc.webp",
+    "og": "og/opstelling-fc-emmen-mvv-08-11-2026-4cb87b.webp",
     "og_done": "og/opstelling-fc-emmen-mvv-08-11-2026-27ffb1.webp",
     "ververst": "2026-11-08T14:13:16+00:00",
     "xi_sig": "4-2-3-1:S. Karssies,L. Everink,R. Kongolo,Y. Dede-Lhomme,B. Van Hove,A. Hojabrpour,T. Rhein,S. Veldhuis,F. Quispel,M. Breij,J. Cooper|4-2-3-1:H. Wentges,S. Wegen,F. Dicke,Sven Bouland,Yael Liesdek,E. Sierra,R. Klaasen,D. Asante,O. Dumont,L. Daneels,T. Verheijen",
     "xi_extern": false,
     "titel_vandaag": true,
-    "bron": "footymetrics"
+    "bron": "api"
   }
 }
