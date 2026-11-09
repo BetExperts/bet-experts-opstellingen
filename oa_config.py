@@ -74,6 +74,17 @@ LEAGUES = [
 
 # Vaste opstellingspagina per club (oa_club.py) i.p.v. een artikel per wedstrijd (24-10-2026)
 CLUBPAGINA_LEAGUES = {"eredivisie", "eerste-divisie"}
+# 9-11-2026: vaste pagina voor één ploeg binnen een competitie (API-teamnaam). Oranje: /nieuws/opstelling-oranje-vandaag
+# (ZOEKNAAM Nederland -> Oranje). Alleen die ploeg krijgt de vaste pagina; er komt dan geen los wedstrijdartikel.
+CLUBPAGINA_TEAMS = {"nations-league": ["Netherlands"], "friendlies": ["Netherlands"]}
+
+def clubpagina_kanten(fx, worker_slug):
+    """['home'], ['away'], ['home', 'away'] of [] : welke ploeg(en) van deze wedstrijd een vaste clubpagina krijgen."""
+    if worker_slug in CLUBPAGINA_LEAGUES:
+        return ["home", "away"]
+    namen = {n.lower() for n in CLUBPAGINA_TEAMS.get(worker_slug, [])}
+    t = fx.get("teams", {})
+    return [k for k in ("home", "away") if ((t.get(k) or {}).get("name") or "").lower() in namen]
 
 def is_topper(fx, cfg):
     """True als de wedstrijd een 'topper' is (of als de competitie geen filter kent)."""

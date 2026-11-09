@@ -10,7 +10,7 @@ import oa_api as api
 import oa_match as M
 import oa_og as OG
 import oa_build as B
-from oa_config import LEAGUES, BASE, WEBFLOW_TOKEN, is_topper, CLUBPAGINA_LEAGUES
+from oa_config import LEAGUES, BASE, WEBFLOW_TOKEN, is_topper, CLUBPAGINA_LEAGUES, clubpagina_kanten
 import oa_webflow as WF
 import oa_club as CLUB
 
@@ -76,10 +76,11 @@ def main():
             if a.stream:
                 ctx["tvgids"] = {"tv": [], "bookmakers": [a.stream], "gratis": False}
             fd, slug, title = M.build_fielddata(ctx, cfg)
-            club = cfg["worker_slug"] in CLUBPAGINA_LEAGUES     # vaste clubpagina's i.p.v. een wedstrijdartikel
+            kanten = clubpagina_kanten(fx, cfg["worker_slug"])   # vaste clubpagina's i.p.v. een wedstrijdartikel
+            club = bool(kanten)
             if a.preview:
                 if club:
-                    for focus in ("home", "away"):
+                    for focus in kanten:
                         cfd, cslug, ctitle = M.build_fielddata(ctx, cfg, slug=CLUB.slug_voor(ctx["homeN" if focus == "home" else "awayN"]), focus=focus)
                         p = write_preview(cfd, ctitle); print(f"  ✎ preview clubpagina: {p}")
                 else:
@@ -88,7 +89,7 @@ def main():
                 if og: print(f"  ✎ afbeelding: {og}")
             elif a.dry:
                 if club:
-                    CLUB.schrijf({"date": ymd}, fid, ctx, cfg, nieuw=True, dry=True)
+                    CLUB.schrijf({"date": ymd, "kanten": kanten}, fid, ctx, cfg, nieuw=True, dry=True)
                 else:
                     print(f"  ○ zou maken: {title}")
             else:
@@ -99,6 +100,7 @@ def main():
                      "comp_id": cfg.get("comp_id"), "stream": a.stream,
                      "vriendschappelijk": cfg.get("vriendschappelijk", False)}
                 if club:
+                    e["kanten"] = kanten
                     pag = CLUB.schrijf(e, fid, ctx, cfg, nieuw=True)
                     e.update({"evergreen": True, "og_slug": slug, "item_id": e["clubs"][0]["item_id"], "slug": e["clubs"][0]["slug"]})
                     urls = [s_ for s_, _ in pag]

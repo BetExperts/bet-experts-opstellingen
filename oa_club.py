@@ -54,7 +54,10 @@ def schrijf(e, fid, ctx, cfg, nieuw=False, dry=False):
     de pagina's die nog bij deze wedstrijd horen: speelt een club inmiddels een nieuwere wedstrijd, dan blijft die staan.
     Zet e['clubs'] en retourneert [(slug, titel)]."""
     cs = load(); out = []
+    kanten = e.get("kanten") or ["home", "away"]        # 9-11-2026: alleen Oranje bij interlands (oa_config.CLUBPAGINA_TEAMS)
     for focus, tid, naam in (("home", ctx["homeId"], ctx["homeN"]), ("away", ctx["awayId"], ctx["awayN"])):
+        if focus not in kanten:
+            continue
         tid = str(tid); c = cs.get(tid)
         if not nieuw and (not c or c.get("fid") != str(fid)):
             continue

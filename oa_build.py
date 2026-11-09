@@ -323,7 +323,8 @@ ZOEKNAAM = {"AZ Alkmaar": "AZ", "PSV Eindhoven": "PSV", "NEC Nijmegen": "NEC", "
             "Groningen": "FC Groningen", "Utrecht": "FC Utrecht", "GO Ahead Eagles": "Go Ahead Eagles",
             "Cambuur": "SC Cambuur", "Almere City FC": "Almere City", "Den Bosch": "FC Den Bosch",
             "Dordrecht": "FC Dordrecht", "Emmen": "FC Emmen", "FC OSS": "TOP Oss", "Jong Jong PSV": "Jong PSV",
-            "Jong Utrecht": "Jong FC Utrecht", "Roda": "Roda JC", "Waalwijk": "RKC Waalwijk"}
+            "Jong Utrecht": "Jong FC Utrecht", "Roda": "Roda JC", "Waalwijk": "RKC Waalwijk",
+            "Nederland": "Oranje"}
 
 def zoeknaam(naam):
     return ZOEKNAAM.get(naam, naam)
