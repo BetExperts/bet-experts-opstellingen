@@ -34,3 +34,6 @@ if $PY -c "import json,sys;s=json.load(open('state/opstellingen.json'));sys.exit
   $PY attach_og.py
   sync_push "state: deelafbeeldingen gekoppeld (Mac)"
 fi
+
+# Telegram-wachtrij (9-11-2026): geplande posts naar de groep (superodd-agent/state/tg_wachtrij.json)
+(cd ../superodd-agent && ../superodd-agent/.venv/bin/python tg_wachtrij.py) || true
