@@ -39,7 +39,10 @@
     "item_id": "6af50012a0c2d46246dc9c67",
     "slug": "opstelling-moldavie-kazachstan-13-11-2026",
     "og": "og/opstelling-moldavie-kazachstan-13-11-2026-6090df.webp",
-    "og_done": "og/opstelling-moldavie-kazachstan-13-11-2026-6090df.webp"
+    "og_done": "og/opstelling-moldavie-kazachstan-13-11-2026-6090df.webp",
+    "ververst": "2026-11-12T17:31:38+00:00",
+    "xi_sig": "5-3-2:Dumitru Celeadnic,Oleg Reabciuk,Vladislav Baboglo,Mihail Gherasimencov,Iurie Iovu,Ioan-Calin Revenco,Sergiu Perciun,Vladimir Fratea,Vadim Rață,Petru Popescu,Nicky Cleșcenco|4-3-3:S. Pokatilov,N. Alip,A. Kassym,N. Zhagorov,I. Kuat,Ramazan Orazov,D. Karaman,A. Ashirbek,M. Samorodov,Galymzhan Kenzhebek,R. Karimov",
+    "xi_extern": true
   },
   "1528965": {
     "definitief": false,
@@ -189,6 +192,9 @@
     "item_id": "6af500566a611ebb0cc125fc",
     "slug": "opstelling-jong-denemarken-jong-oranje-13-11-2026",
     "og": "og/opstelling-jong-denemarken-jong-oranje-13-11-2026-75217b.webp",
-    "og_done": "og/opstelling-jong-denemarken-jong-oranje-13-11-2026-75217b.webp"
+    "og_done": "og/opstelling-jong-denemarken-jong-oranje-13-11-2026-75217b.webp",
+    "ververst": "2026-11-12T17:31:38+00:00",
+    "xi_sig": ":T. Sander,L. Hogsberg,V. Nielsen,T. Storm,S. Hansen,O. Hojlund,W. Clem,M. McCoy,V. Byskov,C. Harder,N. Nartey|:B. Klaverboer,G. Read,T. Blokzijl,D. Janse,E. Dijkstra,S. Steur,T. van Bergen,D. Kwakman,A. Oufkir,L. Zeefuik,E. Poku",
+    "xi_extern": false
   }
 }
