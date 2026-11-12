@@ -226,5 +226,341 @@
     "ververst": "2026-11-12T22:05:16+00:00",
     "xi_sig": ":T. Sander,L. Hogsberg,V. Nielsen,T. Storm,S. Hansen,O. Hojlund,W. Clem,M. McCoy,V. Byskov,C. Harder,N. Nartey|:B. Klaverboer,G. Read,T. Blokzijl,D. Janse,E. Dijkstra,S. Steur,T. van Bergen,D. Kwakman,A. Oufkir,L. Zeefuik,E. Poku",
     "xi_extern": false
+  },
+  "1551877": {
+    "definitief": false,
+    "match": "NAC Breda - Emmen",
+    "date": "2026-11-14",
+    "league": "eerste-divisie",
+    "comp_slug": "keuken-kampioen-divisie",
+    "naam": "Keuken Kampioen Divisie",
+    "comp_id": "65de4bc0a8777b9898d6374e",
+    "stream": null,
+    "vriendschappelijk": false,
+    "kanten": [
+      "home",
+      "away"
+    ],
+    "clubs": [
+      {
+        "team_id": "203",
+        "slug": "opstelling-nac-breda-vandaag",
+        "item_id": "6ae7afe1adc1619af0249d16"
+      },
+      {
+        "team_id": "208",
+        "slug": "opstelling-fc-emmen-vandaag",
+        "item_id": "6ae654d38981eb605eecf47f"
+      }
+    ],
+    "evergreen": true,
+    "og_slug": "opstelling-nac-breda-fc-emmen-14-11-2026",
+    "item_id": "6ae7afe1adc1619af0249d16",
+    "slug": "opstelling-nac-breda-vandaag",
+    "og": "og/opstelling-nac-breda-fc-emmen-14-11-2026-aafc9c.webp"
+  },
+  "1551879": {
+    "definitief": false,
+    "match": "De Graafschap - FC OSS",
+    "date": "2026-11-14",
+    "league": "eerste-divisie",
+    "comp_slug": "keuken-kampioen-divisie",
+    "naam": "Keuken Kampioen Divisie",
+    "comp_id": "65de4bc0a8777b9898d6374e",
+    "stream": null,
+    "vriendschappelijk": false,
+    "kanten": [
+      "home",
+      "away"
+    ],
+    "clubs": [
+      {
+        "team_id": "199",
+        "slug": "opstelling-de-graafschap-vandaag",
+        "item_id": "6ae3c54a89477054fa318b41"
+      },
+      {
+        "team_id": "423",
+        "slug": "opstelling-top-oss-vandaag",
+        "item_id": "6ae7afd488c1622a06ad8ef1"
+      }
+    ],
+    "evergreen": true,
+    "og_slug": "opstelling-de-graafschap-top-oss-14-11-2026",
+    "item_id": "6ae3c54a89477054fa318b41",
+    "slug": "opstelling-de-graafschap-vandaag",
+    "og": "og/opstelling-de-graafschap-top-oss-14-11-2026-0fb15e.webp"
+  },
+  "1551882": {
+    "definitief": false,
+    "match": "VVV Venlo - FC Eindhoven",
+    "date": "2026-11-14",
+    "league": "eerste-divisie",
+    "comp_slug": "keuken-kampioen-divisie",
+    "naam": "Keuken Kampioen Divisie",
+    "comp_id": "65de4bc0a8777b9898d6374e",
+    "stream": null,
+    "vriendschappelijk": false,
+    "kanten": [
+      "home",
+      "away"
+    ],
+    "clubs": [
+      {
+        "team_id": "204",
+        "slug": "opstelling-vvv-venlo-vandaag",
+        "item_id": "6ae51140433faf782fba0b88"
+      },
+      {
+        "team_id": "422",
+        "slug": "opstelling-fc-eindhoven-vandaag",
+        "item_id": "6ae3c55e50b0cc2842139227"
+      }
+    ],
+    "evergreen": true,
+    "og_slug": "opstelling-vvv-venlo-fc-eindhoven-14-11-2026",
+    "item_id": "6ae51140433faf782fba0b88",
+    "slug": "opstelling-vvv-venlo-vandaag",
+    "og": "og/opstelling-vvv-venlo-fc-eindhoven-14-11-2026-9e9319.webp"
+  },
+  "1551880": {
+    "definitief": false,
+    "match": "Dordrecht - Heracles",
+    "date": "2026-11-14",
+    "league": "eerste-divisie",
+    "comp_slug": "keuken-kampioen-divisie",
+    "naam": "Keuken Kampioen Divisie",
+    "comp_id": "65de4bc0a8777b9898d6374e",
+    "stream": null,
+    "vriendschappelijk": false,
+    "kanten": [
+      "home",
+      "away"
+    ],
+    "clubs": [
+      {
+        "team_id": "409",
+        "slug": "opstelling-fc-dordrecht-vandaag",
+        "item_id": "6ae7b00043efd89fed6e37cd"
+      },
+      {
+        "team_id": "206",
+        "slug": "opstelling-heracles-vandaag",
+        "item_id": "6ae7afd2d1399902e056a2bb"
+      }
+    ],
+    "evergreen": true,
+    "og_slug": "opstelling-fc-dordrecht-heracles-almelo-14-11-2026",
+    "item_id": "6ae7b00043efd89fed6e37cd",
+    "slug": "opstelling-fc-dordrecht-vandaag",
+    "og": "og/opstelling-fc-dordrecht-heracles-almelo-14-11-2026-a4a1a8.webp"
+  },
+  "1551881": {
+    "definitief": false,
+    "match": "Roda - FC Volendam",
+    "date": "2026-11-14",
+    "league": "eerste-divisie",
+    "comp_slug": "keuken-kampioen-divisie",
+    "naam": "Keuken Kampioen Divisie",
+    "comp_id": "65de4bc0a8777b9898d6374e",
+    "stream": null,
+    "vriendschappelijk": false,
+    "kanten": [
+      "home",
+      "away"
+    ],
+    "clubs": [
+      {
+        "team_id": "414",
+        "slug": "opstelling-roda-jc-vandaag",
+        "item_id": "6ae3c5405f631fd72de9d150"
+      },
+      {
+        "team_id": "416",
+        "slug": "opstelling-fc-volendam-vandaag",
+        "item_id": "6ae3c5490a8851e6dd89be21"
+      }
+    ],
+    "evergreen": true,
+    "og_slug": "opstelling-roda-jc-volendam-14-11-2026",
+    "item_id": "6ae3c5405f631fd72de9d150",
+    "slug": "opstelling-roda-jc-vandaag",
+    "og": "og/opstelling-roda-jc-volendam-14-11-2026-ae2011.webp"
+  },
+  "1551883": {
+    "definitief": false,
+    "match": "Waalwijk - Den Bosch",
+    "date": "2026-11-14",
+    "league": "eerste-divisie",
+    "comp_slug": "keuken-kampioen-divisie",
+    "naam": "Keuken Kampioen Divisie",
+    "comp_id": "65de4bc0a8777b9898d6374e",
+    "stream": null,
+    "vriendschappelijk": false,
+    "kanten": [
+      "home",
+      "away"
+    ],
+    "clubs": [
+      {
+        "team_id": "417",
+        "slug": "opstelling-rkc-waalwijk-vandaag",
+        "item_id": "6ae3c55478ea2448aad49984"
+      },
+      {
+        "team_id": "421",
+        "slug": "opstelling-fc-den-bosch-vandaag",
+        "item_id": "6ae654d4bc0ed2f9667a6e49"
+      }
+    ],
+    "evergreen": true,
+    "og_slug": "opstelling-rkc-waalwijk-fc-den-bosch-14-11-2026",
+    "item_id": "6ae3c55478ea2448aad49984",
+    "slug": "opstelling-rkc-waalwijk-vandaag",
+    "og": "og/opstelling-rkc-waalwijk-fc-den-bosch-14-11-2026-a90e57.webp"
+  },
+  "1551878": {
+    "definitief": false,
+    "match": "Almere City FC - Helmond Sport",
+    "date": "2026-11-14",
+    "league": "eerste-divisie",
+    "comp_slug": "keuken-kampioen-divisie",
+    "naam": "Keuken Kampioen Divisie",
+    "comp_id": "65de4bc0a8777b9898d6374e",
+    "stream": null,
+    "vriendschappelijk": false,
+    "kanten": [
+      "home",
+      "away"
+    ],
+    "clubs": [
+      {
+        "team_id": "419",
+        "slug": "opstelling-almere-city-vandaag",
+        "item_id": "6ae3c555b21b349f6908b436"
+      },
+      {
+        "team_id": "424",
+        "slug": "opstelling-helmond-sport-vandaag",
+        "item_id": "6ae3c55dfc89e700a56af19e"
+      }
+    ],
+    "evergreen": true,
+    "og_slug": "opstelling-almere-city-helmond-sport-14-11-2026",
+    "item_id": "6ae3c555b21b349f6908b436",
+    "slug": "opstelling-almere-city-vandaag",
+    "og": "og/opstelling-almere-city-helmond-sport-14-11-2026-c87f4c.webp"
+  },
+  "1528971": {
+    "definitief": false,
+    "match": "Kosovo - Israël",
+    "date": "2026-11-14",
+    "league": "nations-league",
+    "comp_slug": "uefa-nations-league",
+    "naam": "Nations League",
+    "comp_id": "66d5a7f7fb9f23ce90376ef4",
+    "stream": null,
+    "vriendschappelijk": false,
+    "item_id": "6af6459a0acac80d8ff3a35b",
+    "slug": "opstelling-kosovo-israel-14-11-2026",
+    "og": "og/opstelling-kosovo-israel-14-11-2026-9cf526.webp"
+  },
+  "1528972": {
+    "definitief": false,
+    "match": "Noorwegen - Wales",
+    "date": "2026-11-14",
+    "league": "nations-league",
+    "comp_slug": "uefa-nations-league",
+    "naam": "Nations League",
+    "comp_id": "66d5a7f7fb9f23ce90376ef4",
+    "stream": null,
+    "vriendschappelijk": false,
+    "item_id": "6af645a159a3e0fc228e37a2",
+    "slug": "opstelling-noorwegen-wales-14-11-2026",
+    "og": "og/opstelling-noorwegen-wales-14-11-2026-d844a9.webp"
+  },
+  "1528973": {
+    "definitief": false,
+    "match": "Georgië - Hongarije",
+    "date": "2026-11-14",
+    "league": "nations-league",
+    "comp_slug": "uefa-nations-league",
+    "naam": "Nations League",
+    "comp_id": "66d5a7f7fb9f23ce90376ef4",
+    "stream": null,
+    "vriendschappelijk": false,
+    "item_id": "6af645a9ff64d47f8a8a507a",
+    "slug": "opstelling-georgie-hongarije-14-11-2026",
+    "og": "og/opstelling-georgie-hongarije-14-11-2026-a2d512.webp"
+  },
+  "1528978": {
+    "definitief": false,
+    "match": "Zweden - Bosnië en Herzegovina",
+    "date": "2026-11-14",
+    "league": "nations-league",
+    "comp_slug": "uefa-nations-league",
+    "naam": "Nations League",
+    "comp_id": "66d5a7f7fb9f23ce90376ef4",
+    "stream": null,
+    "vriendschappelijk": false,
+    "item_id": "6af645b2e28e7bb014dfedf7",
+    "slug": "opstelling-zweden-bosnie-herzegovina-14-11-2026",
+    "og": "og/opstelling-zweden-bosnie-herzegovina-14-11-2026-00591d.webp"
+  },
+  "1528974": {
+    "definitief": false,
+    "match": "Portugal - Denemarken",
+    "date": "2026-11-14",
+    "league": "nations-league",
+    "comp_slug": "uefa-nations-league",
+    "naam": "Nations League",
+    "comp_id": "66d5a7f7fb9f23ce90376ef4",
+    "stream": null,
+    "vriendschappelijk": false,
+    "item_id": "6af645b8ff64d47f8a8a573f",
+    "slug": "opstelling-portugal-denemarken-14-11-2026",
+    "og": "og/opstelling-portugal-denemarken-14-11-2026-3e27f1.webp"
+  },
+  "1528975": {
+    "definitief": false,
+    "match": "Noord-Ierland - Oekraïne",
+    "date": "2026-11-14",
+    "league": "nations-league",
+    "comp_slug": "uefa-nations-league",
+    "naam": "Nations League",
+    "comp_id": "66d5a7f7fb9f23ce90376ef4",
+    "stream": null,
+    "vriendschappelijk": false,
+    "item_id": "6af645bfd8ad762caa298979",
+    "slug": "opstelling-noord-ierland-oekraine-14-11-2026",
+    "og": "og/opstelling-noord-ierland-oekraine-14-11-2026-33fede.webp"
+  },
+  "1528977": {
+    "definitief": false,
+    "match": "Roemenië - Polen",
+    "date": "2026-11-14",
+    "league": "nations-league",
+    "comp_slug": "uefa-nations-league",
+    "naam": "Nations League",
+    "comp_id": "66d5a7f7fb9f23ce90376ef4",
+    "stream": null,
+    "vriendschappelijk": false,
+    "item_id": "6af645c57999e1ccd0e7202a",
+    "slug": "opstelling-roemenie-polen-14-11-2026",
+    "og": "og/opstelling-roemenie-polen-14-11-2026-e041f1.webp"
+  },
+  "1528976": {
+    "definitief": false,
+    "match": "Oostenrijk - Ierland",
+    "date": "2026-11-14",
+    "league": "nations-league",
+    "comp_slug": "uefa-nations-league",
+    "naam": "Nations League",
+    "comp_id": "66d5a7f7fb9f23ce90376ef4",
+    "stream": null,
+    "vriendschappelijk": false,
+    "item_id": "6af645ca5dca95143db0dc69",
+    "slug": "opstelling-oostenrijk-ierland-14-11-2026",
+    "og": "og/opstelling-oostenrijk-ierland-14-11-2026-986b2c.webp"
   }
 }
