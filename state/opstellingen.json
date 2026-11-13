@@ -1,6 +1,6 @@
 {
   "1528966": {
-    "definitief": false,
+    "definitief": true,
     "match": "Nederland - Griekenland",
     "date": "2026-11-13",
     "league": "nations-league",
@@ -23,12 +23,13 @@
     "og_slug": "opstelling-nederland-griekenland-13-11-2026",
     "item_id": "6af1eaa1724fe278e13c3f02",
     "slug": "opstelling-oranje-vandaag",
-    "og": "og/opstelling-nederland-griekenland-13-11-2026-a062c8.webp",
+    "og": "og/opstelling-nederland-griekenland-13-11-2026-e9479d.webp",
     "og_done": "og/opstelling-nederland-griekenland-13-11-2026-a062c8.webp",
     "ververst": "2026-11-13T18:20:54+00:00",
     "xi_sig": "4-3-3:Bart Verbruggen,Micky van de Ven,I. Maatsen,F. de Jong,Jurriën Timber,Tijjani Reijnders,Joey Veerman,J. Paul van Hecke,Crysencio Summerville,D. Malen,C. Gakpo|4-4-2:K. Tzolakis,P. Retsos,K. Tsimikas,K. Mavropanos,K. Koulierakis,C. Tzolis,D. Kourbelis,A. Androutsos,K. Karetsas,F. Ioannidis,V. Pavlidis",
     "xi_extern": true,
-    "titel_vandaag": true
+    "titel_vandaag": true,
+    "bron": "api"
   },
   "1528968": {
     "definitief": true,
@@ -51,7 +52,7 @@
     "bron": "api"
   },
   "1528965": {
-    "definitief": false,
+    "definitief": true,
     "match": "Servië - Duitsland",
     "date": "2026-11-13",
     "league": "nations-league",
@@ -62,15 +63,16 @@
     "vriendschappelijk": false,
     "item_id": "6af50018aa34af50ea7eb4c4",
     "slug": "opstelling-servie-duitsland-13-11-2026",
-    "og": "og/opstelling-servie-duitsland-13-11-2026-db5155.webp",
+    "og": "og/opstelling-servie-duitsland-13-11-2026-946dfe.webp",
     "og_done": "og/opstelling-servie-duitsland-13-11-2026-db5155.webp",
     "ververst": "2026-11-13T18:20:54+00:00",
     "xi_sig": "5-4-1:Vanja Milinković-Savić,N. Milenković,S. Bukinac,Kosta Nedeljković,Stefan Gudelj,Srđan Babić,S. Milinkovic-Savic,Lazar Samardžić,Andrija Živković,Dušan Tadić,Mihajlo Cvetković|4-2-3-1:J. Tah,J. Kimmich,K. Havertz,M. ter Stegen,P. Treu,A. Pavlovic,L. Karl,N. Brown,N. Schlotterbeck,F. Nmecha,F. Wirtz",
     "xi_extern": true,
-    "titel_vandaag": true
+    "titel_vandaag": true,
+    "bron": "api"
   },
   "1528967": {
-    "definitief": false,
+    "definitief": true,
     "match": "Slowakije - Faeröer",
     "date": "2026-11-13",
     "league": "nations-league",
@@ -81,15 +83,16 @@
     "vriendschappelijk": false,
     "item_id": "6af5001f9a5a911427630b60",
     "slug": "opstelling-slowakije-faeroer-13-11-2026",
-    "og": "og/opstelling-slowakije-faeroer-13-11-2026-7d2f6b.webp",
+    "og": "og/opstelling-slowakije-faeroer-13-11-2026-e4b72c.webp",
     "og_done": "og/opstelling-slowakije-faeroer-13-11-2026-7d2f6b.webp",
     "ververst": "2026-11-13T18:20:54+00:00",
     "xi_sig": "4-3-3:Dominik Greif,Dávid Hancko,Adam Obert,Ivan Mesík,Milan Škriniar,Ondrej Duda,Peter Pokorný,Tomáš Rigo,Lukáš Haraslín,Tomáš Bobček,David Strelec|3-4-3:M. Lamhauge,S. Chukwudi,Andrias Edmundsson,O. Færø,G. Vatnhamar,J. Danielsen,J. Bjartalíð,G. Turi,H. Sørensen,Á. Samuelsen,P. Knudsen",
     "xi_extern": true,
-    "titel_vandaag": true
+    "titel_vandaag": true,
+    "bron": "api"
   },
   "1545654": {
-    "definitief": false,
+    "definitief": true,
     "match": "Slovenië - Zwitserland",
     "date": "2026-11-13",
     "league": "nations-league",
@@ -100,15 +103,16 @@
     "vriendschappelijk": false,
     "item_id": "6af50025cb034bfb7ef966d8",
     "slug": "opstelling-slovenie-zwitserland-13-11-2026",
-    "og": "og/opstelling-slovenie-zwitserland-13-11-2026-ef2183.webp",
+    "og": "og/opstelling-slovenie-zwitserland-13-11-2026-9ef0e6.webp",
     "og_done": "og/opstelling-slovenie-zwitserland-13-11-2026-ef2183.webp",
     "ververst": "2026-11-13T18:20:54+00:00",
     "xi_sig": "4-4-2:J. Oblak,S. Kuzmić,V. Drkušić,D. Brekalo,J. Bijol,A. Čerin,M. Zabukovnik,A. Matko,B. Verbic,A. Zeljkovic,Z. Vipotnik|4-3-3:G. Kobel,S. Britschgi,Z. Athekame,N. Elvedi,M. Akanji,A. Jashari,R. Freuler,D. Ndoye,D. Sow,F. Rieder,B. Embolo",
     "xi_extern": true,
-    "titel_vandaag": true
+    "titel_vandaag": true,
+    "bron": "api"
   },
   "1545614": {
-    "definitief": false,
+    "definitief": true,
     "match": "Luxemburg - Estland",
     "date": "2026-11-13",
     "league": "nations-league",
@@ -119,15 +123,16 @@
     "vriendschappelijk": false,
     "item_id": "6af5002cda05d8ac9d8ee193",
     "slug": "opstelling-luxemburg-estland-13-11-2026",
-    "og": "og/opstelling-luxemburg-estland-13-11-2026-ff8850.webp",
+    "og": "og/opstelling-luxemburg-estland-13-11-2026-247256.webp",
     "og_done": "og/opstelling-luxemburg-estland-13-11-2026-ff8850.webp",
     "ververst": "2026-11-13T18:20:54+00:00",
     "xi_sig": "4-2-3-1:Anthony Moris,E. Mahmutovic,Florian Bohnert,Eric Veiga,Vahid Selimović,Vincent Thill,Omar Natami,Hamza Kadamani,T. Cruz,Timothé Rupil,Aiman Dardari|3-5-1-1:K. Hein,K. Mets,M. Schjønning-Larsen,M. Paskotši,E. Tõugjas,M. Käit,R. Shein,M. Miller,K. Palumets,P. Kristal,M. Männilaan",
     "xi_extern": true,
-    "titel_vandaag": true
+    "titel_vandaag": true,
+    "bron": "api"
   },
   "1528969": {
-    "definitief": false,
+    "definitief": true,
     "match": "Bulgarije - IJsland",
     "date": "2026-11-13",
     "league": "nations-league",
@@ -138,12 +143,13 @@
     "vriendschappelijk": false,
     "item_id": "6af50032b0c13f89d4ed20d8",
     "slug": "opstelling-bulgarije-ijsland-13-11-2026",
-    "og": "og/opstelling-bulgarije-ijsland-13-11-2026-7f90b6.webp",
+    "og": "og/opstelling-bulgarije-ijsland-13-11-2026-6693db.webp",
     "og_done": "og/opstelling-bulgarije-ijsland-13-11-2026-7f90b6.webp",
     "ververst": "2026-11-13T18:20:54+00:00",
     "xi_sig": "4-3-3:Daniel Naumov,Emil Tsenov,Stefan Velkov,Dimitar Velkovski,Ivan Turitsov,Ilia Gruev,Andrian Kraev,Georgi Rusev,Kristiyan Balov,G. Lazarov,Atanas Iliev|4-3-3:H. Valdimarsson,D. Grétarsson,V. Pálsson,S. Teitur Thórdarson,M. Egill Ellertsson,A. Sigurðsson,Í. Bergmann Jóhannesson,A. Guðjohnsen,H. Haraldsson,J. Dagur Thorsteinsson,O. Óskarsson",
     "xi_extern": true,
-    "titel_vandaag": true
+    "titel_vandaag": true,
+    "bron": "api"
   },
   "1528970": {
     "definitief": false,
@@ -159,13 +165,13 @@
     "slug": "opstelling-liechtenstein-azerbeidzjan-13-11-2026",
     "og": "og/opstelling-liechtenstein-azerbeidzjan-13-11-2026-5acd96.webp",
     "og_done": "og/opstelling-liechtenstein-azerbeidzjan-13-11-2026-5acd96.webp",
-    "ververst": "2026-11-13T18:20:54+00:00",
+    "ververst": "2026-11-13T19:36:52+00:00",
     "xi_sig": "5-3-2:B. Buchel,M. Goppel,Lars Traber,J. Weissenhofer,Nicolas Hasler,J. Hofer,A. Hasler,A. Sele,Marcel Büchel,A. Lo Russo,K. Kindle|3-4-3:Emil Balayev,Bədavi Hüseynov,Rahil Mammadov,Rahman Dashdamirov,Tellur Mutallimov,Aleksey Isayev,Rüfat Abbasov,A. Khaybulayev,Oruc Mammadov,Mahir Emreli,Toral Bayramov",
     "xi_extern": true,
     "titel_vandaag": true
   },
   "1545659": {
-    "definitief": false,
+    "definitief": true,
     "match": "Schotland - Noord-Macedonië",
     "date": "2026-11-13",
     "league": "nations-league",
@@ -176,15 +182,16 @@
     "vriendschappelijk": false,
     "item_id": "6af5004408e7cab736be7810",
     "slug": "opstelling-schotland-noord-macedonie-13-11-2026",
-    "og": "og/opstelling-schotland-noord-macedonie-13-11-2026-941191.webp",
+    "og": "og/opstelling-schotland-noord-macedonie-13-11-2026-d29f53.webp",
     "og_done": "og/opstelling-schotland-noord-macedonie-13-11-2026-941191.webp",
     "ververst": "2026-11-13T18:20:54+00:00",
     "xi_sig": "3-5-1-1:A. Gunn,J. Hendry,A. Hickey,N. Patterson,A. Robertson,J.  McGinn,B. Gilmour,B. Doak,L. Ferguson,S. McTominay,O. McBurnie|4-2-3-1:S. Dimitrievski,E. Alioski,A. Meliqi,V. Musliu,D. Churlinov,L. Doriev,Bojan Ilievski,M. Gashtarov,E. Bardhi,E. Elmas,E. Rastoder",
     "xi_extern": true,
-    "titel_vandaag": true
+    "titel_vandaag": true,
+    "bron": "api"
   },
   "1545615": {
-    "definitief": false,
+    "definitief": true,
     "match": "Andorra - Gibraltar",
     "date": "2026-11-13",
     "league": "nations-league",
@@ -195,12 +202,13 @@
     "vriendschappelijk": false,
     "item_id": "6af5004a08e7cab736be7a99",
     "slug": "opstelling-andorra-gibraltar-13-11-2026",
-    "og": "og/opstelling-andorra-gibraltar-13-11-2026-85fe62.webp",
+    "og": "og/opstelling-andorra-gibraltar-13-11-2026-bc902f.webp",
     "og_done": "og/opstelling-andorra-gibraltar-13-11-2026-85fe62.webp",
     "ververst": "2026-11-13T18:20:54+00:00",
     "xi_sig": "4-4-2:Iker Álvarez,Max Llovera,Biel Borra Font,Ian Bryan Olivera,Moisés San Nicolás,Ot Remolins Planes,Jordi Alaez,E. Izquierdo,A. Rodrigo Tapia,Guillaume Lopez,Albert Rosas|4-1-4-1:J. Hankins,E. Jolley,D. Bent,B. Lopes,K. Ronan,J. Valarino,N. Pozo,C. Richards,J. Gomez,H. Stevens,T. De Barr",
     "xi_extern": true,
-    "titel_vandaag": true
+    "titel_vandaag": true,
+    "bron": "api"
   },
   "1545878": {
     "definitief": false,
@@ -216,7 +224,7 @@
     "slug": "opstelling-marokko-niger-13-11-2026",
     "og": "og/opstelling-marokko-niger-13-11-2026-7cc19e.webp",
     "og_done": "og/opstelling-marokko-niger-13-11-2026-7cc19e.webp",
-    "ververst": "2026-11-13T18:20:54+00:00",
+    "ververst": "2026-11-13T19:36:52+00:00",
     "xi_sig": "4-2-3-1:Bono,A. Maamar,I. Diop,N. Aguerd,A. Salah-Eddine,N. El Aynaoui,A. Bouaddi,B. El Khannouss,A. Ounahi,A. Ezzalzouli,I. Saibari|4-4-1-1:M. Tanja,A. Camara,M. Abdourahmane,O. Sako,R. Alhassane,K. Amoustapha,Y. Oumarou,A. Mohamed,K. Ndri,O. Badamassi,D. Sosah",
     "xi_extern": false,
     "titel_vandaag": true
@@ -272,7 +280,7 @@
     "slug": "opstelling-nac-breda-vandaag",
     "og": "og/opstelling-nac-breda-fc-emmen-14-11-2026-aafc9c.webp",
     "og_done": "og/opstelling-nac-breda-fc-emmen-14-11-2026-aafc9c.webp",
-    "ververst": "2026-11-13T18:20:54+00:00",
+    "ververst": "2026-11-13T19:36:52+00:00",
     "xi_sig": "4-3-3:M. Verrips,B. Lucassen,L. Greiml,R. Hillen,J. Van den Bergh,M. Balard,M. Nassoh,K. Sowah,J. Van Hecke,M. Soumano,C. Brym|4-2-3-1:S. Karssies,J. Mukeh,R. Kongolo,Y. Dede-Lhomme,B. Van Hove,A. Hojabrpour,T. Rhein,Mustafa Abdullatif,J. Cooper,M. Breij,D. Lambers",
     "xi_extern": false
   },
@@ -307,7 +315,10 @@
     "item_id": "6ae3c54a89477054fa318b41",
     "slug": "opstelling-de-graafschap-vandaag",
     "og": "og/opstelling-de-graafschap-top-oss-14-11-2026-0fb15e.webp",
-    "og_done": "og/opstelling-de-graafschap-top-oss-14-11-2026-0fb15e.webp"
+    "og_done": "og/opstelling-de-graafschap-top-oss-14-11-2026-0fb15e.webp",
+    "ververst": "2026-11-13T19:36:52+00:00",
+    "xi_sig": "4-2-3-1:T. Wieggers,J. Wieckhoff,R. Besselink,T. Kok,L. Schoppema,N. Martens,C. Leemans,Bjorn van Zijl,D. Warmerdam,M. Diemers,F. de Jong|4-3-3:M. Havekotte,I. Pata,M. Mariani,D. Vianello,A. Henry,M. Esajas,Jafar Howard Bynoe,J. Mathieu,K. Lubrano,Andy Visser,M. de Lannoy",
+    "xi_extern": false
   },
   "1551882": {
     "definitief": false,
@@ -340,7 +351,10 @@
     "item_id": "6ae51140433faf782fba0b88",
     "slug": "opstelling-vvv-venlo-vandaag",
     "og": "og/opstelling-vvv-venlo-fc-eindhoven-14-11-2026-9e9319.webp",
-    "og_done": "og/opstelling-vvv-venlo-fc-eindhoven-14-11-2026-9e9319.webp"
+    "og_done": "og/opstelling-vvv-venlo-fc-eindhoven-14-11-2026-9e9319.webp",
+    "ververst": "2026-11-13T19:36:52+00:00",
+    "xi_sig": "4-2-3-1:Y. Schoonderwaldt,Raf Vullers,É. Clancy,G. Blancquart,Lars de Blok,A. Verstraeten,Tristan Schenkhuizen,E. Zuliani,Ismail Oulad M'Hand,Thomas Janssen,M. Tsigkas|4-4-2:J. Borgmans,L. Netten,O. Renfrum,Predrag Jevtić,Raf van de Riet,R. Buifrahi,G. Beaumont,X. Blomme,V. Besuijen,H. Deenen,Kevin Ferreira",
+    "xi_extern": false
   },
   "1551880": {
     "definitief": false,
@@ -373,7 +387,10 @@
     "item_id": "6ae7b00043efd89fed6e37cd",
     "slug": "opstelling-fc-dordrecht-vandaag",
     "og": "og/opstelling-fc-dordrecht-heracles-almelo-14-11-2026-a4a1a8.webp",
-    "og_done": "og/opstelling-fc-dordrecht-heracles-almelo-14-11-2026-a4a1a8.webp"
+    "og_done": "og/opstelling-fc-dordrecht-heracles-almelo-14-11-2026-a4a1a8.webp",
+    "ververst": "2026-11-13T19:36:52+00:00",
+    "xi_sig": "5-4-1:T. Coremans,J. van Aken,J. Pinas,L. Woudenberg,S. Henderikx,C. Mpanzu,A. Lechkar,Robin van Asten,L. Riccio,A. Ouarghi,J. de Bie|4-2-3-1:F. de Keijzer,David Vicente,D. Mirani,M. Wrusch,Manny,D. van der Kust,S. Scheperman,C. Abbas,T. van Gilst,M. Hauswirth,J. N'djoli",
+    "xi_extern": false
   },
   "1551881": {
     "definitief": false,
@@ -406,7 +423,10 @@
     "item_id": "6ae3c5405f631fd72de9d150",
     "slug": "opstelling-roda-jc-vandaag",
     "og": "og/opstelling-roda-jc-volendam-14-11-2026-ae2011.webp",
-    "og_done": "og/opstelling-roda-jc-volendam-14-11-2026-ae2011.webp"
+    "og_done": "og/opstelling-roda-jc-volendam-14-11-2026-ae2011.webp",
+    "ververst": "2026-11-13T19:36:52+00:00",
+    "xi_sig": "3-4-2-1:J. Treichel,M. Tol,D. Van den Buijs,L. Beerten,Guilherme Martinho Peixoto,J. Déom,J. Nisbet,K. Jansen,M. Paulissen,J. Sleegers,A. van den Hurk|4-2-3-1:R. Steur,D. Payne,M. Amevor,A. Plat,P. Ugwu,N. Bukala,D. Huisman,N. Doodeman,R. Niemeijer,Y. el Maftahi,H. Veerman",
+    "xi_extern": false
   },
   "1551883": {
     "definitief": false,
@@ -439,7 +459,10 @@
     "item_id": "6ae3c55478ea2448aad49984",
     "slug": "opstelling-rkc-waalwijk-vandaag",
     "og": "og/opstelling-rkc-waalwijk-fc-den-bosch-14-11-2026-a90e57.webp",
-    "og_done": "og/opstelling-rkc-waalwijk-fc-den-bosch-14-11-2026-a90e57.webp"
+    "og_done": "og/opstelling-rkc-waalwijk-fc-den-bosch-14-11-2026-a90e57.webp",
+    "ververst": "2026-11-13T19:36:52+00:00",
+    "xi_sig": "4-1-3-2:N. Schiks,F. Al Mazyani,L. van Gelderen,J. de Wijs,Juan Carlos Familia-Castillo,L. Postma,Yorem van der Veen,T. van de Loo,V. Misidjan,R. van Hedel,J. van de Haar|3-1-4-2:P. van de Merbel,Jeffry Fortes,M. Laros,S. Maas,H. Eikelboom,S. Barglan,B. van Schuppen,Devon Decorte,I. Boumassaoudi,K. Monzialo,S. Karlsson Grach",
+    "xi_extern": false
   },
   "1551878": {
     "definitief": false,
@@ -472,7 +495,10 @@
     "item_id": "6ae3c555b21b349f6908b436",
     "slug": "opstelling-almere-city-vandaag",
     "og": "og/opstelling-almere-city-helmond-sport-14-11-2026-c87f4c.webp",
-    "og_done": "og/opstelling-almere-city-helmond-sport-14-11-2026-c87f4c.webp"
+    "og_done": "og/opstelling-almere-city-helmond-sport-14-11-2026-c87f4c.webp",
+    "ververst": "2026-11-13T19:36:52+00:00",
+    "xi_sig": "4-2-3-1:Wessel Speel,M. Wasinski,J. Jacobs,D. van Bruggen,T. Bijleveld,M. Hoedemakers,E. Cornelisse,E. Poku,H. El Dahri,J. Ritmeester van de Kamp,F. Druijf|4-4-2:M. Bergsen,R. van Bree,B. Koglin,Lovro Golič,T. Poll,H. Ingason,Pol Llonch,M. Ludwig,Xander van der Velde,L. Bajrami,T. Essakkati",
+    "xi_extern": false
   },
   "1528971": {
     "definitief": false,
@@ -488,7 +514,7 @@
     "slug": "opstelling-kosovo-israel-14-11-2026",
     "og": "og/opstelling-kosovo-israel-14-11-2026-9cf526.webp",
     "og_done": "og/opstelling-kosovo-israel-14-11-2026-9cf526.webp",
-    "ververst": "2026-11-13T18:20:54+00:00",
+    "ververst": "2026-11-13T19:36:52+00:00",
     "xi_sig": "3-4-3:Amir Saipi,B. Kurtulus,Ron Raçi,Ilir Krasniqi,Dion Gallapeni,Mërgim Vojvoda,Veldin Hodža,Leon Avdullahu,Edon Zhegrova,Baton Zabergja,Vedat Muriqi|4-3-2-1:D. Turgeman,L. Abada,E. Azoulay,A. Tzur,E. Dasa,R. Revivo,O. Gandelman,D. Peretz,O. Gloukh,N. Stoinov,I. Feingold",
     "xi_extern": true
   },
@@ -506,7 +532,7 @@
     "slug": "opstelling-noorwegen-wales-14-11-2026",
     "og": "og/opstelling-noorwegen-wales-14-11-2026-d844a9.webp",
     "og_done": "og/opstelling-noorwegen-wales-14-11-2026-d844a9.webp",
-    "ververst": "2026-11-13T18:20:54+00:00",
+    "ververst": "2026-11-13T19:36:52+00:00",
     "xi_sig": "4-2-3-1:Ørjan Nyland,Kristoffer Ajer,Fredrik Aursnes,Julian Ryerson,Torbjørn Heggem,Patrick Berg,Sander Berge,Martin Ødegaard,Antonio Nusa,Andreas Schjelderup,Erling Haaland|4-2-3-1:D. Ward,N. Williams,J. Dasilva,B. Davies,C. Roberts,E. Ampadu,B. Johnson,L. Cullen,D. James,C. Ashford,L. Koumas",
     "xi_extern": true
   },
@@ -524,7 +550,7 @@
     "slug": "opstelling-georgie-hongarije-14-11-2026",
     "og": "og/opstelling-georgie-hongarije-14-11-2026-a2d512.webp",
     "og_done": "og/opstelling-georgie-hongarije-14-11-2026-a2d512.webp",
-    "ververst": "2026-11-13T18:20:54+00:00",
+    "ververst": "2026-11-13T19:36:52+00:00",
     "xi_sig": "3-4-1-2:G. Mamardashvili,L. Lochoshvili,L. Dvali,S. Goglichidze,O. Kakabadze,G. Tsitaishvili,Z. Davitashvili,G. Chakvetadze,G. Kvernadze,B. Zivzivadze,G. Mikautadze|4-2-3-1:B. Toth,M. Csinger,W. Orban,Miloš Kerkez,A. Osvath,D. Szoboszlai,A. Schafer,D. Lukacs,D. Redzic,R. Sallai,B. Varga",
     "xi_extern": true
   },
