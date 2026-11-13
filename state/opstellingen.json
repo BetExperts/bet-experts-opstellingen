@@ -645,5 +645,149 @@
     "ververst": "2026-11-13T21:27:54+00:00",
     "xi_sig": "4-4-2:Alexander Schlager,Konrad Laimer,Kevin Danso,Stefan Posch,Felix Bacher,Alexander Prass,Xaver Schlager,Nicolas Seiwald,Romano Schmid,Marco Grüll,Michael Gregoritsch|3-4-3:C. Kelleher,J. Dunne,L. Scales,J. O'Brien,J. Molumby,J. Knight,C. Coventry,R. Manning,T. Parrott,A. Idah,J. Moylan",
     "xi_extern": true
+  },
+  "1551884": {
+    "definitief": false,
+    "match": "MVV - Vitesse",
+    "date": "2026-11-15",
+    "league": "eerste-divisie",
+    "comp_slug": "keuken-kampioen-divisie",
+    "naam": "Keuken Kampioen Divisie",
+    "comp_id": "65de4bc0a8777b9898d6374e",
+    "stream": null,
+    "vriendschappelijk": false,
+    "kanten": [
+      "home",
+      "away"
+    ],
+    "clubs": [
+      {
+        "team_id": "412",
+        "slug": "opstelling-mvv-vandaag",
+        "item_id": "6ae5113e93171a7a8ad59a02"
+      },
+      {
+        "team_id": "200",
+        "slug": "opstelling-vitesse-vandaag",
+        "item_id": "6ae7aff7feb4aaf6384e9a32"
+      }
+    ],
+    "evergreen": true,
+    "og_slug": "opstelling-mvv-vitesse-15-11-2026",
+    "item_id": "6ae5113e93171a7a8ad59a02",
+    "slug": "opstelling-mvv-vandaag",
+    "og": "og/opstelling-mvv-vitesse-15-11-2026-d1bd2c.webp"
+  },
+  "1545616": {
+    "definitief": false,
+    "match": "Letland - Armenië",
+    "date": "2026-11-15",
+    "league": "nations-league",
+    "comp_slug": "uefa-nations-league",
+    "naam": "Nations League",
+    "comp_id": "66d5a7f7fb9f23ce90376ef4",
+    "stream": null,
+    "vriendschappelijk": false,
+    "item_id": "6af7979c44d9c2fb49ffd387",
+    "slug": "opstelling-letland-armenie-15-11-2026",
+    "og": "og/opstelling-letland-armenie-15-11-2026-768c43.webp"
+  },
+  "1528979": {
+    "definitief": false,
+    "match": "Cyprus - Montenegro",
+    "date": "2026-11-15",
+    "league": "nations-league",
+    "comp_slug": "uefa-nations-league",
+    "naam": "Nations League",
+    "comp_id": "66d5a7f7fb9f23ce90376ef4",
+    "stream": null,
+    "vriendschappelijk": false,
+    "item_id": "6af797a71cb695cbfc94f19a",
+    "slug": "opstelling-cyprus-montenegro-15-11-2026",
+    "og": "og/opstelling-cyprus-montenegro-15-11-2026-3c987a.webp"
+  },
+  "1528981": {
+    "definitief": false,
+    "match": "Finland - San Marino",
+    "date": "2026-11-15",
+    "league": "nations-league",
+    "comp_slug": "uefa-nations-league",
+    "naam": "Nations League",
+    "comp_id": "66d5a7f7fb9f23ce90376ef4",
+    "stream": null,
+    "vriendschappelijk": false,
+    "item_id": "6af797aef3413c1a5d6f9c5e",
+    "slug": "opstelling-finland-san-marino-15-11-2026",
+    "og": "og/opstelling-finland-san-marino-15-11-2026-c4102d.webp"
+  },
+  "1528980": {
+    "definitief": false,
+    "match": "Belarus - Albanië",
+    "date": "2026-11-15",
+    "league": "nations-league",
+    "comp_slug": "uefa-nations-league",
+    "naam": "Nations League",
+    "comp_id": "66d5a7f7fb9f23ce90376ef4",
+    "stream": null,
+    "vriendschappelijk": false,
+    "item_id": "6af797b34478b19e26cd08f9",
+    "slug": "opstelling-wit-rusland-albanie-15-11-2026",
+    "og": "og/opstelling-wit-rusland-albanie-15-11-2026-b7b93c.webp"
+  },
+  "1528983": {
+    "definitief": false,
+    "match": "België - Italië",
+    "date": "2026-11-15",
+    "league": "nations-league",
+    "comp_slug": "uefa-nations-league",
+    "naam": "Nations League",
+    "comp_id": "66d5a7f7fb9f23ce90376ef4",
+    "stream": null,
+    "vriendschappelijk": false,
+    "item_id": "6af797bc4cbdf46dee36f93c",
+    "slug": "opstelling-belgie-italie-15-11-2026",
+    "og": "og/opstelling-belgie-italie-15-11-2026-f5f878.webp"
+  },
+  "1528982": {
+    "definitief": false,
+    "match": "Frankrijk - Turkije",
+    "date": "2026-11-15",
+    "league": "nations-league",
+    "comp_slug": "uefa-nations-league",
+    "naam": "Nations League",
+    "comp_id": "66d5a7f7fb9f23ce90376ef4",
+    "stream": null,
+    "vriendschappelijk": false,
+    "item_id": "6af797c3f3db681838b7bb46",
+    "slug": "opstelling-frankrijk-turkije-15-11-2026",
+    "og": "og/opstelling-frankrijk-turkije-15-11-2026-7c809e.webp"
+  },
+  "1528985": {
+    "definitief": false,
+    "match": "Kroatië - Tsjechië",
+    "date": "2026-11-15",
+    "league": "nations-league",
+    "comp_slug": "uefa-nations-league",
+    "naam": "Nations League",
+    "comp_id": "66d5a7f7fb9f23ce90376ef4",
+    "stream": null,
+    "vriendschappelijk": false,
+    "item_id": "6af797c955294a7eb19b48ed",
+    "slug": "opstelling-kroatie-tsjechie-15-11-2026",
+    "og": "og/opstelling-kroatie-tsjechie-15-11-2026-82de86.webp"
+  },
+  "1528984": {
+    "definitief": false,
+    "match": "Spanje - Engeland",
+    "date": "2026-11-15",
+    "league": "nations-league",
+    "comp_slug": "uefa-nations-league",
+    "naam": "Nations League",
+    "comp_id": "66d5a7f7fb9f23ce90376ef4",
+    "stream": null,
+    "vriendschappelijk": false,
+    "item_id": "6af797cf24f25495a44ab72a",
+    "slug": "opstelling-spanje-engeland-15-11-2026",
+    "og": "og/opstelling-spanje-engeland-15-11-2026-d2e6d7.webp"
   }
 }
