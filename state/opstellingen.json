@@ -706,7 +706,8 @@
     "og_slug": "opstelling-mvv-vitesse-15-11-2026",
     "item_id": "6ae5113e93171a7a8ad59a02",
     "slug": "opstelling-mvv-vandaag",
-    "og": "og/opstelling-mvv-vitesse-15-11-2026-d1bd2c.webp"
+    "og": "og/opstelling-mvv-vitesse-15-11-2026-d1bd2c.webp",
+    "og_done": "og/opstelling-mvv-vitesse-15-11-2026-d1bd2c.webp"
   },
   "1545616": {
     "definitief": false,
@@ -720,7 +721,8 @@
     "vriendschappelijk": false,
     "item_id": "6af8d7d8e21a48e293fbdae6",
     "slug": "opstelling-letland-armenie-15-11-2026",
-    "og": "og/opstelling-letland-armenie-15-11-2026-768c43.webp"
+    "og": "og/opstelling-letland-armenie-15-11-2026-768c43.webp",
+    "og_done": "og/opstelling-letland-armenie-15-11-2026-768c43.webp"
   },
   "1528979": {
     "definitief": false,
@@ -734,7 +736,8 @@
     "vriendschappelijk": false,
     "item_id": "6af8d7dc9c3ad00a12b257bf",
     "slug": "opstelling-cyprus-montenegro-15-11-2026",
-    "og": "og/opstelling-cyprus-montenegro-15-11-2026-3c987a.webp"
+    "og": "og/opstelling-cyprus-montenegro-15-11-2026-3c987a.webp",
+    "og_done": "og/opstelling-cyprus-montenegro-15-11-2026-3c987a.webp"
   },
   "1528981": {
     "definitief": false,
@@ -748,7 +751,8 @@
     "vriendschappelijk": false,
     "item_id": "6af8d7e3d73ae5b7c4a94575",
     "slug": "opstelling-finland-san-marino-15-11-2026",
-    "og": "og/opstelling-finland-san-marino-15-11-2026-b8d747.webp"
+    "og": "og/opstelling-finland-san-marino-15-11-2026-b8d747.webp",
+    "og_done": "og/opstelling-finland-san-marino-15-11-2026-b8d747.webp"
   },
   "1528980": {
     "definitief": false,
@@ -762,7 +766,8 @@
     "vriendschappelijk": false,
     "item_id": "6af8d7e73bc4c5f443be3661",
     "slug": "opstelling-wit-rusland-albanie-15-11-2026",
-    "og": "og/opstelling-wit-rusland-albanie-15-11-2026-b7b93c.webp"
+    "og": "og/opstelling-wit-rusland-albanie-15-11-2026-b7b93c.webp",
+    "og_done": "og/opstelling-wit-rusland-albanie-15-11-2026-b7b93c.webp"
   },
   "1528983": {
     "definitief": false,
@@ -776,7 +781,8 @@
     "vriendschappelijk": false,
     "item_id": "6af8d7ed76b6cda762f09d34",
     "slug": "opstelling-belgie-italie-15-11-2026",
-    "og": "og/opstelling-belgie-italie-15-11-2026-f5f878.webp"
+    "og": "og/opstelling-belgie-italie-15-11-2026-f5f878.webp",
+    "og_done": "og/opstelling-belgie-italie-15-11-2026-f5f878.webp"
   },
   "1528982": {
     "definitief": false,
@@ -790,7 +796,8 @@
     "vriendschappelijk": false,
     "item_id": "6af8d7f16220a5213f745709",
     "slug": "opstelling-frankrijk-turkije-15-11-2026",
-    "og": "og/opstelling-frankrijk-turkije-15-11-2026-7c809e.webp"
+    "og": "og/opstelling-frankrijk-turkije-15-11-2026-7c809e.webp",
+    "og_done": "og/opstelling-frankrijk-turkije-15-11-2026-7c809e.webp"
   },
   "1528985": {
     "definitief": false,
@@ -804,7 +811,8 @@
     "vriendschappelijk": false,
     "item_id": "6af8d7f70ebf9bb7ddb79633",
     "slug": "opstelling-kroatie-tsjechie-15-11-2026",
-    "og": "og/opstelling-kroatie-tsjechie-15-11-2026-82de86.webp"
+    "og": "og/opstelling-kroatie-tsjechie-15-11-2026-82de86.webp",
+    "og_done": "og/opstelling-kroatie-tsjechie-15-11-2026-82de86.webp"
   },
   "1528984": {
     "definitief": false,
@@ -818,6 +826,7 @@
     "vriendschappelijk": false,
     "item_id": "6af8d7fb2c8c459679614a69",
     "slug": "opstelling-spanje-engeland-15-11-2026",
-    "og": "og/opstelling-spanje-engeland-15-11-2026-d2e6d7.webp"
+    "og": "og/opstelling-spanje-engeland-15-11-2026-d2e6d7.webp",
+    "og_done": "og/opstelling-spanje-engeland-15-11-2026-d2e6d7.webp"
   }
 }
