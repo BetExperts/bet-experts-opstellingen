@@ -280,13 +280,13 @@
     "og_slug": "opstelling-nac-breda-fc-emmen-14-11-2026",
     "item_id": "6ae7afe1adc1619af0249d16",
     "slug": "opstelling-nac-breda-vandaag",
-    "og": "og/opstelling-nac-breda-fc-emmen-14-11-2026-bba278.webp",
+    "og": "og/opstelling-nac-breda-fc-emmen-14-11-2026-9093d2.webp",
     "og_done": "og/opstelling-nac-breda-fc-emmen-14-11-2026-bba278.webp",
     "ververst": "2026-11-14T14:35:25+00:00",
     "xi_sig": "4-3-3:M. Verrips,B. Lucassen,L. Greiml,R. Hillen,J. Van den Bergh,M. Balard,M. Nassoh,K. Sowah,J. Van Hecke,M. Soumano,C. Brym|4-2-3-1:S. Karssies,J. Mukeh,R. Kongolo,Y. Dede-Lhomme,B. Van Hove,A. Hojabrpour,T. Rhein,Mustafa Abdullatif,J. Cooper,M. Breij,D. Lambers",
     "xi_extern": false,
     "titel_vandaag": true,
-    "bron": "footymetrics"
+    "bron": "api"
   },
   "1551879": {
     "definitief": false,
