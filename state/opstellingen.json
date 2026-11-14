@@ -614,7 +614,7 @@
     "xi_sig": "4-2-3-1:Diogo Costa,Nazinho,Rúben Dias,Diogo Dalot,Renato Veiga,João Palhinha,Bernardo Silva,Bruno Fernandes,Vitinha,Gonçalo Ramos,João Félix|4-2-3-1:M. Hermansen,J. Andersen,O. Provstgaard,R. Kristensen,J. Maehle,M. Daramy,G. Isaksen,M. Hjulmand,P. Hojbjerg,M. Bidstrup,R. Hojlund",
     "xi_extern": true,
     "titel_vandaag": true,
-    "bron": "footymetrics"
+    "bron": "api"
   },
   "1528975": {
     "definitief": true,
