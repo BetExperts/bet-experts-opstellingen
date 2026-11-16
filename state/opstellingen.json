@@ -1,36 +1,4 @@
 {
-  "1528966": {
-    "definitief": true,
-    "match": "Nederland - Griekenland",
-    "date": "2026-11-13",
-    "league": "nations-league",
-    "comp_slug": "uefa-nations-league",
-    "naam": "Nations League",
-    "comp_id": "66d5a7f7fb9f23ce90376ef4",
-    "stream": null,
-    "vriendschappelijk": false,
-    "kanten": [
-      "home"
-    ],
-    "clubs": [
-      {
-        "team_id": "1118",
-        "slug": "opstelling-oranje-vandaag",
-        "item_id": "6af1eaa1724fe278e13c3f02"
-      }
-    ],
-    "evergreen": true,
-    "og_slug": "opstelling-nederland-griekenland-13-11-2026",
-    "item_id": "6af1eaa1724fe278e13c3f02",
-    "slug": "opstelling-oranje-vandaag",
-    "og": "og/opstelling-nederland-griekenland-13-11-2026-e9479d.webp",
-    "og_done": "og/opstelling-nederland-griekenland-13-11-2026-e9479d.webp",
-    "ververst": "2026-11-13T18:20:54+00:00",
-    "xi_sig": "4-3-3:Bart Verbruggen,Micky van de Ven,I. Maatsen,F. de Jong,Jurriën Timber,Tijjani Reijnders,Joey Veerman,J. Paul van Hecke,Crysencio Summerville,D. Malen,C. Gakpo|4-4-2:K. Tzolakis,P. Retsos,K. Tsimikas,K. Mavropanos,K. Koulierakis,C. Tzolis,D. Kourbelis,A. Androutsos,K. Karetsas,F. Ioannidis,V. Pavlidis",
-    "xi_extern": true,
-    "titel_vandaag": true,
-    "bron": "api"
-  },
   "1528968": {
     "definitief": true,
     "match": "Moldavië - Kazachstan",
