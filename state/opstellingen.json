@@ -378,43 +378,6 @@
     "titel_vandaag": true,
     "bron": "api"
   },
-  "1551884": {
-    "definitief": true,
-    "match": "MVV - Vitesse",
-    "date": "2026-11-15",
-    "league": "eerste-divisie",
-    "comp_slug": "keuken-kampioen-divisie",
-    "naam": "Keuken Kampioen Divisie",
-    "comp_id": "65de4bc0a8777b9898d6374e",
-    "stream": null,
-    "vriendschappelijk": false,
-    "kanten": [
-      "home",
-      "away"
-    ],
-    "clubs": [
-      {
-        "team_id": "412",
-        "slug": "opstelling-mvv-vandaag",
-        "item_id": "6ae5113e93171a7a8ad59a02"
-      },
-      {
-        "team_id": "200",
-        "slug": "opstelling-vitesse-vandaag",
-        "item_id": "6ae7aff7feb4aaf6384e9a32"
-      }
-    ],
-    "evergreen": true,
-    "og_slug": "opstelling-mvv-vitesse-15-11-2026",
-    "item_id": "6ae5113e93171a7a8ad59a02",
-    "slug": "opstelling-mvv-vandaag",
-    "og": "og/opstelling-mvv-vitesse-15-11-2026-f4bc32.webp",
-    "og_done": "og/opstelling-mvv-vitesse-15-11-2026-f4bc32.webp",
-    "ververst": "2026-11-14T22:09:47+00:00",
-    "xi_sig": "4-2-3-1:H. Wentges,S. Wegen,F. Dicke,Sven Bouland,Yael Liesdek,E. Sierra,Mika Luijendijk,D. Asante,L. Daneels,T. Verheijen,T. Vinogradac|4-2-3-1:C. van den Berg,N. Markelo,V. Zumberi,O. Achouitar,L. Wouters,M. Schikora,A. Büttner,F. de Carvalho,E. Probst,A. Sellouf,N. Bannis",
-    "xi_extern": false,
-    "bron": "api"
-  },
   "1545616": {
     "definitief": false,
     "match": "Letland - Armenië",
