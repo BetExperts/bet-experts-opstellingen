@@ -1183,7 +1183,8 @@
     "og_slug": "opstelling-fc-twente-willem-2-22-11-2026",
     "item_id": "6add0ece841fcad07c68a54e",
     "slug": "opstelling-fc-twente-vandaag",
-    "og": "og/opstelling-fc-twente-willem-2-22-11-2026-b3a0fe.webp"
+    "og": "og/opstelling-fc-twente-willem-2-22-11-2026-b3a0fe.webp",
+    "og_done": "og/opstelling-fc-twente-willem-2-22-11-2026-b3a0fe.webp"
   },
   "1552225": {
     "definitief": false,
@@ -1215,7 +1216,8 @@
     "og_slug": "opstelling-ajax-ado-den-haag-22-11-2026",
     "item_id": "6add0ec55667dffba0da5059",
     "slug": "opstelling-ajax-vandaag",
-    "og": "og/opstelling-ajax-ado-den-haag-22-11-2026-ad64db.webp"
+    "og": "og/opstelling-ajax-ado-den-haag-22-11-2026-ad64db.webp",
+    "og_done": "og/opstelling-ajax-ado-den-haag-22-11-2026-ad64db.webp"
   },
   "1552230": {
     "definitief": false,
@@ -1247,7 +1249,8 @@
     "og_slug": "opstelling-sparta-rotterdam-az-22-11-2026",
     "item_id": "6add0ec3dffed64ab0c06b14",
     "slug": "opstelling-sparta-rotterdam-vandaag",
-    "og": "og/opstelling-sparta-rotterdam-az-22-11-2026-cf5b51.webp"
+    "og": "og/opstelling-sparta-rotterdam-az-22-11-2026-cf5b51.webp",
+    "og_done": "og/opstelling-sparta-rotterdam-az-22-11-2026-cf5b51.webp"
   },
   "1552227": {
     "definitief": false,
@@ -1279,6 +1282,7 @@
     "og_slug": "opstelling-go-ahead-eagles-fortuna-sittard-22-11-2026",
     "item_id": "6ae511361cd0ddb1d6794623",
     "slug": "opstelling-go-ahead-eagles-vandaag",
-    "og": "og/opstelling-go-ahead-eagles-fortuna-sittard-22-11-2026-8de20d.webp"
+    "og": "og/opstelling-go-ahead-eagles-fortuna-sittard-22-11-2026-8de20d.webp",
+    "og_done": "og/opstelling-go-ahead-eagles-fortuna-sittard-22-11-2026-8de20d.webp"
   }
 }
