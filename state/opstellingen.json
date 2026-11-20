@@ -613,33 +613,6 @@
     "og": "og/opstelling-zwitserland-schotland-16-11-2026-894140.webp",
     "og_done": "og/opstelling-zwitserland-schotland-16-11-2026-894140.webp"
   },
-  "1528990": {
-    "definitief": false,
-    "match": "Duitsland - Nederland",
-    "date": "2026-11-16",
-    "league": "nations-league",
-    "comp_slug": "uefa-nations-league",
-    "naam": "Nations League",
-    "comp_id": "66d5a7f7fb9f23ce90376ef4",
-    "stream": null,
-    "vriendschappelijk": false,
-    "kanten": [
-      "away"
-    ],
-    "clubs": [
-      {
-        "team_id": "1118",
-        "slug": "opstelling-oranje-vandaag",
-        "item_id": "6af1eaa1724fe278e13c3f02"
-      }
-    ],
-    "evergreen": true,
-    "og_slug": "opstelling-duitsland-nederland-16-11-2026",
-    "item_id": "6af1eaa1724fe278e13c3f02",
-    "slug": "opstelling-oranje-vandaag",
-    "og": "og/opstelling-duitsland-nederland-16-11-2026-d2b8df.webp",
-    "og_done": "og/opstelling-duitsland-nederland-16-11-2026-d2b8df.webp"
-  },
   "1545618": {
     "definitief": false,
     "match": "Gibraltar - Malta",
