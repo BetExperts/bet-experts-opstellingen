@@ -1011,7 +1011,8 @@
     "og_slug": "opstelling-nec-nijmegen-psv-21-11-2026",
     "item_id": "6add0ebb241e26bc4d7be3d6",
     "slug": "opstelling-nec-vandaag",
-    "og": "og/opstelling-nec-nijmegen-psv-21-11-2026-4a6dbf.webp"
+    "og": "og/opstelling-nec-nijmegen-psv-21-11-2026-4a6dbf.webp",
+    "og_done": "og/opstelling-nec-nijmegen-psv-21-11-2026-4a6dbf.webp"
   },
   "1552233": {
     "definitief": false,
@@ -1043,7 +1044,8 @@
     "og_slug": "opstelling-fc-utrecht-sc-cambuur-21-11-2026",
     "item_id": "6ae654b97e6c6546015f1be1",
     "slug": "opstelling-fc-utrecht-vandaag",
-    "og": "og/opstelling-fc-utrecht-sc-cambuur-21-11-2026-6549e6.webp"
+    "og": "og/opstelling-fc-utrecht-sc-cambuur-21-11-2026-6549e6.webp",
+    "og_done": "og/opstelling-fc-utrecht-sc-cambuur-21-11-2026-6549e6.webp"
   },
   "1552226": {
     "definitief": false,
@@ -1075,7 +1077,8 @@
     "og_slug": "opstelling-feyenoord-excelsior-21-11-2026",
     "item_id": "6add0eb50fcc713db9310976",
     "slug": "opstelling-feyenoord-vandaag",
-    "og": "og/opstelling-feyenoord-excelsior-21-11-2026-4a9668.webp"
+    "og": "og/opstelling-feyenoord-excelsior-21-11-2026-4a9668.webp",
+    "og_done": "og/opstelling-feyenoord-excelsior-21-11-2026-4a9668.webp"
   },
   "1552228": {
     "definitief": false,
@@ -1107,7 +1110,8 @@
     "og_slug": "opstelling-fc-groningen-heerenveen-21-11-2026",
     "item_id": "6add0ebcbf589f9263aad5c5",
     "slug": "opstelling-fc-groningen-vandaag",
-    "og": "og/opstelling-fc-groningen-heerenveen-21-11-2026-ddca7c.webp"
+    "og": "og/opstelling-fc-groningen-heerenveen-21-11-2026-ddca7c.webp",
+    "og_done": "og/opstelling-fc-groningen-heerenveen-21-11-2026-ddca7c.webp"
   },
   "1552231": {
     "definitief": false,
@@ -1139,7 +1143,8 @@
     "og_slug": "opstelling-telstar-pec-zwolle-21-11-2026",
     "item_id": "6ae654b7a7c7319279df560c",
     "slug": "opstelling-telstar-vandaag",
-    "og": "og/opstelling-telstar-pec-zwolle-21-11-2026-56048c.webp"
+    "og": "og/opstelling-telstar-pec-zwolle-21-11-2026-56048c.webp",
+    "og_done": "og/opstelling-telstar-pec-zwolle-21-11-2026-56048c.webp"
   },
   "1551896": {
     "definitief": false,
@@ -1171,6 +1176,7 @@
     "og_slug": "opstelling-fc-eindhoven-rkc-waalwijk-21-11-2026",
     "item_id": "6ae3c55e50b0cc2842139227",
     "slug": "opstelling-fc-eindhoven-vandaag",
-    "og": "og/opstelling-fc-eindhoven-rkc-waalwijk-21-11-2026-2d73c1.webp"
+    "og": "og/opstelling-fc-eindhoven-rkc-waalwijk-21-11-2026-2d73c1.webp",
+    "og_done": "og/opstelling-fc-eindhoven-rkc-waalwijk-21-11-2026-2d73c1.webp"
   }
 }
