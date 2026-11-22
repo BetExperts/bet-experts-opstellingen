@@ -1284,5 +1284,61 @@
     "slug": "opstelling-go-ahead-eagles-vandaag",
     "og": "og/opstelling-go-ahead-eagles-fortuna-sittard-22-11-2026-8de20d.webp",
     "og_done": "og/opstelling-go-ahead-eagles-fortuna-sittard-22-11-2026-8de20d.webp"
+  },
+  "1635611": {
+    "definitief": false,
+    "match": "Arsenal - Borussia Dortmund",
+    "date": "2026-11-24",
+    "league": "champions-league",
+    "comp_slug": "champions-league",
+    "naam": "Champions League",
+    "comp_id": "65de4adac046f4488dfdebc2",
+    "stream": null,
+    "vriendschappelijk": false,
+    "item_id": "6b037453646d2f6b2046722e",
+    "slug": "opstelling-arsenal-borussia-dortmund-24-11-2026",
+    "og": "og/opstelling-arsenal-borussia-dortmund-24-11-2026-10429d.webp"
+  },
+  "1635692": {
+    "definitief": false,
+    "match": "Manchester City - Napoli",
+    "date": "2026-11-24",
+    "league": "champions-league",
+    "comp_slug": "champions-league",
+    "naam": "Champions League",
+    "comp_id": "65de4adac046f4488dfdebc2",
+    "stream": null,
+    "vriendschappelijk": false,
+    "item_id": "6b03745bc3d19b6896c0eee7",
+    "slug": "opstelling-manchester-city-napoli-24-11-2026",
+    "og": "og/opstelling-manchester-city-napoli-24-11-2026-560463.webp"
+  },
+  "1635663": {
+    "definitief": false,
+    "match": "Feyenoord - FC Porto",
+    "date": "2026-11-24",
+    "league": "champions-league",
+    "comp_slug": "champions-league",
+    "naam": "Champions League",
+    "comp_id": "65de4adac046f4488dfdebc2",
+    "stream": null,
+    "vriendschappelijk": false,
+    "item_id": "6b0374627981ba235ac2b4e9",
+    "slug": "opstelling-feyenoord-fc-porto-24-11-2026",
+    "og": "og/opstelling-feyenoord-fc-porto-24-11-2026-1e5899.webp"
+  },
+  "1635715": {
+    "definitief": false,
+    "match": "Real Madrid - PSV Eindhoven",
+    "date": "2026-11-24",
+    "league": "champions-league",
+    "comp_slug": "champions-league",
+    "naam": "Champions League",
+    "comp_id": "65de4adac046f4488dfdebc2",
+    "stream": null,
+    "vriendschappelijk": false,
+    "item_id": "6b03746c53fef8d35845c91f",
+    "slug": "opstelling-real-madrid-psv-24-11-2026",
+    "og": "og/opstelling-real-madrid-psv-24-11-2026-a78b60.webp"
   }
 }
