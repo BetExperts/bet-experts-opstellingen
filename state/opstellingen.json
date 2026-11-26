@@ -1045,7 +1045,8 @@
     "og_slug": "opstelling-fc-groningen-willem-2-27-11-2026",
     "item_id": "6add0ebcbf589f9263aad5c5",
     "slug": "opstelling-fc-groningen-vandaag",
-    "og": "og/opstelling-fc-groningen-willem-2-27-11-2026-945d42.webp"
+    "og": "og/opstelling-fc-groningen-willem-2-27-11-2026-945d42.webp",
+    "og_done": "og/opstelling-fc-groningen-willem-2-27-11-2026-945d42.webp"
   },
   "1551902": {
     "definitief": false,
@@ -1077,7 +1078,8 @@
     "og_slug": "opstelling-nac-breda-fc-den-bosch-27-11-2026",
     "item_id": "6ae7afe1adc1619af0249d16",
     "slug": "opstelling-nac-breda-vandaag",
-    "og": "og/opstelling-nac-breda-fc-den-bosch-27-11-2026-31cad9.webp"
+    "og": "og/opstelling-nac-breda-fc-den-bosch-27-11-2026-31cad9.webp",
+    "og_done": "og/opstelling-nac-breda-fc-den-bosch-27-11-2026-31cad9.webp"
   },
   "1551903": {
     "definitief": false,
@@ -1109,7 +1111,8 @@
     "og_slug": "opstelling-vvv-venlo-rkc-waalwijk-27-11-2026",
     "item_id": "6ae51140433faf782fba0b88",
     "slug": "opstelling-vvv-venlo-vandaag",
-    "og": "og/opstelling-vvv-venlo-rkc-waalwijk-27-11-2026-e9fb77.webp"
+    "og": "og/opstelling-vvv-venlo-rkc-waalwijk-27-11-2026-e9fb77.webp",
+    "og_done": "og/opstelling-vvv-venlo-rkc-waalwijk-27-11-2026-e9fb77.webp"
   },
   "1551897": {
     "definitief": false,
@@ -1141,7 +1144,8 @@
     "og_slug": "opstelling-fc-dordrecht-vitesse-27-11-2026",
     "item_id": "6ae7b00043efd89fed6e37cd",
     "slug": "opstelling-fc-dordrecht-vandaag",
-    "og": "og/opstelling-fc-dordrecht-vitesse-27-11-2026-8dd4e1.webp"
+    "og": "og/opstelling-fc-dordrecht-vitesse-27-11-2026-8dd4e1.webp",
+    "og_done": "og/opstelling-fc-dordrecht-vitesse-27-11-2026-8dd4e1.webp"
   },
   "1551901": {
     "definitief": false,
@@ -1173,7 +1177,8 @@
     "og_slug": "opstelling-mvv-jong-psv-27-11-2026",
     "item_id": "6ae5113e93171a7a8ad59a02",
     "slug": "opstelling-mvv-vandaag",
-    "og": "og/opstelling-mvv-jong-psv-27-11-2026-36f4a4.webp"
+    "og": "og/opstelling-mvv-jong-psv-27-11-2026-36f4a4.webp",
+    "og_done": "og/opstelling-mvv-jong-psv-27-11-2026-36f4a4.webp"
   },
   "1551899": {
     "definitief": false,
@@ -1205,7 +1210,8 @@
     "og_slug": "opstelling-jong-az-top-oss-27-11-2026",
     "item_id": "6ae3c5410e3f7f15337960f1",
     "slug": "opstelling-jong-az-vandaag",
-    "og": "og/opstelling-jong-az-top-oss-27-11-2026-e10f76.webp"
+    "og": "og/opstelling-jong-az-top-oss-27-11-2026-e10f76.webp",
+    "og_done": "og/opstelling-jong-az-top-oss-27-11-2026-e10f76.webp"
   },
   "1551898": {
     "definitief": false,
@@ -1237,7 +1243,8 @@
     "og_slug": "opstelling-jong-ajax-heracles-almelo-27-11-2026",
     "item_id": "6ae7aff10180e0ebb92bab3d",
     "slug": "opstelling-jong-ajax-vandaag",
-    "og": "og/opstelling-jong-ajax-heracles-almelo-27-11-2026-c17517.webp"
+    "og": "og/opstelling-jong-ajax-heracles-almelo-27-11-2026-c17517.webp",
+    "og_done": "og/opstelling-jong-ajax-heracles-almelo-27-11-2026-c17517.webp"
   },
   "1551900": {
     "definitief": false,
@@ -1269,6 +1276,7 @@
     "og_slug": "opstelling-jong-fc-utrecht-almere-city-27-11-2026",
     "item_id": "6ae7afff43efd89fed6e3771",
     "slug": "opstelling-jong-fc-utrecht-vandaag",
-    "og": "og/opstelling-jong-fc-utrecht-almere-city-27-11-2026-0db5a4.webp"
+    "og": "og/opstelling-jong-fc-utrecht-almere-city-27-11-2026-0db5a4.webp",
+    "og_done": "og/opstelling-jong-fc-utrecht-almere-city-27-11-2026-0db5a4.webp"
   }
 }
