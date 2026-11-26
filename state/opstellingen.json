@@ -1014,5 +1014,261 @@
     "slug": "opstelling-freiburg-fc-twente-26-11-2026",
     "og": "og/opstelling-freiburg-fc-twente-26-11-2026-a667fd.webp",
     "og_done": "og/opstelling-freiburg-fc-twente-26-11-2026-a667fd.webp"
+  },
+  "1552238": {
+    "definitief": false,
+    "match": "Groningen - Willem II",
+    "date": "2026-11-27",
+    "league": "eredivisie",
+    "comp_slug": "eredivisie",
+    "naam": "Eredivisie",
+    "comp_id": "65de2f987de877fdf6583d10",
+    "stream": null,
+    "vriendschappelijk": false,
+    "kanten": [
+      "home",
+      "away"
+    ],
+    "clubs": [
+      {
+        "team_id": "202",
+        "slug": "opstelling-fc-groningen-vandaag",
+        "item_id": "6add0ebcbf589f9263aad5c5"
+      },
+      {
+        "team_id": "195",
+        "slug": "opstelling-willem-ii-vandaag",
+        "item_id": "6ae5111d52fb1e06e814a2b7"
+      }
+    ],
+    "evergreen": true,
+    "og_slug": "opstelling-fc-groningen-willem-2-27-11-2026",
+    "item_id": "6add0ebcbf589f9263aad5c5",
+    "slug": "opstelling-fc-groningen-vandaag",
+    "og": "og/opstelling-fc-groningen-willem-2-27-11-2026-945d42.webp"
+  },
+  "1551902": {
+    "definitief": false,
+    "match": "NAC Breda - Den Bosch",
+    "date": "2026-11-27",
+    "league": "eerste-divisie",
+    "comp_slug": "keuken-kampioen-divisie",
+    "naam": "Keuken Kampioen Divisie",
+    "comp_id": "65de4bc0a8777b9898d6374e",
+    "stream": null,
+    "vriendschappelijk": false,
+    "kanten": [
+      "home",
+      "away"
+    ],
+    "clubs": [
+      {
+        "team_id": "203",
+        "slug": "opstelling-nac-breda-vandaag",
+        "item_id": "6ae7afe1adc1619af0249d16"
+      },
+      {
+        "team_id": "421",
+        "slug": "opstelling-fc-den-bosch-vandaag",
+        "item_id": "6ae654d4bc0ed2f9667a6e49"
+      }
+    ],
+    "evergreen": true,
+    "og_slug": "opstelling-nac-breda-fc-den-bosch-27-11-2026",
+    "item_id": "6ae7afe1adc1619af0249d16",
+    "slug": "opstelling-nac-breda-vandaag",
+    "og": "og/opstelling-nac-breda-fc-den-bosch-27-11-2026-31cad9.webp"
+  },
+  "1551903": {
+    "definitief": false,
+    "match": "VVV Venlo - Waalwijk",
+    "date": "2026-11-27",
+    "league": "eerste-divisie",
+    "comp_slug": "keuken-kampioen-divisie",
+    "naam": "Keuken Kampioen Divisie",
+    "comp_id": "65de4bc0a8777b9898d6374e",
+    "stream": null,
+    "vriendschappelijk": false,
+    "kanten": [
+      "home",
+      "away"
+    ],
+    "clubs": [
+      {
+        "team_id": "204",
+        "slug": "opstelling-vvv-venlo-vandaag",
+        "item_id": "6ae51140433faf782fba0b88"
+      },
+      {
+        "team_id": "417",
+        "slug": "opstelling-rkc-waalwijk-vandaag",
+        "item_id": "6ae3c55478ea2448aad49984"
+      }
+    ],
+    "evergreen": true,
+    "og_slug": "opstelling-vvv-venlo-rkc-waalwijk-27-11-2026",
+    "item_id": "6ae51140433faf782fba0b88",
+    "slug": "opstelling-vvv-venlo-vandaag",
+    "og": "og/opstelling-vvv-venlo-rkc-waalwijk-27-11-2026-e9fb77.webp"
+  },
+  "1551897": {
+    "definitief": false,
+    "match": "Dordrecht - Vitesse",
+    "date": "2026-11-27",
+    "league": "eerste-divisie",
+    "comp_slug": "keuken-kampioen-divisie",
+    "naam": "Keuken Kampioen Divisie",
+    "comp_id": "65de4bc0a8777b9898d6374e",
+    "stream": null,
+    "vriendschappelijk": false,
+    "kanten": [
+      "home",
+      "away"
+    ],
+    "clubs": [
+      {
+        "team_id": "409",
+        "slug": "opstelling-fc-dordrecht-vandaag",
+        "item_id": "6ae7b00043efd89fed6e37cd"
+      },
+      {
+        "team_id": "200",
+        "slug": "opstelling-vitesse-vandaag",
+        "item_id": "6ae7aff7feb4aaf6384e9a32"
+      }
+    ],
+    "evergreen": true,
+    "og_slug": "opstelling-fc-dordrecht-vitesse-27-11-2026",
+    "item_id": "6ae7b00043efd89fed6e37cd",
+    "slug": "opstelling-fc-dordrecht-vandaag",
+    "og": "og/opstelling-fc-dordrecht-vitesse-27-11-2026-8dd4e1.webp"
+  },
+  "1551901": {
+    "definitief": false,
+    "match": "MVV - Jong Jong PSV",
+    "date": "2026-11-27",
+    "league": "eerste-divisie",
+    "comp_slug": "keuken-kampioen-divisie",
+    "naam": "Keuken Kampioen Divisie",
+    "comp_id": "65de4bc0a8777b9898d6374e",
+    "stream": null,
+    "vriendschappelijk": false,
+    "kanten": [
+      "home",
+      "away"
+    ],
+    "clubs": [
+      {
+        "team_id": "412",
+        "slug": "opstelling-mvv-vandaag",
+        "item_id": "6ae5113e93171a7a8ad59a02"
+      },
+      {
+        "team_id": "411",
+        "slug": "opstelling-jong-psv-vandaag",
+        "item_id": "6ae7afdf2f44f67ca20cd6bf"
+      }
+    ],
+    "evergreen": true,
+    "og_slug": "opstelling-mvv-jong-psv-27-11-2026",
+    "item_id": "6ae5113e93171a7a8ad59a02",
+    "slug": "opstelling-mvv-vandaag",
+    "og": "og/opstelling-mvv-jong-psv-27-11-2026-36f4a4.webp"
+  },
+  "1551899": {
+    "definitief": false,
+    "match": "Jong AZ - FC OSS",
+    "date": "2026-11-27",
+    "league": "eerste-divisie",
+    "comp_slug": "keuken-kampioen-divisie",
+    "naam": "Keuken Kampioen Divisie",
+    "comp_id": "65de4bc0a8777b9898d6374e",
+    "stream": null,
+    "vriendschappelijk": false,
+    "kanten": [
+      "home",
+      "away"
+    ],
+    "clubs": [
+      {
+        "team_id": "418",
+        "slug": "opstelling-jong-az-vandaag",
+        "item_id": "6ae3c5410e3f7f15337960f1"
+      },
+      {
+        "team_id": "423",
+        "slug": "opstelling-top-oss-vandaag",
+        "item_id": "6ae7afd488c1622a06ad8ef1"
+      }
+    ],
+    "evergreen": true,
+    "og_slug": "opstelling-jong-az-top-oss-27-11-2026",
+    "item_id": "6ae3c5410e3f7f15337960f1",
+    "slug": "opstelling-jong-az-vandaag",
+    "og": "og/opstelling-jong-az-top-oss-27-11-2026-e10f76.webp"
+  },
+  "1551898": {
+    "definitief": false,
+    "match": "Jong Ajax - Heracles",
+    "date": "2026-11-27",
+    "league": "eerste-divisie",
+    "comp_slug": "keuken-kampioen-divisie",
+    "naam": "Keuken Kampioen Divisie",
+    "comp_id": "65de4bc0a8777b9898d6374e",
+    "stream": null,
+    "vriendschappelijk": false,
+    "kanten": [
+      "home",
+      "away"
+    ],
+    "clubs": [
+      {
+        "team_id": "425",
+        "slug": "opstelling-jong-ajax-vandaag",
+        "item_id": "6ae7aff10180e0ebb92bab3d"
+      },
+      {
+        "team_id": "206",
+        "slug": "opstelling-heracles-vandaag",
+        "item_id": "6ae7afd2d1399902e056a2bb"
+      }
+    ],
+    "evergreen": true,
+    "og_slug": "opstelling-jong-ajax-heracles-almelo-27-11-2026",
+    "item_id": "6ae7aff10180e0ebb92bab3d",
+    "slug": "opstelling-jong-ajax-vandaag",
+    "og": "og/opstelling-jong-ajax-heracles-almelo-27-11-2026-c17517.webp"
+  },
+  "1551900": {
+    "definitief": false,
+    "match": "Jong Utrecht - Almere City FC",
+    "date": "2026-11-27",
+    "league": "eerste-divisie",
+    "comp_slug": "keuken-kampioen-divisie",
+    "naam": "Keuken Kampioen Divisie",
+    "comp_id": "65de4bc0a8777b9898d6374e",
+    "stream": null,
+    "vriendschappelijk": false,
+    "kanten": [
+      "home",
+      "away"
+    ],
+    "clubs": [
+      {
+        "team_id": "428",
+        "slug": "opstelling-jong-fc-utrecht-vandaag",
+        "item_id": "6ae7afff43efd89fed6e3771"
+      },
+      {
+        "team_id": "419",
+        "slug": "opstelling-almere-city-vandaag",
+        "item_id": "6ae3c555b21b349f6908b436"
+      }
+    ],
+    "evergreen": true,
+    "og_slug": "opstelling-jong-fc-utrecht-almere-city-27-11-2026",
+    "item_id": "6ae7afff43efd89fed6e3771",
+    "slug": "opstelling-jong-fc-utrecht-vandaag",
+    "og": "og/opstelling-jong-fc-utrecht-almere-city-27-11-2026-0db5a4.webp"
   }
 }
