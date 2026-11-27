@@ -1309,7 +1309,8 @@
     "og_slug": "opstelling-excelsior-telstar-28-11-2026",
     "item_id": "6add0ea4c52f5ea2d2a76864",
     "slug": "opstelling-excelsior-vandaag",
-    "og": "og/opstelling-excelsior-telstar-28-11-2026-e873a3.webp"
+    "og": "og/opstelling-excelsior-telstar-28-11-2026-e873a3.webp",
+    "og_done": "og/opstelling-excelsior-telstar-28-11-2026-e873a3.webp"
   },
   "1552240": {
     "definitief": false,
@@ -1341,7 +1342,8 @@
     "og_slug": "opstelling-psv-go-ahead-eagles-28-11-2026",
     "item_id": "6add0eb1e272194247024d86",
     "slug": "opstelling-psv-vandaag",
-    "og": "og/opstelling-psv-go-ahead-eagles-28-11-2026-67755f.webp"
+    "og": "og/opstelling-psv-go-ahead-eagles-28-11-2026-67755f.webp",
+    "og_done": "og/opstelling-psv-go-ahead-eagles-28-11-2026-67755f.webp"
   },
   "1552234": {
     "definitief": false,
@@ -1373,7 +1375,8 @@
     "og_slug": "opstelling-sc-cambuur-sparta-rotterdam-28-11-2026",
     "item_id": "6ae51134d77a8efba55516c2",
     "slug": "opstelling-sc-cambuur-vandaag",
-    "og": "og/opstelling-sc-cambuur-sparta-rotterdam-28-11-2026-488402.webp"
+    "og": "og/opstelling-sc-cambuur-sparta-rotterdam-28-11-2026-488402.webp",
+    "og_done": "og/opstelling-sc-cambuur-sparta-rotterdam-28-11-2026-488402.webp"
   },
   "1551904": {
     "definitief": false,
@@ -1405,6 +1408,7 @@
     "og_slug": "opstelling-fc-emmen-helmond-sport-28-11-2026",
     "item_id": "6ae654d38981eb605eecf47f",
     "slug": "opstelling-fc-emmen-vandaag",
-    "og": "og/opstelling-fc-emmen-helmond-sport-28-11-2026-6bc5b8.webp"
+    "og": "og/opstelling-fc-emmen-helmond-sport-28-11-2026-6bc5b8.webp",
+    "og_done": "og/opstelling-fc-emmen-helmond-sport-28-11-2026-6bc5b8.webp"
   }
 }
