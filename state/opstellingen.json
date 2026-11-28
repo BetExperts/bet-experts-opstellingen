@@ -1441,7 +1441,8 @@
     "og_slug": "opstelling-ado-den-haag-fc-utrecht-29-11-2026",
     "item_id": "6ae654a7e13644c1aaf1773a",
     "slug": "opstelling-ado-den-haag-vandaag",
-    "og": "og/opstelling-ado-den-haag-fc-utrecht-29-11-2026-e9403a.webp"
+    "og": "og/opstelling-ado-den-haag-fc-utrecht-29-11-2026-e9403a.webp",
+    "og_done": "og/opstelling-ado-den-haag-fc-utrecht-29-11-2026-e9403a.webp"
   },
   "1552241": {
     "definitief": false,
@@ -1473,7 +1474,8 @@
     "og_slug": "opstelling-fortuna-sittard-heerenveen-29-11-2026",
     "item_id": "6add0ea23338fa52136a9127",
     "slug": "opstelling-fortuna-sittard-vandaag",
-    "og": "og/opstelling-fortuna-sittard-heerenveen-29-11-2026-80111b.webp"
+    "og": "og/opstelling-fortuna-sittard-heerenveen-29-11-2026-80111b.webp",
+    "og_done": "og/opstelling-fortuna-sittard-heerenveen-29-11-2026-80111b.webp"
   },
   "1552237": {
     "definitief": false,
@@ -1505,7 +1507,8 @@
     "og_slug": "opstelling-feyenoord-ajax-29-11-2026",
     "item_id": "6add0eb50fcc713db9310976",
     "slug": "opstelling-feyenoord-vandaag",
-    "og": "og/opstelling-feyenoord-ajax-29-11-2026-fd366e.webp"
+    "og": "og/opstelling-feyenoord-ajax-29-11-2026-fd366e.webp",
+    "og_done": "og/opstelling-feyenoord-ajax-29-11-2026-fd366e.webp"
   },
   "1552242": {
     "definitief": false,
@@ -1537,7 +1540,8 @@
     "og_slug": "opstelling-pec-zwolle-az-29-11-2026",
     "item_id": "6ae654a6d24ad0c001341986",
     "slug": "opstelling-pec-zwolle-vandaag",
-    "og": "og/opstelling-pec-zwolle-az-29-11-2026-7ae554.webp"
+    "og": "og/opstelling-pec-zwolle-az-29-11-2026-7ae554.webp",
+    "og_done": "og/opstelling-pec-zwolle-az-29-11-2026-7ae554.webp"
   },
   "1552239": {
     "definitief": false,
@@ -1569,7 +1573,8 @@
     "og_slug": "opstelling-nec-nijmegen-fc-twente-29-11-2026",
     "item_id": "6add0ebb241e26bc4d7be3d6",
     "slug": "opstelling-nec-vandaag",
-    "og": "og/opstelling-nec-nijmegen-fc-twente-29-11-2026-8f4f6a.webp"
+    "og": "og/opstelling-nec-nijmegen-fc-twente-29-11-2026-8f4f6a.webp",
+    "og_done": "og/opstelling-nec-nijmegen-fc-twente-29-11-2026-8f4f6a.webp"
   },
   "1551905": {
     "definitief": false,
@@ -1601,7 +1606,8 @@
     "og_slug": "opstelling-volendam-fc-eindhoven-29-11-2026",
     "item_id": "6ae3c5490a8851e6dd89be21",
     "slug": "opstelling-fc-volendam-vandaag",
-    "og": "og/opstelling-volendam-fc-eindhoven-29-11-2026-09c666.webp"
+    "og": "og/opstelling-volendam-fc-eindhoven-29-11-2026-09c666.webp",
+    "og_done": "og/opstelling-volendam-fc-eindhoven-29-11-2026-09c666.webp"
   },
   "1551906": {
     "definitief": false,
@@ -1633,6 +1639,7 @@
     "og_slug": "opstelling-roda-jc-de-graafschap-29-11-2026",
     "item_id": "6ae3c5405f631fd72de9d150",
     "slug": "opstelling-roda-jc-vandaag",
-    "og": "og/opstelling-roda-jc-de-graafschap-29-11-2026-12f5c1.webp"
+    "og": "og/opstelling-roda-jc-de-graafschap-29-11-2026-12f5c1.webp",
+    "og_done": "og/opstelling-roda-jc-de-graafschap-29-11-2026-12f5c1.webp"
   }
 }
